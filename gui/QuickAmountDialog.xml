@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement type="empty" profile="newLayer" />
+    <GuiElement type="bitmap" profile="dialogFullscreenBg" />
+    <GuiElement type="bitmap" profile="bgVignette"/>
+    <GuiElement type="bitmap" profile="bgGlowDialog" />
+
+    <GuiElement type="bitmap" profile="quickAmountDialogBg" id="dialogElement">
+        <GuiElement type="bitmap" profile="dialogHeaderDocked">
+            <GuiElement type="text" profile="dialogHeaderText" text="" id="dialogTitleElement"/>
+        </GuiElement>
+        
+        <GuiElement type="text" profile="siloDialogText" id="dialogTextElement" />
+
+        <GuiElement type="empty" size="352px 140px" profile="emptyPanel" position="0px 40px">
+            <GuiElement type="text" profile="quickAmountDialogAmountConsole" id="consoleAmountText" />
+
+            <!-- <GuiElement type="textInput" profile="quickAmountDialogAmount" id="amountText" /> -->
+        </GuiElement>
+
+        <GuiElement type="boxLayout" profile="quickAmountDialogOptionBox">
+            <GuiElement type="empty" profile="multiTextOptionTransferMoney" onCreate="onCreateScroller" onCreateArgs="1">
+                <GuiElement type="button" profile="multiTextOptionTransferMoneyLeft" text="-" onClick="onClickLeft" focusId="100_left" focusChangeTop="100000_left" focusChangeBottom="1000_left" />
+                <GuiElement type="button" profile="multiTextOptionTransferMoneyRight" text="+" onClick="onClickRight" focusId="100_right" focusChangeTop="100000_right" focusChangeBottom="1000_right" focusInit="onOpen" />
+                <GuiElement type="text"   profile="multiTextOptionText" text="± 1" />
+                <GuiElement type="bitmap" profile="multiTextOptionBg" />
+            </GuiElement>
+
+            <GuiElement type="empty" profile="multiTextOptionTransferMoney" onCreate="onCreateScroller" onCreateArgs="10">
+                <GuiElement type="button" profile="multiTextOptionTransferMoneyLeft" text="-" onClick="onClickLeft" focusId="1000_left" focusChangeTop="100_left" focusChangeBottom="10000_left" />
+                <GuiElement type="button" profile="multiTextOptionTransferMoneyRight" text="+" onClick="onClickRight" focusId="1000_right" focusChangeTop="100_right" focusChangeBottom="10000_right" />
+                <GuiElement type="text"   profile="multiTextOptionText" text="± 10" />
+                <GuiElement type="bitmap" profile="multiTextOptionBg" />
+            </GuiElement>
+        </GuiElement>
+
+        <GuiElement type="flowLayout" profile="buttonBoxDialog">
+            <GuiElement type="button" profile="buttonOK" text="$l10n_button_ok" onClick="onClickOk" id="yesButton" />
+            <GuiElement type="button" profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="noButton" />
+        </GuiElement>
+    </GuiElement>
+</GUI>

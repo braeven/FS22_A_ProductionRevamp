@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+    <texts>
+    <!--Production line texts-->
+        <text name="Revamp_Store"                               text="Einlagern" />
+        <text name="Revamp_Spawn"                               text="Auslagern" />
+        <text name="Revamp_ChangePriority"                      text="Priorität senken" />
+        <text name="Revamp_BuyInputButton"                      text="Zukaufen" />
+        <text name="Revamp_DeliveryPriority"                    text="Priorität" />
+        <text name="Revamp_DeliveryPriorityDeactivated"         text="Deaktiviert" />
+        <text name="Revamp_BuyInputText"                        text="Kaufe %s für %s ?" />
+        <text name="Revamp_BuyInput"                            text="Güter kaufen" />
+        <text name="Revamp_BuyInputNotEnoughMoney"              text="Nicht genug Geld." />
+        <text name="Revamp_ChooseAmountToPutOut"                text="Anzahl wählen:" />
+        <text name="Revamp_ChooseWhatToPutOut"                  text="Material wählen:" />
+        <text name="Revamp_ExtractPallets"                      text="Paletten auslagern" />
+        <text name="Revamp_PalletSiloItem"                      text="Paletten" />
+        <text name="Revamp_BaleSiloItem"                        text="Ballen" />
+        <text name="Revamp_ChooseBaleType"                      text="Ballen Typ wählen" />
+        <text name="Revamp_WoodLogItem"                         text="Holzstämme" />
+        <text name="Revamp_SpawnType_bale"                      text="Ballen" />
+        <text name="Revamp_SpawnType_pallet"                    text="Paletten" />
+        <text name="Revamp_SpawnType_woodLog"                   text="Holzstämme" />
+        <text name="Revamp_ChooseSpawnToPutOut"                 text="Variante wählen" />
+        <text name="Revamp_storeWoodlogs"                       text="Holz einlagern" />
+        <text name="Revamp_ViewActiveProductions"               text="Inaktive ausblenden" />
+        <text name="Revamp_ViewInActiveProductions"             text="Aktive ausblenden" />
+        <text name="Revamp_ViewAllProductions"                  text="Alle anzeigen" />
+
+    <!-- Production messages -->
+        <text name="Revamp_StorageEmpty"                        text="Lager ist leer." />
+        <text name="Revamp_CantBuy"                             text="Input %s kann nicht zugekauft werden." />
+        <text name="Revamp_ProductionClosed"                    text="%s ist geschlossen. - Öffnungszeiten: %s bis %s Uhr." />
+
+    <!-- Production Variants -->
+        <text name="Revamp_sunProduction"                       text="%s (Sonnenabhängig)" />
+        <text name="Revamp_rainProduction"                      text="%s (Regenabhängig)" />
+        <text name="Revamp_windProduction"                      text="%s (Windabhängig)" />
+        <text name="Revamp_temperatureProduction"               text="%s (Plus Temperaturabhängig)" />
+        <text name="Revamp_temperatureNegativeProduction"       text="%s (Minus Temperaturabhängig)" />
+        <text name="Revamp_seasonalProduction"                  text="%s (Saisonal)" />
+        <text name="Revamp_productionHoursDependent"            text="%s (%s bis %s Uhr)" />
+        <text name="Revamp_monthlyProduction"                   text="%s (Monatlich)" />
+
+    <!-- Production menu -->
+        <text name="Revamp_OpenProduction"                      text="Produktion verwalten" />
+        <text name="Revamp_SpawnItem"                           text="Auslagern" />
+        <text name="finance_ProductionDeliveryCosts"            text="Produktions Liefergebühren" />
+
+    <!-- game Settings menu -->
+        <text name="Revamp_Settings_Title"                      text="Revamp" />
+        <text name="Revamp_BuyRestriction_Title"                text="Kaufberechtigt" />
+        <text name="Revamp_BuyRestriction_Tooltip"              text="Wer kann die Kauffunktion in Produktionen nutzen? (Kann in Produktionen unabhängig deaktiviert sein.)" />
+        <text name="Revamp_BuyRestriction_Everyone"             text="Jeder" />
+        <text name="Revamp_BuyRestriction_FarmManager"          text="Farmmanager" />
+        <text name="Revamp_BuyRestriction_ProductionAgent"      text="Produktionsverwalter" />
+        <text name="Revamp_BuyRestriction_None"                 text="Niemand" />
+        <text name="Revamp_PrioSystemActive_Title"              text="Prioritätensystem" />
+        <text name="Revamp_PrioSystemActive_Tooltip"            text="Das Prioritätensystem beim Verteilen kann hier deaktiviert werden." />
+        <text name="Revamp_MissionFixActive_Title"              text="Missions Fix" />
+        <text name="Revamp_MissionFixActive_Tooltip"            text="Hiermit kann der Missionsfix deaktiviert werden(Für mehr Informationen, siehe Ingame Hilfe.)" />
+        <text name="Revamp_PriceCorrectionActive_Title"         text="Korrektur der Einkaufspreise" />
+        <text name="Revamp_PriceCorrectionActive_Tooltip"       text="Die Anpassung der Einkaufspreise an den Schwierigkeitsgrad kann hier deaktiviert werden." />
+        <text name="Revamp_DistributionCostFactor_Title"        text="Verteilkostenfaktor" />
+        <text name="Revamp_DistributionCostFactor_Tooltip"      text="Faktor auf die Standard Giants Verteilkosten. (0 = deaktiviert)" />
+        <text name="Revamp_DirectSellingPriceFactor_Title"      text="Direktverkaufsfaktor" />
+        <text name="Revamp_DirectSellingPriceFactor_Tooltip"    text="Faktor auf den Preis beim direkt verkaufen aus der Produktion. (Standard 0.9)" />
+
+      <!-- Ingame help menu -->
+        <text name="Revamp_Help_Header" text="Production Revamp"/>
+      <!-- Page 01 - What is Revamp? -->
+        <text name="Revamp_Help_P1_Title" text="Was ist Revamp?"/>
+        <text name="Revamp_Help_P1_Text" text="Production Revamp überarbeitet das interne Produktionssystem, baut dieses aus und fügt diverse Funktionen hinzu. Revamp selbst ist der Grundlegende Script-Mod und bietet bereits viele der nachfolgenden Möglichkeiten automatisch. Einige müssen aber von Moddern / Mappern in ihre Mods und Maps eingebaut werden, um genutzt werden zu können.
+
+Dies ist die Ingame-Hilfe, weitergehende Information und Einbauhilfe sind in der Dokumentation zu finden."/>
+      <!-- Page 02 - Reworked Production Menue -->
+        <text name="Revamp_Help_P2_Title" text="Produktionsmenü"/>
+        <text name="Revamp_Help_P2_Text_1" text="Revamp sortiert die Produktionsketten Alphabetisch nach den vergebenen Namen. Mit der Filterfunktion können entweder die aktiven oder inaktive Produktionslinien ausgeblendet werden."/>
+        <text name="Revamp_Help_P2_Text_2" text="Ungefiltert
+
+Alle Produktionen werden angezeigt."/>
+        <text name="Revamp_Help_P2_Text_3" text="Aktive Produktionen
+
+Es werden nur aktive Produktionen angezeigt, alle anderen sind ausgeblendet."/>
+        <text name="Revamp_Help_P2_Text_4" text="Inaktive Produktionen
+
+Es werden nur Inaktive Produktionen angezeigt, alle aktiven sind ausgeblendet."/>
+        <text name="Revamp_Help_P2_Text_5" text="Geteilte / Parallele Produktionen        
+Produktionen können ihre Leistung auf die Produktionslinien aufteilen oder diese parallel arbeiten lassen. Damit dieses erkennbar ist, fügt Revamp hinter dem Produktionsnamen ein Y(teilt) oder ein II(parallel) hinzu. Die Gewächshäuser zum Beispiel produzieren Tomaten, Salat und Erdbeeren. Sind die Tomaten alleine aktiviert, produziert es 100% Tomaten. Wird der Salat zusätzlich aktiviert, produziert es 50% Tomaten und 50% Salat.
+Eine Bäckerei hingegen kann Brot und Kuchen mit voller Leistung gleichzeitig herstellen."/>
+      <!-- Page 03 - Reworked Recipe View -->
+        <text name="Revamp_Help_P3_Title" text="Rezept-Anzeige"/>
+        <text name="Revamp_Help_P3_Text_1" text="Rezepte, die aus mehr als 4 Inputs haben, werden automatisch mit einem Zeilenumbruch versehen."/>
+        <text name="Revamp_Help_P3_Text_2" text="Rezepte bekommen durch Revamp eine farbige Darstellung, abhängig davon, ob Inputs vorhanden sind oder nicht. Die Farben bedeuten:
+Weiß - Input ist vorhanden. 
+Rot - Input  ist nicht vorhanden und wird benötigt. 
+Orange - Input ist nicht vorhanden, ist aber optional/austauschbar. 
+
+Damit die Anzeige sich aktualisiert, muss die Produktion kurz aktiviert werden."/>
+        <text name="Revamp_Help_P3_Text_3" text="Im Lager werden nun neben dem aktuellen Bestand, auch die maximalen Lagermengen mit den eingestellten Einheiten angezeigt."/>
+      <!-- Page 04 - Priorities, Buy Function -->
+        <text name="Revamp_Help_P4_Title" text="Prioritäten, Zukauf"/>
+        <text name="Revamp_Help_P4_Text_1" text="Revamp führt für eingehende Güter ein Prioritäten-System ein. Produktionen, die auf Verteilen stehen, verteilen die ausgehenden Güter nach der eingestellten Priorität an Empfängerproduktionen. Dabei gilt:
+
+1 - am wichtigsten, Zuerst
+10 - am unwichtigsten, Zuletzt
+deaktiviert - Nimmt keine Güter an
+
+Innerhalb einer Priorität werden die Güter wie bisher verteilt. Dabei werden alle Produktionen abhängig von ihrem freien Lagerplatz beliefert.
+Produktionen müssen aktiviert sein, damit sie mit Güter beliefert werden.
+Das Verteilsystem kann im Einstellungsmenü deaktiviert werden."/>
+        <text name="Revamp_Help_P4_Text_2" text="Über das Produktions-Menü können Inputs für Produktionen gekauft werden. Die Auswahl erfolgt in 4 Stufen:
+1.000 Einheiten, 10.000 Einheiten, 100.000 Einheiten und maximale Menge.
+Der Preis entspricht beim Zukauf über das Menü dem doppelten Normalpreis. Der Zukauf einzelner Güter kann vom Modder deaktiviert sein.
+Über das Einstellungsmenü kann die Funktion deaktiviert werden."/>
+      <!-- Page 05 - Spawning, Storing and manual Spawn -->
+        <text name="Revamp_Help_P5_Title" text="Ein, Auslagern und Spawnen"/>
+        <text name="Revamp_Help_P5_Text_1" text="Revamp bietet einen neuen Ausgangs-Modus: Einlagern. Wenn Einlagern ausgewählt ist, werden Paletten nicht automatisch von der Produktion ausgelagert, sondern im Lager belassen.
+Zur besseren Unterscheidbarkeit wurde der Modus Behalten in Auslagern umbenannt. Beim Modus Auslagern, lagert die Produktion von alleine Paletten aus."/>
+        <text name="Revamp_Help_P5_Text_2" text="Es ist auch möglich Paletten, Ballen und Holzstämme manuell auszulagern. Dies ist über das Produktionsmenü oder über den Produktionstrigger machbar. Dabei wird die ausgewählte Menge ausgelagert, bis die Spawnarea voll ist."/>
+        <text name="Revamp_Help_P5_Text_3" text="Beim Modus Direkt verkaufen werden die Güter automatisch verkauft. Dabei fällt eine Gebühr in Höhe von 10% an.
+Die Gebührenhöhe kann im Einstellungsmenü angepasst werden.
+
+Beim Modus Verteilen werden Güter zu jeder vollen ingame Stunde an die entsprechende Produktionen geliefert. Dafür fällt eine Gebühr an, die abhängig von der Distanz und der gelieferten Menge berechnet wird.
+Die Höhe der Gebühr kann im Einstellungsmenü angepasst werden."/>
+      <!-- Page 06 - Mix Groups, Boosters -->
+        <text name="Revamp_Help_P6_Title" text="Neue Rezept-Varianten"/>
+        <text name="Revamp_Help_P6_Text_1" text="Revamp ermöglicht es, Rezepte mit gemischten Inputs zu erstellen. Jede Zeile stellt dabei eine Gruppe dar. Innerhalb einer Mix-Gruppe muss nur ein Input vorhanden sein, damit das Rezept ausgeführt werden kann. Diese Mix-Gruppen sind am Trennzeichen II zu erkennen."/>
+        <text name="Revamp_Help_P6_Text_2" text="Durch Booster können Produktionen mehr Output herstellen. Diese Booster sind optionale Inputs und somit nicht erforderlich, um das Rezept herstellen zu können. Sind Booster vorhanden, produziert die Produktion entsprechend mehr Output, z.B. weitere 20%. Booster sind additiv, daher werden 2 Booster mit 20% und 30% addiert zu 50% Boost."/>
+        <text name="Revamp_Help_P6_Text_3" text="Durch Master-Booster kann die Produktionsgeschwindigkeit erhöht werden. Diese Master-Booster sind, wie Booster, optionale Inputs und nicht erforderlich, um das Rezept herstellen zu können. Sind Master-Booster vorhanden, produziert die Produktion entsprechend schneller, z.B. um 20%. Master-Booster sind additiv, daher werden 2 Master-Booster mit 50% und 40% addiert zu 90% Master-Boost."/>
+      <!-- Page 07 - New Production Modes -->
+        <text name="Revamp_Help_P7_Title" text="Neue Produktions-Varianten"/>
+        <text name="Revamp_Help_P7_Text_1" text="Mit Revamp gibt es viele neue Produktions-Varianten:
+
+Saisonal - Saisonale Produktionen produzieren nur zu bestimmten Jahreszeiten, außerhalb der Saison finden keine Produktion statt.
+
+Sonnenabhängig - Sonnenabhängige Produktionen produzieren abhängig vom aktuellen Sonnenstand. Je größer die Sonneneinstrahlung, desto größer die Produktionsrate. Bei Nacht ruht die Produktion. Wolken, Nebel und Regen haben Einfluss auf die Produktion.
+
+Windabhängig - Windabhängige Produktionen produzieren abhängig von der aktuellen Windgeschwindigkeit. Umso mehr Wind herrscht, umso größer ist die Produktionsrate.
+
+Regenabhängig - Regenabhängige Produktionen arbeiten nur, wenn es Regnet. Ohne Regen sind die Produktionen inaktiv.
+
+Temperaturabhängig - Temperaturabhängige Produktionen arbeiten je nach Temperatur schneller oder langsamer.
+
+Öffnungszeiten - Produktionen mit Öffnungszeiten arbeiten nur im angegebenen Zeitraum. Außerhalb dieser Zeit, geben sie keine Paletten aus."/>
+        <text name="Revamp_Help_P7_Text_2" text="Produktionen können nun auch Güter besitzen, deren Lagermengen sich verändern können. Diese Filltypes sind durch ein Symbol und einen Pfeil gekennzeichnet.
+
+Pfeile:
+Der grüne Pfeil zeigt an, das ein Füllstand steigen kann.
+Der rote Pfeil zeigt an, das ein Füllstand sinken kann.
+
+Mögliche Einflüsse:
+
+Sonne - Abhängig vom Sonnenstand, Wolken, Regen und Nebel.
+
+Regen - Abhängig vom Niederschlag kann sich ein Füllstand verändern.
+
+Wind - Abhängig von der Windgeschwindigkeit kann sich ein Füllstand verändern.
+
+Temperatur - Abhängig von der Temperatur kann sich ein Füllstand verändern."/>
+      <!-- Page 08 - Hidden Productions, Sellpoints -->
+        <text name="Revamp_Help_P8_Title" text="Versteckte Produktionen, Sellpoints"/>
+        <text name="Revamp_Help_P8_Text_1" text="Revamp erlaubt es, versteckte Produktionen zu erstellen. Diese haben kein Menü mehr, funktionieren aber ansonsten wie normale Produktionen und verarbeiten die Güter entsprechend. Es können trotzdem über den Trigger Paletten ausgelagert werden."/>
+        <text name="Revamp_Help_P8_Text_2" text="Mit Revamp ist es möglich, das Mod-Produktionen ihre FillTypes automatisch in bestehende Maps eintragen können, ohne einen Eingriff in die Map selbst vornehmen zu müssen. Es ist also nicht nötig weitere Verkaufsstellen zu platzieren."/>
+      <!-- Page 09 - Missions -->
+        <text name="Revamp_Help_P9_Title" text="Missionen"/>
+        <text name="Revamp_Help_P9_Text_1" text="Revamp greift in das Missionssystem ein, um einige Problem zu beseitigen. Dazu müssen 2 Fälle unterschieden werden:"/>
+        <text name="Revamp_Help_P9_Text_2" text="Produktion ist noch nicht gekauft
+
+Falls die Produktion nur auf der Karte platziert ist, aber von noch keinem Hof gekauft wurde, fungiert sie als normale Verkaufsstelle. Dort angelieferte Ware wird verkauft, der entsprechende Hof bekommt sein Geld und das interne Lager der Produktion bleibt leer. 
+Hat ein Hof nun die Produktion als Missionsziel wird die angelieferte Menge auf die Mission angerechnet, ein eventueller Überschuss wird am Ende automatisch zum aktuellen Preis verkauft.
+"/>
+        <text name="Revamp_Help_P9_Text_3" text="Produktion ist von einen Hof gekauft
+
+Der Hof kann ganz normal seine Waren in die Produktion einlagern, damit sie dort verarbeitet werden. Sollte der Hof nun einen Auftrag mit Missionsziel für die Produktion haben, werden die angelieferten Waren erst auf die Mission angerechnet, ein eventueller Überschuss wandert ins interne Lager.
+
+Zusätzlich im MP:
+Sollte ein anderer Hof die Produktion gekauft haben, verhält sich die Produktion wie eine normale Verkaufsstelle.
+Die Besonderheit liegt beim Lohnunternehmerstatus. Hat Hof 2 einen Lohnunternehmerstatus bei Hof 1, wird er vom Spiel wie Hof 1 gewertet, d.h. abgelieferte Waren werden in das Produktionslager eingeliefert und zählen nicht für die Mission.
+
+Der Missionsfix kann im Einstellungsmenü deaktiviert werden."/>
+      <!-- Page 10 - Annotations, Other -->
+        <text name="Revamp_Help_P10_Title" text="Anmerkungen"/>
+        <text name="Revamp_Help_P10_Text_1" text="Die Ingame Hilfe ist nur ein Auszug von dem, was alles in Revamp steckt und ist stark vereinfacht sowie komprimiert. Eine EinbauHilfe kann in der ausführlichen Dokumentation gefunden werden."/>
+        <text name="Revamp_Help_P10_Text_2" text="Diese Hilfe befindet sich auf Stand Revamp 1.3."/>
+    </texts>
+</l10n>

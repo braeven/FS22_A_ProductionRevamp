@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<helpLines>
+  <category title="$l10n_Revamp_Help_Header">
+    <page title="$l10n_Revamp_Help_P1_Title"> <!-- general -->
+      <paragraph>
+        <image filename="images/helpline/Revamp_Helpline_01_en.dds" uvs="0px 0px 1024px 256px" aspectRatio="0.2"/>
+      </paragraph>
+      <paragraph>
+        <text text="$l10n_Revamp_Help_P1_Text" />
+      </paragraph>
+    </page>
+    <page title="$l10n_Revamp_Help_P2_Title"> <!-- Reworked Production Menue -->
+      <paragraph>
+        <text text="$l10n_Revamp_Help_P2_Text_1" />
+      </paragraph>
+      <paragraph>
+          <text text="$l10n_Revamp_Help_P2_Text_2" />
+          <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="25px 25px 277px 200px" />
+      </paragraph>
+      <paragraph>
+          <text text="$l10n_Revamp_Help_P2_Text_3" />
+          <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="629px 25px 277px 200px" />
+      </paragraph>
+      <paragraph>
+          <text text="$l10n_Revamp_Help_P2_Text_4" />
+          <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="327px 25px 277px 200px" />
+      </paragraph>
+			<paragraph>
+        <text text="$l10n_Revamp_Help_P2_Text_5" />
+        <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="25px 247px 277px 200px" />
+      </paragraph>
+    </page>
+    <page title="$l10n_Revamp_Help_P3_Title"> <!-- Reworked Recipe View -->
+      <paragraph>
+        <image filename="images/helpline/Revamp_Helpline_01_en.png" uvs="0px 256px 1024px 394px" aspectRatio="0.2"/>
+      </paragraph>
+      <paragraph>
+        <text text="$l10n_Revamp_Help_P3_Text_1" />
+      </paragraph>
+      <paragraph>
+        <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="327px 248px 277px 200px"/>
+        <text text="$l10n_Revamp_Help_P3_Text_2" />
+      </paragraph>
+      <paragraph>
+        <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="327px 473px 277px 200px"/>
+        <text text="$l10n_Revamp_Help_P3_Text_3" />
+      </paragraph>
+    </page>
+    <page title="$l10n_Revamp_Help_P4_Title"> <!-- Priorities, Buy Function -->
+      <paragraph>
+        <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="25px 473px 277px 200px"/>
+        <text text="$l10n_Revamp_Help_P4_Text_1" />
+      </paragraph>
+      <paragraph>
+        <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="629px 473px 277px 200px"/>
+        <text text="$l10n_Revamp_Help_P4_Text_2" />
+      </paragraph>
+    </page>
+    <page title="$l10n_Revamp_Help_P5_Title"> <!-- Spawning, Storing and manual Spawn -->
+      <paragraph>
+        <text text="$l10n_Revamp_Help_P5_Text_1" />
+        <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="629px 248px 277px 200px"/>
+      </paragraph>
+      <paragraph>
+        <text text="$l10n_Revamp_Help_P5_Text_2" />
+        <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="629px 473px 277px 200px"/>
+      </paragraph>
+      <paragraph>
+        <text text="$l10n_Revamp_Help_P5_Text_3" />
+      </paragraph>
+    </page>
+    <page title="$l10n_Revamp_Help_P6_Title"> <!-- Mix Groups, Boosters -->
+			<paragraph>
+        <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="327px 248px 277px 200px"/>
+        <text text="$l10n_Revamp_Help_P6_Text_1" />
+      </paragraph>
+			<paragraph>
+        <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="25px 697px 277px 200px"/>
+        <text text="$l10n_Revamp_Help_P6_Text_2" />
+      </paragraph>
+			<paragraph>
+        <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="327px 697px 277px 200px"/>
+        <text text="$l10n_Revamp_Help_P6_Text_3" />
+      </paragraph>
+    </page>
+    <page title="$l10n_Revamp_Help_P7_Title"> <!-- New Production Modes -->
+      <paragraph>
+        <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="629px 697px 277px 200px"/>
+        <text text="$l10n_Revamp_Help_P7_Text_1" />
+      </paragraph>
+      <paragraph>
+        <image filename="images/helpline/Revamp_Helpline_02_en.png" uvs="629px 697px 277px 200px"/>
+        <text text="$l10n_Revamp_Help_P7_Text_2" />
+      </paragraph>
+    </page>
+    <page title="$l10n_Revamp_Help_P8_Title"> <!-- Hidden Productions, Sellpoints -->
+      <paragraph>
+        <text text="$l10n_Revamp_Help_P8_Text_1" />
+      </paragraph>
+      <paragraph>
+        <text text="$l10n_Revamp_Help_P8_Text_2" />
+      </paragraph>
+    </page>
+    <page title="$l10n_Revamp_Help_P9_Title"> <!-- Missions -->
+      <paragraph>
+        <text text="$l10n_Revamp_Help_P9_Text_1" />
+      </paragraph>
+      <paragraph>
+        <text text="$l10n_Revamp_Help_P9_Text_2" />
+      </paragraph>
+      <paragraph>
+        <text text="$l10n_Revamp_Help_P9_Text_3" />
+      </paragraph>
+    </page>
+    <page title="$l10n_Revamp_Help_P10_Title"> <!-- Annotations, Other -->
+      <paragraph>
+        <image filename="images/helpline/Revamp_Helpline_01_en.dds" uvs="0px 0px 1024px 256px" aspectRatio="0.2"/>
+      </paragraph>
+      <paragraph>
+        <text text="$l10n_Revamp_Help_P10_Text_1" />
+      </paragraph>
+      <paragraph>
+        <text text="$l10n_Revamp_Help_P10_Text_2" />
+      </paragraph>
+    </page>
+  </category>
+</helpLines>

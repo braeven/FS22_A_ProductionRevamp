@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+    <translationContributors>Swedish Fika</translationContributors>
+    <texts>
+    <!--Production line texts-->
+        <text name="Revamp_Store"                           text="Lagra" />
+        <text name="Revamp_Spawn"                           text="Generera" />
+        <text name="Revamp_ChangePriority"                  text="Lägre prioritet" />
+        <text name="Revamp_BuyInputButton"                  text="Köp" />
+        <text name="Revamp_DeliveryPriority"                text="Prioritet" />
+        <text name="Revamp_DeliveryPriorityDeactivated"     text="Inaktiverad" />
+        <text name="Revamp_BuyInputText"                    text="Köp %s för %s ?" />
+        <text name="Revamp_BuyInput"                        text="Köp varor" />
+        <text name="Revamp_BuyInputNotEnoughMoney"          text="Not enough money." />
+        <text name="Revamp_ChooseAmountToPutOut"            text="Välj antal att mata ut" />
+        <text name="Revamp_ChooseWhatToPutOut"              text="Välj material" />
+        <text name="Revamp_ExtractPallets"                  text="Extrahera pallar" />
+        <text name="Revamp_PalletSiloItem"                  text="Pallar" />
+        <text name="Revamp_BaleSiloItem"                    text="Balar" />
+        <text name="Revamp_ChooseBaleType"                  text="Välj Baltyp" />
+        <text name="Revamp_WoodLogItem"                     text="Stockar" />
+        <text name="Revamp_SpawnType_bale"                  text="Balar" />
+        <text name="Revamp_SpawnType_pallet"                text="Pallar" />
+        <text name="Revamp_SpawnType_woodLog"               text="Stockar" />
+        <text name="Revamp_ChooseSpawnToPutOut"             text="Välj variant" />
+        <text name="Revamp_storeWoodlogs"                   text="Lagra Stockar" />
+        <text name="Revamp_ViewActiveProductions"           text="Göm Inaktiva" />
+        <text name="Revamp_ViewInActiveProductions"         text="Göm Aktiv" />
+        <text name="Revamp_ViewAllProductions"              text="Visa alla" />
+
+    <!-- Production messages -->
+        <text name="Revamp_StorageEmpty"                    text="Lagret är tomt" />
+        <text name="Revamp_CantBuy"                         text="Typ %s kan inte köpas." />
+        <text name="Revamp_ProductionClosed"                text="%s är sängt. - Öppettider: %s to %s." />
+
+    <!-- Production Variants -->
+        <text name="Revamp_sunProduction"                  text="%s (Berorende av solen)" />
+        <text name="Revamp_rainProduction"                 text="%s (Berorende av regnet)" />
+        <text name="Revamp_windProduction"                 text="%s (Berorende av vinden)" />
+        <text name="Revamp_temperatureProduction"          text="%s (Berorende av plus grader)" />
+        <text name="Revamp_temperaturNegativeProduction"   text="%s (Berorende av minus grader)" />
+        <text name="Revamp_seasonalProduction"             text="%s (Säsong)" />
+        <text name="Revamp_productionHoursDependent"       text="%s (%s till %s)" />
+        <text name="Revamp_monthlyProduction"              text="%s (en gång i månaden)" />
+
+    <!-- Production menu -->
+        <text name="Revamp_OpenProduction"                  text="Öppna produktionsmenyn" />
+        <text name="Revamp_SpawnItem"                       text="Generera föremål" />
+        <text name="finance_ProductionDeliveryCosts"        text="Produktion Leveranskostnader" />
+
+    <!-- game Settings menu -->
+        <text name="Revamp_Settings_Title"                  text="Revamp" />
+        <text name="Revamp_BuyRestriction_Title"            text="Kvalificerad att köpa" />
+        <text name="Revamp_BuyRestriction_Tooltip"          text="Vem kan använda köpfunktionen i produktioner om den inte har inaktiverats av moddern?" />
+        <text name="Revamp_BuyRestriction_Everyone"         text="Alla" />
+        <text name="Revamp_BuyRestriction_FarmManager"      text="Gårdschef" />
+        <text name="Revamp_BuyRestriction_ProductionAgent"  text="Produktionschef" />
+        <text name="Revamp_BuyRestriction_None"             text="Ingen" />
+        <text name="Revamp_PrioSystemActive_Title"          text="Prioritetssystem" />
+        <text name="Revamp_PrioSystemActive_Tooltip"        text="Prioritetssystemet vid distribution kan avaktiveras här." />
+        <text name="Revamp_MissionFixActive_Title"          text="Missionfixet" />
+        <text name="Revamp_MissionFixActive_Tooltip"        text="Missionfixet att när de levererar egna produktioner går de inte in i det egna lagret kan avaktiveras här" />
+        <text name="Revamp_PriceCorrectionActive_Title"     text="Rättelse av inköpspriser" />
+        <text name="Revamp_PriceCorrectionActive_Tooltip"   text="Anpassningen av inköpspriserna till svårighetsgraden kan avaktiveras här." />
+        <text name="Revamp_DistributionCostFactor_Title"    text="Distributionskostnadsfaktor" />
+        <text name="Revamp_DistributionCostFactor_Tooltip"  text="Faktor på standard Giants distributionskostnader. 0 avaktiverar dem." />
+        <text name="Revamp_DirectSellingPriceFactor_Title"   text="Direktförsäljningsprisfaktor" />
+        <text name="Revamp_DirectSellingPriceFactor_Tooltip" text="Ta hänsyn till priset du får för direkt dale i produktioner (Standard 0,9)" />
+
+      <!-- Ingame help menu -->
+        <text name="Revamp_Help_Header" text="Production Revamp"/>
+      <!-- Page 01 - What is Revamp? -->
+        <text name="Revamp_Help_P1_Title" text="Vad är Revamp?"/>
+        <text name="Revamp_Help_P1_Text" text="Production Revamp ser över det interna produktionssystemet, utökar det och lägger till olika funktioner. Revamp själv är den grundläggande skriptmodden och erbjuder redan många av följande alternativ automatiskt. Men vissa måste byggas in i sina moddar en kartor av moddare/mappare för att kunna användas.
+
+Detta är hjälpen i spelet, ytterligare information och installationshjälp finns i dokumentationen."/>
+      <!-- Page 02 - Reworked Production Menue -->
+        <text name="Revamp_Help_P2_Title" text="produktionsmeny"/>
+        <text name="Revamp_Help_P2_Text_1" text="Revamp sorterar produktionskedjorna i alfabetisk ordning enligt de namn som anges. Med filterfunktionen kan endast aktiva produktionslinjer eller inaktiva produktionslinjer visas."/>
+        <text name="Revamp_Help_P2_Text_2" text="Ofiltrerad
+
+Alla produktioner visas."/>
+        <text name="Revamp_Help_P2_Text_3" text="Aktiva produktioner
+
+Endast aktiva produktioner visas, alla andra är dolda."/>
+        <text name="Revamp_Help_P2_Text_4" text="Inaktiva produktioner
+
+Endast inaktiva produktioner visas, alla aktiva produktioner är dolda."/>
+        <text name="Revamp_Help_P2_Text_5" text="Split / Parallell Productions
+Produktioner kan dela sin produktion över produktionslinjerna eller få dem att arbeta parallellt. För att göra detta igenkännbart lägger Revamp till ett Y(andelar) eller II(parallellt) efter produktionsnamnet. Växthusen producerar till exempel tomater, sallad och jordgubbar. Om tomaterna aktiveras ensamma ger det 100 % tomater. Om sallaten är extra aktiverad ger den 50 % tomater och 50 % sallad.
+Ett bageri, å andra sidan, kan producera bröd och kakor på full kapacitet samtidigt."/>
+      <!-- Page 03 - Reworked Recipe View -->
+        <text name="Revamp_Help_P3_Title" text="Receptvisning"/>
+        <text name="Revamp_Help_P3_Text_1" text="Recept som består av fler än 4 ingångar förses automatiskt med radbrytning. Vid användning av boosters sker detta redan efter 2 ingångar. Detta sker automatiskt för alla recept."/>
+        <text name="Revamp_Help_P3_Text_2" text="Revamp ger recepten en färgrepresentation, beroende på om indata är tillgängliga eller inte. Färgerna betyder:
+Vit - ingång finns.
+Röd - Ingång finns inte och krävs.
+Orange - Ingång finns inte men är valfri/utbytbar.
+
+För att displayen ska uppdateras måste produktionen aktiveras kort."/>
+        <text name="Revamp_Help_P3_Text_3" text="I lagret visas nu de maximala lagerkvantiteterna utöver det aktuella lagret. De inställda enheterna visas också."/>
+      <!-- Page 04 - Priorities, Buy Function -->
+        <text name="Revamp_Help_P4_Title" text="Prioriteringar, förvärv"/>
+        <text name="Revamp_Help_P4_Text_1" text="Revamp introducerar ett prioriteringssystem för inkommande varor. Produktioner som är inställda på att distribueras distribueras nu till andra produktioner enligt den prioriterade prioriteringen. Följande gäller:
+
+1 - viktigast, först
+10 - minst viktigt, sist
+Inaktiverad - tar inte emot varor
+
+Inom en prioritet distribueras varorna som tidigare, så alla produktioner tillförs beroende på deras lediga lagerutrymme.
+Produktioner måste aktiveras för att ta emot varor.
+Distributionssystemet kan avaktiveras i inställningsmenyn."/>
+        <text name="Revamp_Help_P4_Text_2" text="Insatser till produktioner kan köpas via produktionsmenyn. Urvalet görs i 4 steg:
+1 000 enheter, 10 000 enheter, 100 000 enheter och maximal kvantitet.
+Priset här är x2. Enskilda varor kan också uteslutas från köp.
+Funktionen kan avaktiveras via inställningsmenyn."/>
+      <!-- Page 05 - Spawning, Storing and manual Spawn -->
+        <text name="Revamp_Help_P5_Title" text="In, outsourcing och spawning"/>
+        <text name="Revamp_Help_P5_Text_1" text="Revamp erbjuder ett nytt utdataläge: embed. Om lagringen är påslagen kommer inga pallar automatiskt att leka vid produktionen.
+För att göra det lättare att särskilja har Keep-läget bytt namn till Outsourca. I hämtningsläget flyttar produktionen pallar på egen hand."/>
+        <text name="Revamp_Help_P5_Text_2" text="Det går även att hämta ut pallar, balar och stockar manuellt. Detta är möjligt via produktionsmenyn eller via produktionsutlösaren. Den önskade mängden byts ut tills lekområdet är fullt."/>
+        <text name="Revamp_Help_P5_Text_3" text="I direktförsäljningsläget säljs varorna automatiskt minus en avgift på 10 %.
+Avgiftsbeloppet kan ställas in i inställningsmenyn.
+
+I distributionsläget levereras varor till motsvarande produktioner varje timme på timmen. Det tillkommer en avgift för detta beroende på avstånd och levererad kvantitet.
+Avgiftsbeloppet kan ställas in i inställningsmenyn."/>
+      <!-- Page 06 - Mix Groups, Boosters -->
+        <text name="Revamp_Help_P6_Title" text="Nya receptvarianter"/>
+        <text name="Revamp_Help_P6_Text_1" text="Revamp gör det möjligt att skapa recept med blandade input. Varje rad representerar en grupp. Endast en input behöver finnas inom en grupp för att receptet ska kunna utföras. Blandningsgrupper kan kännas igen av separatorn II."/>
+        <text name="Revamp_Help_P6_Text_2" text="Booster tillåter produktioner att producera mer produktion. Boosters är valfria ingångar och krävs inte för att skapa receptet. Om det finns boosters ger produktionen motsvarande mer produktion, t ex ytterligare 20 %. Boosters är additiv, så 2 boosters på 20 % och 30 % ger upp till 50 % booster."/>
+        <text name="Revamp_Help_P6_Text_3" text="Master Boosters kan öka hastigheten på en produktion. Master Boosters är valfria ingångar och krävs inte för att skapa receptet. Om masterbooster finns kommer produktionen att producera motsvarande snabbare, t ex med 20 %. Master Boosters är additiv, så 2 Master Boosters på 50 % och 40 % ger upp till 90 % Master Boost."/>
+      <!-- Page 07 - New Production Modes -->
+        <text name="Revamp_Help_P7_Title" text="Nya produktionsvarianter"/>
+        <text name="Revamp_Help_P7_Text_1" text="Med Revamp finns det många nya produktionsvarianter:
+
+Säsongsbetonad - Säsongsproduktion producerar bara vissa tider på året, det finns ingen produktion under lågsäsong.
+
+Solberoende - Solberoende produktioner producerar beroende på solens nuvarande position. Ju större solstrålning, desto högre produktionshastighet. Produktionen stannar på natten. Moln, dimma och regn påverkar produktionen.
+
+Vindberoende - Vindberoende produktioner producerar beroende på aktuell vindhastighet. Ju mer vind det är, desto högre produktionstakt.
+
+Regnberoende - Regnberoende produktioner fungerar bara när det regnar. Utan regn är dessa produktioner inaktiva.
+
+Temperaturberoende - Temperaturberoende produktioner fungerar snabbare eller långsammare beroende på temperaturen.
+
+Öppettider - Produktioner med öppettider fungerar endast under angiven period. Utanför denna tid delar de inte ut pallar."/>
+        <text name="Revamp_Help_P7_Text_2" text="Produktionerna kan nu även äga varor vars lagermängder kan ändras. Dessa fyllningstyper identifieras med en symbol på fyllnadsnivån och en pil.
+
+pilar:
+Den gröna pilen indikerar att en nivå kan stiga.
+Den röda pilen indikerar att en nivå kan sjunka.
+
+Möjliga influenser:
+
+Sol - Beroende på solens läge, moln, regn och dimma.
+
+Regn - Beroende på nederbörden kan en nivå ändras.
+
+Vind - Beroende på vindhastigheten kan en nivå ändras.
+
+Temperatur - Beroende på temperaturen kan en nivå ändras."/>
+      <!-- Page 08 - Hidden Productions, Sellpoints -->
+        <text name="Revamp_Help_P8_Title" text="Dolda produktioner, säljpunkter"/>
+        <text name="Revamp_Help_P8_Text_1" text="Revamp gör det möjligt att skapa dolda produktioner. Dessa har inte längre någon meny utan fungerar i övrigt som vanliga produktioner och bearbetar varorna därefter. Ändå kan lastpallar bytas ut med avtryckaren."/>
+        <text name="Revamp_Help_P8_Text_2" text="Med Revamp är det möjligt för modproduktioner att automatiskt lägga in sina FillTypes i befintliga kartor utan att störa själva kartan. Det är därför inte nödvändigt att behöva placera ytterligare försäljningsställen."/>
+      <!-- Page 09 - Missions -->
+        <text name="Revamp_Help_P9_Title" text="Missionen"/>
+        <text name="Revamp_Help_P9_Text_1" text="Revamp ingriper i uppdragssystemet för att fixa några problem. Två fall måste särskiljas för detta:"/>
+        <text name="Revamp_Help_P9_Text_2" text="Produktionen är ännu inte köpt
+
+Om produktionen bara finns på kartan men ännu inte köpts av någon gård fungerar den som ett normalt försäljningsställe. Varor som levereras dit säljs, motsvarande gård får sina pengar och det interna produktionslagret förblir tomt.
+Om en gård nu har produktion som uppdragsmål så räknas den levererade kvantiteten mot uppdraget, eventuellt överskott säljs automatiskt i slutet till aktuellt pris."/>
+        <text name="Revamp_Help_P9_Text_3" text="Produktionen köps från en gård
+        
+Gården kan normalt lagra sina varor i produktionen så att de kan förädlas där. Om gården nu har en beställning med uppdragsmål för produktionen kommer de levererade varorna först att krediteras uppdraget, eventuellt överskott går till internlagret.
+
+Dessutom i MP:
+Om en annan gård har köpt produktionen beter sig produktionen som ett vanligt försäljningsställe.
+Det speciella ligger i entreprenörsstatusen. Om gård 2 har entreprenörsstatus på gård 1, räknas viltet som gård 1, det vill säga levererade varor levereras till produktionslagret och räknas inte för uppdraget.
+
+Uppdragsfixet kan inaktiveras i inställningsmenyn."/>
+      <!-- Page 10 - Annotations, Other -->
+        <text name="Revamp_Help_P10_Title" text="Anmärkningar"/>
+        <text name="Revamp_Help_P10_Text_1" text="Hjälpen i spelet är bara ett utdrag av vad som finns i Revamp. Det är mycket förenklat och förtätat. Installationshjälp finns i den detaljerade dokumentationen."/>
+        <text name="Revamp_Help_P10_Text_2" text="Denna hjälp finns på version Revamp 1.3 och uppåt"/>
+    </texts>
+</l10n>

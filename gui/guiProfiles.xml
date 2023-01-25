@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUIProfiles>
+    <Presets>
+        <Preset name="colorTransparent" value="0 0 0 0"/>
+    </Presets>
+    <Profile name="quickAmountDialogBg" extends="dialogBg">
+        <Value name="size" value="750px 230px"/>
+    </Profile>
+    <Profile name="quickAmountDialogOptionBox" extends="baseReference" with="anchorTopRight">
+        <Value name="imageColor" value="$preset_colorTransparent" />
+        <Value name="size" value="372px 144px" />
+        <Value name="position" value="-20px -50px" />
+    </Profile>
+    <Profile name="quickAmountDialogAmountConsole" extends="textDefault" with="anchorMiddleCenter">
+        <Value name="textSize" value="22px" />
+        <Value name="textAlignment" value="center" />
+        <Value name="textAutoWidth" value="true" />
+    </Profile>
+</GUIProfiles>

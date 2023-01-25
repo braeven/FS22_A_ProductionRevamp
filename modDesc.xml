@@ -1,0 +1,724 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="72">
+  <author>Braeven</author>
+  <contributors>Achimobil, TethysSaturn, DickerSauerlaender, AlfredProm</contributors>
+  <version>1.3.5.7</version>
+  <title>
+    <en>Production Revamp</en>
+  </title>
+
+  <description>
+    <en>
+<![CDATA[Production Revamp-Script
+Revamp reworks the internal production system, expands it and adds various functions. Revamp itself is the basic script mod, but also independently extends productions with additional comfort functions.
+
+A selection of features:
+
+Automatically available for all productions:
+* Automatic line break in recipe display for input and output page (4 ingredients per line).
+* A colored display of the recipes makes it easier to see why a production is not producing. Where: white - available, red - not available but required, orange - not available and not required.
+* Possibility to buy goods in the production menu for a production for double the market price.
+* Priority system: Incoming goods can now be set to different priorities via the production menu and will be distributed based on these priorities. The following applies: Priority 1 is most important and will get the goods first until the warehouse is full. Priority 2 only afterwards, etc. Inputs can also be deactivated, in which case they will not receive any deliveries.
+* Only active production lines can be supplied via the distribute mode.
+* New output mode available: Sell Directly, Distribute, Outsource (Previously Keep) and Swap In (New). If a production is set to storage, it does not automatically spawn pallets.
+* Added manual pallet, bale and wood spawner - All productions with pallet spawner can also manually spawn pallets and bales - via the menu or a trigger.
+* Production delivery costs are now reported separately (previously part of production costs).
+* Productions that are mission objectives can accept unlimited goods from missions until the mission is completed. Mission goods no longer end up in the production itself during missions.
+* Display of the maximum storage quantities and the corresponding units.
+* Sort productions alphabetically and filter by active/inactive.
+* In the case of productions, it is displayed whether they are running in parallel (II) or distributed (Y).
+* Own settings menu.
+
+Must be actively installed in productions:
+Recipes:
+* Recipes can be created with several equal ingredients in groups (maximum 5).
+* Multiple production lines that previously had to be created separately can be combined into one production line.
+* Ability to add one or more optional boosters that increase Outgoing Production.
+* Boosters can be disabled or reversed for individual goods.
+* Display of the real current production depending on the booster. The current booster value is shown in orange brackets after the amount.
+* Ability to create recipes via FillTypeCategories.
+* Possibility of weather dependent productions.
+* Possibility of weather-dependent filling levels.
+
+Depiction:
+* Possibility to install displays on productions that can show the current level in the warehouse. Also possible with pure bearings.
+* Possibility to display objects depending on the fill level, e.g. pallets in a production warehouse. Also possible with pure bearings.
+* Warehouses can also be provided with a spawn script that can be used to spawn bales and pallets.
+
+Other features:
+* New FillTypes can be entered via Revamp at existing sales points without actively changing the existing sales points. A separate point of sale is no longer required.
+* Hidden productions with autostart function.
+* Various setting options for the above functions.
+* All fully multiplayer capable.
+* Own ingame help that explains the most important features of the mod.
+* AND AND AND
+
+A full list of options, installation help and support is available from the <a href="https://docs.google.com/document/d/1UgEIonDfseTsUM9s5KP735ZK_--5qmbqqPGylXDzJ6o">Documentation:</a>
+ 
+This is just the script, the script alone does not change any production recipes! These must be created separately.
+
+
+Changelog:
+(Full changelog can be found in the documentation)
+
+Version 1.3
+* Translations outsourced to separate files and new translations: Swedish and Russian.
+* Silo/Production spawn can now choose to spawn as bales, pallets or logs depending on what is available on the map. The selection is only displayed if there are several options.
+* "Store wood" is now displayed for a silo/production instead of "Sell wood".
+* Added game settings
+* Correction of the purchase prices based on the economy settings (can be deactivated in the settings)
+* The selling price factor for direct sales from productions can be set
+* Changed bales from mods can now also be spawned
+* Bales are now displayed sorted by size when swapping out
+* Added conditional outputs
+* Production dependent on temperature, wind, sun, rain, season and opening hours
+* Enables fill levels depending on temperature, sun, rain and wind
+* Made color of silage bales selectable
+* Made production lines that are inactive/active hideable
+* Added ingame help
+
+Version 1.3.0.1
+* Fixed the Broken Limit Breaker
+* fix time scale bug in fill levels depending on temperature, sun, rain and wind
+
+Version 1.3.0.2
+* Fixed object fill level with one object
+* Optimized distribution calculation
+* Fixed bug with the new production modes
+
+Version 1.3.1.0
+* Swap dialogues now with 1/10 steps
+* When swapping out seedlings, all tree species available in the standard seedling palette can be selected.
+* Fix for interaction with Pumps N' Hoses DLC
+
+Version 1.3.1.2
+* Fix for interaction with Pumps N' Hoses DLC (Dedi)
+* Fix for Seasonal Productions
+
+Version 1.3.1.3
+* Fix for Priorities and Pumps N' Hoses DLC
+
+Version 1.3.1.4
+* Fix with new productions and Pumps N' Hoses DLC+
+
+Version 1.3.2.0
+* Add PL translations
+* Filltype dependent store items added
+
+Version 1.3.5.0
+* Bugfix autostart and weather dependent productions/filltypes
+* preselected priorities
+* buyfactor can be changed
+* production mode monthly
+* modes for mix-groups
+* displays can change color depending from filllevel
+* production modes can be used together
+* silage bales from m+ are now spawned with foil
+
+Version 1.3.5.1
+* fix for patch 1.8.1
+
+Version 1.3.5.2
+* Using filltypes for spawnplaces fixed
+
+Version 1.3.5.3
+* Production modes individually adjustable for production lines
+
+Version 1.3.5.4
+* Removed RevaSP
+
+Version 1.3.5.5
+* Compatibility with Silverrun Forest/Platinum Shipyard and Coaster
+
+Version 1.3.5.6
+* Fixed a bug with production line modes
+* Fixed usage of wood trigger with no activation trigger
+* Fixed a bug with production lines using same filltype multiple times
+
+Version 1.3.5.7
+* rename mod icon to match new guidlines
+* replace Ampersand sign in XML texts for better display
+]]>
+    </en>
+    <de>
+<![CDATA[Production Revamp - Script
+Revamp überarbeitet das Interne Produktionssystem, baut dieses aus und fügt diverse Funktionen hinzu. Revamp selbst ist der Grundlegende Script-Mod, erweitert Produktionen aber auch unabhängig um zusätzliche Komfort-Funktionen.
+
+Eine Auswahl an Features:
+
+Bei allen Produktionen automatisch verfügbar:
+* Automatischer Zeilenumbruch in der Rezeptanzeige für Eingangs- und Ausgangsseite (4 Zutaten pro Zeile).
+* Durch eine farbige Anzeige der Rezepte ist schneller zu erkennen, warum eine Produktion nicht produziert. Dabei gilt: weiß - verfügbar, rot - nicht verfügbar, aber erforderlich, orange - nicht verfügbar und nicht erforderlich.
+* Möglichkeit, Güter im Produktionsmenü für eine Produktion zu kaufen für den doppelten Marktpreis.
+* Prioritätensystem: Eingehende Güter können jetzt über das Produktionsmenü auf verschiedene Prioritäten eingestellt werden und werden auf Grundlage dieser Prioritäten verteilt. Das Folgende gilt: Priorität 1 ist am Wichtigsten und erhält die Güter an erster Stelle, bis das Lager voll ist. Priorität 2 erst danach, usw. Eingänge können auch deaktiviert werden, sie erhalten dann keine Lieferungen.
+* Nur aktive Produktionslinien können beliefert werden über den Verteilen-Modus.
+* Neuen Ausgangsmodus verfügbar: Direkt Verkaufen, Verteilen, Auslagern (zuvor Behalten) und Einlagern (neu). Steht eine Produktion auf Einlagern spawnt sie keine Paletten automatisch.
+* Manuellen Paletten-, Ballen- und Holzspawner hinzugefügt - Alle Produktionen mit Palettenspawner können auch manuell Paletten und Ballen spawnen - über das Menü oder einen Trigger.
+* Produktions-Lieferkosten werden jetzt getrennt ausgewiesen(vorher Teil der Produktionskosten).
+* Produktionen, die Missionsziele sind, können bei Missionen unbegrenzt Güter annehmen bis die Mission abgeschlossen ist. Missionsgüter landen bei Missionen nicht mehr in der Produktion selber.
+* Anzeige der maximalen Lagermengen und der entsprechenden Einheiten.
+* Alphabetische Sortierung der Produktionen und Filtern nach Aktiv/Inaktiv.
+* Bei Produktionen wird angezeigt ob sie Parallel( II ) oder Verteilt laufen (Y).
+* Eigenes Einstellungsmenü.
+
+Muss bei Produktionen aktiv eingebaut werden:
+Rezepte:
+* Rezepte können mit mehreren gleichwertigen Zutaten in Gruppen erstellt werden (maximal 5).
+* Mehrere Produktionslinien können zu einer Produktionslinie kombiniert werden, die zuvor getrennt erstellt werden mussten.
+* Möglichkeit, einen oder mehrere optionale Booster hinzuzufügen, die die Ausgehende Produktion erhöhen.
+* Booster können für einzelne Güter deaktiviert oder auch umgekehrt werden.
+* Anzeige der realen aktuellen Produktion abhängig vom Booster. Der aktuelle Booster-Wert wird in orangefarbenen Klammern hinter der Menge angezeigt.
+* Möglichkeit Rezepte über FillTypeCategories zu erstellen.
+* Möglichkeit Wetterabhängiger Produktionen.
+* Möglichkeit Wetterabhängiger Füllstände.
+
+Darstellung:
+* Möglichkeit Displays an Produktionen einzubauen, die den aktuellen Füllstand im Lager anzeigen können. Auch Möglich bei reinen Lagern.
+* Möglichkeit Objekte abhängig vom Füllstand anzeigen zu können, z.B. Paletten in einen Produktionslager. Auch Möglich bei reinen Lagern.
+* Lager können zudem mit einem Spawn-Script versehen werden, über das Ballen und Paletten gespawnt werden können.
+
+Weitere Feature:
+* Neue FillTypes können über Revamp bei bereits bestehenden Verkaufsstellen eingetragen werden, ohne aktive Änderung der vorhandenen Verkaufsstellen. Es ist keine gesonderte Verkaufsstelle mehr erforderlich.
+* Versteckte Produktionen mit Autostart-Funktion.
+* Diverse Einstellmöglichkeiten für oben genannte Funktionen.
+* Alles vollkommen Multiplayer-tauglich.
+* Eigene Ingame-Hilfe die die wichtigsten Features des Mods erklärt.
+* UND UND UND
+
+Eine vollstände Liste der Möglichkeiten, Einbauhilfe und Support gibt es über die <a href="https://docs.google.com/document/d/1nKWIoe2zAPUGquR6uO4uQAix8gkmKjuFV58kL9i0x28">Dokumentation:</a>
+ 
+Dies ist nur das Skript, das Skript allein ändert keine Produktions-Rezepte! Diese müssen getrennt erstellt werden.
+
+
+Changelog:
+(Vollstände Changelog ist in der Dokumentation zu finden)
+
+Version 1.3
+* Übersetzungen in eigene Dateien ausgelagert und neue Übersetzungen: Schwedisch und Russisch.
+* Silo/Produktion Spawn kann jetzt auswählen ob als Ballen, Paletten oder Holzstämme gespawned werden, je nach dem was verfügbar ist. Nur wenn mehrere Möglichkeiten bestehen wird die Auswahl angezeigt.
+* Bei einem Silo/Produktion wird jetzt "Holz einlagern" statt "Holz verkaufen" angezeigt.
+* Spieleinstellungen hinzugefügt.
+* Korrektur der Einkaufspreise anhand der Wirtschaftseinstellungen (Deaktivierbar in den Einstellungen).
+* Faktor für den Verkaufspreis beim Direktverkauf aus Produktionen einstellbar.
+* Veränderte Ballen aus Mods können jetzt auch gespawned werden.
+* Ballen werden nun nach größe sortiert beim Auslagern angezeigt.
+* Conditionale Outputs hinzugefügt.
+* Produktion abhängig von Temperatur, Wind, Sonne, Regen, Saison und Öffnungszeiten ermöglicht.
+* Füllstände abhängig von Temperatur, Sonne, Regen und Wind ermöglicht.
+* Farbe von Silageballen festlegbar gemacht.
+* Produktionslinien die Inaktiv/Aktiv sind ausblendbar gemacht.
+* Ingame Hilfe hinzugefügt.
+
+Version 1.3.0.1
+* Limit Breaker repariert
+* Behebung eines Zeitskalenfehlers bei Füllständen in Abhängigkeit von Temperatur, Sonne, Regen und Wind
+
+Version 1.3.0.2
+* Object fill level mit einem Object gefixed
+* Optimierte Verteilungsberechnung
+* Bugs mit den neuen Produktions-Modi behoben
+
+Version 1.3.1.0
+* Auslagern Dialoge jetzt mit 1/10 Schritten
+* Beim Auslagern von Setzlingen können alle in der Standard Setzlingspalette verfügbaren Baumarten ausgewählt werden
+* Fix für zusammenspiel mit Pumps N' Hoses DLC
+
+Version 1.3.1.2
+* Fix für zusammenspiel mit Pumps N' Hoses DLC (Dedi)
+* Fix für Seasonal Productions.
+
+Version 1.3.1.3
+* Fix mit Priorities und Pumps N' Hoses DLC
+
+Version 1.3.1.4
+* Fix mit neuen Produktionen und Pumps N' Hoses DLC
+
+Version 1.3.2.0
+* PL-Übersetzungen hinzufügen
+* Filltype-abhängige store items hinzugefügt
+
+Version 1.3.5.0
+* Bugfix Autostart und Wetterabhängige Produktionen/FillTypes
+* Voreinstellbare Priorität
+* Einstellbarer Kauffaktor
+* Produktionsmodus Monatlich
+* MixGruppen-Modi
+* Displays können nun Füllstandabhängige Farben haben
+* Produktions-Modi können kombiniert werden
+* Silageballen von M+ werden mit Folie gespawnt von Lagern/Produktionen
+
+Version 1.3.5.1
+* fix für patch 1.8.1
+
+Version 1.3.5.2
+* Verwendung von Fülltypen für Spawnplaces behoben
+
+Version 1.3.5.3
+* Produktions-Modi einzelnd einstellbar für Produktionslinien
+
+Version 1.3.5.4
+* RevaSP entfernt
+
+Version 1.3.5.5
+* Kompabilität zu Silverrun Forest/Platinum Schiffswerft und Achterbahn
+
+Version 1.3.5.6
+* Bug gefixt mit Produktionslinien
+* Behobene Verwendung des Holzauslösers ohne Aktivierungsauslöser
+* Bugfix bei Produktionslinien, die denselben Filltype mehrmals verwenden
+
+Version 1.3.5.7
+* Mod-Icon umbenannt, um den neuen Richtlinien zu entsprechen
+* Ampersand-Zeichen in XML-Texten zur besseren Darstellung ersetzen
+]]>
+    </de>
+    <es>
+    <![CDATA[Production Revamp-Script
+Revamp reelabora el sistema de producción interno, lo expande y agrega varias funciones. Revamp en sí mismo es el mod de guión básico, pero también amplía de forma independiente las producciones con funciones de comodidad adicionales.
+
+Una selección de características:
+
+Disponible automáticamente para todas las producciones:
+* Salto de línea automático en la pantalla de recetas para la página de entrada y salida (4 ingredientes por línea).
+* Una pantalla a color de las recetas hace que sea más fácil ver por qué una producción no está produciendo. Donde: blanco - disponible, rojo - no disponible pero requerido, naranja - no disponible y no requerido.
+* Posibilidad de comprar bienes en el menú de producción para una producción por el doble del precio de mercado.
+* Sistema de prioridad: los bienes entrantes ahora se pueden establecer en diferentes prioridades a través del menú de producción y se distribuirán en función de estas prioridades. Se aplica lo siguiente: la prioridad 1 es la más importante y obtendrá los productos primero hasta que el almacén esté lleno. Prioridad 2 solo después, etc. Las entradas también se pueden desactivar, en cuyo caso no recibirán ninguna entrega.
+* Solo las líneas de producción activas se pueden suministrar a través del modo de distribución.
+* Nuevo modo de salida disponible: Vender directamente, Distribuir, Subcontratar (Anteriormente Mantener) e Intercambiar (Nuevo). Si una producción está configurada para almacenamiento, no genera palets automáticamente.
+* Agregado generador manual de palets, fardos y madera: todas las producciones con generador de palets también pueden generar manualmente palets y fardos, a través del menú o un disparador.
+* Los costos de entrega de producción ahora se informan por separado (antes formaban parte de los costos de producción).
+* Las producciones que son objetivos de la misión pueden aceptar bienes ilimitados de las misiones hasta que se complete la misión. Los bienes de la misión ya no terminan en la producción misma durante las misiones.
+* Visualización de las cantidades máximas de almacenamiento y las unidades correspondientes.
+* Ordena las producciones alfabéticamente y filtra por activo/inactivo.
+* En el caso de producciones, se muestra si se ejecutan en paralelo (II) o distribuidas (Y).
+* Menú de configuración propio.
+
+Debe estar instalado activamente en producciones:
+Recetas:
+* Se pueden crear recetas con varios ingredientes iguales en grupos (máximo 5).
+* Varias líneas de producción que antes tenían que crearse por separado se pueden combinar en una sola línea de producción.
+* Posibilidad de agregar uno o más refuerzos opcionales que aumentan la producción saliente.
+* Los impulsores se pueden desactivar o revertir para productos individuales.
+* Visualización de la producción actual real en función del booster. El valor de refuerzo actual se muestra entre corchetes naranjas después de la cantidad.
+* Capacidad para crear recetas a través de FillTypeCategories.
+* Posibilidad de producciones dependientes del clima.
+* Posibilidad de niveles de llenado dependientes del clima.
+
+Representación:
+* Posibilidad de instalar pantallas en las producciones que pueden mostrar el nivel actual en el almacén. También es posible con rodamientos puros.
+* Posibilidad de mostrar objetos según el nivel de llenado, por ejemplo, paletas en un almacén de producción. También es posible con rodamientos puros.
+* Los almacenes también se pueden proporcionar con un script de generación que se puede usar para generar pacas y paletas.
+
+Otras características:
+* Se pueden ingresar nuevos tipos de relleno a través de Revamp en los puntos de venta existentes sin cambiar activamente los puntos de venta existentes. Ya no se requiere un punto de venta separado.
+* Producciones ocultas con función de inicio automático.
+* Varias opciones de configuración para las funciones anteriores.
+* Todos totalmente compatibles con multijugador.
+* Ayuda propia dentro del juego que explica las características más importantes del mod.
+
+Se encuentra disponible una lista completa de opciones, ayuda para la instalación y soporte en la <a href="https://docs.google.com/document/d/1UgEIonDfseTsUM9s5KP735ZK_--5qmbqqPGylXDzJ6o">Documentación:</a>
+ 
+Este es solo el guión, ¡el guión por sí solo no cambia ninguna receta de producción! Estos deben crearse por separado.
+
+
+Registro de cambios:
+(El registro de cambios completo se puede encontrar en la documentación)
+
+Versión 1.3
+* Traducciones subcontratadas a archivos separados y nuevas traducciones: Sueco y Ruso.
+* El engendro de Silo/Producción ahora puede elegir engendrar como fardos, paletas o troncos, según lo que esté disponible en el mapa. La selección solo se muestra si hay varias opciones.
+* "Almacenar madera" ahora se muestra para un silo/producción en lugar de "Vender madera".
+* Configuración del juego agregada
+* Corrección de los precios de compra en función de la configuración económica (se puede desactivar en la configuración)
+* Se puede establecer el factor de precio de venta para ventas directas de producciones
+* Ahora también se pueden generar pacas modificadas de mods
+* Las pacas ahora se muestran ordenadas por tamaño cuando se intercambian
+* Salidas condicionales añadidas
+* Producción en función de la temperatura, el viento, el sol, la lluvia, la estación y el horario de apertura
+* Habilita los niveles de llenado en función de la temperatura, el sol, la lluvia y el viento
+* Color hecho de pacas de ensilaje seleccionable
+* Líneas de producción hechas que son ocultables inactivas/activas
+* Se agregó ayuda en el juego
+
+Versión 1.3.0.1
+* Se corrigió el interruptor de límite roto
+* Arreglar el error de escala de tiempo en los niveles de llenado en función de la temperatura, el sol, la lluvia y el viento
+
+Versión 1.3.0.2
+* Se ha corregido el nivel de llenado de los objetos con un objeto.
+* Cálculo optimizado de la distribución
+* Error solucionado con los nuevos modos de producción.
+
+Versión 1.3.1.0
+* Intercambio de diálogos ahora con pasos de 1/10
+* Al intercambiar plántulas, se pueden seleccionar todos los tipos de árboles disponibles en la paleta de plántulas estándar
+* Arreglo de la interacción con el DLC de Pumps N' Hoses
+
+Version 1.3.1.2
+* Arreglo de la interacción con el DLC de Pumps N' Hoses (Dedi)
+* Arreglo para Seasonal Productions
+
+Version 1.3.1.3
+* Arreglar con Prioridades y Pumps N' Hoses DLC
+
+Versión 1.3.1.4
+* Arreglar con nuevas producciones y Pumps N' Hoses DLC
+
+Versión 1.3.2.0
+* Añadir traducciones de PL
+* Se añaden elementos de tienda dependientes del tipo de relleno
+
+Versión 1.3.5.0
+* Corrección de errores de inicio automático y producciones / tipos de relleno dependientes del clima
+* prioridades preseleccionadas
+* factor de compra se puede cambiar
+* modo de producción mensual
+* modos para grupos mixtos
+* las pantallas pueden cambiar de color según el nivel de llenado
+* los modos de producción se pueden usar juntos
+* las pacas de ensilaje de m+ ahora se generan con papel de aluminio
+
+Version 1.3.5.1
+* fix for patch 1.8.1
+
+Versión 1.3.5.2
+* Uso de filltypes para spawnplaces arreglado.
+
+Versión 1.3.5.3
+* Modos de producción ajustables individualmente para líneas de producción
+
+Versión 1.3.5.4
+* Eliminado RevaSP
+
+Versión 1.3.5.5
+* Compatibilidad con Silverrun Forest/Platinum Shipyard y Coaster
+
+Versión 1.3.5.6
+* Se corrigió un error con los modos de línea de producción
+* Se ha corregido el uso del gatillo de madera sin gatillo de activación
+* Se corrigió un error con las líneas de producción que usaban el mismo tipo de relleno varias veces
+
+Versión 1.3.5.7
+* Cambiar el nombre del icono mod para que coincida con las nuevas directrices
+* Reemplazar el signo Ampersand en los textos XML para una mejor visualización.
+]]>
+    </es>
+  <it>
+    <![CDATA[Production Revamp-Script
+Revamp rielabora il sistema produttivo interno, lo amplia e aggiunge diverse funzioni. Revamp stesso è il mod di script di base, ma estende anche autonomamente le produzioni con funzioni di comfort aggiuntive.
+
+Una selezione di caratteristiche:
+
+Automaticamente disponibile per tutte le produzioni:
+* Interruzione di riga automatica nella visualizzazione della ricetta per la pagina di input e output (4 ingredienti per riga).
+* Un display a colori delle ricette rende più facile capire perché una produzione non sta producendo. Dove: bianco - disponibile, rosso - non disponibile ma obbligatorio, arancione - non disponibile e non obbligatorio.
+*Possibilità di acquistare merce nel menù di produzione per una produzione al doppio del prezzo di mercato.
+* Sistema di priorità: le merci in entrata possono ora essere impostate su priorità diverse tramite il menu di produzione e saranno distribuite in base a queste priorità. Si applica quanto segue: la priorità 1 è la più importante e riceverà prima la merce fino a quando il magazzino non sarà pieno. Priorità 2 solo dopo, ecc. Gli ingressi possono anche essere disattivati, nel qual caso non riceveranno consegne.
+* Solo le linee di produzione attive possono essere fornite tramite la modalità di distribuzione.
+* Nuova modalità di output disponibile: vendi direttamente, distribuisci, esternalizza (precedentemente mantieni) e scambia (nuovo). Se una produzione è impostata sullo stoccaggio, non genera automaticamente i pallet.
+* Aggiunto spawner manuale per pallet, balle e legno - Tutte le produzioni con spawner per pallet possono anche generare manualmente pallet e balle - tramite il menu o un trigger.
+* I costi di consegna della produzione sono ora riportati separatamente (in precedenza parte dei costi di produzione).
+* Le produzioni che sono obiettivi della missione possono accettare beni illimitati dalle missioni fino al completamento della missione. I beni delle missioni non finiscono più nella produzione stessa durante le missioni.
+* Visualizzazione delle quantità massime di stoccaggio e delle unità corrispondenti.
+* Ordina le produzioni in ordine alfabetico e filtra per attivo/inattivo.
+* Nel caso di produzioni viene visualizzato se sono in esecuzione in parallelo (II) o distribuite (Y).
+* Proprio menu delle impostazioni.
+
+Deve essere installato attivamente nelle produzioni:
+Ricette:
+* È possibile creare ricette con più ingredienti uguali in gruppi (massimo 5).
+* Più linee di produzione che prima dovevano essere create separatamente possono essere combinate in un'unica linea di produzione.
+* Possibilità di aggiungere uno o più booster opzionali che aumentano la produzione in uscita.
+* I booster possono essere disabilitati o annullati per i singoli beni.
+* Visualizzazione della produzione attuale reale a seconda del booster. Il valore attuale del booster è mostrato tra parentesi arancioni dopo l'importo.
+* Possibilità di creare ricette tramite FillTypeCategories.
+* Possibilità di produzioni dipendenti dal clima.
+* Possibilità di livelli di riempimento dipendenti dalle condizioni meteorologiche.
+
+Raffigurazione:
+* Possibilità di installare display sulle produzioni che possono mostrare il livello attuale in magazzino. Possibile anche con cuscinetti puri.
+* Possibilità di visualizzare oggetti a seconda del livello di riempimento, ad esempio pallet in un magazzino di produzione. Possibile anche con cuscinetti puri.
+* I magazzini possono anche essere dotati di uno script di spawn che può essere utilizzato per generare balle e pallet.
+
+Altre caratteristiche:
+* Nuovi FillType possono essere inseriti tramite Revamp nei punti vendita esistenti senza modificare attivamente i punti vendita esistenti. Non è più necessario un punto vendita separato.
+* Produzioni nascoste con funzione di avvio automatico.
+* Varie opzioni di impostazione per le funzioni di cui sopra.
+* Tutti completamente compatibili con il multiplayer.
+* Proprio aiuto in gioco che spiega le caratteristiche più importanti del mod.
+* E E E E
+
+Un elenco completo di opzioni, guida all'installazione e supporto è disponibile nella <a href="https://docs.google.com/document/d/1UgEIonDfseTsUM9s5KP735ZK_--5qmbqqPGylXDzJ6o">Documentazione:</a>
+ 
+Questa è solo la sceneggiatura, la sceneggiatura da sola non cambia nessuna ricetta di produzione! Questi devono essere creati separatamente.
+
+
+Registro delle modifiche:
+(Il registro completo delle modifiche può essere trovato nella documentazione)
+
+Versione 1.3
+* Traduzioni esternalizzate in file separati e nuove traduzioni: svedese e russo.
+* Lo spawn di silo/produzione ora può scegliere di spawnare come balle, pallet o tronchi a seconda di ciò che è disponibile sulla mappa. La selezione viene visualizzata solo se sono presenti più opzioni.
+* Ora viene visualizzato "Store wood" per un silo/produzione invece di "Vendi legna".
+* Aggiunte impostazioni di gioco
+* Correzione dei prezzi di acquisto in base alle impostazioni dell'economia (disattivabile nelle impostazioni)
+* È possibile impostare il fattore prezzo di vendita per le vendite dirette da produzioni
+* Ora è possibile generare anche le balle modificate dalle mod
+* Le balle ora vengono visualizzate ordinate per dimensione quando vengono sostituite
+* Aggiunte uscite condizionali
+* Produzione dipendente da temperatura, vento, sole, pioggia, stagione e orari di apertura
+* Consente livelli di riempimento in base a temperatura, sole, pioggia e vento
+* Colore delle balle di insilato selezionabile
+* Realizzate linee di produzione che sono inattive/attive nascondebili
+* Aggiunto aiuto in gioco
+
+Versione 1.3.0.1
+* Risolto il problema con il Limit Breaker
+* Correzione del bug della scala temporale nei livelli di riempimento in base alla temperatura, al sole, alla pioggia e al vento.
+
+Versione 1.3.0.2
+* Livello di riempimento dell'oggetto fisso con un oggetto
+* Calcolo della distribuzione ottimizzato
+* Corretto un bug con le nuove modalità di produzione
+
+Versione 1.3.1.0
+* Scambio di dialoghi ora con 1/10 di passo
+* Quando si scambiano le piantine, è possibile selezionare tutti i tipi di alberi disponibili nella tavolozza delle piantine standard.
+* Correzione dell'interazione con il DLC Pumps N' Hoses.
+
+Version 1.3.1.2
+* Correzione dell'interazione con il DLC Pumps N' Hoses. (Dedi)
+* Correzione per le Seasonal Productions
+
+Version 1.3.1.3
+* Correggi con le priorità e Pumps N' Hoses DLC
+
+Versione 1.3.1.4
+* Riparare con le nuove produzioni e Pumps N' Hoses DLC
+
+Versione 1.3.2.0
+* Aggiunta di traduzioni PL
+* Aggiunta di elementi del negozio dipendenti dal tipo di riempimento
+
+Versione 1.3.5.0
+* Bugfix autostart e produzioni/filltypes dipendenti dal tempo
+* priorità preselezionate
+* Il fattore di acquisto può essere modificato
+* modalità di produzione mensile
+* modalità per gruppi misti
+* i display possono cambiare colore a seconda del livello di riempimento
+* le modalità di produzione possono essere utilizzate insieme
+* le balle di insilato di m+ ora vengono generate con un foglio
+
+Version 1.3.5.1
+* fix for patch 1.8.1
+
+Versione 1.3.5.2
+* Usare i tipi di riempimento per gli spawnplaces
+
+Versione 1.3.5.3
+* Modalità di produzione regolabili individualmente per le linee di produzione
+
+Versione 1.3.5.4
+* Rimosso RevaSP
+
+Versione 1.3.5.5
+* Compatibilità con Silverrun Forest/Platinum Shipyard and Coaster
+
+Versione 1.3.5.6
+* Risolto un bug con le modalità della linea di produzione
+* Uso corretto dell'innesco del legno senza innesco di attivazione
+* Risolto un bug con le linee di produzione che utilizzavano più volte lo stesso tipo di riempimento
+
+Versione 1.3.5.7
+* Rinominare l'icona della mod per adattarla alle nuove linee guida.
+* Sostituire il segno Ampersand nei testi XML per una migliore visualizzazione.
+]]>
+    </it>
+   <fr>
+    <![CDATA[Production Revamp-Script
+Revamp retravaille le système de production interne, l'étend et ajoute diverses fonctions. Revamp lui-même est le mod de script de base, mais étend également indépendamment les productions avec des fonctions de confort supplémentaires.
+
+Une sélection de fonctionnalités :
+
+Disponible automatiquement pour toutes les productions :
+* Saut de ligne automatique dans l'affichage de la recette pour la page d'entrée et de sortie (4 ingrédients par ligne).
+* Un affichage coloré des recettes permet de voir plus facilement pourquoi une production ne produit pas. Où : blanc - disponible, rouge - non disponible mais requis, orange - non disponible et non requis.
+*Possibilité d'acheter des marchandises dans le menu production pour une production au double du prix du marché.
+* Système de priorité : les marchandises entrantes peuvent désormais être définies sur différentes priorités via le menu de production et seront distribuées en fonction de ces priorités. Ce qui suit s'applique : La priorité 1 est la plus importante et obtiendra les marchandises en premier jusqu'à ce que l'entrepôt soit plein. Priorité 2 uniquement après, etc. Les entrées peuvent également être désactivées, auquel cas elles ne recevront aucune livraison.
+* Seules les lignes de production actives peuvent être alimentées via le mode distribution.
+* Nouveau mode de sortie disponible : vendre directement, distribuer, sous-traiter (anciennement conserver) et échanger (nouveau). Si une production est définie sur stockage, elle ne génère pas automatiquement de palettes.
+* Ajout d'un générateur manuel de palettes, de balles et de bois - Toutes les productions avec générateur de palettes peuvent également générer manuellement des palettes et des balles - via le menu ou un déclencheur.
+* Les coûts de livraison de la production sont désormais déclarés séparément (auparavant, ils faisaient partie des coûts de production).
+* Les productions qui sont des objectifs de mission peuvent accepter des marchandises illimitées des missions jusqu'à ce que la mission soit terminée. Les biens de mission ne se retrouvent plus dans la production elle-même pendant les missions.
+* Affichage des quantités maximales de stockage et des unités correspondantes.
+* Trier les productions par ordre alphabétique et filtrer par actif/inactif.
+* Dans le cas des productions, il est affiché si elles sont exécutées en parallèle (II) ou réparties (Y).
+* Menu des paramètres personnels.
+
+Doit être activement installé dans les productions :
+Recettes:
+* Des recettes peuvent être créées avec plusieurs ingrédients égaux en groupes (maximum 5).
+* Plusieurs lignes de production qui devaient auparavant être créées séparément peuvent être combinées en une seule ligne de production.
+* Possibilité d'ajouter un ou plusieurs boosters optionnels qui augmentent la production sortante.
+* Les boosters peuvent être désactivés ou annulés pour des marchandises individuelles.
+* Affichage de la production réelle de courant en fonction du booster. La valeur actuelle du booster est indiquée entre parenthèses orange après le montant.
+* Possibilité de créer des recettes via FillTypeCategories.
+* Possibilité de productions dépendantes de la météo.
+* Possibilité de niveaux de remplissage en fonction des conditions météorologiques.
+
+Représentation:
+* Possibilité d'installer des présentoirs sur les productions pouvant afficher le niveau actuel dans l'entrepôt. Également possible avec des roulements purs.
+* Possibilité d'afficher des objets en fonction du niveau de remplissage, par exemple des palettes dans un entrepôt de production. Également possible avec des roulements purs.
+* Les entrepôts peuvent également être fournis avec un script d'apparition qui peut être utilisé pour générer des balles et des palettes.
+
+Autres caractéristiques:
+* De nouveaux FillTypes peuvent être saisis via Revamp dans les points de vente existants sans modifier activement les points de vente existants. Un point de vente séparé n'est plus nécessaire.
+* Productions cachées avec fonction de démarrage automatique.
+* Diverses options de réglage pour les fonctions ci-dessus.
+* Tous entièrement compatibles multijoueurs.
+* Propre aide en jeu qui explique les fonctionnalités les plus importantes du mod.
+* ET ET ET
+
+Une liste complète des options, de l'aide à l'installation et de l'assistance est disponible dans la <a href="https://docs.google.com/document/d/1UgEIonDfseTsUM9s5KP735ZK_--5qmbqqPGylXDzJ6o">Documentation :</a>
+ 
+Ce n'est que le script, le script seul ne change aucune recette de production ! Ceux-ci doivent être créés séparément.
+
+
+Journal des modifications :
+(Le journal des modifications complet peut être trouvé dans la documentation)
+
+Variante 1.3
+* Traductions externalisées dans des fichiers séparés et nouvelles traductions : suédois et russe.
+* Silo/Production spawn peut désormais choisir de se reproduire sous forme de balles, de palettes ou de bûches en fonction de ce qui est disponible sur la carte. La sélection n'est affichée que s'il y a plusieurs options.
+* "Stocker du bois" s'affiche désormais pour un silo/production au lieu de "Vendre du bois".
+* Paramètres de jeu ajoutés
+* Correction des prix d'achat en fonction des paramètres d'économie (peut être désactivé dans les paramètres)
+* Le facteur de prix de vente pour les ventes directes des productions peut être défini
+* Les balles modifiées des mods peuvent désormais également être générées
+* Les balles sont maintenant affichées triées par taille lors de l'échange
+* Ajout de sorties conditionnelles
+* Production dépendante de la température, du vent, du soleil, de la pluie, de la saison et des heures d'ouverture
+* Active les niveaux de remplissage en fonction de la température, du soleil, de la pluie et du vent
+* Couleur des balles d'ensilage sélectionnable
+* Rendre les lignes de production inactives/actives masquables
+* Ajout d'une aide en jeu
+
+Variante 1.3.0.1
+* Correction du briseur de limite cassé
+* Correction du bug de l'échelle de temps dans les niveaux de remplissage en fonction de la température, du soleil, de la pluie et du vent.
+
+Version 1.3.0.2
+* Correction du niveau de remplissage des objets avec un seul objet
+* Calcul de distribution optimisé
+* Correction d'un bug avec les nouveaux modes de production
+
+Version 1.3.1.0
+* Les dialogues de transfert ont maintenant des incréments de 1/10.
+* Lors du transfert de plants, toutes les espèces d'arbres disponibles dans la palette de plants standard peuvent être sélectionnées.
+* Correction de l'interaction avec le DLC Pumps N' Hoses
+
+Version 1.3.1.2
+* Correction de l'interaction avec le DLC Pumps N' Hoses (Dedi)
+* Correction pour les Seasonal Productions
+
+Version 1.3.1.3
+* Corriger avec les priorités et Pumps N' Hoses DLC
+
+Version 1.3.1.4
+* Correction avec de nouvelles productions et Pumps N' Hoses DLC
+
+Version 1.3.2.0
+* Ajout de traductions PL
+* Ajout d'éléments de magasin dépendant du type de remplissage
+
+Version 1.3.5.0
+* Correction de bugs sur le démarrage automatique et les productions/types de remplissage dépendant de la météo
+* priorités présélectionnées
+* le facteur d'achat peut être modifié
+* mode de production mensuel
+* modes pour les groupes mixtes
+* les affichages peuvent changer de couleur en fonction du niveau de remplissage
+* les modes de production peuvent être utilisés ensemble
+* les balles d'ensilage de m+ sont maintenant générées avec du papier d'aluminium
+
+Version 1.3.5.1
+* fix for patch 1.8.1
+
+Version 1.3.5.2
+* Correction de l'utilisation des types de remplissage pour les lieux de ponte.
+
+Variante 1.3.5.3
+* Modes de production réglables individuellement pour les lignes de production
+
+Variante 1.3.5.4
+* Supprimé RevaSP
+
+Variante 1.3.5.5
+* Compatibilité avec Silverrun Forest/Platinum Shipyard and Coaster
+
+Variante 1.3.5.6
+* Correction d'un bug avec les modes de ligne de production
+* Correction de l'utilisation du déclencheur de bois sans déclencheur d'activation.
+* Correction d'un bug avec les lignes de production utilisant plusieurs fois le même type de remplissage
+
+Version 1.3.5.7
+* renommage de l'icône du mod pour correspondre aux nouvelles lignes directrices
+* remplacement du signe de l'esperluette dans les textes XML pour un meilleur affichage
+]]>
+    </fr>
+  </description>
+
+
+
+  <iconFilename>icon_ProductionRevamp.dds</iconFilename>
+  <multiplayer supported="true" />
+  <fillTypes filename="revamp_fillTypes.xml"/>
+  
+  <extraSourceFiles>
+    <sourceFile filename="revamp.lua" />
+    <sourceFile filename="revampHelper.lua" />
+    <sourceFile filename="scripts/revamp_spawner.lua" />
+    <sourceFile filename="events/ProductionPointPriorityEvent.lua" />
+    <sourceFile filename="events/ProductionPointBuyInputEvent.lua" />
+    <sourceFile filename="events/ProductionPointProductionInputColorEvent.lua" />
+    <sourceFile filename="events/RevampSpawnPalletsEvent.lua" />
+    <sourceFile filename="events/RevampSpawnBalesEvent.lua" />
+    <sourceFile filename="events/RevampSpawnWoodLogsAtSiloEvent.lua" />
+    <sourceFile filename="scripts/revamp_buyInputs.lua" />
+    <sourceFile filename="scripts/revamp_prioritySystem.lua" />
+    <sourceFile filename="scripts/revamp_changeLimits.lua" />
+    <sourceFile filename="scripts/revamp_correctBuyingPrices.lua" />
+    <sourceFile filename="scripts/revamp_recipeDisplay.lua" />
+    <sourceFile filename="scripts/revamp_extendetFunctionalities.lua" />
+    <sourceFile filename="revampSettings.lua" />
+  </extraSourceFiles>
+  
+  <revamp minVersion="1.3.5.0"></revamp>
+
+    <placeableSpecializations>
+        <specialization name="siloObjectFillLevel" className="SiloObjectFillLevelSpecialization" filename="scripts/siloObjectFillLevelSpecialization.lua"/>
+        <specialization name="siloDisplay" className="SiloDisplaySpecialization" filename="scripts/siloDisplaySpecialization.lua"/>
+        <specialization name="productionObjectFillLevel" className="ProductionObjectFillLevelSpecialization" filename="scripts/productionObjectFillLevelSpecialization.lua"/>
+        <specialization name="productionDisplay" className="ProductionDisplaySpecialization" filename="scripts/productionDisplaySpecialization.lua"/>
+        <specialization name="siloPalletSpawner" className="SiloPalletSpawnerSpecialization" filename="scripts/siloPalletSpawnerSpecialization.lua"/>
+    </placeableSpecializations>
+    
+    <placeableTypes>
+        <type name="RevampSilo" parent="silo" filename="$dataS/scripts/placeables/Placeable.lua">
+            <specialization name="siloObjectFillLevel"/>
+            <specialization name="siloDisplay"/>
+            <specialization name="siloPalletSpawner"/>
+        </type>
+        <type name="RevampProductionPoint" parent="productionPoint" filename="$dataS/scripts/placeables/Placeable.lua">
+            <specialization name="productionObjectFillLevel"/>
+            <specialization name="productionDisplay"/>
+        </type>
+        <type name="RevampGreenhouse" parent="greenhouse" filename="$dataS/scripts/placeables/Placeable.lua">
+            <specialization name="productionObjectFillLevel"/>
+            <specialization name="productionDisplay"/>
+        </type>
+    </placeableTypes>
+  
+	<l10n filenamePrefix="l10n/l10n" />
+</modDesc>

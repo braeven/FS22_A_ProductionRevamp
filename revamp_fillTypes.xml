@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/fillTypes.xsd">
+    <fillTypeCategories>
+	    <fillTypeCategory name="REVAMP_GRAIN">WHEAT BARLEY OAT</fillTypeCategory>
+	    <fillTypeCategory name="REVAMP_FERTILIZER">FERTILIZER MANURE</fillTypeCategory>
+	    <fillTypeCategory name="REVAMP_LIQUIDFERTILIZER">LIQUIDFERTILIZER LIQUIDMANURE DIGESTATE</fillTypeCategory>
+	    <fillTypeCategory name="REVAMP_BURNABLE">WOODCHIPS STRAW</fillTypeCategory>
+	    <fillTypeCategory name="REVAMP_OIL">SUNFLOWER_OIL CANOLA_OIL OLIVE_OIL</fillTypeCategory>
+	    <fillTypeCategory name="REVAMP_OILFRUITS">SUNFLOWER CANOLA OLIVE</fillTypeCategory>
+	    <fillTypeCategory name="REVAMP_ORGANIC">WHEAT BARLEY OAT CANOLA SUNFLOWER SOYBEAN MAIZE POTATO SUGARBEET SUGARBEET_CUT CHAFF SILAGE STRAW GRASS_WINDROW DRYGRASS_WINDROW SUGARCANE SORGHUM OLIVE GRAPE RAISINS STRAWBERRY LETTUCE TOMATO</fillTypeCategory>
+		  <fillTypeCategory name="REVAMP_GREENFEED">GRASS_WINDROW DRYGRASS_WINDROW</fillTypeCategory>
+		  <fillTypeCategory name="REVAMP_ROOTCROPS">POTATO SUGARBEET SUGARBEET_CUT</fillTypeCategory>
+		  <fillTypeCategory name="REVAMP_PROTEINS">SOYBEAN CANOLA SUNFLOWER</fillTypeCategory>
+		  <fillTypeCategory name="REVAMP_BASEFOOD">SORGHUM MAIZE</fillTypeCategory>
+		  <fillTypeCategory name="REVAMP_FRUITS">GRAPE STRAWBERRY</fillTypeCategory>
+		  <fillTypeCategory name="REVAMP_VEGETABLES">TOMATO LETTUCE</fillTypeCategory>
+		  <fillTypeCategory name="REVAMP_ANIMALPRODUCTS">EGG WOOL MILK</fillTypeCategory>
+		  <fillTypeCategory name="REVAMP_SUGARFRUITS">SUGARBEET SUGARBEET_CUT SUGARCANE</fillTypeCategory>
+      
+        <fillTypeCategory name="ADDITIONAL_STORAGE_GOODS">MINERAL_FEED SILAGE_ADDITIVE HERBICIDE LIME LIQUIDFERTILIZER FERTILIZER SEEDS WOOL EGG HONEY</fillTypeCategory>	
+        <fillTypeCategory name="ADDITIONAL_STORAGE_BALES">STRAW DRYGRASS_WINDROW SILAGE GRASS_WINDROW COTTON WOODCHIPS</fillTypeCategory>	
+    </fillTypeCategories>
+</map>
