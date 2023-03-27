@@ -3,69 +3,88 @@
     <translationContributors>nagor</translationContributors>
     <texts>
     <!--Production line texts-->
-        <text name="Revamp_Store"                           text="Складирование" />
-        <text name="Revamp_Spawn"                           text="Создание" />
-        <text name="Revamp_ChangePriority"                  text="Уменьшить приоритет" />
-        <text name="Revamp_BuyInputButton"                  text="Купить (PR)" />
-        <text name="Revamp_DeliveryPriority"                text="Приоритет" />
-        <text name="Revamp_DeliveryPriorityDeactivated"     text="Отключено" />
-        <text name="Revamp_BuyInputText"                    text="Купить %s за %s?" />
-        <text name="Revamp_BuyInput"                        text="Покупка" />
-        <text name="Revamp_BuyInputNotEnoughMoney"          text="Не хватает денег." />
-        <text name="Revamp_ChooseAmountToPutOut"            text="Выберите количество" />
-        <text name="Revamp_ChooseWhatToPutOut"              text="Выберите продукт" />
-        <text name="Revamp_ExtractPallets"                  text="Извлечь из Хранилища" />
-        <text name="Revamp_PalletSiloItem"                  text="Поддоны" />
-        <text name="Revamp_BaleSiloItem"                    text="Тюки" />
-        <text name="Revamp_ChooseBaleType"                  text="Выберите тип тюка" />
-        <text name="Revamp_WoodLogItem"                     text="Брёвна" />
-        <text name="Revamp_SpawnType_bale"                  text="Тюк(-ов)" />
-        <text name="Revamp_SpawnType_pallet"                text="Поддон(-ов)" />
-        <text name="Revamp_SpawnType_woodLog"               text="Бревно(Брёвен)" />
-        <text name="Revamp_ChooseSpawnToPutOut"             text="Выберите вариант" />
-        <text name="Revamp_storeWoodlogs"                   text="Хранилище брёвен" />
-        <text name="Revamp_ViewActiveProductions"           text="Скрыть неактивные" />
-        <text name="Revamp_ViewInActiveProductions"         text="Скрыть активные" />
-        <text name="Revamp_ViewAllProductions"              text="Показывать все" />
+        <text name="Revamp_Store"                               text="Складирование" />
+        <text name="Revamp_Spawn"                               text="Создание" />
+        <text name="Revamp_ChangePriority"                      text="Уменьшить приоритет" />
+        <text name="Revamp_BuyInputButton"                      text="Купить (PR)" />
+        <text name="Revamp_DeliveryPriority"                    text="Приоритет" />
+        <text name="Revamp_DeliveryPriorityDeactivated"         text="Отключено" />
+        <text name="Revamp_BuyInputText"                        text="Купить %s за %s?" />
+        <text name="Revamp_BuyInput"                            text="Покупка" />
+        <text name="Revamp_BuyInputNotEnoughMoney"              text="Не хватает денег." />
+        <text name="Revamp_ChooseAmountToPutOut"                text="Выберите количество" />
+        <text name="Revamp_ChooseWhatToPutOut"                  text="Выберите продукт" />
+        <text name="Revamp_ExtractPallets"                      text="Извлечь из Хранилища" />
+        <text name="Revamp_PalletSiloItem"                      text="Поддоны" />
+        <text name="Revamp_BaleSiloItem"                        text="Тюки" />
+        <text name="Revamp_ChooseBaleType"                      text="Выберите тип тюка" />
+        <text name="Revamp_WoodLogItem"                         text="Брёвна" />
+        <text name="Revamp_SpawnType_bale"                      text="Тюк(-ов)" />
+        <text name="Revamp_SpawnType_pallet"                    text="Поддон(-ов)" />
+        <text name="Revamp_SpawnType_woodLog"                   text="Бревно(Брёвен)" />
+        <text name="Revamp_ChooseSpawnToPutOut"                 text="Выберите вариант" />
+        <text name="Revamp_storeWoodlogs"                       text="Хранилище брёвен" />
+        <text name="Revamp_ViewActiveProductions"               text="Скрыть неактивные" />
+        <text name="Revamp_ViewInActiveProductions"             text="Скрыть активные" />
+        <text name="Revamp_ViewAllProductions"                  text="Показывать все" />
+        <text name="Revamp_ChooseWoodLogLength"                 text="Выберите длину" />
 
     <!-- Production messages -->
-        <text name="Revamp_StorageEmpty"                    text="Склад пуст" />
-        <text name="Revamp_CantBuy"                         text="%s нельзя купить." />
-        <text name="Revamp_ProductionClosed"                text="%s закрыт. - Часы работы: с %s до %s." />
+        <text name="Revamp_StorageEmpty"                        text="Склад пуст" />
+        <text name="Revamp_CantBuy"                             text="%s нельзя купить." />
+        <text name="Revamp_ProductionClosed"                    text="%s закрыт. - Часы работы: с %s." />
+        <text name="Revamp_ProductionNotEmpty"                  text="Производство не пусто. Следующие товары тоже будут проданы:"/>
 
     <!-- Production Variants -->
-        <text name="Revamp_sunProduction"                  text="%s (Зависит от Солнца)" />
-        <text name="Revamp_rainProduction"                 text="%s (Зависит от дождя)" />
-        <text name="Revamp_windProduction"                 text="%s (Зависит от ветра)" />
-        <text name="Revamp_temperatureProduction"          text="%s (Зависит от +t°)" />
-        <text name="Revamp_temperaturNegativeProduction"   text="%s (Зависит от -t°)" />
-        <text name="Revamp_seasonalProduction"             text="%s (Сезонно)" />
-        <text name="Revamp_productionHoursDependent"       text="%s (%s до %s)" />
-        <text name="Revamp_monthlyProduction"              text="%s (ежемесячно)" />
+        <text name="Revamp_sunProduction"                       text="%s Зависит от Солнца" />
+        <text name="Revamp_rainProduction"                      text="%s Зависит от дождя" />
+        <text name="Revamp_windProduction"                      text="%s Зависит от ветра" />
+        <text name="Revamp_temperatureProduction"               text="%s Зависит от +t°" />
+        <text name="Revamp_temperatureNegativeProduction"       text="%s Зависит от -t°" />
+        <text name="Revamp_seasonalProduction"                  text="%s Сезонно" />
+        <text name="Revamp_productionHoursDependent"            text="%s %s" />
+        <text name="Revamp_monthlyProduction"                   text="%s ежемесячно" />
+        <text name="Revamp_productionMode"                      text="Режим производства" />
 
     <!-- Production menu -->
-        <text name="Revamp_OpenProduction"                  text="Управление производством" />
-        <text name="Revamp_SpawnItem"                       text="На поддоны" />
-        <text name="finance_ProductionDeliveryCosts"        text="Сборы за доставку продукции" />
+        <text name="Revamp_OpenProduction"                      text="Управление производством" />
+        <text name="Revamp_SpawnItem"                           text="На поддоны" />
+        <text name="finance_ProductionDeliveryCosts"            text="Сборы за доставку продукции" />
 
     <!-- game Settings menu -->
-        <text name="Revamp_Settings_Title"                  text="Revamp" />
-        <text name="Revamp_BuyRestriction_Title"            text="Право на покупку" />
-        <text name="Revamp_BuyRestriction_Tooltip"          text="Кто может использовать функцию покупки в производстве, если она не отключена моддером?" />
-        <text name="Revamp_BuyRestriction_Everyone"         text="У всех" />
-        <text name="Revamp_BuyRestriction_FarmManager"      text="У управляющего фермы" />
-        <text name="Revamp_BuyRestriction_ProductionAgent"  text="У управляющего произ-вом" />
-        <text name="Revamp_BuyRestriction_None"             text="Ни у кого" />
-        <text name="Revamp_PrioSystemActive_Title"          text="Система приоритетов" />
-        <text name="Revamp_PrioSystemActive_Tooltip"        text="Здесь можно отключить систему приоритетов Распределения." />
-        <text name="Revamp_MissionFixActive_Title"          text="Исправление контрактов" />
-        <text name="Revamp_MissionFixActive_Tooltip"        text="Здесь можно отключить исправление контрактов о том, что при поставках собственной продукции она не попадает на собственный склад." />
-        <text name="Revamp_PriceCorrectionActive_Title"     text="Корректировка закупочных цен" />
-        <text name="Revamp_PriceCorrectionActive_Tooltip"   text="Здесь можно отключить корректировку закупочных цен в зависимости от уровня сложности." />
-        <text name="Revamp_DistributionCostFactor_Title"    text="Фактор стоимости распределения" />
-        <text name="Revamp_DistributionCostFactor_Tooltip"  text="Фактор стандартных затрат на распределение от Giants. 0 отключает их." />.
-        <text name="Revamp_DirectSellingPriceFactor_Title"   text="Фактор цены прямой продажи" />
-        <text name="Revamp_DirectSellingPriceFactor_Tooltip" text="Коэффициент на цену, которую вы получаете за прямую продажу с производств (по умолчанию 0,9)." />
+        <text name="Revamp_Settings_Title"                      text="Revamp" />
+        <text name="Revamp_BuyRestriction_Title"                text="Право на покупку" />
+        <text name="Revamp_BuyRestriction_Tooltip"              text="Кто может использовать функцию покупки в производстве, если она не отключена моддером?" />
+        <text name="Revamp_BuyRestriction_Everyone"             text="У всех" />
+        <text name="Revamp_BuyRestriction_FarmManager"          text="У управляющего фермы" />
+        <text name="Revamp_BuyRestriction_ProductionAgent"      text="У управляющего произ-вом" />
+        <text name="Revamp_BuyRestriction_None"                 text="Ни у кого" />
+        <text name="Revamp_PrioSystemActive_Title"              text="Система приоритетов" />
+        <text name="Revamp_PrioSystemActive_Tooltip"            text="Здесь можно отключить систему приоритетов Распределения." />
+        <text name="Revamp_MissionFixActive_Title"              text="Исправление контрактов" />
+        <text name="Revamp_MissionFixActive_Tooltip"            text="Здесь можно отключить исправление контрактов о том, что при поставках собственной продукции она не попадает на собственный склад." />
+        <text name="Revamp_PriceCorrectionActive_Title"         text="Корректировка закупочных цен" />
+        <text name="Revamp_PriceCorrectionActive_Tooltip"       text="Здесь можно отключить корректировку закупочных цен в зависимости от уровня сложности." />
+        <text name="Revamp_DistributionCostFactor_Title"        text="Фактор стоимости распределения" />
+        <text name="Revamp_DistributionCostFactor_Tooltip"      text="Фактор стандартных затрат на распределение от Giants. 0 отключает их." />.
+        <text name="Revamp_DirectSellingPriceFactor_Title"      text="Фактор цены прямой продажи" />
+        <text name="Revamp_DirectSellingPriceFactor_Tooltip"    text="Коэффициент на цену, которую вы получаете за прямую продажу с производств (по умолчанию 0,9)." />
+
+    <!-- animal delivery menu -->
+        <text name="Revamp_productionAnimalDeliveryTitle"       text="Доставка животных на производство" />
+        <text name="Revamp_productionAnimalDeliveryDescription" text="Количество, поставляемое на производство, зависит от вида, возраста и здоровья животных." />
+        <text name="Revamp_animalAgeError"                      text="Возраст животных должен быть от %s до %s месяцев." />
+        <text name="Revamp_animalHealthError"                   text="У животных должно быть от %s до %s здоровья." />
+        <text name="Revamp_animalNotValid"                      text="Этот вид животных здесь не принимается." />
+        <text name="Revamp_productFullError"                    text="Нет свободного места на производстве" />
+        <text name="Revamp_amountPerAnimal"                     text="Объём одного животного" />
+        <text name="Revamp_amountTotal"                         text="Общий объём доставки" />
+        <text name="Revamp_transferAnimals"                     text="Передача животных" />
+        <text name="Revamp_AnimalOverviewHealth"                text="Требуемое здоровье" />
+        <text name="Revamp_AnimalOverviewAge"                   text="Требуемый возраст" />
+        <text name="Revamp_AnimalOverviewInputFillType"         text="Поступит на производство" />
+        <text name="Revamp_AnimalOverviewTitle"                 text="Какие животные могут быть поставлены на производство" />
+        <text name="Revamp_AnimalOverviewDescription"           text="Животные могут быть поставлены на производство, если они соответствуют следующим условиям:" />
 
       <!-- Ingame help menu -->
         <text name="Revamp_Help_Header" text="Production Revamp"/>

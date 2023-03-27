@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <l10n>
+    <translationContributors>Braeven / Achimobil</translationContributors>
     <texts>
     <!--Production line texts-->
         <text name="Revamp_Store"                               text="Einlagern" />
@@ -26,22 +27,25 @@
         <text name="Revamp_ViewActiveProductions"               text="Inaktive ausblenden" />
         <text name="Revamp_ViewInActiveProductions"             text="Aktive ausblenden" />
         <text name="Revamp_ViewAllProductions"                  text="Alle anzeigen" />
+        <text name="Revamp_ChooseWoodLogLength"                 text="Länge wählen" />
 
     <!-- Production messages -->
         <text name="Revamp_StorageEmpty"                        text="Lager ist leer." />
         <text name="Revamp_CantBuy"                             text="Input %s kann nicht zugekauft werden." />
-        <text name="Revamp_ProductionClosed"                    text="%s ist geschlossen. - Öffnungszeiten: %s bis %s Uhr." />
+        <text name="Revamp_ProductionClosed"                    text="%s ist geschlossen. - Öffnungszeiten: %s Uhr." />
+        <text name="Revamp_ProductionNotEmpty"                  text="Die Produktion ist nicht leer. Die enthaltenen Güter werden ebenfalls verkauft:"/>
 
     <!-- Production Variants -->
-        <text name="Revamp_sunProduction"                       text="%s (Sonnenabhängig)" />
-        <text name="Revamp_rainProduction"                      text="%s (Regenabhängig)" />
-        <text name="Revamp_windProduction"                      text="%s (Windabhängig)" />
-        <text name="Revamp_temperatureProduction"               text="%s (Plus Temperaturabhängig)" />
-        <text name="Revamp_temperatureNegativeProduction"       text="%s (Minus Temperaturabhängig)" />
-        <text name="Revamp_seasonalProduction"                  text="%s (Saisonal)" />
-        <text name="Revamp_productionHoursDependent"            text="%s (%s bis %s Uhr)" />
-        <text name="Revamp_monthlyProduction"                   text="%s (Monatlich)" />
-
+        <text name="Revamp_sunProduction"                       text="%s Sonnenabhängig" />
+        <text name="Revamp_rainProduction"                      text="%s Regenabhängig" />
+        <text name="Revamp_windProduction"                      text="%s Windabhängig" />
+        <text name="Revamp_temperatureProduction"               text="%s Temperaturabhängig" />
+        <text name="Revamp_temperatureNegativeProduction"       text="%s Temperaturabhängig" />
+        <text name="Revamp_seasonalProduction"                  text="%s Saisonal" />
+        <text name="Revamp_productionHoursDependent"            text="%s %s Uhr" />
+        <text name="Revamp_monthlyProduction"                   text="%s Monatlich" />
+        <text name="Revamp_productionMode"                      text="Produktions Modus" />
+        
     <!-- Production menu -->
         <text name="Revamp_OpenProduction"                      text="Produktion verwalten" />
         <text name="Revamp_SpawnItem"                           text="Auslagern" />
@@ -66,6 +70,22 @@
         <text name="Revamp_DirectSellingPriceFactor_Title"      text="Direktverkaufsfaktor" />
         <text name="Revamp_DirectSellingPriceFactor_Tooltip"    text="Faktor auf den Preis beim direkt verkaufen aus der Produktion. (Standard 0.9)" />
 
+    <!-- animal delivery menu -->
+        <text name="Revamp_productionAnimalDeliveryTitle"       text="Tiere an Produktion liefern" />
+        <text name="Revamp_productionAnimalDeliveryDescription" text="Die Menge, die in die Produktion geliefert wird, ist abhängig von der Tierart, dem Alter und der Gesundheit." />
+        <text name="Revamp_animalAgeError"                      text="Tiere müssen zwischen %s und %s Monate alt sein." />
+        <text name="Revamp_animalHealthError"                   text="Tiere müssen zwischen %s und %s Gesundheit haben." />
+        <text name="Revamp_animalNotValid"                      text="Diese Tierart wird hier nicht angenommen." />
+        <text name="Revamp_productFullError"                    text="Kein freier Platz in der Produktion" />
+        <text name="Revamp_amountPerAnimal"                     text="Liefermenge pro Tier" />
+        <text name="Revamp_amountTotal"                         text="Liefermenge gesamt" />
+        <text name="Revamp_transferAnimals"                     text="Tiere transferieren" />
+        <text name="Revamp_AnimalOverviewHealth"                text="Erwartete Gesundheit" />
+        <text name="Revamp_AnimalOverviewAge"                   text="Erwartetes Alter" />
+        <text name="Revamp_AnimalOverviewInputFillType"         text="Input in die Produktion" />
+        <text name="Revamp_AnimalOverviewTitle"                 text="Welche Tiere können der Produktion geliefert werden" />
+        <text name="Revamp_AnimalOverviewDescription"           text="Tiere können der Produktion angeliefert werden, wenn sie folgende Bedingungen erfüllen:" />
+  
       <!-- Ingame help menu -->
         <text name="Revamp_Help_Header" text="Production Revamp"/>
       <!-- Page 01 - What is Revamp? -->

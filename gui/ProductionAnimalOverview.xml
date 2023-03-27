@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement type="empty" profile="newLayer" />
+    <GuiElement type="bitmap" profile="dialogFullscreenBg" />
+    <GuiElement type="bitmap" profile="bgVignette"/>
+    <GuiElement type="bitmap" profile="bgGlowDialog" />
+
+    <GuiElement type="bitmap" profile="siloDialogBg" id="dialogElement" size="890px 370px">
+        <GuiElement type="bitmap" profile="dialogHeaderDocked">
+            <GuiElement type="text" profile="dialogHeaderText" text="$l10n_Revamp_AnimalOverviewTitle" id="dialogTitleElement"/>
+        </GuiElement>
+
+        <GuiElement type="text" profile="siloDialogText" text="$l10n_Revamp_AnimalOverviewDescription" id="dialogTextElement" />
+
+        <GuiElement type="bitmap" profile="multiTextOptionSiloIcon" position="-280px -20px" size="230px 230px" id="animalIconElement" />
+
+        <GuiElement type="bitmap" profile="shipConfigPriceTotalBox" position="331px 82px" size="508px 46px">
+            <GuiElement type="text"   profile="revampAnimalOverviewText" text="$l10n_Revamp_AnimalOverviewAge" />
+            <GuiElement type="text"   profile="revampAnimalOverviewValue" id="overviewAgeText" text="123123" />
+        </GuiElement>
+        
+        <GuiElement type="bitmap" profile="shipConfigPriceTotalBox" position="331px 130px" size="508px 46px">
+            <GuiElement type="text"   profile="revampAnimalOverviewText" text="$l10n_Revamp_AnimalOverviewHealth" />
+            <GuiElement type="text"   profile="revampAnimalOverviewValue" id="overviewHealthText" text="123123" />
+        </GuiElement>
+        
+        <GuiElement type="bitmap" profile="shipConfigPriceTotalBox" position="331px 178px" size="508px 46px">
+            <GuiElement type="text"   profile="revampAnimalOverviewText" text="$l10n_Revamp_AnimalOverviewInputFillType" />
+            <GuiElement type="bitmap" profile="revampAnimalOverviewIcon" id="recipeFillIcon" />
+            <GuiElement type="text"   profile="revampAnimalOverviewValue" id="overviewInputFillTypeText" text="123123" />
+        </GuiElement>
+        
+        <GuiElement type="multiTextOption" profile="multiTextOptionSiloRevamp" position="140px -92px" onClick="onClickItems" id="subTypeElement" handleFocus="true" >
+            <GuiElement type="button" profile="multiTextOptionLeft" />
+            <GuiElement type="button" profile="multiTextOptionRight" />
+            <GuiElement type="text"   profile="multiTextOptionTextSiloRevamp" id="subTypeElementText"/>
+            <GuiElement type="bitmap" profile="multiTextOptionBgSiloRevamp" />
+        </GuiElement>
+
+        <GuiElement type="flowLayout" profile="buttonBoxDialog" id="buttonsPC">
+            <GuiElement type="button" profile="buttonOK" text="$l10n_button_back" onClick="onClickOk" id="yesButton" />
+            <GuiElement type="button" profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="noButton" />
+        </GuiElement>
+    </GuiElement>
+</GUI>

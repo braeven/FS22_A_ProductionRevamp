@@ -1,18 +1,17 @@
 --[[
 Production Revamp
-Setting File
+Production Sell Fix - Sells Goods that are still in a Production, when selling the production
 
 Copyright (C) Achimobil, braeven, 2022
 
-Date: 04.09.2022
-Version: 1.0.0.1
+Date: 22.12.2022
+Version: 1.0.0.0
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
 
 Changelog:
-1.0.0.0 @ 22.08.2022 - Initial Release
-1.0.0.1 @ 04.09.2022 - ÜbersetzungsVariablen angepasst
+1.0.0.0 @ 22.12.2022 - Initial Release
 
 Important:.
 No changes are allowed to this script without permission from Achimobil AND Braeven.
@@ -24,33 +23,35 @@ Wenn du eine Produktion mit diesem Script bauen möchtest, lese dir die angepinn
 Nicht das Script in Produktionen kopieren, ladet den Mod über eine Dependency!
 
 ]]
+RevampSellFix ={}
 
-
-function Revamp.registerOverwrittenFunctions(placeableType)
-  SpecializationUtil.registerOverwrittenFunction(placeableType, "canBeSold", Revamp.canBeSold)
+function RevampSellFix.registerOverwrittenFunctions(placeableType)
+	SpecializationUtil.registerOverwrittenFunction(placeableType, "canBeSold", RevampSellFix.canBeSold)
 end
 
-PlaceableProductionPoint.registerOverwrittenFunctions = Utils.prependedFunction(PlaceableProductionPoint.registerOverwrittenFunctions, Revamp.registerOverwrittenFunctions)
+PlaceableProductionPoint.registerOverwrittenFunctions = Utils.prependedFunction(PlaceableProductionPoint.registerOverwrittenFunctions, RevampSellFix.registerOverwrittenFunctions)
 
 
 
-function Revamp.registerEventListeners(placeableType)
-	SpecializationUtil.registerEventListener(placeableType, "onSell", PlaceableSilo)
+function RevampSellFix.registerEventListeners(placeableType)
+	SpecializationUtil.registerEventListener(placeableType, "onSell", RevampSellFix)
 end
 
-PlaceableProductionPoint.registerEventListeners = Utils.prependedFunction(PlaceableProductionPoint.registerEventListeners, Revamp.registerEventListeners)
+PlaceableProductionPoint.registerEventListeners = Utils.prependedFunction(PlaceableProductionPoint.registerEventListeners, RevampSellFix.registerEventListeners)
 
 
 
-function Revamp:canBeSold(superFunc)
+function RevampSellFix:canBeSold(superFunc)
 	local spec = self.spec_productionPoint
+	
+	spec.sellWarningText = g_i18n:getText("Revamp_ProductionNotEmpty")
+	local warning = spec.sellWarningText .. "\n"
 
-	--local warning = spec.sellWarningText .. "\n"
-  --revamp text
 	local totalFillLevel = 0
 	spec.totalFillTypeSellPrice = 0
-
-	for fillTypeIndex, fillLevel in pairs(spec.storages[1].fillLevels) do
+	
+	--DebugUtil.printTableRecursively(spec.productionPoint, test, 2, 3)
+	for fillTypeIndex, fillLevel in pairs(spec.productionPoint.storage.fillLevels) do
 		totalFillLevel = totalFillLevel + fillLevel
 
 		if fillLevel > 0 then
@@ -70,7 +71,7 @@ function Revamp:canBeSold(superFunc)
 				lowestSellPrice = 0.5
 			end
 
-			local price = fillLevel * lowestSellPrice * PlaceableSilo.PRICE_SELL_FACTOR
+			local price = fillLevel * lowestSellPrice * 0.7
 			local fillType = g_fillTypeManager:getFillTypeByIndex(fillTypeIndex)
 			warning = string.format("%s%s (%s) - %s: %s\n", warning, fillType.title, g_i18n:formatVolume(fillLevel), g_i18n:getText("ui_sellValue"), g_i18n:formatMoney(price, 0, true, true))
 			spec.totalFillTypeSellPrice = spec.totalFillTypeSellPrice + price
@@ -85,10 +86,18 @@ function Revamp:canBeSold(superFunc)
 end
 
 
-function PlaceableSilo:onSell()
-	local spec = self.spec_productionPoint
 
+function RevampSellFix:onSell()
+	local spec = self.spec_productionPoint
+	
+	--Bei wiederkaufbaren Produktionen das Lager nullen
+	for fillTypeIndex, fillLevel in pairs(spec.productionPoint.storage.fillLevels) do
+		if fillLevel > 0 then
+			spec.productionPoint.storage.fillLevels[fillTypeIndex] = 0
+		end
+	end
+	
 	if self.isServer and spec.totalFillTypeSellPrice > 0 then
-		g_currentMission:addMoney(spec.totalFillTypeSellPrice, self:getOwnerFarmId(), MoneyType.HARVEST_INCOME, true, true)
+		g_currentMission:addMoney(spec.totalFillTypeSellPrice, self:getOwnerFarmId(), MoneyType.SOLD_PRODUCTS, true, true)
 	end
 end

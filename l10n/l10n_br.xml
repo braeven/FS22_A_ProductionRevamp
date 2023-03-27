@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+  <translationContributors>myiamoto86</translationContributors>
+    <texts>
+    <!--Production line texts-->
+        <text name="Revamp_Store"                               text="Armazenar" />
+        <text name="Revamp_Spawn"                               text="Geração" />
+        <text name="Revamp_ChangePriority"                      text="Baixa prioridade" />
+        <text name="Revamp_BuyInputButton"                      text="Comprar em" />
+        <text name="Revamp_DeliveryPriority"                    text="Prioridade" />
+        <text name="Revamp_DeliveryPriorityDeactivated"         text="Desativado" />
+        <text name="Revamp_BuyInputText"                        text="Comprar %s por %s ?" />
+        <text name="Revamp_BuyInput"                            text="Comprar bens" />
+        <text name="Revamp_BuyInputNotEnoughMoney"              text="Não há dinheiro suficiente." />
+        <text name="Revamp_ChooseAmountToPutOut"                text="Selecione o número:" />
+        <text name="Revamp_ChooseWhatToPutOut"                  text="Selecione o material:" />
+        <text name="Revamp_ExtractPallets"                      text="Remover paletes do armazenamento" />
+        <text name="Revamp_PalletSiloItem"                      text="paletes" />
+        <text name="Revamp_BaleSiloItem"                        text="Fardos" />
+        <text name="Revamp_ChooseBaleType"                      text="Selecione o tipo de fardo" />
+        <text name="Revamp_WoodLogItem"                         text="Logs" />
+        <text name="Revamp_SpawnType_bale"                      text="Fardos" />
+        <text name="Revamp_SpawnType_pallet"                    text="Paletes" />
+        <text name="Revamp_SpawnType_woodLog"                   text="Logs" />
+        <text name="Revamp_ChooseSpawnToPutOut"                 text="Escolha a variante" />
+        <text name="Revamp_storeWoodlogs"                       text="Armazenar madeira" />
+        <text name="Revamp_ViewActiveProductions"               text="Ocultar inativo" />
+        <text name="Revamp_ViewInActiveProductions"             text="Ocultar ativo" />
+        <text name="Revamp_ViewAllProductions"                  text="Mostrar tudo" />
+        <text name="Revamp_ChooseWoodLogLogLength"              text="Escolha o comprimento" />
+
+    <!-- Production messages -->
+        <text name="Revamp_StorageEmpty"                        text="O estoque está vazio." />
+        <text name="Revamp_CantBuy"                             text="As %s de entrada não podem ser compradas." />
+        <text name="Revamp_ProductionClosed"                    text="%s está fechado. - Horário de abertura: das %s horas." />
+        <text name="Revamp_ProductionNotEmpty"                  text="A Produção não está vazia. Os seguintes produtos também serão vendidos:"/>
+
+    <!-- Production Variants -->
+        <text name="Revamp_sunProduction"                       text="%s Dependente do sol" />
+        <text name="Revamp_rainProduction"                      text="%s Dependente da chuva" />
+        <text name="Revamp_windProduction"                      text="%s Dependente do vento" />
+        <text name="Revamp_temperatureProduction"               text="%s Dependente de temperaturas mais quentes" />
+        <text name="Revamp_temperatureNegativeProduction"       text="%s Dependente de temperaturas mais frias" />
+        <text name="Revamp_seasonalProduction"                  text="%s Sazonal" />
+        <text name="Revamp_productionHoursDependent"            text="%s De %s horas" />
+        <text name="Revamp_monthlyProduction"                   text="%s Mensalmente" />
+        <text name="Revamp_productionMode"                      text="Modo de produção" />
+
+    <!-- Production menu -->
+        <text name="Revamp_OpenProduction"                      text="Gerenciar a produção" />
+        <text name="Revamp_SpawnItem"                           text="Geração manual de paletes" />
+        <text name="finance_ProductionDeliveryCosts"            text="Encargos de entrega da produção" />
+
+    <!-- game Settings menu -->
+        <text name="Revamp_Settings_Title"                      text="Revamp" />
+        <text name="Revamp_BuyRestriction_Title"                text="Elegível para comprar" />
+        <text name="Revamp_BuyRestriction_Tooltip"              text="Quem pode usar a função de compra em produções? (Pode ser desativado independentemente em produções)." />
+        <text name="Revamp_BuyRestriction_Everyone"             text="Todos" />
+        <text name="Revamp_BuyRestriction_FarmManager"          text="Gerente da fazenda" />
+        <text name="Revamp_BuyRestriction_ProductionAgent"      text="Gerente de produção" />
+        <text name="Revamp_BuyRestriction_None"                 text="Ninguém" />
+        <text name="Revamp_PrioSystemActive_Title"              text="Sistema prioritário" />
+        <text name="Revamp_PrioSystemActive_Tooltip"            text="O sistema prioritário de distribuição pode ser desativado aqui." />
+        <text name="Revamp_MissionFixActive_Title"              text="Missões Fixas" />
+        <text name="Revamp_MissionFixActive_Tooltip"            text="Isto pode ser usado para desativar a correção da missão (Para mais informações, consulte a ajuda dentro do jogo)." />
+        <text name="Revamp_PriceCorrectionActive_Title"         text="Correção dos preços de compra" />
+        <text name="Revamp_PriceCorrectionActive_Tooltip"       text="O ajuste dos preços de compra para o nível de dificuldade pode ser desativado aqui." />
+        <text name="Revamp_DistributionCostFactor_Title"        text="Fator de custo de distribuição" />
+        <text name="Revamp_DistributionCostFactor_Tooltip"      text="Fator sobre os custos de distribuição. Padrão Giants. (0 = desativado)" />
+        <text name="Revamp_DirectSellingPriceFactor_Title"      text="Fator de venda direta" />
+        <text name="Revamp_DirectSellingPriceFactor_Tooltip"    text="Fator sobre o preço ao vender diretamente da produção. (Padrão 0,9)" />
+
+    <!-- animal delivery menu -->
+        <text name="Revamp_productionAnimalDeliveryTitle"       text="Entregar os animais à produção" />
+        <text name="Revamp_productionAnimalDeliveryDescription" text="A quantidade entregue à produção depende da espécie animal, da idade e da saúde" />
+        <text name="Revamp_animalAgeError"                      text="Os animais devem ter entre %s e %s meses de idade" />
+        <text name="Revamp_animalHealthError"                   text="Os animais devem ter entre %s e %s saúde" />
+        <text name="Revamp_animalNotValid"                      text="Este tipo de animal não é aceito aqui" />
+        <text name="Revamp_productFullError"                    text="Sem espaço livre na produção" />
+        <text name="Revamp_amountPerAnimal"                     text="Quantidade entregue por animal" />
+        <text name="Revamp_amountTotal"                         text="Quantidade total de entrega" />
+        <text name="Revamp_transferAnimals"                     text="Transferir animais" />
+        <text name="Revamp_AnimalOverviewHealth"                text="Saúde Esperada" />
+        <text name="Revamp_AnimalOverviewAge"                   text="Idade Esperada" />
+        <text name="Revamp_AnimalOverviewInputFillType"         text="Insumo para produção" />
+        <text name="Revamp_AnimalOverviewTitle"                 text="Quais os animais que podem ser fornecidos à produção" />
+        <text name="Revamp_AnimalOverviewDescription"           text="Os animais podem ser fornecidos para a produção se satisfizerem as seguintes condições:" />
+
+      <!-- Ingame help menu -->
+        <text name="Revamp_Help_Header" text="Revamp Production - Reforma da Produção"/>
+      <!-- Page 01 - What is Revamp? -->
+        <text name="Revamp_Help_P1_Title" text="O que é Revamp?"/>
+        <text name="Revamp_Help_P1_Text" text="Reforma de produção revisa o sistema de fabricação interna, expande-o e acrescenta várias funções. A própria reformulação é o mod de script básico e já oferece muitas das seguintes possibilidades automaticamente. Entretanto, alguns deles têm que ser integrados por modders / mapeadores em seus mods e mapas para que possam ser utilizados.
+
+Esta é a ajuda do jogo, mais informações e ajuda de instalação podem ser encontradas na documentação."/>
+      <!-- Page 02 - Reworked Production Menue -->
+        <text name="Revamp_Help_P2_Title" text="Menu de produção"/>
+        <text name="Revamp_Help_P2_Text_1" text="A reformulação ordena as cadeias de produção em ordem alfabética de acordo com os nomes atribuídos. Com a função de filtro, tanto as linhas de produção ativas como inativas podem ser ocultadas."/>
+        <text name="Revamp_Help_P2_Text_2" text="Sem filtro
+
+Todas as produções são exibidas."/>
+        <text name="Revamp_Help_P2_Text_3" text="Produções ativas
+
+Somente as produções ativas são exibidas, todas as outras são ocultas."/>
+        <text name="Revamp_Help_P2_Text_4" text="Produções inativas
+
+Somente as produções inativas são exibidas, todas as ativas são ocultas."/>
+        <text name="Revamp_Help_P2_Text_5" text="Produções Divididas / Paralelas        
+As fábricas podem dividir suas produções entre as linhas de produção ou fazê-las trabalhar em paralelo. Para tornar isto reconhecível, o Revamp acrescenta um Y(divide) ou um II(paralelo) após o nome da produção. Por exemplo, as estufas produzem tomates, alface e morangos. Se apenas os tomates são ativados, ele produz 100% de tomates. Se a alface também for ativada, ela produz 50% de tomates e 50% de alface.
+Uma padaria, por outro lado, pode produzir pães e bolos em plena capacidade ao mesmo tempo."/>
+      <!-- Page 03 - Reworked Recipe View -->
+        <text name="Revamp_Help_P3_Title" text="Exibição de receita"/>
+        <text name="Revamp_Help_P3_Text_1" text="As receitas que têm mais de 4 entradas terão automaticamente uma quebra de linha."/>
+        <text name="Revamp_Help_P3_Text_2" text="As receitas recebem uma representação colorida através do Revamp, dependendo se as entradas estão presentes ou não. As cores significam:
+Branco - A entrada está presente. 
+Vermelho - A entrada não está presente e é necessária. 
+Laranja - A entrada não está presente, mas é opcional/substituível. 
+
+A produção deve ser ativada brevemente para que o display possa ser atualizado."/>
+        <text name="Revamp_Help_P3_Text_3" text="Além do estoque atual, as quantidades máximas em estoque com as unidades definidas são agora exibidas no depósito."/>
+      <!-- Page 04 - Priorities, Buy Function -->
+        <text name="Revamp_Help_P4_Title" text="Prioridades, Função Comprar"/>
+        <text name="Revamp_Help_P4_Text_1" text="A Revamp introduz um sistema de prioridade para mercadorias recebidas. As produções definidas para distribuição distribuem as mercadorias de saída para as produções receptoras de acordo com a prioridade definida. Aplica-se o seguinte:
+
+1 - Maior prioridade. Recebe primeiro
+10 - Menor prioridade. Recebe por último
+Desativado - Não aceita mercadorias
+
+Dentro de uma prioridade, as mercadorias são distribuídas como antes. Todas as produções são fornecidas em função de seu espaço livre de armazenamento.
+As produções devem ser ativadas para serem abastecidas com mercadorias.
+O sistema de distribuição pode ser desativado no menu de configurações."/>
+        <text name="Revamp_Help_P4_Text_2" text="Os insumos para produções podem ser adquiridos através do menu de produção. A seleção é feita em 4 etapas:
+1.000 unidades, 10.000 unidades, 100.000 unidades e quantidade máxima.
+O preço corresponde ao dobro do preço normal ao comprar através do menu. A compra de mercadorias individuais pode ser desativada pelo modder.
+A função pode ser desativada através do menu de configurações."/>
+      <!-- Page 05 - Spawning, Storing and manual Spawn -->
+        <text name="Revamp_Help_P5_Title" text="Armazenamento e geração"/>
+        <text name="Revamp_Help_P5_Text_1" text="O Revamp oferece um novo modo de saída: Armazenamento. Se o armazenamento é ativado, nenhum palete é gerado automaticamente na saída da produção.
+Para facilitar a distinção, o modo Keep (manter) foi renomeado para Spawning (geração). No modo Geração, a produção gera paletes automaticamente, quando o produto final atende a quantidade para a formação de paletes. Isso ocorre até não haver mais espaço no marcador de saída da fábrica."/>
+        <text name="Revamp_Help_P5_Text_2" text="Também é possível gerar paletes, fardos e toras manualmente. Isso é possível através do menu de produção ou através do gatilho de produção. A quantidade desejada é gerada até que a área de geração esteja cheia."/>
+        <text name="Revamp_Help_P5_Text_3" text="No modo Venda, as mercadorias são vendidas automaticamente pela fábrica. Uma taxa de 10% é cobrada para isto.
+O valor da taxa pode ser ajustado no menu de configurações.
+
+Na modalidade Distribuir, as mercadorias são entregues às produções correspondentes a cada hora completa dentro do jogo. Uma taxa é cobrada para isto, dependendo da distância e da quantidade entregue.
+O valor da taxa pode ser ajustado no menu de configurações."/>
+      <!-- Page 06 - Mix Groups, Boosters -->
+        <text name="Revamp_Help_P6_Title" text="Novas variações de receita"/>
+        <text name="Revamp_Help_P6_Text_1" text="Revamp permite criar receitas com entradas mistas. Cada linha representa um grupo, apenas uma entrada precisa estar presente dentro de um grupo de mistura para que a receita seja executada. Esses grupos de mistura podem ser reconhecidos pelo separador ||."/>
+        <text name="Revamp_Help_P6_Text_2" text="Os impulsionadores permitem que as produções produzam com maior rendimento. Estes impulsionadores são entradas opcionais e, portanto, não são necessários para poder produzir a receita. Se os impulsionadores estiverem presentes, a produção produz mais produção de acordo, por exemplo, outros 20%. Os impulsionadores são aditivos, portanto, 2 impulsionadores com 20% e 30% são adicionados a 50% de aumento."/>
+        <text name="Revamp_Help_P6_Text_3" text="Os impulsionadores principais podem ser usados para aumentar a velocidade de produção. Estes impulsionadores principais são, como os impulsionadores, entradas opcionais e não precisam ser capazes de produzir a receita. Se houver reforços mestre, a produção é correspondentemente mais rápida, por exemplo, em 20%. Os impulsionadores principais são aditivos, portanto 2 impulsionadores principais com 50% e 40% são adicionados a 90% de impulso principal."/>
+      <!-- Page 07 - New Production Modes -->
+        <text name="Revamp_Help_P7_Title" text="Novas variações de produção"/>
+        <text name="Revamp_Help_P7_Text_1" text="Com o Revamp, existem muitas novas variações de produção:
+
+Sazonal - As produções sazonais só produzem em determinadas épocas do ano, nenhuma produção ocorre fora da estação.
+
+Dependentes do sol - As produções dependentes do sol produzem em função da posição atual do sol. Quanto maior for a radiação solar, maior será a taxa de produção. À noite, a produção está paralisada. Nuvens, neblina e chuva têm influência na produção.
+
+Dependentes do vento - As produções dependentes do vento produzem dependendo da velocidade do vento atual. Quanto mais vento houver, maior será a taxa de produção.
+
+Dependentes da chuva - As produções dependentes da chuva só funcionam quando chove. Sem chuva, as produções estão inativas.
+
+Dependentes da temperatura - As produções dependentes da temperatura trabalham mais rápido ou mais lentamente, dependendo da temperatura.
+
+Horário de funcionamento - As produções com horário de funcionamento só funcionam durante o período especificado. Fora desses tempos, eles não distribuem paletes."/>
+        <text name="Revamp_Help_P7_Text_2" text="As produções agora também podem ter mercadorias cujas quantidades em estoque podem mudar. Estes tipos de preenchimento são marcados por um símbolo e uma seta.
+
+Setas:
+A seta verde indica que um nível pode subir.
+A seta vermelha indica que um nível pode cair.
+
+Possíveis influências:
+
+Sol - Dependendo da posição do sol, nuvens, chuva e neblina.
+
+Chuva - Dependendo da precipitação, um nível pode mudar.
+
+Vento - Dependendo da velocidade do vento, um nível pode mudar.
+
+Temperatura - Dependendo da temperatura, um nível pode mudar."/>
+      <!-- Page 08 - Hidden Productions, Sellpoints -->
+        <text name="Revamp_Help_P8_Title" text="Produções Ocultas, Pontos de Venda"/>
+        <text name="Revamp_Help_P8_Text_1" text="A Revamp permite a criação de produções ocultas. Estes não têm mais um menu, mas funcionam como produções normais e processam as mercadorias de acordo. Os paletes ainda podem ser gerados através do gatilho."/>
+        <text name="Revamp_Help_P8_Text_2" text="Com o Revamp, é possível que as produções de mods introduzam automaticamente seus tipos de preenchimento nos mapas existentes sem ter que intervir no próprio mapa. Portanto, não é necessário colocar pontos de venda adicionais."/>
+      <!-- Page 09 - Missions -->
+        <text name="Revamp_Help_P9_Title" text="Missões"/>
+        <text name="Revamp_Help_P9_Text_1" text="O Revamp intervém no sistema de missão para eliminar alguns problemas. Para este fim, é preciso fazer uma distinção entre 2 casos:"/>
+        <text name="Revamp_Help_P9_Text_2" text="A produção ainda não foi comprada
+
+Se a produção só for colocada no mapa mas ainda não tiver sido comprada por nenhuma fazenda, ela funciona como um ponto normal de venda. As mercadorias aí entregues são vendidas, a fazenda correspondente recebe seu dinheiro e o armazém interno da produção permanece vazio. 
+Se uma fazenda agora tem a produção como objetivo da missão, a quantidade entregue é contada para a missão, e qualquer excedente é automaticamente vendido no final ao preço atual. 
+"/>
+        <text name="Revamp_Help_P9_Text_3" text="A produção é comprada de uma fazenda
+
+A fazenda normalmente pode armazenar suas mercadorias na produção para que possam ser processadas lá. Se a fazenda agora tem um pedido com um objetivo de missão para produção, as mercadorias entregues são primeiro creditadas à missão, e qualquer excedente vai para o armazém interno.
+
+Além disso, no MP:
+Caso outra fazenda tenha comprado a produção, a produção se comporta como um ponto normal de venda.
+A característica especial é o status de contratante. Se a fazenda 2 tem um status de contratante com a fazenda 1, ela é avaliada pelo jogo como fazenda 1, ou seja, as mercadorias entregues são trazidas para o armazém de produção e não contam para a missão.
+
+A correção da missão pode ser desativada no menu de configurações."/>
+      <!-- Page 10 - Annotations, Other -->
+        <text name="Revamp_Help_P10_Title" text="Observações"/>
+        <text name="Revamp_Help_P10_Text_1" text="A ajuda dentro do jogo é apenas um trecho do que está incluído no Revamp e é muito simplificado e comprimido. A ajuda para a instalação pode ser encontrada na documentação detalhada."/>
+        <text name="Revamp_Help_P10_Text_2" text="Esta ajuda está na versão Revamp 1.4."/>
+    </texts>
+</l10n>

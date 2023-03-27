@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+    <translationContributors>Zipac</translationContributors>
+    <texts>
+    <!--Production line texts-->
+        <text name="Revamp_Store"                               text="Uskladnění" />
+        <text name="Revamp_Spawn"                               text="Vyskladnění" />
+        <text name="Revamp_ChangePriority"                      text="Změna priority" />
+        <text name="Revamp_BuyInputButton"                      text="Nákup" />
+        <text name="Revamp_DeliveryPriority"                    text="Priorita" />
+        <text name="Revamp_DeliveryPriorityDeactivated"         text="Priorita deaktivována" />
+        <text name="Revamp_BuyInputText"                        text="Nákup %s za %s ?" />
+        <text name="Revamp_BuyInput"                            text="Nákup produktů" />
+        <text name="Revamp_BuyInputNotEnoughMoney"              text="Málo peněz." />
+        <text name="Revamp_ChooseAmountToPutOut"                text="Výběr množství, pro vydání" />
+        <text name="Revamp_ChooseWhatToPutOut"                  text="Výběr materiálu" />
+        <text name="Revamp_ExtractPallets"                      text="Vyskladnění palet" />
+        <text name="Revamp_PalletSiloItem"                      text="Palety" />
+        <text name="Revamp_BaleSiloItem"                        text="Balíky" />
+        <text name="Revamp_ChooseBaleType"                      text="Výběr typu balíku" />
+        <text name="Revamp_WoodLogItem"                         text="Klády" />
+        <text name="Revamp_SpawnType_bale"                      text="Balíky" />
+        <text name="Revamp_SpawnType_pallet"                    text="Palety" />
+        <text name="Revamp_SpawnType_woodLog"                   text="Klády" />
+        <text name="Revamp_ChooseSpawnToPutOut"                 text="Výběr varianty" />
+        <text name="Revamp_storeWoodlogs"                       text="Uskladnění dřeva" />
+        <text name="Revamp_ViewActiveProductions"               text="Skrýt neaktivní" />
+        <text name="Revamp_ViewInActiveProductions"             text="Skrýt aktivní" />
+        <text name="Revamp_ViewAllProductions"                  text="Ukázat vše" />
+        <text name="Revamp_ChooseWoodLogLength"                 text="Výběr délky" />
+
+    <!-- Production messages -->
+        <text name="Revamp_StorageEmpty"                        text="Sklad je prázdný" />
+        <text name="Revamp_CantBuy"                             text="Produkt %s není možné koupit." />
+        <text name="Revamp_ProductionClosed"                    text="%s je uzavřen. - Otevírací hodiny: %s." />
+        <text name="Revamp_ProductionNotEmpty"                  text="Výroba není prázdná. Bude se prodávat následující zboží:"/>
+
+    <!-- Production Variants -->
+        <text name="Revamp_sunProduction"                       text="%s (záleží na slunci)" />
+        <text name="Revamp_rainProduction"                      text="%s (záleží na dešti)" />
+        <text name="Revamp_windProduction"                      text="%s (záleží na větru)" />
+        <text name="Revamp_temperatureProduction"               text="%s (záleží na teplotě &gt; 0°C)" />
+        <text name="Revamp_temperatureNegativeProduction"       text="%s (záleží na teplotě &lt; 0°C)" />
+        <text name="Revamp_seasonalProduction"                  text="%s (sezóní)" />
+        <text name="Revamp_productionHoursDependent"            text="%s (%s)" />
+        <text name="Revamp_monthlyProduction"                   text="%s (měsíčně)" />
+        <text name="Revamp_productionMode"                      text="Režim produkce" />
+
+    <!-- Production menu -->
+        <text name="Revamp_OpenProduction"                      text="Otevřít menu výroby" />
+        <text name="Revamp_SpawnItem"                           text="Vyskladnění" />
+        <text name="finance_ProductionDeliveryCosts"            text="Poplatek za dodání výroby" />
+
+    <!-- game Settings menu -->
+        <text name="Revamp_Settings_Title"                      text="Revamp" />
+        <text name="Revamp_BuyRestriction_Title"                text="Možnost přímého nákupu" />
+        <text name="Revamp_BuyRestriction_Tooltip"              text="Kdo může používat funkci nákupu ve výrobách, pokud nebyla deaktivována modderem?" />
+        <text name="Revamp_BuyRestriction_Everyone"             text="Každý" />
+        <text name="Revamp_BuyRestriction_FarmManager"          text="Manažer farmy" />
+        <text name="Revamp_BuyRestriction_ProductionAgent"      text="Manažer výroby" />
+        <text name="Revamp_BuyRestriction_None"                 text="Nikdo" />
+        <text name="Revamp_PrioSystemActive_Title"              text="Systém priorit" />
+        <text name="Revamp_PrioSystemActive_Tooltip"            text="Zde lze deaktivovat systém priority distribuce." />
+        <text name="Revamp_MissionFixActive_Title"              text="Plnění misí" />
+        <text name="Revamp_MissionFixActive_Tooltip"            text="Zde lze deaktivovat plnění misí tak, že při zásobování vlastní produkcí se tato neskladní do vlastního skladu." />
+        <text name="Revamp_PriceCorrectionActive_Title"         text="Korekce nákupních cen" />
+        <text name="Revamp_PriceCorrectionActive_Tooltip"       text="Zde lze přizpůsobení nákupních cen úrovni obtížnosti deaktivovat." />
+        <text name="Revamp_DistributionCostFactor_Title"        text="Náklady na distribuci" />
+        <text name="Revamp_DistributionCostFactor_Tooltip"      text="1 – standardní distribuční náklady. 0 - bez nákladů na distribuci." />
+        <text name="Revamp_DirectSellingPriceFactor_Title"      text="Koeficient ceny přímého prodeje" />
+        <text name="Revamp_DirectSellingPriceFactor_Tooltip"    text="Koeficient ceny při prodeji přímo z výroby. (výchozí 0,9)" />
+
+    <!-- animal delivery menu -->
+        <text name="Revamp_productionAnimalDeliveryTitle"       text="Dodat zvířata do výroby" />
+        <text name="Revamp_productionAnimalDeliveryDescription" text="Množství zvířat dodávané do výroby závisí na druhu zvířat, věku a zdravotním stavu." />
+        <text name="Revamp_animalAgeError"                      text="Zvířata musí být v rozmezí stáří mezi %s a %s měsíci." />
+        <text name="Revamp_animalHealthError"                   text="Zvířata musí mít zdraví mezi %s and %s." />
+        <text name="Revamp_animalNotValid"                      text="Tento druh zvířat zde nebude akceptován." />
+        <text name="Revamp_productFullError"                    text="Žádné volné místo ve výrobě." />
+        <text name="Revamp_amountPerAnimal"                     text="Dodávané množství vztažené na zvíře." />
+        <text name="Revamp_amountTotal"                         text="Celkové množství." />
+        <text name="Revamp_transferAnimals"                     text="Přemístění zvířat. " />
+        <text name="Revamp_AnimalOverviewHealth"                text="Očekávané zdraví" />
+        <text name="Revamp_AnimalOverviewAge"                   text="Očekávaný věk" />
+        <text name="Revamp_AnimalOverviewInputFillType"         text="Vstup do výroby" />
+        <text name="Revamp_AnimalOverviewTitle"                 text="Jaká zvířata lze dodat do výroby." />
+        <text name="Revamp_AnimalOverviewDescription"           text="Zvířata mohou být dodána do výroby, pokud splňují následující podmínky:" />
+
+      <!-- Ingame help menu -->
+        <text name="Revamp_Help_Header" text="Production Revamp"/>
+
+      <!-- Page 01 - What is Revamp? -->
+        <text name="Revamp_Help_P1_Title" text="Co je Revamp?"/>
+        <text name="Revamp_Help_P1_Text" text="Production Revamp přepracovává vnitřní výrobní systém, rozšiřuje jej a přidává různé funkce. Revamp sám o sobě je základním modem skriptu a již automaticky nabízí mnoho z následujících možností. Některé musí být zabudovány do svých modů a map moddery / mappery, aby je bylo možné používat. Toto je nápověda ve hře, další informace a nápovědu k instalaci naleznete v dokumentaci."/>
+      
+	  <!-- Page 02 - Reworked Production Menue -->
+        <text name="Revamp_Help_P2_Title" text="Menu výroby"/>
+        <text name="Revamp_Help_P2_Text_1" text="Revamp řadí výrobní řetězce abecedně podle nastavených názvů. Pomocí funkce filtru lze zobrazit pouze aktivní výrobní linky nebo neaktivní výrobní linky."/>
+        <text name="Revamp_Help_P2_Text_2" text="Bez filtru - Zobrazují se všechny výroby."/>
+        <text name="Revamp_Help_P2_Text_3" text="Aktivní výroby - Zobrazují se pouze aktivní výroby, všechny ostatní jsou skryté."/>
+        <text name="Revamp_Help_P2_Text_4" text="Nektivní výroby - Zobrazují se pouze nektivní výroby, všechny ostatní jsou skryté."/>
+        <text name="Revamp_Help_P2_Text_5" text="Sdílené / paralelní výroby - Výroby mohou svůj výstup rozdělit mezi výrobní linky nebo je nechat pracovat paralelně. Aby to bylo rozpoznatelné, Revamp přidává za název produkce Y (rozdělený) nebo II (paralelní). Ve sklenících se pěstují například rajčata, salát a jahody. Pokud jsou rajčata aktivována samostatně, produkuje 100% rajčata. Pokud je salát dodatečně aktivován, produkuje 50 % rajčat a 50 % salátu. Na druhou stranu pekárna dokáže vyrábět chléb a koláče na plný výkon zároveň."/>
+      
+	  <!-- Page 03 - Reworked Recipe View -->
+        <text name="Revamp_Help_P3_Title" text="Zobrazení receptury"/>
+        <text name="Revamp_Help_P3_Text_1" text="Recepty, které se skládají z více než 4 vstupů, jsou automaticky opatřeny zalomením řádku, při použití boosterů se toto děje již po 2 vstupech a to automaticky u všech receptů."/>
+        <text name="Revamp_Help_P3_Text_2" text="Revamp dává receptům barevné rozlišení v závislosti na tom, zda jsou k dispozici vstupy nebo ne. Barvy znamenají:
+
+BÍLÁ – vstup je k dispozici,
+ČERVENÁ - vstup není k dispozici a je vyžadován,
+ORANŽOVÁ - vstup není k dispozici, ale je volitelný / zaměnitelný.
+
+Aby se zobrazení aktualizovalo, musí být výroba krátce aktivována."/>
+        <text name="Revamp_Help_P3_Text_3" text="Ve skladu se nyní kromě aktuální zásoby zobrazují i ​​maximální skladovaná množství. Zobrazí se také nastavené jednotky."/>
+
+      <!-- Page 04 - Priorities, Buy Function -->
+        <text name="Revamp_Help_P4_Title" text="Priority, funkce nákupu"/>
+        <text name="Revamp_Help_P4_Text_1" text="Revamp zavádí prioritní systém pro příchozí zboží. Výroby, které jsou nastaveny k distribuci, se nyní distribuují do jiné výroby podle nastavené priority. Platí následující:
+
+1 - nejdůležitější, první
+10 - nejméně důležité, poslední
+zakázáno - nepřijímá zboží.
+
+Zboží je v rámci priority distribuováno jako dosud, takže všechny produkce jsou zásobovány v závislosti na volném skladovém prostoru.Výroby musí být aktivovány, aby bylo možné přijímat zboží. Distribuční systém lze deaktivovat v nabídce nastavení."/>
+        <text name="Revamp_Help_P4_Text_2" text="Vstupy do výroby lze zakoupit přes výrobní menu. Výběr probíhá ve 4 fázích:
+
+1.000 jednotek, 10.000 jednotek, 100.000 jednotek a maximální množství.
+Cena je zde 2× vyšší. Z nákupu může být vyloučeno i jednotlivé zboží.
+Funkci lze deaktivovat prostřednictvím nabídky nastavení."/>
+
+      <!-- Page 05 - Spawning, Storing and manual Spawn -->
+        <text name="Revamp_Help_P5_Title" text="Uskladnění a vyskladnění"/>
+        <text name="Revamp_Help_P5_Text_1" text="Revamp nabízí nový výstupní režim: USKLADNĚNÍ - Pokud je aktivováno uskladnění, ve výrobě se automaticky nevytvoří žádné palety. Pro snazší rozlišení byl režim USCHOVAT přejmenován na VYSKLADNĚNÍ. V režimu vyskladnění se při výrobě tvoři palety."/>
+        <text name="Revamp_Help_P5_Text_2" text="Palety, balíky a klády je také možné vyskladňovat ručně. To lze provést prostřednictvím nabídky výroby nebo prostřednictvím spouštěče výroby. Vybrané množství je vyskladněno, dokud není oblast vyskladnění plná."/>
+        <text name="Revamp_Help_P5_Text_3" text="V režimu přímého prodeje je zboží automaticky prodáno za poplatek 10% ceny. Poplatek lze změnit v nabídce nastavení. V režimu DISTRIBUCE je zboží dodáno do odpovídající výroby každou celou hodinu. To je zpoplatněno v závislosti na vzdálenosti a dodaném množství. Poplatek lze změnit v nabídce nastavení."/>
+
+      <!-- Page 06 - Mix Groups, Boosters -->
+        <text name="Revamp_Help_P6_Title" text="Nová varianta receptů"/>
+        <text name="Revamp_Help_P6_Text_1" text="Revamp umožňuje vytvářet recepty se smíšenými vstupy. Každý řádek představuje skupinu. Aby bylo možné vytvořit recepty, musí být ve skupině přítomen pouze jeden vstup. Skupiny mixů lze rozpoznat podle separátoru ||."/>
+        <text name="Revamp_Help_P6_Text_2" text="Boostery umožňují výrobě produkovat více výstupu. Boostery jsou volitelné vstupy a nejsou nutné k vytvoření receptu. Pokud jsou k dispozici boostery, produkuje výroba odpovídajícím způsobem více. Například o 20 %. Boostery se sčítají, takže booster s 20 % a booster s 30 % přidají až o 50 % více výstupu."/>
+        <text name="Revamp_Help_P6_Text_3" text="Master booster může zvýšit rychlost výroby. Master boostery jsou volitelné vstupy a nejsou nutné k vytvoření receptu. Pokud jsou k dispozici master boostery, výroba bude vyrábět odpovídajícím způsobem rychleji. Například o 20 %. Master boostery se sčítají, takže master booster s 50 % a master booster s 40 % přidají společně až o 90 % na rychlosti výroby."/>
+
+      <!-- Page 07 - New Production Modes -->
+        <text name="Revamp_Help_P7_Title" text="Nové výrobní varianty"/>
+        <text name="Revamp_Help_P7_Text_1" text="Mód Revamp přidává mnoho dalších nových výrobních variant:
+
+SEZÓNA – sezónní výroba funguje pouze v určitých obdobích roku, mimo sezónu žádná produkce není.
+
+SLUNCE - závislá na slunci - výroba funguje v závislosti na aktuálním slunečním záření. Čím větší je sluneční záření, tím vyšší je rychlost výroby. Výroba se zastaví v noci. Mraky, mlha a déšť též ovlivňují produkci.
+
+VÍTR - závislá na větru - výroba funguje v závislosti na aktuální rychlosti větru. Čím více větru, tím vyšší je výroba.
+
+DÉŠŤ - závislá na dešti - výroba závislá na dešti funguje pouze tehdy, když prší. Bez deště je výroba neaktivní.
+
+TEPLOTA - závislá na teplotě - výroba závislá na teplotě pracuje rychleji nebo naopak pomaleji.
+
+OTEVÍRACÍ DOBA - výroba s otevírací dobou funguje pouze v uvedené době. Mimo tuto dobu se výroba nevydává."/>
+        <text name="Revamp_Help_P7_Text_2" text="Výroby nyní mohou mít i zboží, jehož skladované množství se může měnit. Tyto jsou označeny symbolem na úrovni ukazatele naplnění a šipkou.
+
+
+Šipky:
+------
+Zelená šipka ukazuje, že úroveň naplnění může stoupnout.
+Červená šipka ukazuje, že úroveň naplnění může klesnout.
+
+Možné vlivy:
+------------
+SLUNCE - podle polohy slunce, oblačnosti, deště a mlhy.
+DÉŠŤ – v závislosti na srážkách se může úroveň měnit.
+VÍTR - v závislosti na rychlosti větru se může úroveň měnit.
+TEPLOTA - v závislosti na teplotě se může úroveň měnit."/>
+
+      <!-- Page 08 - Hidden Productions, Sellpoints -->
+        <text name="Revamp_Help_P8_Title" text="Skryté výroby a prodejní místa"/>
+        <text name="Revamp_Help_P8_Text_1" text="Revamp umožňuje vytvářet skryté výroby. Už nemají menu, ale jinak fungují jako normální výroby a podle toho zpracovávají zboží. Přesto lze palety vyskladnit pomocí spouště."/>
+        <text name="Revamp_Help_P8_Text_2" text="S Revamp módem je možné, aby módové výroby automaticky zadávaly své FillTypes do existujících map, aniž by zasahovaly do mapy samotné. Není tedy nutné umisťovat další extra prodejní místa."/>
+ 
+      <!-- Page 09 - Missions -->
+        <text name="Revamp_Help_P9_Title" text="Mise"/>
+        <text name="Revamp_Help_P9_Text_1" text="Revamp zasahuje do systému misí, čímž vyřešil některé problémy. Rozlišují se dva případy:"/>
+        <text name="Revamp_Help_P9_Text_2" text="Výroba je prodejním místem
+
+Pokud ještě výroba nebyla koupena žádnou farmou, funguje jako normální prodejní místo. Dodané zboží je prodáno, příslušná farma obdrží své peníze a vnitřní výrobní sklad zůstává prázdný.
+Pokud je výroba jako cíl mise, dodané množství se započítá do mise, případný přebytek se poté automaticky prodá za aktuální cenu."/>
+        <text name="Revamp_Help_P9_Text_3" text="Výrobu vlastní farma
+
+Farma může běžně skladovat své zboží ve výrobě, aby se tam dalo zpracovat. Pokud má nyní farma misi s cílem mise pro výrobu, dodané zboží se nejprve připíše do mise, případný přebytek jde do interního skladu.
+
+Navíc pro hru ve více lidech (MP):
+Pokud výrobu koupila jiná farma, výroba se chová jako normální prodejní místo.
+Zvláštností je status dodavatele. Pokud má farma 2 status dodavatele na farmě 1, hra ji započítá jako farmu 1, takže dodané zboží je doručeno do výroby a nezapočítává se do mise.
+
+Opravu mise lze deaktivovat v nabídce nastavení."/>
+
+      <!-- Page 10 - Annotations, Other -->
+        <text name="Revamp_Help_P10_Title" text="Vysvětlivky"/>
+        <text name="Revamp_Help_P10_Text_1" text="Tato nápověda ve hře je jen částečné popsání funkcí módu Revamp Production a je značně zjednodušená. Podrobnou nápovědu k instalaci naleznete přímo v dokumentaci."/>
+        <text name="Revamp_Help_P10_Text_2" text="Tato nápověda byla vytvořena pro Revamp od v.1.3. Český překlad by Zipac."/>
+    </texts>
+</l10n>

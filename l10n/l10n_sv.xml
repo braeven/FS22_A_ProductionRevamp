@@ -3,75 +3,93 @@
     <translationContributors>Swedish Fika</translationContributors>
     <texts>
     <!--Production line texts-->
-        <text name="Revamp_Store"                           text="Lagra" />
-        <text name="Revamp_Spawn"                           text="Generera" />
-        <text name="Revamp_ChangePriority"                  text="Lägre prioritet" />
-        <text name="Revamp_BuyInputButton"                  text="Köp" />
-        <text name="Revamp_DeliveryPriority"                text="Prioritet" />
-        <text name="Revamp_DeliveryPriorityDeactivated"     text="Inaktiverad" />
-        <text name="Revamp_BuyInputText"                    text="Köp %s för %s ?" />
-        <text name="Revamp_BuyInput"                        text="Köp varor" />
-        <text name="Revamp_BuyInputNotEnoughMoney"          text="Not enough money." />
-        <text name="Revamp_ChooseAmountToPutOut"            text="Välj antal att mata ut" />
-        <text name="Revamp_ChooseWhatToPutOut"              text="Välj material" />
-        <text name="Revamp_ExtractPallets"                  text="Extrahera pallar" />
-        <text name="Revamp_PalletSiloItem"                  text="Pallar" />
-        <text name="Revamp_BaleSiloItem"                    text="Balar" />
-        <text name="Revamp_ChooseBaleType"                  text="Välj Baltyp" />
-        <text name="Revamp_WoodLogItem"                     text="Stockar" />
-        <text name="Revamp_SpawnType_bale"                  text="Balar" />
-        <text name="Revamp_SpawnType_pallet"                text="Pallar" />
-        <text name="Revamp_SpawnType_woodLog"               text="Stockar" />
-        <text name="Revamp_ChooseSpawnToPutOut"             text="Välj variant" />
-        <text name="Revamp_storeWoodlogs"                   text="Lagra Stockar" />
-        <text name="Revamp_ViewActiveProductions"           text="Göm Inaktiva" />
-        <text name="Revamp_ViewInActiveProductions"         text="Göm Aktiv" />
-        <text name="Revamp_ViewAllProductions"              text="Visa alla" />
+        <text name="Revamp_Store"                               text="Lagra" />
+        <text name="Revamp_Spawn"                               text="Generera" />
+        <text name="Revamp_ChangePriority"                      text="Lägre prioritet" />
+        <text name="Revamp_BuyInputButton"                      text="Köp" />
+        <text name="Revamp_DeliveryPriority"                    text="Prioritet" />
+        <text name="Revamp_DeliveryPriorityDeactivated"         text="Inaktiverad" />
+        <text name="Revamp_BuyInputText"                        text="Köp %s för %s ?" />
+        <text name="Revamp_BuyInput"                            text="Köp varor" />
+        <text name="Revamp_BuyInputNotEnoughMoney"              text="Not enough money." />
+        <text name="Revamp_ChooseAmountToPutOut"                text="Välj antal att mata ut" />
+        <text name="Revamp_ChooseWhatToPutOut"                  text="Välj material" />
+        <text name="Revamp_ExtractPallets"                      text="Extrahera pallar" />
+        <text name="Revamp_PalletSiloItem"                      text="Pallar" />
+        <text name="Revamp_BaleSiloItem"                        text="Balar" />
+        <text name="Revamp_ChooseBaleType"                      text="Välj Baltyp" />
+        <text name="Revamp_WoodLogItem"                         text="Stockar" />
+        <text name="Revamp_SpawnType_bale"                      text="Balar" />
+        <text name="Revamp_SpawnType_pallet"                    text="Pallar" />
+        <text name="Revamp_SpawnType_woodLog"                   text="Stockar" />
+        <text name="Revamp_ChooseSpawnToPutOut"                 text="Välj variant" />
+        <text name="Revamp_storeWoodlogs"                       text="Lagra Stockar" />
+        <text name="Revamp_ViewActiveProductions"               text="Göm Inaktiva" />
+        <text name="Revamp_ViewInActiveProductions"             text="Göm Aktiv" />
+        <text name="Revamp_ViewAllProductions"                  text="Visa alla" />
+        <text name="Revamp_ChooseWoodLogLength"                 text="Välj längd" />
 
     <!-- Production messages -->
-        <text name="Revamp_StorageEmpty"                    text="Lagret är tomt" />
-        <text name="Revamp_CantBuy"                         text="Typ %s kan inte köpas." />
-        <text name="Revamp_ProductionClosed"                text="%s är sängt. - Öppettider: %s to %s." />
+        <text name="Revamp_StorageEmpty"                        text="Lagret är tomt" />
+        <text name="Revamp_CantBuy"                             text="Typ %s kan inte köpas." />
+        <text name="Revamp_ProductionClosed"                    text="%s är sängt. - Öppettider: %s." />
+        <text name="Revamp_ProductionNotEmpty"                  text="Produktionen är inte tom. Följande varor kommer också att säljas:"/>
 
     <!-- Production Variants -->
-        <text name="Revamp_sunProduction"                  text="%s (Berorende av solen)" />
-        <text name="Revamp_rainProduction"                 text="%s (Berorende av regnet)" />
-        <text name="Revamp_windProduction"                 text="%s (Berorende av vinden)" />
-        <text name="Revamp_temperatureProduction"          text="%s (Berorende av plus grader)" />
-        <text name="Revamp_temperaturNegativeProduction"   text="%s (Berorende av minus grader)" />
-        <text name="Revamp_seasonalProduction"             text="%s (Säsong)" />
-        <text name="Revamp_productionHoursDependent"       text="%s (%s till %s)" />
-        <text name="Revamp_monthlyProduction"              text="%s (en gång i månaden)" />
-
+        <text name="Revamp_sunProduction"                       text="%s Berorende av solen" />
+        <text name="Revamp_rainProduction"                      text="%s Berorende av regnet" />
+        <text name="Revamp_windProduction"                      text="%s Berorende av vinden" />
+        <text name="Revamp_temperatureProduction"               text="%s Berorende av plus grader" />
+        <text name="Revamp_temperatureNegativeProduction"       text="%s Berorende av minus grader" />
+        <text name="Revamp_seasonalProduction"                  text="%s Säsong" />
+        <text name="Revamp_productionHoursDependent"            text="%s %s" />
+        <text name="Revamp_monthlyProduction"                   text="%s en gång i månaden" />
+        <text name="Revamp_productionMode"                      text="Produktionsläge" />
     <!-- Production menu -->
-        <text name="Revamp_OpenProduction"                  text="Öppna produktionsmenyn" />
-        <text name="Revamp_SpawnItem"                       text="Generera föremål" />
-        <text name="finance_ProductionDeliveryCosts"        text="Produktion Leveranskostnader" />
+        <text name="Revamp_OpenProduction"                      text="Öppna produktionsmenyn" />
+        <text name="Revamp_SpawnItem"                           text="Generera föremål" />
+        <text name="finance_ProductionDeliveryCosts"            text="Produktion Leveranskostnader" />
 
     <!-- game Settings menu -->
-        <text name="Revamp_Settings_Title"                  text="Revamp" />
-        <text name="Revamp_BuyRestriction_Title"            text="Kvalificerad att köpa" />
-        <text name="Revamp_BuyRestriction_Tooltip"          text="Vem kan använda köpfunktionen i produktioner om den inte har inaktiverats av moddern?" />
-        <text name="Revamp_BuyRestriction_Everyone"         text="Alla" />
-        <text name="Revamp_BuyRestriction_FarmManager"      text="Gårdschef" />
-        <text name="Revamp_BuyRestriction_ProductionAgent"  text="Produktionschef" />
-        <text name="Revamp_BuyRestriction_None"             text="Ingen" />
-        <text name="Revamp_PrioSystemActive_Title"          text="Prioritetssystem" />
-        <text name="Revamp_PrioSystemActive_Tooltip"        text="Prioritetssystemet vid distribution kan avaktiveras här." />
-        <text name="Revamp_MissionFixActive_Title"          text="Missionfixet" />
-        <text name="Revamp_MissionFixActive_Tooltip"        text="Missionfixet att när de levererar egna produktioner går de inte in i det egna lagret kan avaktiveras här" />
-        <text name="Revamp_PriceCorrectionActive_Title"     text="Rättelse av inköpspriser" />
-        <text name="Revamp_PriceCorrectionActive_Tooltip"   text="Anpassningen av inköpspriserna till svårighetsgraden kan avaktiveras här." />
-        <text name="Revamp_DistributionCostFactor_Title"    text="Distributionskostnadsfaktor" />
-        <text name="Revamp_DistributionCostFactor_Tooltip"  text="Faktor på standard Giants distributionskostnader. 0 avaktiverar dem." />
-        <text name="Revamp_DirectSellingPriceFactor_Title"   text="Direktförsäljningsprisfaktor" />
-        <text name="Revamp_DirectSellingPriceFactor_Tooltip" text="Ta hänsyn till priset du får för direkt dale i produktioner (Standard 0,9)" />
+        <text name="Revamp_Settings_Title"                      text="Revamp" />
+        <text name="Revamp_BuyRestriction_Title"                text="Kvalificerad att köpa" />
+        <text name="Revamp_BuyRestriction_Tooltip"              text="Vem kan använda köpfunktionen i produktioner om den inte har inaktiverats av moddern?" />
+        <text name="Revamp_BuyRestriction_Everyone"             text="Alla" />
+        <text name="Revamp_BuyRestriction_FarmManager"          text="Gårdschef" />
+        <text name="Revamp_BuyRestriction_ProductionAgent"      text="Produktionschef" />
+        <text name="Revamp_BuyRestriction_None"                 text="Ingen" />
+        <text name="Revamp_PrioSystemActive_Title"              text="Prioritetssystem" />
+        <text name="Revamp_PrioSystemActive_Tooltip"            text="Prioritetssystemet vid distribution kan avaktiveras här." />
+        <text name="Revamp_MissionFixActive_Title"              text="Missionfixet" />
+        <text name="Revamp_MissionFixActive_Tooltip"            text="Missionfixet att när de levererar egna produktioner går de inte in i det egna lagret kan avaktiveras här" />
+        <text name="Revamp_PriceCorrectionActive_Title"         text="Rättelse av inköpspriser" />
+        <text name="Revamp_PriceCorrectionActive_Tooltip"       text="Anpassningen av inköpspriserna till svårighetsgraden kan avaktiveras här." />
+        <text name="Revamp_DistributionCostFactor_Title"        text="Distributionskostnadsfaktor" />
+        <text name="Revamp_DistributionCostFactor_Tooltip"      text="Faktor på standard Giants distributionskostnader. 0 avaktiverar dem." />
+        <text name="Revamp_DirectSellingPriceFactor_Title"      text="Direktförsäljningsprisfaktor" />
+        <text name="Revamp_DirectSellingPriceFactor_Tooltip"    text="Ta hänsyn till priset du får för direkt dale i produktioner (Standard 0,9)" />
 
+    <!-- animal delivery menu -->
+        <text name="Revamp_productionAnimalDeliveryTitle"       text="Leverera djur till produktionen" />
+        <text name="Revamp_productionAnimalDeliveryDescription" text="Mängden som levereras till produktionen beror på djurart, ålder och hälsa." />
+        <text name="Revamp_animalAgeError"                      text="Djuren måste vara mellan %s och %s månader gamla." />
+        <text name="Revamp_animalHealthError"                   text="Djur måste ha mellan %s och %s hälsa." />
+        <text name="Revamp_animalNotValid"                      text="Den här typen av djur accepteras inte här." />
+        <text name="Revamp_productFullError"                    text="Inget ledigt utrymme i produktionen" />
+        <text name="Revamp_amountPerAnimal"                     text="Leveransmängd per djur" />
+        <text name="Revamp_amountTotal"                         text="Total leveranskvantitet" />
+        <text name="Revamp_transferAnimals"                     text="Överför djur" />
+        <text name="Revamp_AnimalOverviewHealth"                text="Förväntad hälsa" />
+        <text name="Revamp_AnimalOverviewAge"                   text="Förväntad ålder" />
+        <text name="Revamp_AnimalOverviewInputFillType"         text="Input till produktionen" />
+        <text name="Revamp_AnimalOverviewTitle"                 text="Vilka djur kan levereras till produktionen" />
+        <text name="Revamp_AnimalOverviewDescription"           text="Djur kan levereras till produktionen om de uppfyller följande villkor:" />
+        
       <!-- Ingame help menu -->
         <text name="Revamp_Help_Header" text="Production Revamp"/>
       <!-- Page 01 - What is Revamp? -->
         <text name="Revamp_Help_P1_Title" text="Vad är Revamp?"/>
-        <text name="Revamp_Help_P1_Text" text="Production Revamp ser över det interna produktionssystemet, utökar det och lägger till olika funktioner. Revamp själv är den grundläggande skriptmodden och erbjuder redan många av följande alternativ automatiskt. Men vissa måste byggas in i sina moddar en kartor av moddare/mappare för att kunna användas.
+        <text name="Revamp_Help_P1_Text" text="Production Revamp ser över det interna produktionssystemet, utökar det och lägger till olika funktioner. Revamp själv är den grundläggande skriptmodden och erbjuder redan många av följande alternativ automatiskt. Men vissa måste byggas in i sina moddar och kartor av moddare/mappare för att kunna användas.
 
 Detta är hjälpen i spelet, ytterligare information och installationshjälp finns i dokumentationen."/>
       <!-- Page 02 - Reworked Production Menue -->

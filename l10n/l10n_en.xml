@@ -1,70 +1,90 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <l10n>
+    <translationContributors>Braeven / Achimobil</translationContributors>
     <texts>
     <!--Production line texts-->
-        <text name="Revamp_Store"                           text="Storing" />
-        <text name="Revamp_Spawn"                           text="Spawning" />
-        <text name="Revamp_ChangePriority"                  text="Lower Priority" />
-        <text name="Revamp_BuyInputButton"                  text="Buy" />
-        <text name="Revamp_DeliveryPriority"                text="Priority" />
-        <text name="Revamp_DeliveryPriorityDeactivated"     text="Deactivated" />
-        <text name="Revamp_BuyInputText"                    text="Buy %s for %s ?" />
-        <text name="Revamp_BuyInput"                        text="Buy goods" />
-        <text name="Revamp_BuyInputNotEnoughMoney"          text="Not enough money." />
-        <text name="Revamp_ChooseAmountToPutOut"            text="Choose amount to put out" />
-        <text name="Revamp_ChooseWhatToPutOut"              text="Choose material" />
-        <text name="Revamp_ExtractPallets"                  text="Extract in Pallets" />
-        <text name="Revamp_PalletSiloItem"                  text="Pallets" />
-        <text name="Revamp_BaleSiloItem"                    text="Bales" />
-        <text name="Revamp_ChooseBaleType"                  text="Choose BalesTypes" />
-        <text name="Revamp_WoodLogItem"                     text="Logs" />
-        <text name="Revamp_SpawnType_bale"                  text="Bales" />
-        <text name="Revamp_SpawnType_pallet"                text="Pallets" />
-        <text name="Revamp_SpawnType_woodLog"               text="Logs" />
-        <text name="Revamp_ChooseSpawnToPutOut"             text="Choose variant" />
-        <text name="Revamp_storeWoodlogs"                   text="Store wood" />
-        <text name="Revamp_ViewActiveProductions"           text="Hide Inactive" />
-        <text name="Revamp_ViewInActiveProductions"         text="Hide Active" />
-        <text name="Revamp_ViewAllProductions"              text="View All" />
+        <text name="Revamp_Store"                               text="Storing" />
+        <text name="Revamp_Spawn"                               text="Spawning" />
+        <text name="Revamp_ChangePriority"                      text="Lower Priority" />
+        <text name="Revamp_BuyInputButton"                      text="Buy" />
+        <text name="Revamp_DeliveryPriority"                    text="Priority" />
+        <text name="Revamp_DeliveryPriorityDeactivated"         text="Deactivated" />
+        <text name="Revamp_BuyInputText"                        text="Buy %s for %s ?" />
+        <text name="Revamp_BuyInput"                            text="Buy goods" />
+        <text name="Revamp_BuyInputNotEnoughMoney"              text="Not enough money." />
+        <text name="Revamp_ChooseAmountToPutOut"                text="Choose amount to put out" />
+        <text name="Revamp_ChooseWhatToPutOut"                  text="Choose material" />
+        <text name="Revamp_ExtractPallets"                      text="Extract in Pallets" />
+        <text name="Revamp_PalletSiloItem"                      text="Pallets" />
+        <text name="Revamp_BaleSiloItem"                        text="Bales" />
+        <text name="Revamp_ChooseBaleType"                      text="Choose BalesTypes" />
+        <text name="Revamp_WoodLogItem"                         text="Logs" />
+        <text name="Revamp_SpawnType_bale"                      text="Bales" />
+        <text name="Revamp_SpawnType_pallet"                    text="Pallets" />
+        <text name="Revamp_SpawnType_woodLog"                   text="Logs" />
+        <text name="Revamp_ChooseSpawnToPutOut"                 text="Choose variant" />
+        <text name="Revamp_storeWoodlogs"                       text="Store wood" />
+        <text name="Revamp_ViewActiveProductions"               text="Hide Inactive" />
+        <text name="Revamp_ViewInActiveProductions"             text="Hide Active" />
+        <text name="Revamp_ViewAllProductions"                  text="View All" />
+        <text name="Revamp_ChooseWoodLogLength"                 text="Choose Length" />
 
     <!-- Production messages -->
-        <text name="Revamp_StorageEmpty"                    text="Storage is empty" />
-        <text name="Revamp_CantBuy"                         text="Input %s can't be bought." />
-        <text name="Revamp_ProductionClosed"                text="%s is closed. - Opening hours: %s to %s." />
+        <text name="Revamp_StorageEmpty"                        text="Storage is empty" />
+        <text name="Revamp_CantBuy"                             text="Input %s can't be bought." />
+        <text name="Revamp_ProductionClosed"                    text="%s is closed. - Opening hours: %s." />
+        <text name="Revamp_ProductionNotEmpty"                  text="The Production is not empty. The following goods will be sold too:"/>
 
     <!-- Production Variants -->
-        <text name="Revamp_sunProduction"                  text="%s (Sun dependent)" />
-        <text name="Revamp_rainProduction"                 text="%s (Rain dependent)" />
-        <text name="Revamp_windProduction"                 text="%s (Wind dependent)" />
-        <text name="Revamp_temperatureProduction"          text="%s (positive temperature dependent)" />
-        <text name="Revamp_temperaturNegativeProduction"   text="%s (negative temperature dependent)" />
-        <text name="Revamp_seasonalProduction"             text="%s (Seasonal)" />
-        <text name="Revamp_productionHoursDependent"       text="%s (%s to %s)" />
-        <text name="Revamp_monthlyProduction"              text="%s (Monthly)" />
+        <text name="Revamp_sunProduction"                       text="%s Sun dependent" />
+        <text name="Revamp_rainProduction"                      text="%s Rain dependent" />
+        <text name="Revamp_windProduction"                      text="%s Wind dependent" />
+        <text name="Revamp_temperatureProduction"               text="%s temperature dependent" />
+        <text name="Revamp_temperatureNegativeProduction"       text="%s temperature dependent" />
+        <text name="Revamp_seasonalProduction"                  text="%s Seasonal" />
+        <text name="Revamp_productionHoursDependent"            text="%s %s" />
+        <text name="Revamp_monthlyProduction"                   text="%s Monthly" />
+        <text name="Revamp_productionMode"                      text="Production Mode" />
 
     <!-- Production menu -->
-        <text name="Revamp_OpenProduction"                  text="Open Production Menu" />
-        <text name="Revamp_SpawnItem"                       text="Spawn Items" />
-        <text name="finance_ProductionDeliveryCosts"        text="Delivery Costs Productions" />
+        <text name="Revamp_OpenProduction"                      text="Open Production Menu" />
+        <text name="Revamp_SpawnItem"                           text="Spawn Items" />
+        <text name="finance_ProductionDeliveryCosts"            text="Delivery Costs Productions" />
 
     <!-- game Settings menu -->
-        <text name="Revamp_Settings_Title"                  text="Revamp" />
-        <text name="Revamp_BuyRestriction_Title"            text="Eligible to buy" />
-        <text name="Revamp_BuyRestriction_Tooltip"          text="Who can use the buy function in productions if it has not been disabled by the modder?" />
-        <text name="Revamp_BuyRestriction_Everyone"         text="Anyone" />
-        <text name="Revamp_BuyRestriction_FarmManager"      text="Farm Manager" />
-        <text name="Revamp_BuyRestriction_ProductionAgent"  text="Production Manager" />
-        <text name="Revamp_BuyRestriction_None"             text="None" />
-        <text name="Revamp_PrioSystemActive_Title"          text="Priority System" />
-        <text name="Revamp_PrioSystemActive_Tooltip"        text="The priority system when distributing can be deactivated here." />
-        <text name="Revamp_MissionFixActive_Title"          text="Mission Fix" />
-        <text name="Revamp_MissionFixActive_Tooltip"        text="The mission fix that when supplying own productions they do not go into the own warehouse can be deactivated here" />
-        <text name="Revamp_PriceCorrectionActive_Title"     text="Correction of purchase prices" />
-        <text name="Revamp_PriceCorrectionActive_Tooltip"   text="The adjustment of the purchase prices to the difficulty level can be deactivated here." />
-        <text name="Revamp_DistributionCostFactor_Title"    text="Distribution Cost Factor" />
-        <text name="Revamp_DistributionCostFactor_Tooltip"  text="Factor on standard Giants distribution costs. 0 deactivates them." />.
-        <text name="Revamp_DirectSellingPriceFactor_Title"   text="Direct Selling Price Factor" />
-        <text name="Revamp_DirectSellingPriceFactor_Tooltip" text="Factor on the price you get for direct dale in productions (Default 0.9)" />
+        <text name="Revamp_Settings_Title"                      text="Revamp" />
+        <text name="Revamp_BuyRestriction_Title"                text="Eligible to buy" />
+        <text name="Revamp_BuyRestriction_Tooltip"              text="Who can use the buy function in productions if it has not been disabled by the modder?" />
+        <text name="Revamp_BuyRestriction_Everyone"             text="Anyone" />
+        <text name="Revamp_BuyRestriction_FarmManager"          text="Farm Manager" />
+        <text name="Revamp_BuyRestriction_ProductionAgent"      text="Production Manager" />
+        <text name="Revamp_BuyRestriction_None"                 text="None" />
+        <text name="Revamp_PrioSystemActive_Title"              text="Priority System" />
+        <text name="Revamp_PrioSystemActive_Tooltip"            text="The priority system when distributing can be deactivated here." />
+        <text name="Revamp_MissionFixActive_Title"              text="Mission Fix" />
+        <text name="Revamp_MissionFixActive_Tooltip"            text="The mission fix that when supplying own productions they do not go into the own warehouse can be deactivated here" />
+        <text name="Revamp_PriceCorrectionActive_Title"         text="Correction of purchase prices" />
+        <text name="Revamp_PriceCorrectionActive_Tooltip"       text="The adjustment of the purchase prices to the difficulty level can be deactivated here." />
+        <text name="Revamp_DistributionCostFactor_Title"        text="Distribution Cost Factor" />
+        <text name="Revamp_DistributionCostFactor_Tooltip"      text="Factor on standard Giants distribution costs. 0 deactivates them." />.
+        <text name="Revamp_DirectSellingPriceFactor_Title"      text="Direct Selling Price Factor" />
+        <text name="Revamp_DirectSellingPriceFactor_Tooltip"    text="Factor on the price you get for direct sale in productions (Default 0.9)" />
+
+    <!-- animal delivery menu -->
+        <text name="Revamp_productionAnimalDeliveryTitle"       text="Deliver animals to production" />
+        <text name="Revamp_productionAnimalDeliveryDescription" text="The quantity delivered to production depends on the animal species, age and health." />
+        <text name="Revamp_animalAgeError"                      text="Animals must be between %s and %s months old." />
+        <text name="Revamp_animalHealthError"                   text="Animals must have between %s and %s health." />
+        <text name="Revamp_animalNotValid"                      text="This type of animal will not be accepted here." />
+        <text name="Revamp_productFullError"                    text="No free space in production" />
+        <text name="Revamp_amountPerAnimal"                     text="Delivery quantity per animal" />
+        <text name="Revamp_amountTotal"                         text="Total delivery quantity" />
+        <text name="Revamp_transferAnimals"                     text="Transfer animals" />
+        <text name="Revamp_AnimalOverviewHealth"                text="Expected Health" />
+        <text name="Revamp_AnimalOverviewAge"                   text="Expected Age" />
+        <text name="Revamp_AnimalOverviewInputFillType"         text="Input to production" />
+        <text name="Revamp_AnimalOverviewTitle"                 text="Which animals can be supplied to the production" />
+        <text name="Revamp_AnimalOverviewDescription"           text="Animals can be supplied to production if they meet the following conditions:" />
 
       <!-- Ingame help menu -->
         <text name="Revamp_Help_Header" text="Production Revamp"/>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement type="empty" profile="newLayer" />
+    <GuiElement type="bitmap" profile="dialogFullscreenBg" />
+    <GuiElement type="bitmap" profile="bgVignette"/>
+    <GuiElement type="bitmap" profile="bgGlowDialog" />
+
+    <GuiElement type="bitmap" profile="siloDialogBg" id="dialogElement" size="890px 370px">
+        <GuiElement type="bitmap" profile="dialogHeaderDocked">
+            <GuiElement type="text" profile="dialogHeaderText" text="$l10n_Revamp_productionAnimalDeliveryTitle" id="dialogTitleElement"/>
+        </GuiElement>
+
+        <GuiElement type="text" profile="siloDialogText" text="$l10n_Revamp_productionAnimalDeliveryDescription" id="dialogTextElement" />
+
+        <GuiElement type="bitmap" profile="multiTextOptionSiloIcon" position="-280px -20px" size="230px 230px" id="palletIconElement" />
+        <GuiElement type="bitmap" profile="multiTextOptionSiloIcon" position="-280px -20px" size="230px 230px" id="acceptedElement" />
+
+        <GuiElement type="bitmap" profile="shipConfigPriceTotalBox" position="331px 100px" size="508px 46px">
+            <GuiElement type="text"   profile="shopConfigPriceTitleTotal" text="$l10n_Revamp_amountPerAnimal:" />
+            <GuiElement type="text"   profile="shopConfigPriceValueTotal" id="basePriceText" text="123123" />
+        </GuiElement>
+        <GuiElement type="bitmap" profile="shipConfigPriceTotalBox" position="331px 52px" size="508px 46px">
+            <GuiElement type="text"   profile="shopConfigPriceTitleTotal" text="$l10n_Revamp_amountTotal:" />
+            <GuiElement type="text"   profile="shopConfigPriceValueTotal" id="totalPriceText" text="123123" />
+        </GuiElement>
+
+        <GuiElement type="multiTextOption" profile="multiTextOptionSiloRevamp" position="140px -92px" onClick="onClickItems" id="itemsElement" handleFocus="true" >
+            <GuiElement type="button" profile="multiTextOptionLeft" />
+            <GuiElement type="button" profile="multiTextOptionRight" />
+            <GuiElement type="text"   profile="multiTextOptionTextSiloRevamp" id="textElement"/>
+            <GuiElement type="bitmap" profile="multiTextOptionBgSiloRevamp" />
+        </GuiElement>
+
+        <GuiElement type="multiTextOption" profile="multiTextOptionSiloRevamp" position="140px -155px" onClick="onClickQuantity" id="quantityElement" handleFocus="true" >
+            <GuiElement type="button" profile="multiTextOptionLeft" />
+            <GuiElement type="button" profile="multiTextOptionRight" />
+            <GuiElement type="text"   profile="multiTextOptionTextSiloRevamp" id="textElement"/>
+            <GuiElement type="bitmap" profile="multiTextOptionBgSiloRevamp" />
+        </GuiElement>
+
+        <GuiElement type="flowLayout" profile="buttonBoxDialog" id="buttonsPC">
+            <GuiElement type="button" profile="buttonOK" text="$l10n_Revamp_transferAnimals" onClick="onClickOk" id="yesButton" />
+            <GuiElement type="button" profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="noButton" />
+        </GuiElement>
+    </GuiElement>
+</GUI>

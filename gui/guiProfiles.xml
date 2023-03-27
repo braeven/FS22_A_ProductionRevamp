@@ -1,19 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <GUIProfiles>
-    <Presets>
-        <Preset name="colorTransparent" value="0 0 0 0"/>
-    </Presets>
-    <Profile name="quickAmountDialogBg" extends="dialogBg">
-        <Value name="size" value="750px 230px"/>
-    </Profile>
-    <Profile name="quickAmountDialogOptionBox" extends="baseReference" with="anchorTopRight">
-        <Value name="imageColor" value="$preset_colorTransparent" />
-        <Value name="size" value="372px 144px" />
-        <Value name="position" value="-20px -50px" />
-    </Profile>
-    <Profile name="quickAmountDialogAmountConsole" extends="textDefault" with="anchorMiddleCenter">
-        <Value name="textSize" value="22px" />
-        <Value name="textAlignment" value="center" />
-        <Value name="textAutoWidth" value="true" />
-    </Profile>
+  <Presets>
+    <Preset name="colorTransparent" value="0 0 0 0"/>
+  </Presets>
+  <Profile name="quickAmountDialogBg" extends="dialogBg">
+    <Value name="size" value="750px 230px"/>
+  </Profile>
+  <Profile name="quickAmountDialogOptionBox" extends="baseReference" with="anchorTopRight">
+    <Value name="imageColor" value="$preset_colorTransparent" />
+    <Value name="size" value="372px 144px" />
+    <Value name="position" value="-20px -50px" />
+  </Profile>
+  <Profile name="quickAmountDialogAmountConsole" extends="textDefault" with="anchorMiddleCenter">
+    <Value name="textSize" value="22px" />
+    <Value name="textAlignment" value="center" />
+    <Value name="textAutoWidth" value="true" />
+  </Profile>
+  <!-- für ProductionAnimalDelivery breitere Textausnutzung -->
+  <Profile name="multiTextOptionTextSiloRevamp" extends="textDefault" with="anchorMiddleCenter">
+    <Value name="textAlignment" value="center"/>
+    <Value name="textVerticalAlignment" value="middle"/>
+    <Value name="textSize" value="18px"/>
+    <Value name="textMaxWidth" value="405px"/>
+    <Value name="textBold" value="true"/>
+    <Value name="size" value="410px 48px"/>
+    <Value name="textLayoutMode" value="resize"/>
+    <Value name="textMaxNumLines" value="1"/>
+    <Value name="textDisabledColor" value="1 0 0 1"/>
+    
+    <Variant name="mobile">
+      <Value name="position" value="0px 40px"/>
+      <Value name="textSize" value="33px"/>
+      <Value name="textMaxWidth" value="320px"/>
+    </Variant>
+  </Profile>
+  <Profile name="multiTextOptionSiloRevamp" extends="multiTextOption" with="anchorTopCenter">
+    <Value name="size" value="508px 48px"/>
+    <Value name="position" value="0px -110px"/>
+
+    <Variant name="mobile">
+      <Value name="size" value="800px 105px"/>
+      <Value name="position" value="0px -200px"/>
+    </Variant>
+  </Profile>
+  <Profile name="multiTextOptionBgSiloRevamp" extends="multiTextOptionBg">
+    <Value name="size" value="412px 48px"/>
+
+    <Variant name="mobile">
+      <Value name="size" value="595px 105px"/>
+    </Variant>
+  </Profile>
+  <!-- Production Animal Overview -->
+  <Profile name="revampAnimalOverviewText" extends="textDefault" with="anchorBottomLeft">
+    <Value name="textSize" value="17px"/>
+    <Value name="textBold" value="true"/>
+    <Value name="textAutoWidth" value="true"/>
+    <Value name="textMaxWidth" value="220px"/>
+    <Value name="textLayoutMode" value="resize"/>
+    <Value name="size" value="0 45px" />
+    <Value name="textVerticalAlignment" value="middle" />
+    <Value name="textOffset" value="13px 0" />
+  </Profile>
+  <Profile name="revampAnimalOverviewValue" extends="textDefault" with="anchorBottomRight">
+    <Value name="textSize" value="17px"/>
+    <Value name="textBold" value="true"/>
+    <Value name="textAutoWidth" value="true"/>
+    <Value name="textMaxWidth" value="220px"/>
+    <Value name="textLayoutMode" value="resize"/>
+    <Value name="size" value="0 46px" />
+    <Value name="textVerticalAlignment" value="middle" />
+    <Value name="textOffset" value="-13px 0" />        
+    <Value name="textAlignment" value="right"/>
+    <!-- <Value name="textColor" value="$preset_colorMainUI"/> -->
+  </Profile>
+  <Profile name="revampAnimalOverviewIcon" extends="baseReference" with="anchorMiddleCenter">
+    <Value name="imageUVs" value="0 0 1 1" />
+    <Value name="size" value="40px 40px" />
+    
+  </Profile>
 </GUIProfiles>

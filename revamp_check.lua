@@ -2,8 +2,8 @@
 Copyright (C) braeven, 2022
 
 Author: braeven / Achimobil
-Date: 14.08.2022
-Version: 1.1.3.0
+Date: 14.02.2022
+Version: 1.1.4.3
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
@@ -15,11 +15,14 @@ Changelog:
 1.1.2.0 @ 13.06.2022 - Added Option to force a registry of a FillType into Selllingstations
 1.1.3.0 @ 14.08.2022 - Ausnahme für den Icon Generator hinzugefügt
 1.1.4.0 @ 18.10.2022 - FillTypeFilesToLoad zum Laden von Filltypes ohne die bestehenden Daten zu überschreiben
+1.1.4.1 @ 30.11.2022 - AddByFillTypeStoreItems erweitert um den mod Titel für die Bauanzeige
+1.1.4.2 @ 19.12.2022 - Code Cleanup
+1.1.4.3 @ 14.02.2022 - Schreibfehler in der Vergangenheit berücksichtig
 
 Important:
-Kopiere diese Datei in deine Produktionen um einen Revamp-Versionscheck ausführen zu können. Diese Datei ist außerdem nötig um Filltypes bei bestehenden Sellingstations anmelden zu können.
+Kopiere diese Datei in deine Produktionen um einen Revamp-Versionscheck ausführen zu können. Diese Datei ist außerdem nötig um Filltypes bei bestehenden Sellingstations anmelden zu können und StoreItems An-/Abzumelden.
 
-Copy this File into your Productions to add a Revamp-Versionscheck. This File is also needed to add Filltypes into existing Sellingstations.
+Copy this File into your Productions to add a Revamp-Versionscheck. This File is also needed to add Filltypes into existing Sellingstations and registering/unregistering StoreItems.
 ]]
 
 RevampChecker = {}
@@ -27,70 +30,70 @@ RevampChecker = {}
 
 --Production Revamp: Function to compare the needed with the avaible version of Revamp
 function RevampChecker.check(revampVersion, neededVersion)
-  local base, major, minor, patch = string.match(revampVersion, "(%d+)%.(%d+)%.(%d+)%.(%d+)")
-  RevampChecker.base = math.floor(base)
-  RevampChecker.major = math.floor(major)
-  RevampChecker.minor = math.floor(minor)
-  RevampChecker.patch = math.floor(patch)
-  
-  local base, major, minor, patch = string.match(neededVersion, "(%d+)%.(%d+)%.(%d+)%.(%d+)")
-  base = math.floor(base)
-  major = math.floor(major)
-  minor = math.floor(minor)
-  patch = math.floor(patch)
-  if RevampChecker.base > base then
-    return true
-  elseif RevampChecker.base == base then
-    if RevampChecker.major > major then
-      return true
-    elseif RevampChecker.major == major then
-      if RevampChecker.minor > minor then
-        return true
-      elseif RevampChecker.minor == minor then
-        if RevampChecker.patch > patch then
-          return true
-        elseif RevampChecker.patch == patch then
-          return true
-        end
-      end
-    end
-  end
-  return false
+	local base, major, minor, patch = string.match(revampVersion, "(%d+)%.(%d+)%.(%d+)%.(%d+)")
+	RevampChecker.base = math.floor(base)
+	RevampChecker.major = math.floor(major)
+	RevampChecker.minor = math.floor(minor)
+	RevampChecker.patch = math.floor(patch)
+
+	local base, major, minor, patch = string.match(neededVersion, "(%d+)%.(%d+)%.(%d+)%.(%d+)")
+	base = math.floor(base)
+	major = math.floor(major)
+	minor = math.floor(minor)
+	patch = math.floor(patch)
+	if RevampChecker.base > base then
+		return true
+	elseif RevampChecker.base == base then
+		if RevampChecker.major > major then
+			return true
+		elseif RevampChecker.major == major then
+			if RevampChecker.minor > minor then
+				return true
+			elseif RevampChecker.minor == minor then
+				if RevampChecker.patch > patch then
+					return true
+				elseif RevampChecker.patch == patch then
+					return true
+				end
+			end
+		end
+	end
+	return false
 end
 
 
 --Production Revamp: Callback function for the warning message. Opens the modhub page if needed.
 function RevampChecker.done(isYes)
-  if isYes == true then
-    local link = "mods.php?title=fs2022&searchMod=revamp"
-    openWebFile(link, "")
-  end
+	if isYes == true then
+		local link = "mods.php?title=fs2022&searchMod=revamp"
+		openWebFile(link, "")
+	end
 end
 
 
 --Production Revamp: Warning function - Will generate the warning message for 2 languages
 function RevampChecker.warning(revampVersion, neededVersion, modName)
-  local title = "Wrong Version of Production Revamp"
-  local text = "At least one mod needs a newer version.\n Mod " ..modName.. " needs at least version " ..neededVersion.. " of Production Revamp.\n The installed version is " ..revampVersion.. ", please update to the latest one."
-  local textyes = "Open Modhub"
-  local textno = "Ignore"
-  local language = g_languageShort
-  if language == "de" then
-    title = "Veraltete Version von Production Revamp"
-    text = "Mindestens ein Mod benötigt eine neuere Version.\n Der Mod " ..modName.. " benötigt Version " ..neededVersion.. " von Production Revamp.\n Die vorhandene Version ist " ..revampVersion.. ", bitte updaten."
-    textyes = "Modhub öffnen"
-    textno = "Ignorieren"
-  end
+	local title = "Wrong Version of Production Revamp"
+	local text = "At least one mod needs a newer version.\n Mod " ..modName.. " needs at least version " ..neededVersion.. " of Production Revamp.\n The installed version is " ..revampVersion.. ", please update to the latest one."
+	local textyes = "Open Modhub"
+	local textno = "Ignore"
+	local language = g_languageShort
+	if language == "de" then
+		title = "Veraltete Version von Production Revamp"
+		text = "Mindestens ein Mod benötigt eine neuere Version.\n Der Mod " ..modName.. " benötigt Version " ..neededVersion.. " von Production Revamp.\n Die vorhandene Version ist " ..revampVersion.. ", bitte updaten."
+		textyes = "Modhub öffnen"
+		textno = "Ignorieren"
+	end
 
-  g_gui:showYesNoDialog({
-    title = title,
-    text = text,
-    dialogType = DialogElement.TYPE_WARNING,
-    callback = RevampChecker.done,
-    target = self,
-    yesText = textyes,
-    noText = textno
-  })
+	g_gui:showYesNoDialog({
+		title = title,
+		text = text,
+		dialogType = DialogElement.TYPE_WARNING,
+		callback = RevampChecker.done,
+		target = self,
+		yesText = textyes,
+		noText = textno
+	})
 end
 
 
@@ -110,7 +113,7 @@ function RevampChecker.test()
 
 	if mod == nil and g_iconGenerator then
 		-- im Icon generator passiert so kein fehler
-		return;
+		return
 	end
 
 	local xmlFile = XMLFile.load("TempDesc", mod.modFile)
@@ -118,7 +121,7 @@ function RevampChecker.test()
 	if xmlFile ~= nil and xmlFile ~= 0 then
 		local version = xmlFile:getString("modDesc.revamp#minVersion")
 		local supressWarning = xmlFile:getBool("modDesc.revamp#supressWarning", false)
-		
+
 		if revampversion == "" and version ~= nil then
 			if supressWarning then
 				-- mach nix, weil es soll nichts gemacht werden
@@ -135,46 +138,50 @@ function RevampChecker.test()
 				local hasSelling = xmlFile:hasProperty("modDesc.revamp.sellFillType(0)") 
 				if hasSelling then
 					xmlFile:iterate("modDesc.revamp.sellFillType", function (_, inputKey)
-							local base = xmlFile:getValue(inputKey .. "#base")
-							local fillType = xmlFile:getValue(inputKey .. "#fillType")
-							local forceRegister = xmlFile:getValue(inputKey .. "#forceRegister", false)
-							local Selltype = {}
-							Selltype.base = base
-							Selltype.fillType = fillType
-							Selltype.forceRegister = forceRegister
-							Selltype.modName = modName
-							table.insert(Revamp.SellFillTypes, Selltype)
-						end)
+						local base = xmlFile:getValue(inputKey .. "#base")
+						local fillType = xmlFile:getValue(inputKey .. "#fillType")
+						local forceRegister = xmlFile:getValue(inputKey .. "#forceRegister", false)
+						local Selltype = {}
+						Selltype.base = base
+						Selltype.fillType = fillType
+						Selltype.forceRegister = forceRegister
+						Selltype.modName = modName
+						table.insert(Revamp.SellFillTypes, Selltype)
+					end)
 				end
 				xmlFile:iterate("modDesc.storeItems.storeItem", function (_, inputKey)
-						local storeItemXMLFilename = xmlFile:getString(inputKey .. "#xmlFilename");
-						local removeWhenFillTypeNames = xmlFile:getValue(inputKey .. "#removeWhenFillTypes");
-						if removeWhenFillTypeNames ~= nil then
-							local storeItem = {};
-							storeItem.xmlFilename = storeItemXMLFilename;
-							storeItem.removeWhenFillTypeNames = removeWhenFillTypeNames;
-							storeItem.customEnvironment = modName;
-							table.insert(Revamp.RemoveByFillTypeStoreItems, storeItem);
-						end
-					end)
+					local storeItemXMLFilename = xmlFile:getString(inputKey .. "#xmlFilename")
+					local removeWhenFillTypeNames = xmlFile:getValue(inputKey .. "#removeWhenFillTypes")
+					if removeWhenFillTypeNames ~= nil then
+						local storeItem = {}
+						storeItem.xmlFilename = storeItemXMLFilename
+						storeItem.removeWhenFillTypeNames = removeWhenFillTypeNames
+						storeItem.customEnvironment = modName
+						table.insert(Revamp.RemoveByFillTypeStoreItems, storeItem)
+					end
+				end)
 				xmlFile:iterate("modDesc.revamp.storeItems.storeItem", function (_, inputKey)
-						local storeItemXMLFilename = xmlFile:getString(inputKey .. "#xmlFilename");
-						local removeWhenFillTypeNames = xmlFile:getValue(inputKey .. "#removeWhenFillTypes");
-						local addWhenFillTypeNames = xmlFile:getValue(inputKey .. "#addWhenfillTypes");
-						if removeWhenFillTypeNames ~= nil or addWhenFillTypeNames ~= nil then
-							local storeItem = {};
-							storeItem.xmlFilename = storeItemXMLFilename;
-							if removeWhenFillTypeNames ~= nil then
-								storeItem.removeWhenFillTypeNames = removeWhenFillTypeNames;
-							end
-							if addWhenFillTypeNames ~= nil then
-								storeItem.addWhenFillTypeNames = addWhenFillTypeNames;
-							end
-							storeItem.customEnvironment = modName;
-							storeItem.baseDirectory = g_currentModDirectory;
-							table.insert(Revamp.AddByFillTypeStoreItems, storeItem);
+					local storeItemXMLFilename = xmlFile:getString(inputKey .. "#xmlFilename")
+					local removeWhenFillTypeNames = xmlFile:getValue(inputKey .. "#removeWhenFillTypes")
+					local addWhenFillTypeNames = xmlFile:getValue(inputKey .. "#addWhenfillTypes")
+					if addWhenFillTypeNames == nil then
+						local addWhenFillTypeNames = xmlFile:getValue(inputKey .. "#addWhenFillTypes") -- SchreibFehler in der Vergangenheit
+					end
+					if removeWhenFillTypeNames ~= nil or addWhenFillTypeNames ~= nil then
+						local storeItem = {}
+						storeItem.xmlFilename = storeItemXMLFilename
+						if removeWhenFillTypeNames ~= nil then
+							storeItem.removeWhenFillTypeNames = removeWhenFillTypeNames
 						end
-					end)
+						if addWhenFillTypeNames ~= nil then
+							storeItem.addWhenFillTypeNames = addWhenFillTypeNames
+						end
+						storeItem.customEnvironment = modName
+						storeItem.baseDirectory = g_currentModDirectory
+						storeItem.title = mod.title
+						table.insert(Revamp.AddByFillTypeStoreItems, storeItem)
+					end
+				end)
 				-- for late loading non overriting fillTypes
 				local fillTypesFilename = xmlFile:getString("modDesc.revamp.fillTypes#filename")
 
@@ -190,7 +197,7 @@ function RevampChecker.test()
 			end
 		end
 	end
-	
+
 	xmlFile:delete()
 end
 
