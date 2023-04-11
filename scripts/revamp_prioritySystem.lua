@@ -6,8 +6,8 @@ Copyright (C) braeven, Achimobil, 2022
 
 Author: braeven, Achimobil
 
-Date: 10.01.2023
-Version: 1.2.3.0
+Date: 29.03.2023
+Version: 1.2.4.1
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
@@ -22,6 +22,7 @@ Changelog:
 1.2.3.0 @ 10.01.2023 - Lieferzeiten korrigiert
 1.2.4.0 @ 14.02.2023 - Bugfix Zyklen-Anzeige
 1.2.4.1 @ 17.03.2023 - Bugfix mit PnH
+1.2.4.2 @ 29.03.2023 - Bugfix again
 
 
 Important:.
@@ -154,8 +155,8 @@ function RevampPriority:distributeGoods()
 			--Production Revamp: Produktionen können nur innerhalb der Arbeitszeit Waren versenden. Außerhalb der Arbeitszeit wird die Schleife der jeweiligen Produktion übersprungen.
 			--Production Revamp: PNH-Produktionen mit Zeiten versehen um Fehler zu vermeiden
 			if distributingProdPoint.hoursTable == nil then
+				distributingProdPoint.hoursTable = {}
 				for i = 0, 24 do
-					distributingProdPoint.hoursTable = {}
 					distributingProdPoint.hoursTable[i] = true
 				end
 			end
@@ -191,6 +192,7 @@ function RevampPriority:distributeGoods()
 								end
 
 								if prodPointsInDemand[n].hoursTable == nil then
+									prodPointsInDemand[n].hoursTable = {}
 									for i = 0, 24 do
 										prodPointsInDemand[n].hoursTable[i] = true
 									end

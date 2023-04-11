@@ -6,8 +6,8 @@ Copyright (C) braeven, Achimobil 2022
 
 Author: braeven
 Thanks for Helping: Achimobil, TethysSaturn, DickerSauerlaender, inconspicuously007, AlfredProm
-Date: 10.03.2023
-Version: 1.4.1.0
+Date: 29.03.2023
+Version: 1.4.1.2
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
@@ -81,6 +81,7 @@ Changelog:
 1.4.0.1         @ 23.01.2023 - Bug mit boostMode
 1.4.0.2         @ 14.02.2023 - Bugfix mit Start/Endzeiten
 1.4.1.0         @ 10.03.2023 - Beliebige viele Arbeitszeiten der Produktion ermöglicht
+1.4.1.2         @ 29.03.2023 - Bugfix Öffnungszeiten
 
 
 Important:.
@@ -604,15 +605,18 @@ function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings
 			pStartHour[1] = 0
 			pEndHour[1] = 24
 		end
+
 		for i = 1, #pStartHour do
 			local startTime = tonumber(pStartHour[i])
 			local endTime = tonumber(pEndHour[i])
 			if startTime < endTime and startTime >=0 and endTime <25 then
-				for j = startTime, endTime do
+				local hoursTableCount = 0
+				for j = startTime, (endTime - 1) do
 					production.hoursTable[j] = true
+					hoursTableCount = hoursTableCount + 1;
 					self.hoursTable[j] = true
 				end
-				if #production.hoursTable < 24 then
+				if hoursTableCount < 24 then
 					production.hours = production.hours .." ".. startTime .. " - " .. endTime .. " "
 				end
 			else
@@ -624,7 +628,13 @@ function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings
 		production.hideFromMenu = xmlFile:getValue(productionKey .. "#hideFromMenu", hideFromMenu)
 		production.hideComplete = hideFromMenu --Nötig um die Ingame-Liste komplett zu verstecken
 		production.autoStart = xmlFile:getValue(productionKey .. "#autoStart", autoStart)
-		production.activeHours = #production.hoursTable -- Hinterlegen für die Rezept-Anzeige
+		
+		-- Für Rezept-Anzeige aktive Stunden zählen geht nicht mit #
+		local activeHoursCount = 0;
+		for hour, value in pairs(production.hoursTable) do
+			activeHoursCount = activeHoursCount + 1;
+		end
+		production.activeHours = activeHoursCount -- Hinterlegen für die Rezept-Anzeige
 		
 		production.cyclesPerMonth = MathUtil.round(((production.cyclesPerMonth / 24) * production.activeHours), 2)
 

@@ -2,7 +2,7 @@
 <modDesc descVersion="73">
   <author>Braeven</author>
   <contributors>Achimobil</contributors>
-  <version>1.4.1.1</version>
+  <version>1.4.1.2</version>
   <title>
     <en>Production Revamp</en>
   </title>
@@ -93,6 +93,10 @@ Version 1.4.0.2
 Version 1.4.1.0
 * Fill level objects can now use multiple filltypes or filltype categories as a sum
 * Possibility to use any number of opening hours
+
+Version 1.4.1.2
+* Bugfix with opening hours
+* Bugfix distribution system with PnH
 ]]>
     </en>
     <de>
@@ -180,6 +184,10 @@ Version 1.4.0.2
 Version 1.4.1.0
 * Fill Level Objekte können nun auch mehrere Filltypes oder Filltype Kategorien als Summe benutzen
 * Möglichkeit beliebig viele Öffnungszeiten zu verwenden
+
+Version 1.4.1.2
+* Bugfix mit Öffnungszeiten
+* Bugfix Verteilsystem mit PnH
 ]]>
     </de>
    <fr>
@@ -267,6 +275,10 @@ Version 1.4.0.2
 Version 1.4.1.0
 * Les objets de niveau de remplissage peuvent maintenant additionner plusieurs types de remplissage ou catégories de remplissage.
 * Possibilité d'utiliser autant d'heures d'ouverture que nécessaire
+
+Version 1.4.1.2
+* Bugfix avec les heures d'ouverture
+* Bugfix système de distribution avec PnH
 ]]>
     </fr>
   </description>

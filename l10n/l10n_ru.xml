@@ -32,7 +32,7 @@
     <!-- Production messages -->
         <text name="Revamp_StorageEmpty"                        text="Склад пуст" />
         <text name="Revamp_CantBuy"                             text="%s нельзя купить." />
-        <text name="Revamp_ProductionClosed"                    text="%s закрыт. - Часы работы: с %s." />
+        <text name="Revamp_ProductionClosed"                    text="%s не работает. - Часы работы: %s." />
         <text name="Revamp_ProductionNotEmpty"                  text="Производство не пусто. Следующие товары тоже будут проданы:"/>
 
     <!-- Production Variants -->
