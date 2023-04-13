@@ -82,6 +82,7 @@ Changelog:
 1.4.0.2         @ 14.02.2023 - Bugfix mit Start/Endzeiten
 1.4.1.0         @ 10.03.2023 - Beliebige viele Arbeitszeiten der Produktion ermöglicht
 1.4.1.2         @ 29.03.2023 - Bugfix Öffnungszeiten
+1.4.1.3         @ 29.03.2023 - Bugfix mehrere Öffnungszeiten
 
 
 Important:.
@@ -166,8 +167,8 @@ function Revamp.registerXMLPaths(schema, basePath)
 	schema:register(XMLValueType.STRING, basePath .. ".productions#seasons", "Number of the seasons a production is working", "0 1 2 3")
 	schema:register(XMLValueType.STRING, basePath .. ".productions#months", "Number of months a production is working", "1 2 3 4 5 6 7 8 9 10 11 12")
 	schema:register(XMLValueType.FLOAT, basePath .. ".productions#weatherFactor", "Factor if a production is affected by weather", 1)
-	schema:register(XMLValueType.FLOAT, basePath .. ".productions#startHour", "Starting hour for modus hourly", 0)
-	schema:register(XMLValueType.FLOAT, basePath .. ".productions#endHour", "End hour for modus hourly", 24)
+	schema:register(XMLValueType.STRING, basePath .. ".productions#startHour", "Starting hour for modus hourly", "0")
+	schema:register(XMLValueType.STRING, basePath .. ".productions#endHour", "End hour for modus hourly", "24")
 	schema:register(XMLValueType.FLOAT, basePath .. ".productions#minPower", "Minimum performance of a weather reliant production", 0)
 	schema:register(XMLValueType.STRING, basePath .. ".productions#mixMode", "Changes how mix-items will be used", "none")
 	schema:register(XMLValueType.STRING, basePath .. ".productions#boostMode", "Changes how boost-items will be used", "none")
@@ -179,12 +180,12 @@ function Revamp.registerXMLPaths(schema, basePath)
 	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#seasons", "Number of the seasons a production-line is working", "0 1 2 3")
 	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#months", "Number of months a production-line is working", "1 2 3 4 5 6 7 8 9 10 11 12")
 	schema:register(XMLValueType.FLOAT, basePath .. ".productions.production(?)#weatherFactor", "Factor if a production-line is affected by weather", 1)
-	schema:register(XMLValueType.FLOAT, basePath .. ".productions.production(?)#startHour", "Starting hour for modus hourly", 0)
-	schema:register(XMLValueType.FLOAT, basePath .. ".productions.production(?)#endHour", "End hour for modus hourly", 24)
+	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#startHour", "Starting hour for modus hourly", "0")
+	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#endHour", "End hour for modus hourly", "24")
 	schema:register(XMLValueType.FLOAT, basePath .. ".productions.production(?)#minPower", "Minimum performance of a weather reliant production-line", 0)
 	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#mixMode", "Changes how mix-items will be used", "none")
 	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#boostMode", "Changes how boost-items will be used", "none")
-schema:register(XMLValueType.BOOL, basePath .. ".productions.production(?)#hideFromMenu", "Hide Production Line from Menue", false)
+	schema:register(XMLValueType.BOOL, basePath .. ".productions.production(?)#hideFromMenu", "Hide Production Line from Menue", false)
 	schema:register(XMLValueType.BOOL, basePath .. ".productions.production(?)#autoStart", "Automatically starts a productionline", false)
 
 	--Production Revamp: Animal Trigger relevantes
@@ -265,8 +266,8 @@ function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings
 	local seasons = xmlFile:getValue(key .. ".productions#seasons", "0 1 2 3")
 	local months = xmlFile:getValue(key .. ".productions#months", "1 2 3 4 5 6 7 8 9 10 11 12")
 	local weatherFactor = xmlFile:getValue(key .. ".productions#weatherFactor", 1)
-	local startHour = xmlFile:getString(key .. ".productions#startHour", 0)
-	local endHour = xmlFile:getString(key .. ".productions#endHour", 24)
+	local startHour = xmlFile:getString(key .. ".productions#startHour", "0")
+	local endHour = xmlFile:getString(key .. ".productions#endHour", "24")
 	local minPower = xmlFile:getValue(key .. ".productions#minPower", 0)
 	self.hoursTable = {}
 

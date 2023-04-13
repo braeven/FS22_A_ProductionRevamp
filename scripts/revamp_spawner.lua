@@ -6,8 +6,8 @@ Copyright (C) braeven, Achimobil, 2022
 
 Author: braeven, Achimobil
 
-Date: 10.01.2023
-Version: 1.4.3.0
+Date: 12.04.2023
+Version: 1.4.3.1
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
@@ -32,6 +32,7 @@ Changelog:
 1.4.1.0 @ 30.12.2022 - Bugfix Paletten, Ballen und Holz im MP
 1.4.2.0 @ 05.01.2023 - Bugfix - auch kleine Mengen größer 1l können ausgelagert werden
 1.4.3.0 @ 10.01.2023 - Bugfix mit Öffnungszeiten und Palettenspawn
+1.4.3.1 @ 12.04.2023 - Bugfix mit Spawner und Öffnungszeiten
 
 Important:.
 No changes are allowed to this script without permission from Braeven AND Achimobil.
@@ -78,16 +79,19 @@ function RevampSpawner:run()
 			
 			--Production Revamp: Sollte die Produktion Öffnungszeiten haben, außerhalb der "Zeiten" keine Produktion, dann auch keine Paletten manuell spawnen.
 			local skip = false
+			local foundOne = false
 			local closedTimes = ""
 			for _, production in pairs (self.productionPoint.productions) do
 				local modes = string.split(production.mode, " ")
 				for _, mode in pairs(modes) do
 					if mode =="hourly" then
 						local currentHour = g_currentMission.environment.currentHour
-						if production.hoursTable[currentHour] then
+						if production.hoursTable[currentHour] == true then
 							skip = false
-						else
+							foundOne = true
+						elseif foundOne == false then
 							closedTimes = production.hours
+							skip = true
 						end
 					end
 				end
@@ -958,17 +962,19 @@ function InGameMenuProductionFrame:menuconnector()
 
 	--Production Revamp: Sollte die Produktion Öffnungszeiten haben, außerhalb der "Zeiten" keine Produktion, dann auch keine Paletten manuell spawnen.
 	local skip = false
-	local foundone = false
+	local foundOne = false
 
 	for _, production in pairs (productionPoint.productions) do
 		local modes = string.split(production.mode, " ")
 		for _, mode in pairs(modes) do
 			if mode =="hourly" then
 				local currentHour = g_currentMission.environment.currentHour
-				if production.hoursTable[currentMission] then
+				if production.hoursTable[currentMission] == true then
 					skip = false
-				else
+					foundOne = true
+				elseif foundOne == false then
 					closedTimes = production.hours
+					skip = true
 				end
 			end
 		end
