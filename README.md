@@ -8,6 +8,6 @@ Dies dient als eine alternativer Weg um Feedback zu geben oder Bugs melden zu k√
 Der Haupt-Support erfolgt weiterhin √ºber den Discord.
 
 
-Newest Version: 1.4.1.1 - https://www.farming-simulator.com/mod.php?lang=de&country=de&mod_id=243542&title=fs2022
+Newest Modhub Version: 1.4.1.1 - https://www.farming-simulator.com/mod.php?lang=de&country=de&mod_id=243542&title=fs2022
 
-Neuste Version: 1.4.1.1 - https://www.farming-simulator.com/mod.php?lang=de&country=de&mod_id=243542&title=fs2022
+Neuste Modhub Version: 1.4.1.1 - https://www.farming-simulator.com/mod.php?lang=de&country=de&mod_id=243542&title=fs2022
