@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="73">
+<modDesc descVersion="74">
   <author>Braeven</author>
   <contributors>Achimobil</contributors>
-  <version>1.4.1.3</version>
+  <version>1.4.1.4</version>
   <title>
     <en>Production Revamp</en>
   </title>
@@ -100,6 +100,9 @@ Version 1.4.1.2
 
 Version 1.4.1.3
 * Bugfix with opening hours and manual spawns
+
+Version 1.4.1.4
+* Bugfix with Pump and Hoses Version 1.3
 ]]>
     </en>
     <de>
@@ -194,6 +197,9 @@ Version 1.4.1.2
 
 Version 1.4.1.3
 * Bugfix mit Öffnungszeiten und Manuellen Spawnen
+
+Version 1.4.1.4
+* Bugfix mit Pump and Hoses Version 1.3
 ]]>
     </de>
    <fr>
@@ -288,6 +294,9 @@ Version 1.4.1.2
 
 Version 1.4.1.3
 * Correction de bug avec les heures d'ouverture et le spawn manuel
+
+Version 1.4.1.4
+* Bugfix avec la Pump and Hoses Version 1.3
 ]]>
     </fr>
   </description>

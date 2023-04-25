@@ -6,8 +6,8 @@ Copyright (C) braeven, Achimobil 2022
 
 Author: braeven
 Thanks for Helping: Achimobil, TethysSaturn, DickerSauerlaender, inconspicuously007, AlfredProm
-Date: 29.03.2023
-Version: 1.4.1.2
+Date: 25.04.2023
+Version: 1.4.1.4
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
@@ -83,6 +83,7 @@ Changelog:
 1.4.1.0         @ 10.03.2023 - Beliebige viele Arbeitszeiten der Produktion ermöglicht
 1.4.1.2         @ 29.03.2023 - Bugfix Öffnungszeiten
 1.4.1.3         @ 29.03.2023 - Bugfix mehrere Öffnungszeiten
+1.4.1.4         @ 25.04.2023 - Bugfix mit PnH Version 1.3
 
 
 Important:.
@@ -114,6 +115,17 @@ local function registerProductionPointOutputMode(name, value)
 			for _, mode in pairs(ProductionPoint.OUTPUT_MODE) do
 				if value < mode then
 					value = mode
+				end
+			end
+
+			--Überprüfen ob PnH aktiv ist und falls ja, Output-Modus-Zahl erhöhen
+			local mods = g_modManager:getActiveMods(pdlc_pumpsAndHosesPack)
+
+			for index, activemod in pairs(mods) do
+				if activemod.modName == "pdlc_pumpsAndHosesPack" then
+					if ProductionPoint.OUTPUT_MODE[AUTO_DISTRIBUTION] == nil then
+						value = value + 1
+					end
 				end
 			end
 

@@ -18,7 +18,7 @@
         <text name="Revamp_PalletSiloItem"                      text="Поддоны" />
         <text name="Revamp_BaleSiloItem"                        text="Тюки" />
         <text name="Revamp_ChooseBaleType"                      text="Выберите тип тюка" />
-        <text name="Revamp_WoodLogItem"                         text="Брёвен" />
+        <text name="Revamp_WoodLogItem"                         text="Брёвна" />
         <text name="Revamp_SpawnType_bale"                      text="Тюк(-ов)" />
         <text name="Revamp_SpawnType_pallet"                    text="Поддон(-ов)" />
         <text name="Revamp_SpawnType_woodLog"                   text="Бревно(Брёвен)" />

@@ -43,6 +43,9 @@ function RevampPriority:setOutputDistributionMode(superFunc, outputFillTypeId, m
 
 	-- Pump'n'Hoses Produktionen ignorieren
 	if self:isa(SandboxProductionPoint) or (self.owningPlaceable.isSandboxPlaceable ~= nil and self.owningPlaceable:isSandboxPlaceable()) then
+		if mode == ProductionPoint.OUTPUT_MODE.STORE then
+			mode = ProductionPoint.OUTPUT_MODE.DIRECT_SELL
+		end
 		return superFunc(self, outputFillTypeId, mode, noEventSend)
 	end
 
