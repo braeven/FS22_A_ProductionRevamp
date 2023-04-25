@@ -11,3 +11,7 @@ Der Haupt-Support erfolgt weiterhin über den Discord.
 Newest Modhub Version: 1.4.1.1 - https://www.farming-simulator.com/mod.php?lang=de&country=de&mod_id=243542&title=fs2022
 
 Neuste Modhub Version: 1.4.1.1 - https://www.farming-simulator.com/mod.php?lang=de&country=de&mod_id=243542&title=fs2022
+
+
+Newest Github Version
+1.4.1.4 - https://github.com/braeven/FS22_A_ProductionRevamp/releases/tag/release
