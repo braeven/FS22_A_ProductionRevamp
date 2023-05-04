@@ -30,7 +30,7 @@
         <text name="Revamp_ChooseWoodLogLength"                     text="Choisir la longueur" />
 
     <!-- Production messages -->
-        <text name="Revamp_StorageEmpty"                            text="Le stockage est video" />
+        <text name="Revamp_StorageEmpty"                            text="Le stockage est vide" />
         <text name="Revamp_CantBuy"                                 text="L'ingrédient %s ne peut pas être acheté" />
         <text name="Revamp_ProductionClosed"                        text="%s est fermé. - Horaires d'ouverture : %s." />
         <text name="Revamp_ProductionNotEmpty"                      text="La production n'est pas vide. Les biens suivants seront également vendus :"/>
