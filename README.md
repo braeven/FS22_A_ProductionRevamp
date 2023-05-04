@@ -14,4 +14,4 @@ Neuste Modhub Version: 1.4.1.4 - https://www.farming-simulator.com/mod.php?lang=
 
 
 Newest Github Version
-1.4.1.4 - https://github.com/braeven/FS22_A_ProductionRevamp/releases/tag/release
+1.4.1.5 - https://github.com/braeven/FS22_A_ProductionRevamp/releases/tag/1.4.1.5
