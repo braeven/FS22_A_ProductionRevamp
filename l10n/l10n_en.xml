@@ -49,7 +49,8 @@
     <!-- Production menu -->
         <text name="Revamp_OpenProduction"                      text="Open Production Menu" />
         <text name="Revamp_SpawnItem"                           text="Spawn Items" />
-        <text name="finance_ProductionDeliveryCosts"            text="Delivery Costs Productions" />
+        <text name="finance_ProductionDeliveryCosts"            text="Productions Delivery Costs" />
+        <text name="Revamp_ShowAnimalsOverview"                 text="Show Animals" />
 
     <!-- game Settings menu -->
         <text name="Revamp_Settings_Title"                      text="Revamp" />

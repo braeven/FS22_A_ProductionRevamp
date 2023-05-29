@@ -45,10 +45,12 @@
         <text name="Revamp_productionHoursDependent"            text="%s %s" />
         <text name="Revamp_monthlyProduction"                   text="%s en gång i månaden" />
         <text name="Revamp_productionMode"                      text="Produktionsläge" />
+
     <!-- Production menu -->
         <text name="Revamp_OpenProduction"                      text="Öppna produktionsmenyn" />
         <text name="Revamp_SpawnItem"                           text="Generera föremål" />
         <text name="finance_ProductionDeliveryCosts"            text="Produktion Leveranskostnader" />
+        <text name="Revamp_ShowAnimalsOverview"                 text="Visa djur" />
 
     <!-- game Settings menu -->
         <text name="Revamp_Settings_Title"                      text="Revamp" />

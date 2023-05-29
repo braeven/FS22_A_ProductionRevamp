@@ -6,8 +6,8 @@ Copyright (C) braeven, Achimobil, 2022
 
 Author: braeven, Achimobil
 
-Date: 27.12.2022
-Version: 1.0.2.0
+Date: 29.05.2023
+Version: 1.0.2.1
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
@@ -17,6 +17,7 @@ Changelog:
 1.0.0.0 @ 24.11.2022 - Initial commit
 1.0.1.0 @ 21.12.2022 - Verschiedene Gesundheitseinstellungen ermöglicht
 1.0.2.0 @ 27.12.2022 - Anpassung für die Tier-Übersicht
+1.0.2.0 @ 29.05.2023 - Button Übersetzbar gemacht
 
 Important:.
 No changes are allowed to this script without permission from Braeven.
@@ -33,7 +34,6 @@ RevampAnimals = {}
 
 --Production Revamp: MenüButton um sich mögliche Tiere/FillTypes anzeigen zu lassen
 function RevampAnimals:updateMenuButtons(superFunc)
-	local buttonText = "Tiere Anzeigen"
 	local isProductionListActive = self.productionList == FocusManager:getFocusedElement()
 	local production, productionPoint = self:getSelectedProduction()
 
@@ -41,7 +41,7 @@ function RevampAnimals:updateMenuButtons(superFunc)
 		table.insert(self.menuButtonInfo, {
 			profile = "buttonOk",
 			inputAction = InputAction.MENU_EXTRA_1,
-			text = buttonText,
+			text = self.i18n:getText("Revamp_ShowAnimalsOverview"),
 			callback = function()
 				ProductionAnimalOverview:show(productionPoint)
 			end

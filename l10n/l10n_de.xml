@@ -50,6 +50,7 @@
         <text name="Revamp_OpenProduction"                      text="Produktion verwalten" />
         <text name="Revamp_SpawnItem"                           text="Auslagern" />
         <text name="finance_ProductionDeliveryCosts"            text="Produktions Liefergebühren" />
+        <text name="Revamp_ShowAnimalsOverview"                 text="Tiere Anzeigen" />
 
     <!-- game Settings menu -->
         <text name="Revamp_Settings_Title"                      text="Revamp" />

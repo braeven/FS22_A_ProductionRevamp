@@ -2,7 +2,7 @@
 <modDesc descVersion="74">
   <author>Braeven</author>
   <contributors>Achimobil</contributors>
-  <version>1.4.1.5</version>
+  <version>1.4.1.6</version>
   <title>
     <en>Production Revamp</en>
   </title>
@@ -106,6 +106,11 @@ Version 1.4.1.4
 
 Version 1.4.1.5
 * Bugfix with manual spawning and opening hours
+
+Version 1.4.1.6
+* Translations updated
+* Buttons in production menu made translatable
+* Bug fixed when selling in combination of silo with productions in a placeable
 ]]>
     </en>
     <de>
@@ -206,6 +211,11 @@ Version 1.4.1.4
 
 Version 1.4.1.5
 * Bugfix mit manuellen spawnen und Öffnungszeiten
+
+Version 1.4.1.6
+* Übersetzungen aktualisiert
+* Butten im Produktionsmenü übersetzbar gemacht
+* Bug gefixxt beim Verkaufen in Kombination von Silo mit Produktionen in einen Placeable
 ]]>
     </de>
    <fr>
@@ -306,6 +316,11 @@ Version 1.4.1.4
 
 Version 1.4.1.5
 * Correction de bug avec le spawn manuel et les heures d'ouverture
+
+Version 1.4.1.6
+* Traductions mises à jour
+* Boutons du menu de production rendus traduisibles
+* Correction d'un bug lors de la vente en combinaison de silo avec des productions dans un placeable
 ]]>
     </fr>
   </description>

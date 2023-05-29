@@ -50,6 +50,7 @@
         <text name="Revamp_OpenProduction"                      text="Åpne Produksjon Meny" />
         <text name="Revamp_SpawnItem"                           text="Spawn Items" />
         <text name="finance_ProductionDeliveryCosts"            text="Leveringskostnader Produksjon" />
+        <text name="Revamp_ShowAnimalsOverview"                 text="Vis frem dyr" />
 
     <!-- game Settings menu -->
         <text name="Revamp_Settings_Title"                      text="revamp" />

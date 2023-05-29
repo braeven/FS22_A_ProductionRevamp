@@ -50,6 +50,7 @@
         <text name="Revamp_OpenProduction"                      text="Управление производством" />
         <text name="Revamp_SpawnItem"                           text="На поддоны" />
         <text name="finance_ProductionDeliveryCosts"            text="Сборы за доставку продукции" />
+        <text name="Revamp_ShowAnimalsOverview"                 text="Показать животных" />
 
     <!-- game Settings menu -->
         <text name="Revamp_Settings_Title"                      text="Revamp" />

@@ -50,6 +50,7 @@
         <text name="Revamp_OpenProduction"                      text="Gerenciar a produção" />
         <text name="Revamp_SpawnItem"                           text="Geração manual de paletes" />
         <text name="finance_ProductionDeliveryCosts"            text="Encargos de entrega da produção" />
+        <text name="Revamp_ShowAnimalsOverview"                 text="Mostrar animais" />
 
     <!-- game Settings menu -->
         <text name="Revamp_Settings_Title"                      text="Revamp" />

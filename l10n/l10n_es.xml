@@ -50,6 +50,7 @@
         <text name="Revamp_OpenProduction"                      text="Producción Abierta" />
         <text name="Revamp_SpawnItem"                           text="Generar Artículos" />
         <text name="finance_ProductionDeliveryCosts"            text="Costes de entrega de producción" />
+        <text name="Revamp_ShowAnimalsOverview"                 text="Mostrar animales" />
 
     <!-- game Settings menu -->
         <text name="Revamp_Settings_Title"                      text="Revamp" />

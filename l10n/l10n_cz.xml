@@ -50,6 +50,7 @@
         <text name="Revamp_OpenProduction"                      text="Otevřít menu výroby" />
         <text name="Revamp_SpawnItem"                           text="Vyskladnění" />
         <text name="finance_ProductionDeliveryCosts"            text="Poplatek za dodání výroby" />
+        <text name="Revamp_ShowAnimalsOverview"                 text="Výstavní zvířata" />
 
     <!-- game Settings menu -->
         <text name="Revamp_Settings_Title"                      text="Revamp" />
