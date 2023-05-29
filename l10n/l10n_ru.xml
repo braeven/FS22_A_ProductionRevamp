@@ -77,12 +77,12 @@
         <text name="Revamp_animalHealthError"                   text="У животных должно быть от %s до %s здоровья." />
         <text name="Revamp_animalNotValid"                      text="Этот вид животных здесь не принимается." />
         <text name="Revamp_productFullError"                    text="Нет свободного места на производстве" />
-        <text name="Revamp_amountPerAnimal"                     text="Объём одного животного" />
-        <text name="Revamp_amountTotal"                         text="Общий объём доставки" />
+        <text name="Revamp_amountPerAnimal"                     text="Вес одного животного" />
+        <text name="Revamp_amountTotal"                         text="Общий вес доставки" />
         <text name="Revamp_transferAnimals"                     text="Передача животных" />
         <text name="Revamp_AnimalOverviewHealth"                text="Требуемое здоровье" />
         <text name="Revamp_AnimalOverviewAge"                   text="Требуемый возраст" />
-        <text name="Revamp_AnimalOverviewInputFillType"         text="Поступит на производство" />
+        <text name="Revamp_AnimalOverviewInputFillType"         text="Принимается производством" />
         <text name="Revamp_AnimalOverviewTitle"                 text="Какие животные могут быть поставлены на производство" />
         <text name="Revamp_AnimalOverviewDescription"           text="Животные могут быть поставлены на производство, если они соответствуют следующим условиям:" />
 
