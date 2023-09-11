@@ -6,8 +6,8 @@ Copyright (C) braeven, Achimobil, 2022
 
 Author: braeven, Achimobil
 
-Date: 04.05.2023
-Version: 1.4.3.2
+Date: 11.09.2023
+Version: 1.4.3.3
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
@@ -34,6 +34,7 @@ Changelog:
 1.4.3.0 @ 10.01.2023 - Bugfix mit Öffnungszeiten und Palettenspawn
 1.4.3.1 @ 12.04.2023 - Bugfix mit Spawner und Öffnungszeiten
 1.4.3.2 @ 04.05.2023 - Bugfix Öffnungszeiten
+1.4.3.2 @ 11.09.2023 - Bugfix manuelles Holzsstamm spawnen
 
 Important:.
 No changes are allowed to this script without permission from Braeven AND Achimobil.
@@ -405,7 +406,7 @@ function ProductionPointActivatable:chooseWoodLogAmount(self, rproductionPoint, 
 	-- Auswahl für jede menge die geht erstellen
 	for i=1, maxWoodLogs do
 		table.insert(selectableOptions, {amount=i, amountPerWoodLog=amountPerWoodLog, fillTypeIndex=fillType.index, productionPoint=rproductionPoint})
-		table.insert(options, i .. " " .. g_i18n:getText("Revamp_WoodLogItem") .. " " ..self.productionPoint.selectedWoodLogLength.. " m (" ..RevampHelper:formatVolume(amountPerWoodLog*i, 0, fillType.unitShort) .. ")")
+		table.insert(options, i .. " " .. g_i18n:getText("Revamp_WoodLogItem") .. " " ..rproductionPoint.selectedWoodLogLength.. " m (" ..RevampHelper:formatVolume(amountPerWoodLog*i, 0, fillType.unitShort) .. ")")
 	end
 
 	-- Dialogbox erstellen

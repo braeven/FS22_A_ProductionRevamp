@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="74">
+<modDesc descVersion="77">
   <author>Braeven</author>
   <contributors>Achimobil</contributors>
-  <version>1.4.1.6</version>
+  <version>1.4.2.0</version>
   <title>
     <en>Production Revamp</en>
   </title>
@@ -111,6 +111,9 @@ Version 1.4.1.6
 * Translations updated
 * Buttons in production menu made translatable
 * Bug fixed when selling in combination of silo with productions in a placeable
+
+Version 1.4.2.0
+* Fixed a Bug with manually spawning logs
 ]]>
     </en>
     <de>
@@ -216,6 +219,9 @@ Version 1.4.1.6
 * Übersetzungen aktualisiert
 * Butten im Produktionsmenü übersetzbar gemacht
 * Bug gefixxt beim Verkaufen in Kombination von Silo mit Produktionen in einen Placeable
+
+Version 1.4.2.0
+* Bug beim manuellen spawnen von Holzstämmen behoben
 ]]>
     </de>
    <fr>
@@ -321,6 +327,9 @@ Version 1.4.1.6
 * Traductions mises à jour
 * Boutons du menu de production rendus traduisibles
 * Correction d'un bug lors de la vente en combinaison de silo avec des productions dans un placeable
+
+Version 1.4.2.0
+* Correction d'un bug avec la création manuelle de logs.
 ]]>
     </fr>
   </description>
