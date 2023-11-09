@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="77">
+<modDesc descVersion="79">
   <author>Braeven</author>
   <contributors>Achimobil</contributors>
-  <version>1.4.2.0</version>
+  <version>1.4.3.0</version>
   <title>
     <en>Production Revamp</en>
   </title>
@@ -114,6 +114,9 @@ Version 1.4.1.6
 
 Version 1.4.2.0
 * Fixed a Bug with manually spawning logs
+
+Version 1.4.3.0
+* Fixed a Bug with Game Version 1.13.1.0
 ]]>
     </en>
     <de>
@@ -222,6 +225,9 @@ Version 1.4.1.6
 
 Version 1.4.2.0
 * Bug beim manuellen spawnen von Holzstämmen behoben
+
+Version 1.4.3.0
+* Bug mit Spielversion 1.13.1.0 repariert
 ]]>
     </de>
    <fr>
@@ -330,6 +336,9 @@ Version 1.4.1.6
 
 Version 1.4.2.0
 * Correction d'un bug avec la création manuelle de logs.
+
+Version 1.4.3.0
+* Correction d'un bug avec la version 1.13.1.0 du jeu
 ]]>
     </fr>
   </description>

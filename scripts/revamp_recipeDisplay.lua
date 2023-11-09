@@ -6,8 +6,8 @@ Copyright (C) braeven, Achimobil, 2022
 
 Author: braeven, Achimobil
 
-Date: 08.01.2023
-Version: 1.6.5.0
+Date: 09.11.2023
+Version: 1.6.6.0
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
@@ -32,6 +32,7 @@ Changelog:
 1.6.3.0 @ 03.01.2023 - Umbau Versteckte Storages
 1.6.4.0 @ 04.01.2023 - Anzeige der Produktionsmodi erfolgt jetzt über mehrere Zeilen
 1.6.5.0 @ 08.01.2023 - Versteckte Produktionen/Linien werden nicht mehr in der infoTable angezeigt
+1.6.6.0 @ 09.11.2023 - Fixes for Patch 1.13.1
 
 
 Important:.
@@ -765,8 +766,7 @@ InGameMenuProductionFrame.onFrameOpen = Utils.prependedFunction(InGameMenuProduc
 
 ProductionPointInfoExtension = {}
 --Production Revamp: Erweitert um Versteckte Produktionslinien nicht anzuzeigen Ingame
-function ProductionPointInfoExtension:updateInfoNeu(_, superFunc, infoTable)
-	--superFunc(self, infoTable)
+function ProductionPointInfoExtension:updateInfoNeu(superFunc, infoTable)
 	local hidden = true
 	local hideComplete = false
 	local activeProduction = nil
