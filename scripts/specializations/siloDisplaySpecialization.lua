@@ -1,9 +1,9 @@
 --[[
-Copyright (C) Achimobil & braeven, 2022
+Copyright (C) Achimobil & braeven, 2023
 
 Author: Achimobil, Braeven
-Date: 06.01.2023
-Version: 1.0.0.0
+Date: 16.06.2023
+Version: 1.1.0.0
 
 Contact:
 https://forum.giants-software.com
@@ -20,6 +20,7 @@ History:
 1.0.0.0 @ 06.01.2023 - Fehlenquellen abgefangen und Meldungen hinzugefügt
 1.0.0.0 @ 06.01.2023 - ReverseMode added
 1.0.0.0 @ 06.01.2023 - Prozentuale Angaben werden beim colorChange unterstützt
+1.1.0.0 @ 16.06.2023 - Verzögerte Anzeige für performance verbesserung
 
 
 Important:
@@ -31,10 +32,9 @@ An diesem Skript dürfen ohne Genehmigung von Achimobil oder braeven keine Ände
 ]]
 
 SiloDisplaySpecialization = {
-	Version = "1.0.0.0",
+	Version = "1.1.0.0",
 	Name = "SiloDisplaySpecialization"
 }
-print(g_currentModName .. " - init " .. SiloDisplaySpecialization.Name .. "(Version: " .. SiloDisplaySpecialization.Version .. ")")
 
 function SiloDisplaySpecialization.prerequisitesPresent(specializations)
 	return SpecializationUtil.hasSpecialization(PlaceableSilo, specializations)
@@ -44,10 +44,12 @@ function SiloDisplaySpecialization.registerEventListeners(placeableType)
 	SpecializationUtil.registerEventListener(placeableType, "onLoad", SiloDisplaySpecialization)
 	SpecializationUtil.registerEventListener(placeableType, "onFinalizePlacement", SiloDisplaySpecialization)
 	SpecializationUtil.registerEventListener(placeableType, "onPostFinalizePlacement", SiloDisplaySpecialization)
+	SpecializationUtil.registerEventListener(placeableType, "onUpdate", SiloDisplaySpecialization)
 end
 
 function SiloDisplaySpecialization.registerFunctions(placeableType)
 	SpecializationUtil.registerFunction(placeableType, "updateDisplays", SiloDisplaySpecialization.updateDisplays)
+	SpecializationUtil.registerFunction(placeableType, "setSiloDisplayFillLevelDirty", SiloDisplaySpecialization.setSiloDisplayFillLevelDirty)
 end
 
 function SiloDisplaySpecialization.registerXMLPaths(schema, basePath)
@@ -76,6 +78,8 @@ function SiloDisplaySpecialization:onLoad(savegame)
 	local xmlFile = self.xmlFile
 	
 	spec.siloDisplays = {}
+	spec.siloDisplayFillLevelDirty = true;
+	spec.lastUpdateTime = 0;
 
 	local displayKey = "placeable.silo.siloDisplays"
 	if xmlFile:hasProperty(displayKey) then
@@ -159,7 +163,7 @@ function SiloDisplaySpecialization:onLoad(savegame)
 		end)
 
 		function spec.fillLevelChangedCallback(fillType, delta)
-			self:updateDisplays()
+			self:setSiloDisplayFillLevelDirty()
 		end
 	end
 end
@@ -173,6 +177,32 @@ end
 
 function SiloDisplaySpecialization:onPostFinalizePlacement(savegame)
 	self:updateDisplays()
+end
+
+function SiloDisplaySpecialization:setSiloDisplayFillLevelDirty()
+	local spec = self.spec_siloDisplay;
+	if not spec.siloDisplayFillLevelDirty then 
+		spec.siloDisplayFillLevelDirty = true 
+	end
+	self:raiseActive()
+end
+
+function SiloDisplaySpecialization:onUpdate(dt)
+	local spec = self.spec_siloDisplay;
+	if not spec.siloDisplayFillLevelDirty then
+		return
+	end;
+	spec.lastUpdateTime = spec.lastUpdateTime + dt
+	if spec.lastUpdateTime < 1000 then
+		self:raiseActive()
+		return
+	end;
+	
+	self:updateDisplays()
+	
+	spec.lastUpdateTime = 0
+	spec.siloDisplayFillLevelDirty = false;
+	
 end
 
 function SiloDisplaySpecialization:updateDisplays()

@@ -67,7 +67,7 @@ function ProductionAnimalOverview:show(productionPoint)
 			local item = {}
 
 			--Name der Rasse, Bild der Rasse auslesen
-			local visual = g_currentMission.animalSystem:getVisualByAge(subType.subTypeIndex, recipe.minAge)
+			local visual = g_currentMission.animalSystem:getVisualByAge(subType.subTypeIndex, recipe.maxAge)
 			item.imageFilename = visual.store.imageFilename
 			item.title = visual.store.name
 

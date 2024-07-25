@@ -31,6 +31,8 @@ Nicht das Script in Produktionen kopieren, ladet den Mod über eine Dependency!
 
 ]]
 
+source(g_currentModDirectory .. "scripts/events/ProductionPointBuyInputEvent.lua")
+
 RevampBuyInput = {}
 --Production Revamp: MenüButton für Buy-Input hinzugefügt
 function RevampBuyInput:updateMenuButtons(superFunc)
@@ -143,7 +145,7 @@ function InGameMenuProductionFrame:buyInputMenu()
 		if fillType ~= FillType.UNKNOWN then
 			local dialogArguments = {
 				text = g_i18n:getText("Revamp_BuyInput"),
-				title = productionPoint.name,
+				title = productionPoint:getName(),
 				options = options,
 				target = self,
 				args = selectableOptions,
@@ -191,5 +193,3 @@ function ProductionPoint:buyInput(fillType, buyVolume, price, noEventSend)
 
 	ProductionPointBuyInputEvent.sendEvent(self, fillType, buyVolume, price, noEventSend)
 end
-
-print("Production Revamp: Added functions for buying Inputs in Production Gui")

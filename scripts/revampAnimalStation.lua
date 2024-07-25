@@ -16,6 +16,7 @@ discord.gg/gHmnFZAypk
 Changelog:
 1.0.0.0 @ 24.11.2022 - Initial commit
 1.0.1.0 @ 02.01.2023 - TierIcons werden durchgestrichen, wenn sie nicht angenommen werden
+1.4.3.2 @ 26.12.2023 - Bugfix für unterscheidung Tiere bei mehreren Triggern
 
 Important:.
 No changes are allowed to this script without permission from Braeven.
@@ -27,6 +28,9 @@ Wenn du eine Produktion mit diesem Script bauen möchtest, lese dir die Dokument
 Nicht das Script in Produktionen kopieren, ladet den Mod über eine Dependency!
 
 ]]
+
+source(g_currentModDirectory .. "scripts/events/RevampMoveAnimalsEvent.lua")
+
 RevampAnimalStation = {
 	MOD_DIRECTORY = g_currentModDirectory}
 RevampAnimalStation.debug = false;
@@ -60,12 +64,10 @@ function RevampAnimalStation:load(productionPoint)
 	self.productionPoint = productionPoint
 
 	for triggerId, triggerIndex in pairs(self.productionPoint.animalTriggerToIndex) do
-		local animalDefinition = self.productionPoint.animalTriggers[triggerId];
 		local innerNode = {}
 		innerNode.triggerIndex = triggerIndex;
 		innerNode.triggerId = triggerId;
 		innerNode.activatable = RevampAnimalLoadingTriggerActivatable.new(self, triggerId);
-		innerNode.animalDefinition = animalDefinition;
 		innerNode.loadingVehicle = nil;
 
 		table.insert(self.innerNodes, innerNode);
@@ -168,9 +170,16 @@ function RevampAnimalStation:showAnimalScreen(triggerId)
 			local visual = g_currentMission.animalSystem:getVisualByAge(cluster.subTypeIndex, cluster.age)
 			item.imageFilename = visual.store.imageFilename
 			item.title = string.format("%s %s - %s - %s", item.cluster.numAnimals, visual.store.name, g_i18n:formatNumMonth(cluster.age), string.format("%d %%", cluster.health))
-			item.maxAnimals, item.inputFillTypeForProduction, item.weightPerAnimal, item.calculationMessage = self.productionPoint:calculateAnimals(item.subType.name, cluster.health, cluster.age)
+			
+			--TerraLife
+			local fatteningBonus = 1
+			if cluster.fatteningBonus ~= nil then
+				fatteningBonus = 1 + cluster.fatteningBonus
+			end
+			item.maxAnimals, item.inputFillTypeForProduction, item.weightPerAnimal, item.calculationMessage = self.productionPoint:calculateAnimals(item.subType.name, cluster.health, cluster.age, fatteningBonus)
 			item.maxAnimals = math.min(item.maxAnimals, item.cluster.numAnimals)
 			item.accepted = RevampAnimalStation.MOD_DIRECTORY .."images/accepted.png"
+			
 			if item.calculationMessage ~= nil then
 				if item.calculationMessage == "WrongAge" then
 					local animal = self.productionPoint.animalTypes[item.subType.name]
@@ -182,6 +191,18 @@ function RevampAnimalStation:showAnimalScreen(triggerId)
 					item.accepted = RevampAnimalStation.MOD_DIRECTORY .."images/notAccepted.png"
 				elseif item.calculationMessage == "WrongAnimal" then
 					item.calculationMessageTranslated = g_i18n:getText("Revamp_animalNotValid")
+				end
+			end
+			
+			-- Wenn der Fehler nicht "WrongAnimal" ist (sollte vorrang haben vor trigger Meldung) oder es keinen Fehler gibt, dann den trigger prüfen
+			if item.calculationMessage == nil or item.calculationMessage ~= "WrongAnimal" then
+				local isSubTypeAllowedForTrigger = self.productionPoint:getIsSubTypeAllowedForTrigger(triggerId, item.subType.name)
+				if not isSubTypeAllowedForTrigger then
+					item.maxAnimals = 0; 
+					item.inputFillTypeForProduction = nil;
+					item.weightPerAnimal = 0;
+					item.accepted = RevampAnimalStation.MOD_DIRECTORY .."images/notAccepted.png"
+					item.calculationMessageTranslated = g_i18n:getText("Revamp_animalNotValidForTrigger")
 				end
 			end
 
@@ -217,7 +238,13 @@ function RevampAnimalStation:receiveAnimalDeliveryCallback(triggerIndex, selecte
 	local cluster = clusters[selectedIndex]
 	local subType = g_currentMission.animalSystem:getSubTypeByIndex(cluster.subTypeIndex)
 
-	local success = self.productionPoint:transportAnimals(subType.name, cluster.health, cluster.age, quantity)
+	--TerraLife
+	local fatteningBonus = 1
+	if cluster.fatteningBonus ~= nil then
+		fatteningBonus = 1 + cluster.fatteningBonus
+	end
+
+	local success = self.productionPoint:transportAnimals(subType.name, cluster.health, cluster.age, quantity, fatteningBonus)
 
 	if success then 
 		cluster:changeNumAnimals(-quantity)

@@ -1,9 +1,9 @@
 --[[
-Copyright (C) Achimobil, 2022
+Copyright (C) Achimobil,20232022
 
 Author: Achimobil
-Date: 20.12.2022
-Version: 0.3.3.1
+Date: 16.06.2023
+Version: 0.4.0.0
 
 Contact:
 https://forum.giants-software.com
@@ -18,6 +18,7 @@ History:
 0.3.2.0 @ 10.05.2022 - Add Version and Name for main.lua
 0.3.3.0 @ 01.06.2022 - Change Name and output on init
 0.3.3.1 @ 20.12.2022 - Code Cleanup
+0.4.0.0 @ 16.06.2023 - Verzögerte Anzeige für performance verbesserung
 
 Important:
 It is not allowed to copy in own Mods. Only usage as reference with Production Revamp.
@@ -28,11 +29,9 @@ An diesem Skript dürfen ohne Genehmigung von Achimobil oder braeven keine Ände
 ]]
 
 SiloObjectFillLevelSpecialization = {
-	Version = "0.3.3.1",
+	Version = "0.4.0.0",
 	Name = "SiloObjectFillLevelSpecialization"
 }
-print(g_currentModName .. " - init " .. SiloObjectFillLevelSpecialization.Name .. "(Version: " .. SiloObjectFillLevelSpecialization.Version .. ")")
-
 
 
 function SiloObjectFillLevelSpecialization.prerequisitesPresent(specializations)
@@ -45,12 +44,13 @@ function SiloObjectFillLevelSpecialization.registerEventListeners(placeableType)
 	SpecializationUtil.registerEventListener(placeableType, "onLoad", SiloObjectFillLevelSpecialization)
 	SpecializationUtil.registerEventListener(placeableType, "onFinalizePlacement", SiloObjectFillLevelSpecialization)
 	SpecializationUtil.registerEventListener(placeableType, "onPostFinalizePlacement", SiloObjectFillLevelSpecialization)
+	SpecializationUtil.registerEventListener(placeableType, "onUpdate", SiloObjectFillLevelSpecialization)
 end
-
 
 
 function SiloObjectFillLevelSpecialization.registerFunctions(placeableType)
 	SpecializationUtil.registerFunction(placeableType, "updateObjectFillLevels", SiloObjectFillLevelSpecialization.updateObjectFillLevels)
+	SpecializationUtil.registerFunction(placeableType, "setSiloObjectFillLevelDirty", SiloObjectFillLevelSpecialization.setSiloObjectFillLevelDirty)
 end
 
 
@@ -73,12 +73,14 @@ end
 
 
 function SiloObjectFillLevelSpecialization:onLoad(savegame)
-		self.spec_siloObjectFillLevel = {}
+	self.spec_siloObjectFillLevel = {}
 	local spec = self.spec_siloObjectFillLevel
 	local xmlFile = self.xmlFile
 		spec.UseSubNodesInsteadOfMainNodes = self.xmlFile:getBool("placeable.silo.siloObjectFillLevels#useSubNodesInsteadOfMainNodes", false)
 
 	spec.siloObjectFillLevels = {}
+	spec.siloObjectFillLevelDirty = true;
+	spec.lastUpdateTime = 0;
 	local i = 0
 
 	while true do
@@ -155,7 +157,7 @@ function SiloObjectFillLevelSpecialization:onLoad(savegame)
 	end
 
 	function spec.fillLevelChangedCallback(fillType, delta)
-		self:updateObjectFillLevels()
+		self:setSiloObjectFillLevelDirty()
 	end
 end
 
@@ -174,7 +176,31 @@ function SiloObjectFillLevelSpecialization:onPostFinalizePlacement(savegame)
 	self:updateObjectFillLevels()
 end
 
+function SiloObjectFillLevelSpecialization:setSiloObjectFillLevelDirty()
+	local spec = self.spec_siloObjectFillLevel;
+	if not spec.siloObjectFillLevelDirty then 
+		spec.siloObjectFillLevelDirty = true 
+	end
+	self:raiseActive()
+end
 
+function SiloObjectFillLevelSpecialization:onUpdate(dt)
+	local spec = self.spec_siloObjectFillLevel;
+	if not spec.siloObjectFillLevelDirty then
+		return
+	end;
+	spec.lastUpdateTime = spec.lastUpdateTime + dt
+	if spec.lastUpdateTime < 5000 then
+		self:raiseActive()
+		return
+	end;
+	
+	self:updateObjectFillLevels()
+	
+	spec.lastUpdateTime = 0
+	spec.siloObjectFillLevelDirty = false;
+	
+end
 
 function SiloObjectFillLevelSpecialization:updateObjectFillLevels()
 	local spec = self.spec_siloObjectFillLevel

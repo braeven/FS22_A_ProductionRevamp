@@ -36,6 +36,8 @@ Nicht das Script in Produktionen kopieren, ladet den Mod über eine Dependency!
 
 ]]
 
+source(g_currentModDirectory .. "scripts/events/ProductionPointPriorityEvent.lua")
+
 RevampPriority = {}
 
 --Production Revamp: Überschrieben um den Output-Mode auf "Einlagern" setzen zu können
@@ -103,7 +105,6 @@ function RevampPriority:getOutputDistributionMode(superFunc, outputFillTypeId)
 end
 
 ProductionPoint.getOutputDistributionMode = Utils.overwrittenFunction(ProductionPoint.getOutputDistributionMode, RevampPriority.getOutputDistributionMode)
-print("Production Revamp: ProductionPoint Set & Get DistributionMode Overwritten")
 
 
 
@@ -293,7 +294,6 @@ function RevampPriority:distributeGoods()
 end
 
 ProductionChainManager.distributeGoods = Utils.overwrittenFunction(ProductionChainManager.distributeGoods, RevampPriority.distributeGoods)
-print("Production Revamp: ProductionChain Distribution System overwritten")
 
 
 
@@ -388,6 +388,3 @@ function ProductionPoint:setInputPriority(inputFillTypeId, priority, noEventSend
 
 	ProductionPointPriorityEvent.sendEvent(self, inputFillTypeId, priority, noEventSend)
 end
-
-
-print("Production Revamp: Added functions for changing and reading Input Priority")

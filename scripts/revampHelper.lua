@@ -161,3 +161,34 @@ RevampHelper.amountPerMeterSpruce = {
 	[19] = 4236;
 	[20] = 4326; -- 4927 bei 20m pinie / 2550 bei 20m Kiefer
 }
+
+function RevampHelper:AddXmlSchema()
+	RevampHelper.XmlSchema = XMLSchema.new("terraLife")
+	local schema = RevampHelper.XmlSchema
+	schema:register(XMLValueType.STRING, "map.terraLife#version", "Required TerraLife Version", nil, nil)
+end
+
+function RevampHelper:testFarmingAgency()
+	if RevampHelper.FarmingAgency ~= nil then
+		return RevampHelper.FarmingAgency
+	else
+		RevampHelper.FarmingAgency = false
+		--Test for MaizePlus
+		local MP = g_modManager:getModByName("FS22_MaizePlus")
+		if MP ~= nil then
+			if g_modIsLoaded[MP.modName] then
+				RevampHelper.FarmingAgency = true
+			end
+		end
+		--Test for TerraLife Plus
+		local TLP = g_modManager:getModByName("FS22_TerraLifePlus")
+		if TLP ~= nil then
+			if g_modIsLoaded[TLP.modName] then
+				RevampHelper.FarmingAgency = true
+			end
+		end
+
+		return RevampHelper.FarmingAgency
+	end
+end
+RevampHelper:AddXmlSchema()

@@ -1,9 +1,9 @@
 --[[
-Copyright (C) braeven, 2022
+Copyright (C) braeven, 2022-2023
 
 Author: braeven / Achimobil
-Date: 14.02.2022
-Version: 1.1.4.3
+Date: 31.05.2023
+Version: 1.2.0.0
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
@@ -18,6 +18,7 @@ Changelog:
 1.1.4.1 @ 30.11.2022 - AddByFillTypeStoreItems erweitert um den mod Titel für die Bauanzeige
 1.1.4.2 @ 19.12.2022 - Code Cleanup
 1.1.4.3 @ 14.02.2022 - Schreibfehler in der Vergangenheit berücksichtig
+1.2.0.0 @ 31.05.2023 - AddByFillTypeStoreItems invert funktion eingefügt
 
 Important:
 Kopiere diese Datei in deine Produktionen um einen Revamp-Versionscheck ausführen zu können. Diese Datei ist außerdem nötig um Filltypes bei bestehenden Sellingstations anmelden zu können und StoreItems An-/Abzumelden.
@@ -164,8 +165,9 @@ function RevampChecker.test()
 					local storeItemXMLFilename = xmlFile:getString(inputKey .. "#xmlFilename")
 					local removeWhenFillTypeNames = xmlFile:getValue(inputKey .. "#removeWhenFillTypes")
 					local addWhenFillTypeNames = xmlFile:getValue(inputKey .. "#addWhenfillTypes")
+					local invert = xmlFile:getValue(inputKey .. "#invert")
 					if addWhenFillTypeNames == nil then
-						local addWhenFillTypeNames = xmlFile:getValue(inputKey .. "#addWhenFillTypes") -- SchreibFehler in der Vergangenheit
+						addWhenFillTypeNames = xmlFile:getValue(inputKey .. "#addWhenFillTypes") -- SchreibFehler in der Vergangenheit
 					end
 					if removeWhenFillTypeNames ~= nil or addWhenFillTypeNames ~= nil then
 						local storeItem = {}
@@ -179,6 +181,7 @@ function RevampChecker.test()
 						storeItem.customEnvironment = modName
 						storeItem.baseDirectory = g_currentModDirectory
 						storeItem.title = mod.title
+						storeItem.invert = invert
 						table.insert(Revamp.AddByFillTypeStoreItems, storeItem)
 					end
 				end)

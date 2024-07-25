@@ -28,6 +28,37 @@
         <text name="Revamp_ViewInActiveProductions"             text="Ocultar ativo" />
         <text name="Revamp_ViewAllProductions"                  text="Mostrar tudo" />
         <text name="Revamp_ChooseWoodLogLogLength"              text="Escolha o comprimento" />
+        <text name="Revamp_ChangeRecipe"                        text="Alterar receita" />
+
+    <!--Production Settings-->
+        <text name="Revamp_PS_MenueButton"                      text="Change Setting" />
+        <text name="Revamp_PS_Mix_Title"                        text="Choose Mix-Mode" />
+        <text name="Revamp_PS_Mix_Text"                         text="This setting changes, in which order Mix-FillTypes are used." />
+        <text name="Revamp_PS_Mix_Asc"                          text="Order descending" />
+        <text name="Revamp_PS_Mix_Desc"                         text="Order ascending" />
+        <text name="Revamp_PS_Mix_Most"                         text="Größte Menge" />
+        <text name="Revamp_PS_Mix_Least"                        text="Kleinste Menge" />
+        <text name="Revamp_PS_Boost_Title"                      text="Choose Boost-Mode" />
+        <text name="Revamp_PS_Boost_Text"                       text="This setting changes, in which order boost-FillTypes are used." />
+        <text name="Revamp_PS_Boost_Asc"                        text="Order first available" />
+        <text name="Revamp_PS_Boost_Desc"                       text="Order  last available" />
+        <text name="Revamp_PS_Boost_Most"                       text="Use	biggest boost" />
+        <text name="Revamp_PS_Boost_Least"                      text="Use smallest boost" />
+        <text name="Revamp_PS_Choose_Title"                     text="Please chooose:" />
+        <text name="Revamp_PS_Choose_Mix"                       text="Change Mix Settings" />
+        <text name="Revamp_PS_Choose_Boost"                     text="Change Boost Settings" />
+
+    <!-- Price Menue Filter -->
+        <text name="REVAMP_FILTER"                              text="Filter: None" />
+        <text name="REVAMP_FILTER_FRUITS"                       text="Filter: Fruits" />
+        <text name="REVAMP_FILTER_GRASSES"                      text="Filter: Grasses" />
+        <text name="REVAMP_FILTER_SILAGES"                      text="Filter: Silages" />
+        <text name="REVAMP_FILTER_FEED"                         text="Filter: Feed" />
+        <text name="REVAMP_FILTER_FEEDINGREDIENTS"              text="Filter: Feed Ingredients" />
+        <text name="REVAMP_FILTER_SEEDS"                        text="Filter: Seeds" />
+        <text name="REVAMP_FILTER_PRODUCTS"                     text="Filter: Products" />
+        <text name="REVAMP_FILTER_ANIMALPRODUCTS"               text="Filter: Animal" />
+        <text name="REVAMP_FILTER_CONSUMABLES"                  text="Filter: Consumables" />
 
     <!-- Production messages -->
         <text name="Revamp_StorageEmpty"                        text="O estoque está vazio." />
@@ -36,21 +67,28 @@
         <text name="Revamp_ProductionNotEmpty"                  text="A Produção não está vazia. Os seguintes produtos também serão vendidos:"/>
 
     <!-- Production Variants -->
+        <text name="Revamp_limitBoosters"                       text="%s limited booster" />
         <text name="Revamp_sunProduction"                       text="%s Dependente do sol" />
         <text name="Revamp_rainProduction"                      text="%s Dependente da chuva" />
         <text name="Revamp_windProduction"                      text="%s Dependente do vento" />
         <text name="Revamp_temperatureProduction"               text="%s Dependente de temperaturas mais quentes" />
         <text name="Revamp_temperatureNegativeProduction"       text="%s Dependente de temperaturas mais frias" />
-        <text name="Revamp_seasonalProduction"                  text="%s Sazonal" />
-        <text name="Revamp_productionHoursDependent"            text="%s De %s horas" />
-        <text name="Revamp_monthlyProduction"                   text="%s Mensalmente" />
         <text name="Revamp_productionMode"                      text="Modo de produção" />
 
+    <!-- Production Variants Season Names -->
+        <text name="Revamp_seasonSpring"                       text="Spring" />
+        <text name="Revamp_seasonSummer"                       text="Summer" />
+        <text name="Revamp_seasonAutumn"                       text="Autumn" />
+        <text name="Revamp_seasonWinter"                       text="Winter" />
+        
     <!-- Production menu -->
         <text name="Revamp_OpenProduction"                      text="Gerenciar a produção" />
         <text name="Revamp_SpawnItem"                           text="Geração manual de paletes" />
         <text name="finance_ProductionDeliveryCosts"            text="Encargos de entrega da produção" />
         <text name="Revamp_ShowAnimalsOverview"                 text="Mostrar animais" />
+        <text name="revamp_production_status_outsideOfSeasons"  text="Outside of Season" />
+        <text name="revamp_production_status_outsideOfHours"    text="Outside of Working Hours" />
+        <text name="revamp_production_status_outsideOfMonths"   text="Outside of Working Months" />
 
     <!-- game Settings menu -->
         <text name="Revamp_Settings_Title"                      text="Revamp" />
@@ -77,6 +115,7 @@
         <text name="Revamp_animalAgeError"                      text="Os animais devem ter entre %s e %s meses de idade" />
         <text name="Revamp_animalHealthError"                   text="Os animais devem ter entre %s e %s saúde" />
         <text name="Revamp_animalNotValid"                      text="Este tipo de animal não é aceito aqui" />
+        <text name="Revamp_animalNotValidForTrigger"            text="Esse tipo de animal não será aceito nessa área." />
         <text name="Revamp_productFullError"                    text="Sem espaço livre na produção" />
         <text name="Revamp_amountPerAnimal"                     text="Quantidade entregue por animal" />
         <text name="Revamp_amountTotal"                         text="Quantidade total de entrega" />

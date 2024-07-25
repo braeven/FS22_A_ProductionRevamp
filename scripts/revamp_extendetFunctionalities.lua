@@ -2,10 +2,10 @@
 Production Revamp
 Extented functuality ccripts
 
-Copyright (C) Achimobil, braeven, 2022
+Copyright (C) Achimobil, braeven, 2022-2023
 
-Date: 14.02.2023
-Version: 1.0.2.0
+Date: 31.05.2023
+Version: 1.1.0.0
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
@@ -16,6 +16,7 @@ Changelog:
 1.0.0.2 @ 19.12.2022 - Code Cleanup
 1.0.1.0 @ 09.01.2023 - Ungülltige FillTypes abgefangen
 1.0.2.0 @ 14.02.2023 - Schreibfehler in der Vergangenheit hinzugefügt
+1.1.0.0 @ 31.05.2023 - AddByFillTypeStoreItems invert funktion eingefügt
 
 Important:.
 No changes are allowed to this script without permission from Achimobil AND Braeven.
@@ -40,6 +41,7 @@ function Revamp:AddXmlSchema()
 	schema:register(XMLValueType.STRING, "modDesc.revamp.storeItems.storeItem(?)#addWhenfillTypes", "Revamp storeItemScript: Store Item only available when all entered filltypes are available", nil, false)
 	schema:register(XMLValueType.STRING, "modDesc.revamp.storeItems.storeItem(?)#addWhenFillTypes", "Revamp storeItemScript: Store Item only available when all entered filltypes are available", nil, false) -- Schreibfehler in der Vergangenheit
 	schema:register(XMLValueType.STRING, "modDesc.revamp.storeItems.storeItem(?)#removeWhenFillTypes", "Revamp storeItemScript: Store Item only available when none of these filltypes are available", nil, false)
+	schema:register(XMLValueType.BOOL, "modDesc.revamp.storeItems.storeItem(?)#invert", "Revamp storeItemScript: invert the result of addWhenFillTypes or removeWhenFillTypes", false, false)
 	schema:register(XMLValueType.STRING, "modDesc.storeItems.storeItem(?)#removeWhenFillTypes", "Revamp storeItemScript: Store Item will not be available when one of the fillTypes is available. Use WHEAT to remove when Revamp is available", nil, false)
 end
 
@@ -187,6 +189,10 @@ function Revamp:AddAdditionalStoreItems(xmlFilename, defaultXMLFilename)
 				addItem = false
 			end
 		end
+		
+		if fillTypeDependentStoreItem.invert then
+			addItem = not addItem;
+		end
 
 		if addItem then
 			-- StoreManager:loadItem(rawXMLFilename, baseDir, customEnvironment, isMod, isBundleItem, dlcTitle, extraContentId, ignoreAdd)
@@ -228,30 +234,16 @@ Mission00.loadPlaceables = Utils.prependedFunction(Mission00.loadPlaceables, Rev
 
 --Production Revamp: loadMapData überschrieben, damit Revamp FillTypes geladen werden zum richtigen Zeitpunkt
 function Revamp:loadMapDataFillTypeManager(superFunc, xmlFile, missionInfo, baseDirectory)
-	FillTypeManager:superClass().loadMapData(self)
-	self:loadDefaultTypes()
+	local result = superFunc(self, xmlFile, missionInfo, baseDirectory)
+	for _, data in ipairs(Revamp.FillTypeFilesToLoad) do
+		local fillTypesXmlFile = XMLFile.load("fillTypes", data[1], FillTypeManager.xmlSchema)
 
-	if XMLUtil.loadDataFromMapXML(xmlFile, "fillTypes", baseDirectory, self, self.loadFillTypes, baseDirectory, false, missionInfo.customEnvironment) then
-		for _, data in ipairs(self.modsToLoad) do
-			local fillTypesXmlFile = XMLFile.load("fillTypes", data[1], FillTypeManager.xmlSchema)
-
-			g_fillTypeManager:loadFillTypes(fillTypesXmlFile, data[2], false, data[3])
-			fillTypesXmlFile:delete()
-		end
-
-		for _, data in ipairs(Revamp.FillTypeFilesToLoad) do
-			local fillTypesXmlFile = XMLFile.load("fillTypes", data[1], FillTypeManager.xmlSchema)
-
-			g_fillTypeManager:loadRevampFillTypes(fillTypesXmlFile, data[2], data[3])
-			fillTypesXmlFile:delete()
-		end
-
-		self:constructFillTypeTextureArrays()
-
-		return true
+		g_fillTypeManager:loadRevampFillTypes(fillTypesXmlFile, data[2], data[3])
+		fillTypesXmlFile:delete()
 	end
+	self:constructFillTypeTextureArrays()
 
-	return false
+	return result
 end
 FillTypeManager.loadMapData = Utils.overwrittenFunction(FillTypeManager.loadMapData, Revamp.loadMapDataFillTypeManager)
 
@@ -429,4 +421,3 @@ end
 
 
 Revamp:AddXmlSchema()
-print("Production Revamp: Added extendet functionalities")

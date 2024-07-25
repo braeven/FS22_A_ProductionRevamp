@@ -1,9 +1,9 @@
 --[[
-Copyright (C) Achimobil, 2022
+Copyright (C) Achimobil, 2023
 
 Author: Achimobil
-Date: 19.12.2022
-Version: 0.1.1.1
+Date: 16.06.2023
+Version: 0.2.0.0
 
 Contact:
 https://forum.giants-software.com
@@ -14,6 +14,7 @@ History:
 0.1.0.0 @ 14.05.2022 - First Version
 0.1.1.0 @ 01.06.2022 - Change Name and output on init
 0.1.1.1 @ 19.12.2022 - Code Cleanup
+0.2.0.0 @ 16.06.2023 - Verzögerte Anzeige für performance verbesserung
 
 
 Important:
@@ -25,11 +26,9 @@ An diesem Skript dürfen ohne Genehmigung von Achimobil oder braeven keine Ände
 ]]
 
 ProductionObjectFillLevelSpecialization = {
-	Version = "0.1.1.1",
+	Version = "0.2.0.0",
 	Name = "ProductionObjectFillLevelSpecialization"
 }
-
-print(g_currentModName .. " - init " .. ProductionObjectFillLevelSpecialization.Name .. "(Version: " .. ProductionObjectFillLevelSpecialization.Version .. ")")
 
 function ProductionObjectFillLevelSpecialization.prerequisitesPresent(specializations)
 	return SpecializationUtil.hasSpecialization(PlaceableProductionPoint, specializations)
@@ -39,10 +38,12 @@ function ProductionObjectFillLevelSpecialization.registerEventListeners(placeabl
 	SpecializationUtil.registerEventListener(placeableType, "onLoad", ProductionObjectFillLevelSpecialization)
 	SpecializationUtil.registerEventListener(placeableType, "onFinalizePlacement", ProductionObjectFillLevelSpecialization)
 	SpecializationUtil.registerEventListener(placeableType, "onPostFinalizePlacement", ProductionObjectFillLevelSpecialization)
+	SpecializationUtil.registerEventListener(placeableType, "onUpdate", ProductionObjectFillLevelSpecialization)
 end
 
 function ProductionObjectFillLevelSpecialization.registerFunctions(placeableType)
 	SpecializationUtil.registerFunction(placeableType, "updateObjectFillLevels", ProductionObjectFillLevelSpecialization.updateObjectFillLevels)
+	SpecializationUtil.registerFunction(placeableType, "setProductionObjectFillLevelDirty", ProductionObjectFillLevelSpecialization.setProductionObjectFillLevelDirty)
 end
 
 function ProductionObjectFillLevelSpecialization.registerXMLPaths(schema, basePath)
@@ -67,6 +68,8 @@ function ProductionObjectFillLevelSpecialization:onLoad(savegame)
 	spec.UseSubNodesInsteadOfMainNodes = self.xmlFile:getBool("placeable.productionPoint.productionObjectFillLevels#useSubNodesInsteadOfMainNodes", false)
 
 	spec.productionObjectFillLevels = {}
+	spec.productionObjectFillLevelDirty = true;
+	spec.lastUpdateTime = 0;
 	local i = 0
 
 	while true do
@@ -143,7 +146,7 @@ function ProductionObjectFillLevelSpecialization:onLoad(savegame)
 	end
 
 	function spec.fillLevelChangedCallback(fillType, delta)
-		self:updateObjectFillLevels()
+		self:setProductionObjectFillLevelDirty()
 	end
 end
 
@@ -154,6 +157,32 @@ end
 
 function ProductionObjectFillLevelSpecialization:onPostFinalizePlacement(savegame)
 	self:updateObjectFillLevels()
+end
+
+function ProductionObjectFillLevelSpecialization:setProductionObjectFillLevelDirty()
+	local spec = self.spec_productionObjectFillLevel;
+	if not spec.productionObjectFillLevelDirty then 
+		spec.productionObjectFillLevelDirty = true 
+	end
+	self:raiseActive()
+end
+
+function ProductionObjectFillLevelSpecialization:onUpdate(dt)
+	local spec = self.spec_productionObjectFillLevel;
+	if not spec.productionObjectFillLevelDirty then
+		return
+	end;
+	spec.lastUpdateTime = spec.lastUpdateTime + dt
+	if spec.lastUpdateTime < 5000 then
+		self:raiseActive()
+		return
+	end;
+	
+	self:updateObjectFillLevels()
+	
+	spec.lastUpdateTime = 0
+	spec.productionObjectFillLevelDirty = false;
+	
 end
 
 function ProductionObjectFillLevelSpecialization:updateObjectFillLevels()

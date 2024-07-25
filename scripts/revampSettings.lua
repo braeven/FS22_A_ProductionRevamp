@@ -32,10 +32,10 @@ RevampSettings.modDir = g_currentModDirectory
 RevampSettings.BuyRestriction = { "Everyone", "FarmManager", "ProductionAgent", "None" }
 RevampSettings.debug = false
 
-source(g_currentModDirectory .. "events/changeRevampSettingsEvent.lua")
-source(g_currentModDirectory .. "events/changeRevampCheckSettingsEvent.lua")
-source(g_currentModDirectory .. "events/changeRevampDecimalSettingsEvent.lua")
-source(g_currentModDirectory .. "events/loadRevampSettingsEvent.lua")
+source(g_currentModDirectory .. "scripts/events/changeRevampSettingsEvent.lua")
+source(g_currentModDirectory .. "scripts/events/changeRevampCheckSettingsEvent.lua")
+source(g_currentModDirectory .. "scripts/events/changeRevampDecimalSettingsEvent.lua")
+source(g_currentModDirectory .. "scripts/events/loadRevampSettingsEvent.lua")
 
 function RevampSettings.init()
 	-- init default settings

@@ -6,85 +6,11 @@ Copyright (C) braeven, Achimobil 2022
 
 Author: braeven
 Thanks for Helping: Achimobil, TethysSaturn, DickerSauerlaender, inconspicuously007, AlfredProm
-Date: 25.04.2023
-Version: 1.4.1.4
+Date: 20.06.2024
+Version: 1.5.0.0 Beta 1
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
-
-
-Changelog:
-1.3.0.0_beta_01 @ 09.07.2022 - Initial 1.3 Release.
-1.3.0.0_beta_01 @ 09.07.2022 - revamp.lua auf mehrere Dateien aufgeteilt.
-1.3.0.0_beta_02 @ 01.08.2022 - Bugfixes 1.2.0.17/18 Übertragen.
-1.3.0.0_beta_03 @ 02.08.2022 - Masterbooster eingebaut.
-1.3.0.0_beta_03 @ 05.08.2022 - Produktion mit Öffnungszeiten eingebaut.
-1.3.0.0_beta_03 @ 09.08.2022 - Inputs und Outputs die vom Wetter gefüllt werden eingebaut.
-1.3.0.0_beta_03 @ 09.08.2022 - Produktionen die vom Wetter beeinflusst werden eingebaut.
-1.3.0.0_beta_08 @ 18.08.2022 - Produktion abhängig von negativer Temperatur hinzugefügt.
-1.3.0.0 beta_09 @ 20.08.2022 - Produktion abhängig von Temperatur umbenannt.
-1.3.0.0 beta_09 @ 20.08.2022 - Code Optimierungen
-1.3.0.0 beta_09 @ 20.08.2022 - Conditionale Outputs hinzugefügt
-1.3.0.0 beta 10 @ 20.08.2022 - Farbe von Silageballen festlegbar gemacht
-1.3.0.0 beta 11 @ 21.08.2022 - Seasonal Produktionen hinzugefügt, Bugfixes
-1.3.0.0 beta 12 @ 22.08.2022 - Änderungen Version 1.7 Übertragen
-1.3.0.0 beta 13 @ 23.08.2022 - minPower hinzugefügt, Mindestleistung für Wetterabhängige Produktionen
-1.3.0.0 beta 14 @ 24.08.2022 - Schreibfehler behoben, Ballenfarbe auf Pink geändert wenn nichts angegeben, Giants-Farbcodes ermöglicht
-1.3.0.0 beta 16 @ 30.08.2022 - Nacht-Abhängige Produktion hinzugefügt
-1.3.0.0 RC1     @ 11.09.2022 - Release Canidate 1
-1.3.0.0         @ 12.09.2022 - Release Version 1.3.0.0
-1.3.1.0         @ 27.09.2022 - Kompabilität mit PnH
-1.3.1.1         @ 31.09.2022 - Bugfix Seasonale Produktionen
-1.3.1.2         @ 31.09.2022 - Kompabilität mit PnH im MP
-1.3.1.3         @ 02.10.2022 - Auslagern Modus wechseln mit PnH macht keinen Fehler mehr bei neu gebauten Produktionen
-1.3.2.0         @ 11.10.2022 - FillType abhängige store items
-1.3.3.0         @ 17.10.2022 - Bugfix Autostart und Wetterabhängige Produktionen/FillTypes
-1.3.3.0         @ 17.10.2022 - Voreinstellbare Priorität
-1.3.3.0         @ 17.10.2022 - Einstellbarer Kauffaktor
-1.3.3.0         @ 17.10.2022 - Produktionsmodus Monatlich
-1.3.3.0         @ 17.10.2022 - MixGruppen-Modi
-1.3.4.0         @ 18.10.2022 - FillTypeFilesToLoad zum Laden von Filltypes ohne die bestehenden Daten zu überschreiben
-1.3.5.0 beta 2  @ 21.10.2022 - Multiple Produktions Modi ermöglicht
-1.3.5.0         @ 24.10.2022 - Erweiterte Funktionen in eigene Datei ausgelagert
-1.3.5.2         @ 05.11.2022 - Fix für Spawnplaces mit FillType-Zuweisung
-1.3.5.3         @ 08.11.2022 - Produktions-Modi für ProduktionsLinien ermöglicht
-1.3.5.3         @ 08.11.2022 - Schreibfehler behoben
-1.3.5.4         @ 12.11.2022 - Code Cleanup
-1.3.5.5         @ 15.11.2022 - Ausnahmen für Silverrun Forest/Platinum Schiffswerft und Achterbahn
-1.3.5.6         @ 23.11.2022 - Bugfix mit Produktionslinien-Modi
-1.3.5.6         @ 23.11.2022 - Bugfix mit Container-Trigger
-1.3.5.6         @ 24.11.2022 - Bugfix mit Produktionslinien die den selben Filltype mehrmals nutzen
-1.3.5.6         @ 27.11.2022 - Bugfix Kauffunktion und Booster 
-1.4.0.0 beta_01 @ 17.11.2022 - Anpassung für Revamp_Spawner
-1.4.0.0 beta_03 @ 27.11.2022 - Versteckte Produktionen, Direktverkauf deaktivierbar gemacht
-1.4.0.0 beta_03 @ 04.12.2022 - sharedThroughputCapacity wird nun komplett bei der Berechnung der Zyklen berücksichtigt
-1.4.0.0 beta_04 @ 20.12.2022 - Code Cleanup
-1.4.0.0 beta_04 @ 21.12.2022 - Verschiedene Min/Max-Alters-Einteilungen bei den Tieren erlaubt, für bessere Einteilbarkeit der Produktionen
-1.4.0.0 beta_04 @ 21.12.2022 - Verschiedene Gesundheitszustände erlaubt für Tiere, für bessere Einstellbarkeit der Produktionen
-1.4.0.0 beta_04 @ 22.12.2022 - boosterMode hinzugefügt
-1.4.0.0 beta_04 @ 22.12.2022 - boosterMode und mixMode für ProduktionsLinien ermöglicht
-1.4.0.0 beta_04 @ 25.12.2022 - AnimalInput-FillTypes sind standardmäßig nicht kaufbar
-1.4.0.0 beta_04 @ 27.12.2022 - AnimalInput-Anzeige Überarbeitet
-1.4.0.0 beta_04 @ 27.12.2022 - AnimalTrigger Fehlermeldungen ausgebaut
-1.4.0.0 beta_05 @ 01.01.2023 - Code Cleanup und Testrunner
-1.4.0.0 beta_06 @ 02.01.2023 - Animal Fehlermeldungen ausgebaut
-1.4.0.0 beta_06 @ 02.01.2023 - Fehler beim Auslesen des Storages abgefangen
-1.4.0.0 beta_06 @ 02.01.2023 - Abbruch Fehler durch Skip ersetzt
-1.4.0.0 beta_08 @ 03.01.2023 - Versteckte Storages umgebaut
-1.4.0.0 beta_11 @ 08.01.2023 - Verstecke Produktionen/linien erweitert
-1.4.0.0 beta_11 @ 08.01.2023 - Autostart für einzelne Produktionslinien
-1.4.0.0 beta_13 @ 09.01.2023 - Bugfix: Typo beim Lagerprüfen
-1.4.0.0 beta_13 @ 10.01.2023 - Automatisches Auslagern erfogt auch nur zu Produktionszeiten
-1.4.0.0 beta_14 @ 13.01.2023 - Bugfix mit Multiplen Production Modes
-1.4.0.0 beta_15 @ 14.01.2023 - Spawnen kann wieder als Voreinstellung gesetzt werden
-1.4.0.0 RC 3    @ 19.01.2023 - Bug mit Precision Farming behoben
-1.4.0.1         @ 23.01.2023 - Bug mit boostMode
-1.4.0.2         @ 14.02.2023 - Bugfix mit Start/Endzeiten
-1.4.1.0         @ 10.03.2023 - Beliebige viele Arbeitszeiten der Produktion ermöglicht
-1.4.1.2         @ 29.03.2023 - Bugfix Öffnungszeiten
-1.4.1.3         @ 29.03.2023 - Bugfix mehrere Öffnungszeiten
-1.4.1.4         @ 25.04.2023 - Bugfix mit PnH Version 1.3
-
 
 Important:.
 No changes are allowed to this script without permission from Braeven and Achimobil.
@@ -104,6 +30,28 @@ Revamp.RemoveByFillTypeStoreItems = {}
 Revamp.AddByFillTypeStoreItems = {}
 Revamp.FillTypeFilesToLoad = {}
 ProductionPoint.Revamp = g_currentModDirectory
+
+ProductionPoint.PROD_STATUS = {
+	INACTIVE = 0,
+	RUNNING = 1,
+	MISSING_INPUTS = 2,
+	NO_OUTPUT_SPACE = 3,
+	OUTSIDE_OF_SEASONS = 4,
+	OUTSIDE_OF_MONTHS = 5,
+	OUTSIDE_OF_HOURS = 6,
+	FEEDMIXER_MIN = 7,
+	FEEDMIXER_MAX = 8
+}
+
+ProductionPoint.PROD_STATUS_TO_L10N = {
+	[ProductionPoint.PROD_STATUS.INACTIVE] = "ui_production_status_inactive",
+	[ProductionPoint.PROD_STATUS.RUNNING] = "ui_production_status_running",
+	[ProductionPoint.PROD_STATUS.MISSING_INPUTS] = "ui_production_status_materialsMissing",
+	[ProductionPoint.PROD_STATUS.NO_OUTPUT_SPACE] = "ui_production_status_outOfSpace",
+	[ProductionPoint.PROD_STATUS.OUTSIDE_OF_SEASONS] = "revamp_production_status_outsideOfSeasons",
+	[ProductionPoint.PROD_STATUS.OUTSIDE_OF_MONTHS] = "revamp_production_status_outsideOfMonths",
+	[ProductionPoint.PROD_STATUS.OUTSIDE_OF_HOURS] = "revamp_production_status_outsideOfHours"
+}
 
 local function registerProductionPointOutputMode(name, value)
 	name = name:upper()
@@ -182,10 +130,12 @@ function Revamp.registerXMLPaths(schema, basePath)
 	schema:register(XMLValueType.STRING, basePath .. ".productions#startHour", "Starting hour for modus hourly", "0")
 	schema:register(XMLValueType.STRING, basePath .. ".productions#endHour", "End hour for modus hourly", "24")
 	schema:register(XMLValueType.FLOAT, basePath .. ".productions#minPower", "Minimum performance of a weather reliant production", 0)
-	schema:register(XMLValueType.STRING, basePath .. ".productions#mixMode", "Changes how mix-items will be used", "none")
-	schema:register(XMLValueType.STRING, basePath .. ".productions#boostMode", "Changes how boost-items will be used", "none")
+	schema:register(XMLValueType.STRING, basePath .. ".productions#mixMode", "Changes how mix-items will be used", "ASC")
+	schema:register(XMLValueType.STRING, basePath .. ".productions#boostMode", "Changes how boost-items will be used", "ASC")
 	schema:register(XMLValueType.BOOL, basePath .. ".productions#hideFromMenu", "Hides Production from the Ingame-Menu", false)
 	schema:register(XMLValueType.BOOL, basePath .. ".productions#autoStart", "Automatically starts a production", false)
+	schema:register(XMLValueType.FLOAT, basePath .. ".productions#feedInputStorage", "Storage Size for ingredients of a FeedMixer Recipe", 1000)
+	schema:register(XMLValueType.FLOAT, basePath .. ".productions#feedOutputStorage", "Storage Size for Feed Mixtures", 10000)
 
 	--Production Revamp: Produktions-Modi Einzelne Produktionslinien
 	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#mode", "Mode of the production-line", "none")
@@ -195,10 +145,12 @@ function Revamp.registerXMLPaths(schema, basePath)
 	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#startHour", "Starting hour for modus hourly", "0")
 	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#endHour", "End hour for modus hourly", "24")
 	schema:register(XMLValueType.FLOAT, basePath .. ".productions.production(?)#minPower", "Minimum performance of a weather reliant production-line", 0)
-	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#mixMode", "Changes how mix-items will be used", "none")
-	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#boostMode", "Changes how boost-items will be used", "none")
+	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#mixMode", "Changes how mix-items will be used", "ASC")
+	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#boostMode", "Changes how boost-items will be used", "ASC")
 	schema:register(XMLValueType.BOOL, basePath .. ".productions.production(?)#hideFromMenu", "Hide Production Line from Menue", false)
 	schema:register(XMLValueType.BOOL, basePath .. ".productions.production(?)#autoStart", "Automatically starts a productionline", false)
+	schema:register(XMLValueType.BOOL, basePath .. ".productions.production(?)#sharedThroughputCapacity", "Excludes a production line from sharedThroughputCapacity", false)
+	schema:register(XMLValueType.FLOAT, basePath .. ".productions.production(?)#boostNumber", "Which number is the boost-mix", 6)
 
 	--Production Revamp: Animal Trigger relevantes
 	schema:register(XMLValueType.NODE_INDEX, basePath .. ".animalTrigger#triggerNode", "Node for the UnloadTrigger", nil)
@@ -213,7 +165,7 @@ function Revamp.registerXMLPaths(schema, basePath)
 	schema:register(XMLValueType.BOOL, basePath .. ".animalTrigger.inputs.input(?)#calculateWeight", "Calculate remaining weight values automatically", true)
 	schema:register(XMLValueType.FLOAT, basePath .. ".animalTrigger.inputs.input(?).weight(?)#ageMonth", "Age in months needed to reach value", 12)
 	schema:register(XMLValueType.FLOAT, basePath .. ".animalTrigger.inputs.input(?).weight(?)#value", "Value for age", 1000)
-	
+
 	schema:register(XMLValueType.BOOL, basePath .. ".storage.capacity(?)#hideFromMenu", "Hide Filltype from Production Menu", False)
 end
 
@@ -225,16 +177,16 @@ ProductionPoint.registerXMLPaths = Utils.prependedFunction(ProductionPoint.regis
 function Revamp.registerSavegameXMLPaths(schema, basePath)
 	schema:register(XMLValueType.STRING, basePath .. ".storageFillType(?)", "fillType currently configured to be stored")
 	schema:register(XMLValueType.STRING, basePath .. ".priorityFillType(?)", "fillType currently configured to be stored")
+	schema:register(XMLValueType.STRING, basePath .. ".revampSettings(?)#id", "Production ID")
+	schema:register(XMLValueType.STRING, basePath .. ".revampSettings(?)#feedMixerRecipe", "Currently Active FeedMixer Recipe")
+	schema:register(XMLValueType.STRING, basePath .. ".revampSettings(?)#mixMode", "Currently Active Mix Mode")
+	schema:register(XMLValueType.STRING, basePath .. ".revampSettings(?)#boostMode", "Currently Active Boost Mode")
 end
 
 ProductionPoint.registerSavegameXMLPaths = Utils.prependedFunction(ProductionPoint.registerSavegameXMLPaths, Revamp.registerSavegameXMLPaths)
-print("Production Revamp: XML-Paths registered")
-
-
 
 --Production Revamp: Load Funktion komplett überarbeitet, um diverse neue Funktionen zu ermöglichen
 function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings)
-
 	-- Pump'n'Hoses Produktionen ignorieren
 	if self:isa(SandboxProductionPoint) or (self.owningPlaceable.isSandboxPlaceable ~= nil and self.owningPlaceable:isSandboxPlaceable()) then
 		return superFunc(self, components, xmlFile, key, customEnv, i3dMappings);
@@ -268,24 +220,31 @@ function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings
 	self.autoDeliver = xmlFile:getValue(key .. ".productions#autoDeliver", false)
 	self.autoSpawn = xmlFile:getValue(key .. ".productions#autoSpawn", false)
 	self.animalInputFillTypeIndexes = {}
-
+	self.onlySellDirectly = true
+	self.hiddenProductions = 0
+	
 	--Production Revamp: Produktions-Modi für gesamte Produktion auslesen
-	local hideFromMenu = xmlFile:getValue(key .. ".productions#hideFromMenu", false)
-	local autoStart = xmlFile:getValue(key .. ".productions#autoStart", false)
-	local mode = xmlFile:getValue(key .. ".productions#mode", "none")
-	local mixMode = xmlFile:getValue(key .. ".productions#mixMode", "none")
-	local boostMode = xmlFile:getValue(key .. ".productions#boostMode", "none")
-	local seasons = xmlFile:getValue(key .. ".productions#seasons", "0 1 2 3")
-	local months = xmlFile:getValue(key .. ".productions#months", "1 2 3 4 5 6 7 8 9 10 11 12")
-	local weatherFactor = xmlFile:getValue(key .. ".productions#weatherFactor", 1)
-	local startHour = xmlFile:getString(key .. ".productions#startHour", "0")
-	local endHour = xmlFile:getString(key .. ".productions#endHour", "24")
-	local minPower = xmlFile:getValue(key .. ".productions#minPower", 0)
+	local pModes = {}
+	pModes.hideFromMenu = xmlFile:getValue(key .. ".productions#hideFromMenu", false)
+	pModes.autoStart = xmlFile:getValue(key .. ".productions#autoStart", false)
+	pModes.mode = xmlFile:getValue(key .. ".productions#mode", "")
+	pModes.mixMode = xmlFile:getValue(key .. ".productions#mixMode", "ASC")
+	pModes.mixMode = pModes.mixMode:upper()
+	pModes.boostMode = xmlFile:getValue(key .. ".productions#boostMode", "ASC")
+	pModes.boostMode = pModes.boostMode:upper()
+	pModes.seasons = xmlFile:getValue(key .. ".productions#seasons", "0 1 2 3")
+	pModes.months = xmlFile:getValue(key .. ".productions#months", "1 2 3 4 5 6 7 8 9 10 11 12")
+	pModes.weatherFactor = xmlFile:getValue(key .. ".productions#weatherFactor", 1)
+	pModes.startHour = xmlFile:getString(key .. ".productions#startHour", "0")
+	pModes.endHour = xmlFile:getString(key .. ".productions#endHour", "24")
+	pModes.minPower = xmlFile:getValue(key .. ".productions#minPower", 0)
 	self.hoursTable = {}
 
 	local usedProdIds = {}
 
 	local revampCatList = {}
+	local additionalStorageInput = {}
+	local FarmingAgency = RevampHelper:testFarmingAgency()
 
 	--Production Revamp: Animal Stuff laden
 	self.animalTriggers = {}
@@ -307,251 +266,10 @@ function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings
 			end
 		end
 	end)
-	
-	
+
+
 	if xmlFile:hasProperty(key .. ".animalTrigger") then
-		self.animalTypes = {}
-		local mainTrigger = xmlFile:getValue(key..".animalTrigger#triggerNode", nil, components, i3dMappings)
-
-		xmlFile:iterate(key .. ".animalTrigger.inputs.input", function (index, animalKey)
-			local animal = {}
-
-			--Grunddaten auslesen
-			local animalType = xmlFile:getValue(animalKey .. "#animalType", nil)
-			local animalSubType = xmlFile:getValue(animalKey .. "#animalSubType", nil)
-			local inputFillType = xmlFile:getValue(animalKey .. "#inputFillType")
-			local inputFillTypeIndex = g_fillTypeManager:getFillTypeIndexByName(inputFillType)
-
-			--Überprüfen ob AnimalSubType, AnimalType und InputFillType gültig sind
-			local skip = false
-			if animalType == nil and animalSubType == nil then
-				Logging.xmlError(xmlFile, "Production Revamp: No animalType or animalSubType given for Production '%s'", self.owningPlaceable:getName())
-				skip = true
-			elseif animalSubType == nil and g_currentMission.animalSystem:getTypeByName(animalType) == nil then
-				Logging.xmlError(xmlFile, "Production Revamp: No animalSubType given and animalType '%s' is invalid for Production '%s'", animalType, self.owningPlaceable:getName())
-				skip = true
-			elseif animalType == nil and g_currentMission.animalSystem:getSubTypeByName(animalSubType) == nil then
-				Logging.xmlError(xmlFile, "Production Revamp: No animalType given and animalSubType '%s' is invalid for Production '%s'", animalSubType, self.owningPlaceable:getName())
-				skip = true
-			end
-			if skip == false then
-				--ErrorAnimalType bestimmen
-				local errorAnimalType = animalType
-				if animalType == nil then
-					errorAnimalType = animalSubType
-				end
-
-				if inputFillTypeIndex == nil then
-					Logging.xmlError(xmlFile, "Production Revamp: Unable to load inputFillType '%s' for Production '%s' - Animal: '%s'.", inputFillType, self.owningPlaceable:getName(), errorAnimalType)
-				elseif not animalStorage[inputFillTypeIndex] then
-					Logging.xmlError(xmlFile, "Production Revamp: No storage supplied for inputFillType '%s' for Production '%s' - Animal: '%s'.", inputFillType, self.owningPlaceable:getName(), errorAnimalType)
-				else
-					self.animalInputFillTypeIndexes[inputFillTypeIndex] = true;
-
-					--Alter und Gesundheit auslesen und überprüfen
-					local minHealthFactor = xmlFile:getInt(animalKey .. "#minHealthFactor", 50)
-					local maxHealthFactor = xmlFile:getInt(animalKey .. "#maxHealthFactor", 100)
-					local minAgeMonth = xmlFile:getInt(animalKey .. "#minAgeMonth", 6)
-					local maxAgeMonth = xmlFile:getInt(animalKey .. "#maxAgeMonth", 200)
-					if maxHealthFactor > 100 or maxHealthFactor < 1 then
-						maxHealthFactor = 100
-						Logging.xmlError(xmlFile, "Production Revamp: Invalid value maxHealth '%s%' set for Production '%s' - Animal: '%s'. Allowed range: 1 - 100. Value set to 100.", maxHealth, self.owningPlaceable:getName(), errorAnimalType)
-					end
-					if minHealthFactor > 100 or minHealthFactor < 0 then
-						minHealthFactor = 50
-						Logging.xmlError(xmlFile, "Production Revamp: Invalid value minHealth '%s%' set for Production '%s' - Animal: '%s'. Allowed range: 0 - 100.	Value set to 50.", minHealth, self.owningPlaceable:getName(), errorAnimalType)
-					end
-					if minHealthFactor > maxHealthFactor then
-						maxHealthFactor = 100
-						minHealthFactor = 50
-						Logging.xmlError(xmlFile, "Production Revamp: Value minHealth '%s%' is bigger than value maxHealth '%s%' for Production '%s' - Animal: '%s'. maxHealth must be bigger or equal to minHealth. Values set to 50 and 100.", minHealthFactor, maxHealthFactor, self.owningPlaceable:getName(), errorAnimalType)
-					end
-					if minAgeMonth < 0 then
-						minAgeMonth = 6
-						Logging.xmlError(xmlFile, "Production Revamp: Invalid value '%s%' minAgeMonth set for Production '%s' - Animal: '%s'. Only positive numbers are allowed. Value set to 6.", minAgeMonth, self.owningPlaceable:getName(), errorAnimalType)
-					end
-					if maxAgeMonth < 0 then
-						maxAgeMonth = 200
-						Logging.xmlError(xmlFile, "Production Revamp: Invalid value '%s%' maxAgeMonth set for Production '%s' - Animal: '%s'. Only positive numbers are allowed. Value set to 200.", maxAgeMonth, self.owningPlaceable:getName(), errorAnimalType)
-					end
-					if minAgeMonth > maxAgeMonth then
-						minAgeMonth = 6
-						maxAgeMonth = 200
-						Logging.xmlError(xmlFile, "Production Revamp: Value '%s%' minAgeMonth is bigger than value maxAgeMonth %s%' for Production '%s' - Animal: '%s'. maxAgeMonth must be bigger or equal to minAgeMonth. Values set to 6 and 200.", minAgeMonth, maxAgeMonth, self.owningPlaceable:getName(), errorAnimalType)
-					end
-					local trigger = xmlFile:getValue(animalKey.."#triggerNode", mainTrigger, components, i3dMappings)
-
-					--Fake animalTypes sollte nur ein subType da sein für die nachfolgende Schleife
-					local animalTypes = {}
-					if animalSubType ~= nil then
-						animalSubType = g_currentMission.animalSystem:getSubTypeIndexByName(animalSubType)
-						animalTypes.subTypes = {}
-						table.insert(animalTypes.subTypes, animalSubType)
-					else
-						animalTypes = g_currentMission.animalSystem:getTypeByName(animalType)
-					end
-
-					for _, subTypeIndex in pairs(animalTypes.subTypes) do
-						local currentType = g_currentMission.animalSystem:getSubTypeByIndex(subTypeIndex).name
-						animal.weight = {}
-						animal.inputFillTypes = {}
-						animal.recipe = {}
-						animal.maxHealthList = {}
-						animal.minHealthList = {}
-						local oldestAge = 0
-						local oldestValue = math.huge
-						local youngestAge = math.huge
-						local youngestValue = math.huge
-
-						--Sollte der AnimalSubtype schon eingetragen sein, Daten laden und ergänzen
-						if self.animalTypes[currentType] ~= nil then
-							animal.weight = self.animalTypes[currentType].weight
-							animal.inputFillTypes = self.animalTypes[currentType].inputFillTypes
-							animal.recipe = self.animalTypes[currentType].recipe
-							animal.maxHealthList = self.animalTypes[currentType].maxHealthList
-							animal.minHealthList = self.animalTypes[currentType].minHealthList
-							animal.minHealthFactor = self.animalTypes[currentType].minHealthFactor
-							animal.maxHealthFactor = self.animalTypes[currentType].maxHealthFactor
-							animal.minAgeMonth = self.animalTypes[currentType].minAgeMonth
-							animal.maxAgeMonth = self.animalTypes[currentType].maxAgeMonth
-						end
-
-						--Daten für die Fehlermeldung hinterlegen
-						if animal.minHealthFactor == nil or animal.minHealthFactor > minHealthFactor then
-							animal.minHealthFactor = minHealthFactor
-						end
-						if animal.maxHealthFactor == nil or animal.maxHealthFactor < maxHealthFactor then
-							animal.maxHealthFactor = maxHealthFactor
-						end
-						if animal.minAgeMonth == nil or animal.minAgeMonth > minAgeMonth then
-							animal.minAgeMonth = minAgeMonth
-						end
-						if animal.maxAgeMonth == nil or animal.maxAgeMonth < maxAgeMonth then
-							animal.maxAgeMonth = maxAgeMonth
-						end
-
-						--Umwandlungs-Übersicht anlegen
-						local recipe = {}
-						recipe.biggestAmount = 0
-						recipe.smallestAmount = math.huge
-
-						--Durch alle weight Einträge durchgehen und Daten in Tabelle hinterlegen, dabei min/max Werte bestimmen
-						xmlFile:iterate(animalKey .. ".weight", function (weightIndex, weightKey)
-							local value = xmlFile:getInt(weightKey .. "#value", 1000)
-							local ageMonth = xmlFile:getInt(weightKey .. "#ageMonth", 6)
-							if ageMonth > maxAgeMonth then
-								Logging.xmlError(xmlFile, "Production Revamp: Value ageMonth '%s' is bigger than value maxAgeMonth '%s' for Production '%s' - Animal: '%s'. ageMonth must be equal or smaller to value maxAgeMonth. Entry was skipped.", ageMonth, maxAgeMonth, self.owningPlaceable:getName(), errorAnimalType)
-							elseif ageMonth < minAgeMonth then
-								Logging.xmlError(xmlFile, "Production Revamp: Value ageMonth '%s' is smaller than value minAgeMonth '%s' for Production '%s' - Animal: '%s'. ageMonth must be equal or bigger to value minAgeMonth. Entry was skipped.", ageMonth, minAgeMonth, self.owningPlaceable:getName(), errorAnimalType)
-							elseif value < 0 then
-								Logging.xmlError(xmlFile, "Production Revamp: Value value(weight) '%s' is a negative number for Production '%s' - Animal: '%s'. value must be equal or bigger to 0. Entry was skipped.", value, self.owningPlaceable:getName(), errorAnimalType)
-							else
-								if ageMonth >= oldestAge then
-									oldestValue = value
-									oldestAge = ageMonth
-								end
-								if ageMonth <= youngestAge then
-									youngestValue = value
-									youngestAge = ageMonth
-								end
-								animal.weight[ageMonth] = value
-								animal.maxHealthList[ageMonth] = maxHealthFactor
-								animal.minHealthList[ageMonth] = minHealthFactor
-								animal.inputFillTypes[ageMonth] = inputFillTypeIndex
-								if recipe.biggestAmount < value then
-									recipe.biggestAmount = value
-								end
-								if recipe.smallestAmount > value then
-									recipe.smallestAmount = value
-								end
-							end
-						end)
-
-						--SubType für Rezept-Anzeige hinterlegen
-
-						recipe.minAge = minAgeMonth
-						recipe.maxAge = maxAgeMonth
-						recipe.minHealth = minHealthFactor
-						recipe.maxHealth = maxHealthFactor
-						recipe.fillTypeIndex = inputFillTypeIndex
-						table.insert(animal.recipe, recipe)
-
-						--Sollte kein Wert für weight[maxAgeMonth] vorhanden sein, wird dieser hier hinterlegt, damit die folgende Schleife nicht fehlerhaft sein kann.
-						if animal.weight[maxAgeMonth] == nil then
-							animal.weight[maxAgeMonth] = oldestValue
-							animal.maxHealthList[maxAgeMonth] = maxHealthFactor
-							animal.minHealthList[maxAgeMonth] = minHealthFactor
-							animal.inputFillTypes[maxAgeMonth] = inputFillTypeIndex
-						end
-
-						--Sollte kein Wert für weight[minAgeMonth] vorhanden sein, wird dieser hier hinterlegt, damit die folgende Schleife nicht fehlerhaft sein kann.
-						if animal.weight[minAgeMonth] == nil then
-							animal.weight[minAgeMonth] = youngestValue
-							animal.maxHealthList[minAgeMonth] = maxHealthFactor
-							animal.minHealthList[minAgeMonth] = minHealthFactor
-							animal.inputFillTypes[minAgeMonth] = inputFillTypeIndex
-						end
-
-						--Kontrollieren ob für alle Altersstufen Einträge vorhanden sind, ansonsten Ergänzen
-						local lastAge = youngestAge
-						local lastValue = youngestValue
-						local calculateWeight = xmlFile:getBool(animalKey .. "#calculateWeight", true)
-
-						for x = minAgeMonth, maxAgeMonth do
-							if calculateWeight then
-								if animal.weight[x] ~= nil then
-									--nichts tun
-								elseif lastAge ~= x then
-									-- next age suchen
-									local nextAge = maxAgeMonth;
-									for y = lastAge + 1, maxAgeMonth do
-										if animal.weight[y] ~= nil and y < nextAge then
-											nextAge = y;
-										end
-									end
-
-									-- stufen berechnen
-									local weightDifference = animal.weight[nextAge] - lastValue;
-									local steps = nextAge - lastAge;
-									local stepWeight = MathUtil.round(weightDifference / steps, 3)
-
-									-- zwischenschritte einfügen
-									for y = lastAge + 1, nextAge - 1 do
-										animal.weight[y] = lastValue + (stepWeight * (y - lastAge))
-										animal.maxHealthList[y] = maxHealthFactor
-										animal.minHealthList[y] = minHealthFactor
-										animal.inputFillTypes[y] = inputFillTypeIndex
-									end
-
-									-- Werte für nächste Berechnung setzen
-									lastValue = animal.weight[nextAge]
-									lastAge = nextAge
-								end
-							else
-								if animal.weight[x] == nil then
-									animal.weight[x] = lastValue
-									animal.maxHealthList[x] = maxHealthFactor
-									animal.minHealthList[x] = minHealthFactor
-									animal.inputFillTypes[x] = inputFillTypeIndex
-								else
-									lastValue = animal.weight[x]
-								end
-							end
-						end
-
-						--Eintragen in Tabelle für den Trigger
-						if self.animalTriggers[trigger] == nil then
-							self.animalTriggers[trigger] = currentType;
-							table.insert(self.animalIndexToTrigger, trigger);
-							self.animalTriggerToIndex[trigger] = #self.animalIndexToTrigger;
-						else
-							self.animalTriggers[trigger] = self.animalTriggers[trigger].. " " ..currentType;
-						end
-						self.animalTypes[currentType] = animal
-					end
-				end
-			end
-		end)
+		self:loadAnimals(xmlFile, key, animalStorage, components, i3dMappings)
 	end
 
 	xmlFile:iterate(key .. ".productions.production", function (index, productionKey)
@@ -601,46 +319,18 @@ function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings
 		production.costsPerActiveHour = costsPerActiveHour or production.costsPerActiveMinute * 60
 		production.costsPerActiveMonth = costsPerActiveMonth or production.costsPerActiveHour * 24
 
-		--Production Revamp: Wenn kein Modus für die Produktionslinie vorhanden ist, übergeordneten Produktionsmodus übernehmen
-		production.mode = xmlFile:getValue(productionKey .. "#mode", mode)
-		production.mixMode = xmlFile:getValue(productionKey .. "#mixMode", mixMode)
-		production.boostMode = xmlFile:getValue(productionKey .. "#boostMode", boostMode)
-		production.seasons = xmlFile:getValue(productionKey .. "#seasons", seasons)
-		production.months = xmlFile:getValue(productionKey .. "#months", months)
-		production.weatherFactor = xmlFile:getValue(productionKey .. "#weatherFactor", weatherFactor)
+		production.sharedThroughputCapacity = xmlFile:getValue(productionKey .. "#sharedThroughputCapacity", self.sharedThroughputCapacity)
+		production.mix = false
+		production.boost = false
+		production.boostNumber = xmlFile:getValue(productionKey .. "#boostNumber", 6)
+		production.masterNumber = production.boostNumber + 1
 		
-		local pStartHour = string.split(xmlFile:getString(productionKey .. "#startHour", startHour), " ")
-		local pEndHour = string.split(xmlFile:getString(productionKey .. "#endHour", endHour), " ")
-		production.hoursTable = {}
-		production.hours = ""
-		if #pStartHour ~= #pEndHour then
-			Logging.xmlError(xmlFile, "Production Revamp: startHour or endHour is invalid, Opening-Hours are set to 0-24 for '%s'.", self.owningPlaceable:getName())
-			pStartHour[1] = 0
-			pEndHour[1] = 24
-		end
+		--Spezialitäten Production Modes laden
+		production = self:loadProductionModes(production, index, productionKey, xmlFile, pModes)
 
-		for i = 1, #pStartHour do
-			local startTime = tonumber(pStartHour[i])
-			local endTime = tonumber(pEndHour[i])
-			if startTime < endTime and startTime >=0 and endTime <25 then
-				local hoursTableCount = 0
-				for j = startTime, (endTime - 1) do
-					production.hoursTable[j] = true
-					hoursTableCount = hoursTableCount + 1;
-					self.hoursTable[j] = true
-				end
-				if hoursTableCount < 24 then
-					production.hours = production.hours .." ".. startTime .. " - " .. endTime .. " "
-				end
-			else
-				Logging.xmlError(xmlFile, "Production Revamp: Entry '%s' from startHour or endHour is invalid for Production '%s'.", i, self.owningPlaceable:getName())
-			end
-		end
-
-		production.minPower = xmlFile:getValue(productionKey .. "#minPower", minPower)
-		production.hideFromMenu = xmlFile:getValue(productionKey .. "#hideFromMenu", hideFromMenu)
-		production.hideComplete = hideFromMenu --Nötig um die Ingame-Liste komplett zu verstecken
-		production.autoStart = xmlFile:getValue(productionKey .. "#autoStart", autoStart)
+		production.inputs = {}
+		production.outputs = {}
+		production.primaryProductFillType = nil
 		
 		-- Für Rezept-Anzeige aktive Stunden zählen geht nicht mit #
 		local activeHoursCount = 0;
@@ -648,12 +338,11 @@ function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings
 			activeHoursCount = activeHoursCount + 1;
 		end
 		production.activeHours = activeHoursCount -- Hinterlegen für die Rezept-Anzeige
-		
 		production.cyclesPerMonth = MathUtil.round(((production.cyclesPerMonth / 24) * production.activeHours), 2)
 
 		--Production Revamp: Master-Booster deaktiviert hinterlegen
 		production.master = false
-		production.outputweather = false
+		production.outputWeather = false
 
 		--Production Revamp: Produktions-Status auf an setzen für versteckte Produktionen
 		if production.autoStart or production.hideFromMenu then
@@ -661,125 +350,149 @@ function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings
 		else
 			production.status = ProductionPoint.PROD_STATUS.INACTIVE
 		end
-		production.inputs = {}
 
-		xmlFile:iterate(productionKey .. ".inputs.input", function (inputIndex, inputKey)
-			local input = {}
-
-			--Production Revamp: Input über FillTypeCategory ermöglichen, funktioniert nur mit gleichen Input-Mengen
-			local fillTypeCategoriesString = xmlFile:getValue(inputKey .. "#fillTypeCategory")
-
-			if fillTypeCategoriesString == nil then
-				local fillTypeString = xmlFile:getValue(inputKey .. "#fillType")
-				input.type = g_fillTypeManager:getFillTypeIndexByName(fillTypeString)
-
-				if input.type == nil then
-					Logging.xmlError(xmlFile, "Unable to load fillType '%s' for '%s'", fillTypeString, inputKey)
-				else
-					--Production Revamp: mix, boost und masterBoost aus der XML auslesen und in der Input-Liste hinterlegen
-					input.mix = xmlFile:getValue(inputKey .. "#mix", 0)
-					if input.mix == "boost" then
-						input.mix = 6
-					elseif input.mix == "master" then
-						input.mix = 7
-						production.master = true
-					else
-						input.mix = tonumber(input.mix)
-					end
-
-					--Production Revamp: Conditionale Outputs bei bestimmten Filltypes
-					input.outputConditional = xmlFile:getValue(inputKey .. "#outputConditional", false)
-					input.outputAmount = xmlFile:getValue(inputKey .. "#outputAmount", 1)
-					if not input.outputConditional == false then
-						input.outputConditional = g_fillTypeManager:getFillTypeIndexByName(input.outputConditional)
-						if input.outputConditional == nil then
-							input.outputConditional = false
-							Logging.xmlError(xmlFile, "Production Revamp: Unable to load conditional output fillType '%s' for '%s'", fillTypeString, inputKey)
-						else
-							self.outputFillTypeIds[input.outputConditional] = true
-							self.outputFillTypeIdsStorage[input.outputConditional] = true
-							if hiddenStorage[input.outputConditional] == nil then
-								table.addElement(self.outputFillTypeIdsArray, input.outputConditional)
-							end							
-						end
-					end
-
-					--Production Revamp: boostFactor, weatherAffected und weatherFactor auslesen
-					input.boostfactor = xmlFile:getValue(inputKey .. "#boostfactor", 0)
-					input.boostfactor = xmlFile:getValue(inputKey .. "#boostFactor", input.boostfactor)
-					input.buyFactor = xmlFile:getValue(inputKey .. "#buyFactor", 2)
-					input.weatherAffected = xmlFile:getValue(inputKey .. "#weatherAffected", false)
-					input.weatherFactor = xmlFile:getValue(inputKey .. "#weatherFactor", 1)
-
-					--Production Revamp: Auslesen ob Kauffunktion nicht möglich sein soll
-					if self.animalInputFillTypeIndexes[input.type] == nil then
-						input.allowBuying = xmlFile:getValue(inputKey .. "#allowbuying", true)
-						input.allowBuying = xmlFile:getValue(inputKey .. "#allowBuying", input.allowBuying)
-					else
-						input.allowBuying = xmlFile:getValue(inputKey .. "#allowbuying", false)
-						input.allowBuying = xmlFile:getValue(inputKey .. "#allowBuying", input.allowBuying)
-					end
-
-					--Production Revamp: Farben hinterlegen für Rezept-Anzeige
-					input.color = 0
-
-					self.inputFillTypeIds[input.type] = true
-
-					--Production Revamp: Verteil-Priorität hinterlegen für FillTypes, 1 = wichtig, 10 = unwichtig
-					self.inputFillTypeIdsPriority[input.type] = self.priorityPreset
-					
-					if hiddenStorage[input.type] == nil then
-						table.addElement(self.inputFillTypeIdsArray, input.type)
-					end
-
-
-					input.amount = xmlFile:getValue(inputKey .. "#amount", 1)
-					table.insert(production.inputs, input)
-				end
-			else
-				local fillTypes = g_fillTypeManager:getFillTypesByCategoryNames(fillTypeCategoriesString, "Warning: '" .. tostring(key) .. "' has invalid fillTypeCategory '%s'.")
-				local categoriesamount = xmlFile:getValue(inputKey .. "#amount", 1)
-				local categoriesmix = xmlFile:getValue(inputKey .. "#mix", 0)
-				if categoriesmix == "boost" then
-					categoriesmix = 6
-				else
-					categoriesmix = tonumber(categoriesmix)
-				end
-				--Production Revamp: boostFactor auslesen für die Categorie
-				local categoriesBoostFactor = xmlFile:getValue(inputKey .. "#boostfactor", 0)
-				categoriesBoostFactor = xmlFile:getValue(inputKey .. "#boostFactor", categoriesBoostFactor)
-				local categoriesBuyFactor = xmlFile:getValue(inputKey .. "#buyFactor", 2)
-				--Production Revamp: Auslesen ob Kauffunktion nicht möglich sein soll für die Categorie
-				local allowBuying = xmlFile:getValue(inputKey .. "#allowbuying", true)
-				allowBuying = xmlFile:getValue(inputKey .. "#allowBuying", allowBuying)
-				for _, fillType in pairs(fillTypes) do
-					local input = {}
-					input.type = fillType
-					input.mix = categoriesmix
-					input.boostfactor= categoriesBoostFactor
-					input.buyFactor= categoriesBuyFactor
-					input.allowBuying = allowBuying
-					input.color = 0
-					self.inputFillTypeIds[input.type] = true
-
-					--Production Revamp: Verteil-Priorität hinterlegen für FillTypes, 1 = wichtig, 10 = unwichtig
-					self.inputFillTypeIdsPriority[input.type] = 10
-
-					if hiddenStorage[input.type] == nil then
-						table.addElement(self.inputFillTypeIdsArray, input.type)
-					end
-
-					input.amount = categoriesamount
-
-					--Production Revamp: Wetterabhängig für Categorien ist nicht möglich, leere Werte hinterlegen zur Fehlervermeidung
-					input.weatherAffected = false
-					input.weatherFactor = 1
-
-					table.insert(production.inputs, input)
-					table.insert(revampCatList, fillType)
-				end
+		--Production Revamp: Kontrollieren ob der Modus FeedMixer vorhanden ist in der Produktionslinie
+		production.modes = string.split(production.mode, " ")
+		for _, mode in pairs(production.modes) do
+			--wenn Feed erkannt wurde
+			if string.upper(mode) == "FEEDMIXER" and FarmingAgency == true then
+				production = self:FMSload(xmlFile, key, production)
 			end
-		end)
+			if string.upper(mode) == "LIMITBOOSTER" then
+				production.boost = true
+			end
+		end
+
+		if production.feedMixer == nil then
+			xmlFile:iterate(productionKey .. ".inputs.input", function (inputIndex, inputKey)
+				local input = {}
+
+				--Production Revamp: Input über FillTypeCategory ermöglichen, funktioniert nur mit gleichen Input-Mengen
+				local fillTypeCategoriesString = xmlFile:getValue(inputKey .. "#fillTypeCategory")
+
+				if fillTypeCategoriesString == nil then
+					local fillTypeString = xmlFile:getValue(inputKey .. "#fillType")
+					input.type = g_fillTypeManager:getFillTypeIndexByName(fillTypeString)
+
+					if input.type == nil then
+						Logging.xmlError(xmlFile, "Unable to load fillType '%s' for '%s'", fillTypeString, inputKey)
+					else
+						--Production Revamp: mix, boost und masterBoost aus der XML auslesen und in der Input-Liste hinterlegen
+						input.mix = xmlFile:getValue(inputKey .. "#mix", "0")
+						if type(input.mix) ~= "number" then
+							if input.mix:upper() == "BOOST" then
+								input.mix = production.boostNumber
+							elseif input.mix:upper() == "MASTER" then
+								input.mix = production.masterNumber
+								production.master = true
+							else
+								input.mix = tonumber(input.mix)
+								if input.mix > 0 then
+									production.mix = true
+								end
+							end
+						else
+							input.mix = tonumber(input.mix)
+							if input.mix > 0 then
+								production.mix = true
+							end
+						end
+
+						--Production Revamp: Conditionale Outputs bei bestimmten Filltypes
+						input.outputConditional = xmlFile:getValue(inputKey .. "#outputConditional", false)
+						input.outputAmount = xmlFile:getValue(inputKey .. "#outputAmount", 1)
+						if not input.outputConditional == false then
+							input.outputConditional = g_fillTypeManager:getFillTypeIndexByName(input.outputConditional)
+							if input.outputConditional == nil then
+								input.outputConditional = false
+								Logging.xmlError(xmlFile, "Production Revamp: Unable to load conditional output fillType '%s' for '%s'", fillTypeString, inputKey)
+							else
+								self.outputFillTypeIds[input.outputConditional] = true
+								self.outputFillTypeIdsStorage[input.outputConditional] = true
+								self.disableDistribution[input.outputConditional] = false
+								self.disableDirectSell[input.outputConditional] = false
+								if hiddenStorage[input.outputConditional] == nil then
+									table.addElement(self.outputFillTypeIdsArray, input.outputConditional)
+								end
+								if input.mix == 0 then
+									Logging.xmlError(xmlFile, "Production Revamp: Conditional output is only supposed to be used for mix/boost-fillTypes: '%s' for '%s'", fillTypeString, inputKey)
+								end
+							end
+						end
+
+						--Production Revamp: boostFactor, weatherAffected und weatherFactor auslesen
+						input.boostfactor = xmlFile:getValue(inputKey .. "#boostFactor", xmlFile:getValue(inputKey .. "#boostfactor", 0))
+						input.buyFactor = xmlFile:getValue(inputKey .. "#buyFactor", 2)
+						input.weatherAffected = xmlFile:getValue(inputKey .. "#weatherAffected", false)
+						input.weatherFactor = xmlFile:getValue(inputKey .. "#weatherFactor", 1)
+
+						--Production Revamp: Auslesen ob Kauffunktion nicht möglich sein soll
+						if self.animalInputFillTypeIndexes[input.type] == nil then
+							input.allowBuying = xmlFile:getValue(inputKey .. "#allowBuying", xmlFile:getValue(inputKey .. "#allowbuying", true))
+						else
+							input.allowBuying = xmlFile:getValue(inputKey .. "#allowBuying", xmlFile:getValue(inputKey .. "#allowbuying", false))
+						end
+
+						--Production Revamp: Farben hinterlegen für Rezept-Anzeige
+						input.color = 0
+
+						self.inputFillTypeIds[input.type] = true
+
+						--Production Revamp: Verteil-Priorität hinterlegen für FillTypes, 1 = wichtig, 10 = unwichtig
+						self.inputFillTypeIdsPriority[input.type] = self.priorityPreset
+						
+						if hiddenStorage[input.type] == nil then
+							table.addElement(self.inputFillTypeIdsArray, input.type)
+						end
+
+
+						input.amount = xmlFile:getValue(inputKey .. "#amount", 1)
+						table.insert(production.inputs, input)
+					end
+				else
+					local fillTypes = g_fillTypeManager:getFillTypesByCategoryNames(fillTypeCategoriesString, "Warning: '" .. tostring(key) .. "' has invalid fillTypeCategory '%s'.")
+					local categoriesamount = xmlFile:getValue(inputKey .. "#amount", 1)
+					local categoriesmix = xmlFile:getValue(inputKey .. "#mix", 0)
+					if categoriesmix == "boost" then
+						categoriesmix = production.boostNumber
+					else
+						categoriesmix = tonumber(categoriesmix)
+						production.mix = true
+					end
+					--Production Revamp: boostFactor auslesen für die Categorie
+					local categoriesBoostFactor = xmlFile:getValue(inputKey .. "#boostFactor", xmlFile:getValue(inputKey .. "#boostfactor", 0))
+					local categoriesBuyFactor = xmlFile:getValue(inputKey .. "#buyFactor", 2)
+					--Production Revamp: Auslesen ob Kauffunktion nicht möglich sein soll für die Categorie
+					local allowBuying = xmlFile:getValue(inputKey .. "#allowBuying", xmlFile:getValue(inputKey .. "#allowbuying", true))
+					for _, fillType in pairs(fillTypes) do
+						local input = {}
+						input.type = fillType
+						input.mix = categoriesmix
+						input.boostfactor= categoriesBoostFactor
+						input.buyFactor= categoriesBuyFactor
+						input.allowBuying = allowBuying
+						input.color = 0
+						self.inputFillTypeIds[input.type] = true
+
+						--Production Revamp: Verteil-Priorität hinterlegen für FillTypes, 1 = wichtig, 10 = unwichtig
+						self.inputFillTypeIdsPriority[input.type] = 10
+
+						if hiddenStorage[input.type] == nil then
+							table.addElement(self.inputFillTypeIdsArray, input.type)
+						end
+
+						input.amount = categoriesamount
+
+						--Production Revamp: Wetterabhängig für Categorien ist nicht möglich, leere Werte hinterlegen zur Fehlervermeidung
+						input.weatherAffected = false
+						input.weatherFactor = 1
+
+						table.insert(production.inputs, input)
+						table.insert(revampCatList, fillType)
+					end
+				end
+			end)
+		end
 
 		if #production.inputs == 0 then
 			Logging.xmlError(xmlFile, "No inputs for production '%s'", productionKey)
@@ -787,72 +500,75 @@ function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings
 			return
 		end
 
-		production.outputs = {}
-		production.primaryProductFillType = nil
 		local maxOutputAmount = 0
 		local primaryFillType = false
 
-		xmlFile:iterate(productionKey .. ".outputs.output", function (outputIndex, outputKey)
-			local output = {}
-			local fillTypeString = xmlFile:getValue(outputKey .. "#fillType")
-			output.type = g_fillTypeManager:getFillTypeIndexByName(fillTypeString)
+		if production.feedMixer == nil then
+			xmlFile:iterate(productionKey .. ".outputs.output", function (outputIndex, outputKey)
+				local output = {}
+				local fillTypeString = xmlFile:getValue(outputKey .. "#fillType")
+				output.type = g_fillTypeManager:getFillTypeIndexByName(fillTypeString)
 
-			if output.type == nil then
-				Logging.xmlError(xmlFile, "Unable to load fillType '%s' for '%s'", fillTypeString, outputKey)
-			else
-				output.sellDirectly = xmlFile:getValue(outputKey .. "#sellDirectly", false)
-				local disableDirectSell = xmlFile:getValue(outputKey .. "#disableDirectSell", false)
-				if self.disableDirectSell[output.type] == nil or self.disableDirectSell[output.type] == false then
-					self.disableDirectSell[output.type] = disableDirectSell
-				end
-				local disableDistribution = xmlFile:getValue(outputKey .. "#disableDistribution", false)
-				if self.disableDistribution[output.type] == nil or self.disableDistribution[output.type] == false then
-					self.disableDistribution[output.type] = disableDistribution
-				end
-				--Production Revamp: boost und weatherAffected aus der XML auslesen und in der Output-Liste hinterlegen
-				output.boost = xmlFile:getValue(outputKey .. "#boost", true)
-				output.weatherAffected = xmlFile:getValue(outputKey .. "#weatherAffected")
-				output.weatherFactor = xmlFile:getValue(outputKey .. "#weatherFactor", 1)
-
-				if not output.weatherAffected==false then
-					production.outputweather = true
-				end
-
-				if not output.sellDirectly then
-					self.outputFillTypeIds[output.type] = true
-					--Production Revamp: Alle Produktionen Standardmäßig auf Einlagern, bei AutoDeliver das Verteilen aktivieren
-					if self.autoDeliver == true then
-						self.outputFillTypeIdsAutoDeliver[output.type] = true
-					elseif self.autoSpawn == true then
-						self.outputFillTypeIds[output.type] = true
-					else
-						self.outputFillTypeIdsStorage[output.type] = true
-					end
-					if hiddenStorage[output.type] == nil then
-						table.addElement(self.outputFillTypeIdsArray, output.type)
-					end
+				if output.type == nil then
+					Logging.xmlError(xmlFile, "Unable to load fillType '%s' for '%s'", fillTypeString, outputKey)
 				else
-					self.soldFillTypesToPayOut[output.type] = 0
+					output.sellDirectly = xmlFile:getValue(outputKey .. "#sellDirectly", false)
+					if output.sellDirectly == false then
+						self.onlySellDirectly = false
+					end
+					local disableDirectSell = xmlFile:getValue(outputKey .. "#disableDirectSell", false)
+					if self.disableDirectSell[output.type] == nil or self.disableDirectSell[output.type] == false then
+						self.disableDirectSell[output.type] = disableDirectSell
+					end
+					local disableDistribution = xmlFile:getValue(outputKey .. "#disableDistribution", false)
+					if self.disableDistribution[output.type] == nil or self.disableDistribution[output.type] == false then
+						self.disableDistribution[output.type] = disableDistribution
+					end
+					--Production Revamp: boost und weatherAffected aus der XML auslesen und in der Output-Liste hinterlegen
+					output.boost = xmlFile:getValue(outputKey .. "#boost", true)
+					output.weatherAffected = xmlFile:getValue(outputKey .. "#weatherAffected")
+					output.weatherFactor = xmlFile:getValue(outputKey .. "#weatherFactor", 1)
+
+					if not output.weatherAffected==false then
+						production.outputWeather = true
+					end
+
+					if not output.sellDirectly then
+						self.outputFillTypeIds[output.type] = true
+						--Production Revamp: Alle Produktionen Standardmäßig auf Einlagern, bei AutoDeliver das Verteilen aktivieren
+						if self.autoDeliver == true then
+							self.outputFillTypeIdsAutoDeliver[output.type] = true
+						elseif self.autoSpawn == true then
+							self.outputFillTypeIds[output.type] = true
+						else
+							self.outputFillTypeIdsStorage[output.type] = true
+						end
+						if hiddenStorage[output.type] == nil then
+							table.addElement(self.outputFillTypeIdsArray, output.type)
+						end
+					else
+						self.soldFillTypesToPayOut[output.type] = 0
+					end
+
+					output.amount = xmlFile:getValue(outputKey .. "#amount", 1)
+
+					--Production Revamp primaryProductFillType Einstellbar machen
+					local primaryProductFillType = xmlFile:getValue(outputKey .. "#primaryProductFillType", false)
+					if primaryProductFillType then
+						primaryFillType = true
+						production.primaryProductFillType = output.type
+						maxOutputAmount = output.amount
+					end
+
+					table.insert(production.outputs, output)
+
+					if maxOutputAmount < output.amount and primaryFillType==false then
+						production.primaryProductFillType = output.type
+						maxOutputAmount = output.amount
+					end
 				end
-
-				output.amount = xmlFile:getValue(outputKey .. "#amount", 1)
-
-				--Production Revamp primaryProductFillType Einstellbar machen
-				local primaryProductFillType = xmlFile:getValue(outputKey .. "#primaryProductFillType", false)
-				if primaryProductFillType then
-					primaryFillType = true
-					production.primaryProductFillType = output.type
-					maxOutputAmount = output.amount
-				end
-
-				table.insert(production.outputs, output)
-
-				if maxOutputAmount < output.amount and primaryFillType==false then
-					production.primaryProductFillType = output.type
-					maxOutputAmount = output.amount
-				end
-			end
-		end)
+			end)
+		end
 
 		if #production.outputs == 0 then
 			Logging.xmlError(xmlFile, "No outputs for production '%s'", productionKey)
@@ -927,7 +643,6 @@ function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings
 	end
 
 	self.unloadingStation:register(true)
-
 	local loadingStationKey = key .. ".loadingStation"
 
 	if xmlFile:hasProperty(loadingStationKey) then
@@ -945,7 +660,7 @@ function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings
 
 		self.loadingStation.owningPlaceable = self.owningPlaceable
 
-		self.loadingStation:register(true)
+		self.loadingStation:register(true)		
 	end
 
 	self.woodSpawnPlace = xmlFile:getValue(key.."#woodSpawnPlace", nil, components, i3dMappings);
@@ -965,7 +680,7 @@ function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings
 		end
 	end
 
-	if self.loadingStation == nil and self.palletSpawner == nil then
+	if self.loadingStation == nil and self.palletSpawner == nil and self.onlySellDirectly == false then
 		Logging.xmlError(xmlFile, "No loading station or pallet spawner for production point")
 
 		return false
@@ -1007,16 +722,24 @@ function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings
 			self.storage.capacities[filltype] = self.storage.capacity
 		end
 	end
-		
+
 	if self.loadingStation ~= nil then
 		if not self.loadingStation:addSourceStorage(self.storage) then
-		Logging.xmlWarning(xmlFile, "Unable to add source storage ")
+			if self.onlySellDirectly == false then
+				Logging.xmlWarning(xmlFile, "Unable to add source storage ")
+			end
 		end
 
 		g_currentMission.storageSystem:addLoadingStation(self.loadingStation, self.owningPlaceable)
 	end
 
 	self.unloadingStation:addTargetStorage(self.storage)
+
+	-- Production Revamp: Bei Verwendung eines Feedmixers, Input-FillTypes im Lager eintragen und UnloadTrigger erweitern.
+	if self.feedMixer ~= nil then
+		local production = self.productions[self.feedMixer.id]
+		self:FMSchangeFillTypes(production.inputs, production.outputs)
+	end
 
 	for inputFillTypeIndex in pairs(self.inputFillTypeIds) do
 		if not self.unloadingStation:getIsFillTypeSupported(inputFillTypeIndex) and self.animalInputFillTypeIndexes[inputFillTypeIndex] == nil then
@@ -1096,7 +819,6 @@ function Revamp:load(superFunc, components, xmlFile, key, customEnv, i3dMappings
 end
 
 ProductionPoint.load = Utils.overwrittenFunction(ProductionPoint.load, Revamp.load)
-print("Production Revamp: ProductionPoint Load overwritten")
 
 
 
@@ -1109,7 +831,6 @@ function Revamp:delete()
 end
 
 ProductionPoint.delete = Utils.prependedFunction(ProductionPoint.delete, Revamp.delete)
-print("Production Revamp: ProductionPoint delete prepended")
 
 
 
@@ -1128,7 +849,7 @@ function Revamp:updateProduction(superFunc)
 
 	-- Pump'n'Hoses Produktionen ignorieren
 	if self:isa(SandboxProductionPoint) or (self.owningPlaceable.isSandboxPlaceable ~= nil and self.owningPlaceable:isSandboxPlaceable()) then
-		return superFunc(self);
+		return superFunc(self)
 	end
 
 	if self.lastUpdatedTime == nil then
@@ -1140,233 +861,51 @@ function Revamp:updateProduction(superFunc)
 	local timeAdjust = g_currentMission.environment.timeAdjustment
 	local numActiveProductions = #self.activeProductions
 
-	--Production Revamp: Lokale Funktion um Wetterabhängige Füllstände zu ermöglichen
-	local function processWeather(weatherAffected, weatherFactor, amount, fillType, cyclesPerMinuteMinuteFactor)
-		local fillLevel = self:getFillLevel(fillType)
-		if weatherAffected=="sun" then
-			if g_currentMission.environment.isSunOn then
-				local dayMinutes = g_currentMission.environment.dayTime / 60000
-				local currentClouds = g_currentMission.environment.weather.cloudUpdater:getCurrentValues()
-				local lightDamping = currentClouds.lightDamping
-				local sunBrightnessScale = 1
-				if g_currentMission.environment.baseLighting.sunBrightnessScaleCurve ~= nil then
-					sunBrightnessScale = g_currentMission.environment.baseLighting.sunBrightnessScaleCurve:get(dayMinutes)
-				end
-				local sunInput = amount * (1 - lightDamping) * (sunBrightnessScale / 7) * cyclesPerMinuteMinuteFactor * weatherFactor
-				self.storage:setFillLevel(fillLevel + sunInput, fillType)
-			end
-		elseif weatherAffected=="night" then
-			if not g_currentMission.environment.isSunOn then
-				local dayMinutes = g_currentMission.environment.dayTime / 60000
-				local currentClouds = g_currentMission.environment.weather.cloudUpdater:getCurrentValues()
-				local lightDamping = currentClouds.lightDamping
-				local nightBrightnessScale = 1
-				if g_currentMission.environment.baseLighting.sunBrightnessScaleCurve ~= nil then
-					nightBrightnessScale = g_currentMission.environment.baseLighting.moonBrightnessScaleCurveData:get(dayMinutes)
-				end
-				local nightInput = amount * (1 - lightDamping) * (nightBrightnessScale / 7) * cyclesPerMinuteMinuteFactor * weatherFactor
-				self.storage:setFillLevel(fillLevel + nightInput, fillType)
-			end
-		elseif weatherAffected=="rain" then
-			if g_currentMission.environment.weather:getIsRaining() then
-				local rainfallScale = g_currentMission.environment.weather:getRainFallScale()
-				local rainInput = amount * rainfallScale * cyclesPerMinuteMinuteFactor * weatherFactor
-				self.storage:setFillLevel(fillLevel + rainInput, fillType)
-			end
-		elseif weatherAffected=="wind" then
-			local windVelocity = g_currentMission.environment.weather.windUpdater.currentVelocity
-			local windInput = amount * (windVelocity / 15) * cyclesPerMinuteMinuteFactor * weatherFactor
-			self.storage:setFillLevel(fillLevel + windInput, fillType)
-		elseif weatherAffected=="temp" then
-			local currentTemp = g_currentMission.environment.weather:getCurrentTemperature()
-			local tempInput = amount * (currentTemp / 25) * cyclesPerMinuteMinuteFactor * weatherFactor
-			self.storage:setFillLevel(fillLevel + tempInput, fillType)
-		end
-	end
-
-	local function processInput(self, input, factor, fillLevel, enoughInput, mixMode, useFillType, boostFillType)
-		if enoughInput[input.mix] or input.mix == 0 or input.mix == 6 or input.mix == 7 then
-			if fillLevel > input.amount * factor then
-				local process = true
-				if mixMode ~= "none" then
-					if input.mix == 0 or input.mix == 6 or input.mix == 7 then
-						--nichts tun
-					else
-						if useFillType[input.mix] ~= nil then
-							if useFillType[input.mix] ~= input.type then
-								process = false
-							end
-						end
-					end
-				end
-				if boostFillType[6] ~= 0 and input.mix == 6 then
-					if boostFillType[6] == input.type then
-						--nichts tun
-					else
-						process = false
-					end
-				end
-				if boostFillType[7] ~= 0 and input.mix == 7 then
-					if boostFillType[7] == input.type then
-						--nichts tun
-					else
-						process = false
-					end
-				end
-				if process then
-					enoughInput[input.mix] = false
-					if self.loadingStation ~= nil then
-						if not input.outputConditional==false then
-							local ouputFillLevel = self:getFillLevel(input.outputConditional)
-							self.storage:setFillLevel(ouputFillLevel + input.outputAmount * factor, input.outputConditional)
-						end
-						self.loadingStation:removeFillLevel(input.type, input.amount * factor, self.ownerFarmId)
-					else
-						if not input.outputConditional==false then
-							local ouputFillLevel = self:getFillLevel(input.outputConditional)
-							self.storage:setFillLevel(ouputFillLevel + input.outputAmount * factor, input.outputConditional)
-						end
-						self.storage:setFillLevel(fillLevel - input.amount * factor, input.type)
-					end
-				end
-			end
-		end
-	end
-
-	local function processMix(mix, maxnum, needamount, fillLevel, enoughInput, useFillType, useFillTypeLevel, fillTypeId, mixMode)
-		local color = 0
-		if mix >= maxnum then
-			maxnum = mix
-		end
-		if fillLevel >= needamount then
-			if mixMode ~= "none" then
-				if useFillType[mix] == nil then
-					useFillType[mix] = fillTypeId
-					useFillTypeLevel[mix] = fillLevel
-				elseif useFillTypeLevel[mix] < fillLevel and mixMode == "most" then
-					useFillType[mix] = fillTypeId
-					useFillTypeLevel[mix] = fillLevel
-				elseif useFillTypeLevel[mix] > fillLevel and mixMode == "least" then
-					useFillType[mix] = fillTypeId
-					useFillTypeLevel[mix] = fillLevel
-				end
-			end
-			enoughInput[mix] = true
-		elseif not enoughInput[mix] then
-			enoughInput[mix] = false
-			color = 2
-		else 
-			color = 2
-		end
-		return maxnum, enoughInput, color, useFillType, useFillTypeLevel
-	end
- 
-	local function processProductionMode(production, mode, cyclesPerMinuteMinuteFactor, skip)
-		--Production Revamp: Sollte die Produktion Öffnungszeiten haben, außerhalb der "Zeit" keine Produktion. Die Inputmengen werden trotzdem durchlaufen, um die Rezeptanzeige zu aktualisieren
-		if mode=="hourly" then
-			local currentHour = g_currentMission.environment.currentHour
-			if not production.hoursTable[currentHour] then
-				skip = true
-			end
-		elseif mode=="sun" then
-			if g_currentMission.environment.isSunOn or production.minPower > 0 then
-				local dayMinutes = g_currentMission.environment.dayTime / 60000
-				local currentClouds = g_currentMission.environment.weather.cloudUpdater:getCurrentValues()
-				local lightDamping = currentClouds.lightDamping
-				local sunBrightnessScale = 1
-				if g_currentMission.environment.baseLighting.sunBrightnessScaleCurve ~= nil then
-					sunBrightnessScale = g_currentMission.environment.baseLighting.sunBrightnessScaleCurve:get(dayMinutes)
-				end
-				local sunFactor = (1 - lightDamping) * (sunBrightnessScale / 7)
-				if sunFactor < production.minPower then
-					sunFactor = production.minPower
-				end
-				cyclesPerMinuteMinuteFactor = cyclesPerMinuteMinuteFactor * sunFactor * production.weatherFactor
-			else
-				skip = true
-			end
-		elseif mode=="rain" then
-			if g_currentMission.environment.weather:getIsRaining() or production.minPower > 0 then
-				local rainfallScale = g_currentMission.environment.weather:getRainFallScale()
-				if rainfallScale < production.minPower then
-					rainfallScale = production.minPower
-				end
-				cyclesPerMinuteMinuteFactor = cyclesPerMinuteMinuteFactor * rainfallScale	* production.weatherFactor
-			else
-				skip = true
-			end
-		elseif mode=="wind" then
-			local windVelocity = g_currentMission.environment.weather.windUpdater.currentVelocity
-			local windFactor = (windVelocity / 15)
-			if windFactor < production.minPower then
-				windFactor = production.minPower
-			end
-			cyclesPerMinuteMinuteFactor = cyclesPerMinuteMinuteFactor * windFactor * production.weatherFactor
-		elseif mode=="temp" then
-			local currentTemp = g_currentMission.environment.weather:getCurrentTemperature()
-			--Production Revamp: Die Temperatur darf nicht negativ sein
-			if currentTemp < 0 then
-				currentTemp = 0
-			end
-			local tempFactor = (currentTemp / 25)
-			if tempFactor < production.minPower then
-				tempFactor = production.minPower
-			end
-			cyclesPerMinuteMinuteFactor = cyclesPerMinuteMinuteFactor * tempFactor * production.weatherFactor
-		elseif mode=="tempNegative" then
-			local currentTemp = g_currentMission.environment.weather:getCurrentTemperature()
-			--Production Revamp: Die Temperatur darf nicht 0 oder negativ sein
-			if currentTemp <= 0 then
-				currentTemp = 1
-			end
-			local tempFactor = (20 / currentTemp) * 0.05
-			if tempFactor < production.minPower then
-				tempFactor = production.minPower
-			end
-			cyclesPerMinuteMinuteFactor = cyclesPerMinuteMinuteFactor * tempFactor * production.weatherFactor
-		elseif mode=="seasonal" then
-			local seasons = string.split(production.seasons, " ")
-			if skip == false then
-				skip = true
-				for s = 1, #seasons do
-					local season = tonumber(seasons[s])
-					if g_currentMission.environment.currentSeason == season then
-						-- 0 Spring, 1 Summer, 2 Autumn, 3 Winter
-						skip = false
-					end
-				end
-			end
-		elseif mode=="monthly" then
-			local months = string.split(production.months, " ")
-			if skip == false then
-				skip = true
-				for s = 1, #months do
-					local month = tonumber(months[s])
-					if g_currentMission.environment.currentPeriod == month then
-						-- 0 Spring, 1 Summer, 2 Autumn, 3 Winter
-						skip = false
-					end
-				end
-			end
-		end
-		return cyclesPerMinuteMinuteFactor, skip
-	end
-
 	if numActiveProductions > 0 then
-		
 		local minuteFactorTimescaledDt = dt * self.minuteFactorTimescaled * timeAdjust
+
+		--Alle aktiven Produktionen einmal durchgehen um Ausnahmen von sharedThroughputCapacity festzustellen
+		local numSharedThroughputCapacity = 0
+		if self.sharedThroughputCapacity  == true then
+			for n = 1, numActiveProductions do
+				local production = self.activeProductions[n]
+				if production.sharedThroughputCapacity == true then
+					numSharedThroughputCapacity = numSharedThroughputCapacity + 1
+				end
+			end
+		else
+			numSharedThroughputCapacity = 1
+		end
 
 		for n = 1, numActiveProductions do
 			local production = self.activeProductions[n]
-			local cyclesPerMinuteMinuteFactor = production.cyclesPerMinute * minuteFactorTimescaledDt / (self.sharedThroughputCapacity and numActiveProductions or 1)
+			local cyclesPerMinuteMinuteFactor = production.cyclesPerMinute * minuteFactorTimescaledDt / (self.sharedThroughputCapacity and numSharedThroughputCapacity or 1)
+			--Sollte ProduktionsLinie von sharedThroughputCapacity ausgenommen sein
+			if production.sharedThroughputCapacity == false then
+				cyclesPerMinuteMinuteFactor = production.cyclesPerMinute * minuteFactorTimescaledDt
+			end
+
 			local skip = false
+			local FMS = false
 
 			--Production Revamp: Produktionen die andere Produktions-Modi verwenden, hier werden die Zyklen neu berechnet
-			local modes = string.split(production.mode, " ")
-			for _, mode in pairs(modes) do
-				cyclesPerMinuteMinuteFactor, skip = processProductionMode(production, mode, cyclesPerMinuteMinuteFactor, skip)
+			for _, mode in pairs(production.modes) do
+				if mode=="FEEDMIXER" then
+					FMS = true
+				end
+				cyclesPerMinuteMinuteFactor, skip = self:processProductionMode(production, mode, cyclesPerMinuteMinuteFactor, skip)
+
+				if skip ~= false then
+					if skip ~= true then
+						production.status = skip
+						self.owningPlaceable:productionStatusChanged(production, skip)
+						self:setProductionStatus(production.id, skip)
+					end
+
+					break
+				end
 			end
-		
+
 			--Production Revamp: mix-gruppen/boostgruppe hinzufügen und auf false stellen
 			local enoughInputResources = true
 			local enoughInput = {}
@@ -1377,105 +916,113 @@ function Revamp:updateProduction(superFunc)
 			local booster = 1
 			local masterFactor = 1
 			local boostFillType = {}
-			boostFillType[6] = 0
-			boostFillType[7] = 0
-
+			boostFillType[production.boostNumber] = 0
+			boostFillType[production.masterNumber] = 0
+			
+			if FMS == false then
 			--Production Revamp: Überprüfen ob ein Master-Booster vorhanden ist, falls vorhanden, dann masterFactor auslesen
-			if production.master then
-				for t = 1, #production.inputs do
-					local input = production.inputs[t]
-					local fillLevel = self:getFillLevel(input.type)
-					local needamount = input.amount * cyclesPerMinuteMinuteFactor
+				if production.master then
+					for t = 1, #production.inputs do
+						local input = production.inputs[t]
+						local fillLevel = self:getFillLevel(input.type)
+						local needamount = input.amount * cyclesPerMinuteMinuteFactor
 
-					if input.mix == 7 and fillLevel > needamount then
-						if production.boostMode == "most" then
-							if input.boostfactor > masterFactor then
-									masterFactor = input.boostfactor
-									boostFillType[7] = input.type
+						if input.mix == production.masterNumber and fillLevel > needamount then
+							if production.boostMode == "MOST" then
+								if input.boostfactor > masterFactor then
+										masterFactor = input.boostfactor
+										boostFillType[production.masterNumber] = input.type
+								end
+							elseif production.boostMode == "LEAST" then
+								if input.boostfactor < masterFactor then
+										masterFactor = input.boostfactor
+										boostFillType[production.masterNumber] = input.type
+								end
+							else
+								masterFactor = masterFactor + input.boostfactor
 							end
-						elseif production.boostMode == "least" then
-							if input.boostfactor < masterFactor then
-									masterFactor = input.boostfactor
-									boostFillType[7] = input.type
-							end
-						else
-							masterFactor = masterFactor + input.boostfactor
 						end
 					end
 				end
-			end
 
-			--Production Revamp: Dieser Abschnitt kontrolliert, ob ein /alle notwendigen Inputs in den jeweiligen Gruppe vorhanden sind
-			--Production Revamp: Farben hinterlegen für die Rezept-Anzeige, 0=weiß(vorhanden) 1=fehlt(wird benötigt) 2=(optional, nicht vorhanden)
-			for x = 1, #production.inputs do
-				local input = production.inputs[x]
+				--Production Revamp: Dieser Abschnitt kontrolliert, ob ein /alle notwendigen Inputs in den jeweiligen Gruppe vorhanden sind
+				--Production Revamp: Farben hinterlegen für die Rezept-Anzeige, 0=weiß(vorhanden) 1=fehlt(wird benötigt) 2=(optional, nicht vorhanden)
+				for x = 1, #production.inputs do
+					local input = production.inputs[x]
 
-				--Production Revamp: Wetterabhängige Zugewinne im Input
-				if not input.weatherAffected==false then
-					processWeather(input.weatherAffected, input.weatherFactor, input.amount, input.type, cyclesPerMinuteMinuteFactor)
-				end
-
-				local fillLevel = self:getFillLevel(input.type)
-				local factor = cyclesPerMinuteMinuteFactor * masterFactor
-				local needamount = input.amount * factor
-				local color = 0
-
-
-				if input.mix == 7 then
-					local boostamount = cyclesPerMinuteMinuteFactor * input.amount
-					if fillLevel < boostamount then
-						color = 2
+					--Production Revamp: Wetterabhängige Zugewinne im Input
+					if not input.weatherAffected==false then
+						self:processWeather(input.weatherAffected, input.weatherFactor, input.amount, input.type, cyclesPerMinuteMinuteFactor)
 					end
-				elseif input.mix == 6 then
-					if fillLevel >= needamount then
-						if production.boostMode == "most" then
-							if input.boostfactor > booster then
-								booster = input.boostfactor
-								boostFillType[6] = input.type
-							end
-						elseif production.boostMode == "least" then
-							if input.boostfactor < booster then
-								booster = input.boostfactor
-								boostFillType[6] = input.type
+
+					local fillLevel = self:getFillLevel(input.type)
+					local factor = cyclesPerMinuteMinuteFactor * masterFactor
+					local needamount = input.amount * factor
+					local color = 0
+
+					if input.mix == production.masterNumber then
+						local boostamount = cyclesPerMinuteMinuteFactor * input.amount
+						if fillLevel < boostamount then
+							color = 2
+						end
+					elseif input.mix == production.boostNumber then
+						if fillLevel >= needamount then
+							if production.boost == true then
+								if production.boostMode == "MOST" and input.boostfactor > booster then
+									booster = input.boostfactor + 1
+									boostFillType[production.boostNumber] = input.type
+								elseif production.boostMode == "LEAST" and input.boostfactor < booster then
+									booster = input.boostfactor + 1
+									boostFillType[production.boostNumber] = input.type
+								elseif production.boostMode == "DESC" then
+									booster = input.boostfactor + 1
+									boostFillType[production.boostNumber] = input.type
+								elseif production.boostMode == "ASC" and boostFillType[production.boostNumber] == 0 then
+									booster = input.boostfactor + 1
+									boostFillType[production.boostNumber] = input.type
+								end
+							else
+								booster = booster + input.boostfactor
 							end
 						else
-							booster = booster + input.boostfactor
+							color = 2
+						end
+					elseif input.mix == 0 then
+						if fillLevel < needamount then
+							enoughInputResources = false
+							color = 1
 						end
 					else
-						color = 2
+						maxnum, enoughInput, color, useFillType, useFillTypeLevel = self:processMix(input.mix, maxnum, needamount, fillLevel, enoughInput, useFillType, useFillTypeLevel, input.type, production.mixMode)
 					end
-				elseif input.mix == 0 then
-					if fillLevel < needamount then
-						enoughInputResources = false
-						color = 1
+
+					if color~=input.color then
+						self:setProductionInputColor(production.id, x, color)
 					end
-				else
-					maxnum, enoughInput, color, useFillType, useFillTypeLevel = processMix(input.mix, maxnum, needamount, fillLevel, enoughInput, useFillType, useFillTypeLevel, input.type, production.mixMode)
 				end
 
-				if color~=input.color then
-					self:setProductionInputColor(production.id, x, color)
-				end
-			end
-
-			--Production Revamp: dieser Abschnitt wertet die Ergebnisse der einzelnen Input-Gruppen aus
-			if enoughInputResources and maxnum == #enoughInput then
-				for x = 1, #enoughInput do
-					local input = enoughInput[x]
-					if not input then
-						enoughInputResources = false
+				--Production Revamp: dieser Abschnitt wertet die Ergebnisse der einzelnen Input-Gruppen aus
+				if enoughInputResources and maxnum == #enoughInput then
+					for x = 1, #enoughInput do
+						local input = enoughInput[x]
+						if not input then
+							enoughInputResources = false
+						end
 					end
 				end
-			end
 
-				--Production Revamp: Wetterabhängige Zugewinne im Output
-			if production.outputweather then
-				for x = 1, #production.outputs do
-					local output = production.outputs[x]
-					if output.weatherAffected==true then
-						processWeather(output.weatherAffected, output.weatherFactor, output.amount, output.type, cyclesPerMinuteMinuteFactor)
+					--Production Revamp: Wetterabhängige Zugewinne im Output
+				if production.outputWeather then
+					for x = 1, #production.outputs do
+						local output = production.outputs[x]
+						if output.weatherAffected==true then
+							self:processWeather(output.weatherAffected, output.weatherFactor, output.amount, output.type, cyclesPerMinuteMinuteFactor)
+						end
 					end
 				end
+			else
+				--FMS
+				enoughInputResources, enoughInput, useFillType = self:FMScalculate(production, cyclesPerMinuteMinuteFactor)
 			end
 
 			if enoughInputResources == false and self.isOwned then
@@ -1527,10 +1074,10 @@ function Revamp:updateProduction(superFunc)
 						local input = production.inputs[y]
 						local fillLevel = self:getFillLevel(input.type)
 
-						if input.mix == 7 then
-							processInput(self, input, mfactor, fillLevel, enoughInput, production.mixMode, useFillType, boostFillType)
+						if input.mix == production.masterNumber then
+							self:processInput(self, input, mfactor, fillLevel, enoughInput, production.mixMode, useFillType, boostFillType, production)
 						else
-							processInput(self, input, factor, fillLevel, enoughInput, production.mixMode, useFillType, boostFillType)
+							self:processInput(self, input, factor, fillLevel, enoughInput, production.mixMode, useFillType, boostFillType, production)
 						end
 					end
 
@@ -1619,7 +1166,6 @@ function Revamp:updateProduction(superFunc)
 end
 
 ProductionPoint.updateProduction = Utils.overwrittenFunction(ProductionPoint.updateProduction, Revamp.updateProduction)
-print("Production Revamp: ProductionPoint Update overwritten")
 
 
 
@@ -1628,8 +1174,11 @@ function Revamp:loadFromXMLFile(superFunc, xmlFile, key)
 
 	-- Pump'n'Hoses Produktionen ignorieren
 	if self:isa(SandboxProductionPoint) or (self.owningPlaceable.isSandboxPlaceable ~= nil and self.owningPlaceable:isSandboxPlaceable()) then
+		RevampDebugHelper:Debug(self.owningPlaceable.configFileName, "Revamp", "skip loading because Pump'n'Hoses production");
 		return superFunc(self, xmlFile, key);
 	end
+	
+	RevampDebugHelper:Debug(self.owningPlaceable.configFileName, "Revamp", "loading");
 
 	local palletSpawnCooldown = xmlFile:getValue(key .. "#palletSpawnCooldown")
 
@@ -1644,6 +1193,27 @@ function Revamp:loadFromXMLFile(superFunc, xmlFile, key)
 			self:setProductionState(self.productions[n].id, true)
 		end
 	end
+
+	xmlFile:iterate(key .. ".revampSettings", function (index, productionKey)
+		local prodId = xmlFile:getValue(productionKey .. "#id")
+		local mixMode = xmlFile:getValue(productionKey .. "#mixMode", "ASC")
+		local boostMode = xmlFile:getValue(productionKey .. "#boostMode", "ASC")
+		local feedMixerRecipe = xmlFile:getValue(productionKey .. "#feedMixerRecipe")
+		if feedMixerRecipe ~= nil then
+			local feedIndex = g_fillTypeManager:getFillTypeIndexByName(feedMixerRecipe)
+			if feedIndex == nil then
+				Logging.error("Production Revamp: Unable to load fillType '%s' for '%s'", feedMixerRecipe, prodId)
+				feedMixerRecipe = nil
+			else
+				feedMixerRecipe = feedIndex
+			end
+		end
+		if self.productionsIdToObj[prodId] == nil then
+			Logging.xmlWarning(xmlFile, "Unknown production id '%s'", prodId)
+		else
+			self:setRevampSettings(prodId, mixMode, boostMode, feedMixerRecipe)
+		end
+	end)
 
 	xmlFile:iterate(key .. ".production", function (index, productionKey)
 		local prodId = xmlFile:getValue(productionKey .. "#id")
@@ -1729,7 +1299,27 @@ function Revamp:saveToXMLFile(superFunc, xmlFile, key, usedModNames)
 	end
 
 	local xmlIndex = 0
+	for i = 1, #self.productions do
+		local production = self.productions[i]
+		local productionKey = string.format("%s.revampSettings(%i)", key, xmlIndex)
 
+		if production.mixMode ~= "ASC" or production.boostMode ~= "ASC" or production.feedMixer ~= nil then
+			xmlFile:setValue(productionKey .. "#id", production.id)
+			if production.mixMode ~= "ASC" then
+				xmlFile:setValue(productionKey .. "#mixMode", production.mixMode)
+			end
+			if production.boostMode ~= "ASC" then
+				xmlFile:setValue(productionKey .. "#boostMode", production.boostMode)
+			end
+			if production.feedMixer ~= nil then
+				xmlFile:setValue(productionKey .. "#feedMixerRecipe", g_fillTypeManager:getFillTypeNameByIndex(production.feedMixer.selected))
+			end
+		end
+
+		xmlIndex = xmlIndex + 1
+	end
+
+	local xmlIndex = 0
 	for i = 1, #self.activeProductions do
 		local production = self.activeProductions[i]
 		local productionKey = string.format("%s.production(%i)", key, xmlIndex)
@@ -1770,7 +1360,6 @@ function Revamp:saveToXMLFile(superFunc, xmlFile, key, usedModNames)
 end
 
 ProductionPoint.saveToXMLFile = Utils.overwrittenFunction(ProductionPoint.saveToXMLFile, Revamp.saveToXMLFile)
-print("Production Revamp: Production Point Load and Save XML overwritten")
 
 
 
@@ -1786,6 +1375,37 @@ function Revamp:readStream(superFunc, streamId, connection)
 	if connection:getIsServer() then
 		-- connection is to server, so here is client and we receive from server
 		-- receive data from the server
+		
+		-- set all lines to KEEP so the sync can correct the send items when set to something different
+		-- needed because otherwise all on KEEP will stay on STORE on the connected client while the server use KEEP
+		--Production Revamp: mixmode/boostmode/feedMixerRecipe synchronisieren
+
+		for i = 1, streamReadUInt8(streamId) do
+			for i = 1, streamReadUInt8(streamId) do
+				local productionId = streamReadString(streamId)
+				local feedFillType = streamReadUIntN(streamId, FillTypeManager.SEND_NUM_BITS)
+				self:setRevampSettings(productionId, nil, nil, feedFillType, true)
+			end
+
+			for i = 1, streamReadUInt8(streamId) do
+				local productionId = streamReadString(streamId)
+				local mixMode = streamReadString(streamId)
+				self:setRevampSettings(productionId, mixMode, nil, nil, true)
+			end
+
+			for i = 1, streamReadUInt8(streamId) do
+				local productionId = streamReadString(streamId)
+				local boostMode = streamReadString(streamId)
+				self:setRevampSettings(productionId, nil, boostMode, nil, true)
+			end
+		end
+
+		for fillType in pairs(self.outputFillTypeIds) do
+			if self.outputFillTypeIdsAutoDeliver[fillType] == nil then
+				self:setOutputDistributionMode(fillType, ProductionPoint.OUTPUT_MODE.KEEP)
+			end
+		end
+
 		for i = 1, streamReadUInt8(streamId) do
 			self:setOutputDistributionMode(streamReadUIntN(streamId, FillTypeManager.SEND_NUM_BITS), ProductionPoint.OUTPUT_MODE.DIRECT_SELL)
 		end
@@ -1858,6 +1478,36 @@ function Revamp:writeStream(superFunc, streamId, connection)
 	if not connection:getIsServer() then
 		-- connection is not to server, so here is server and we write to client
 		-- send data to the client
+		streamWriteUInt8(streamId, table.size(self.productions))
+
+		for i = 1, #self.productions do
+			local production = self.productions[i]
+			--Production Revamp: mixmode/boostmode/feedMixerRecipe synchronisieren
+			if production.feedMixer ~= nil then
+				streamWriteUInt8(streamId, 1)
+				streamWriteString(streamId, production.id)
+				streamWriteUIntN(streamId, production.feedMixer.selected, FillTypeManager.SEND_NUM_BITS)
+			else
+				streamWriteUInt8(streamId, 0)
+			end
+
+			if production.mixMode ~= "ASC" then
+				streamWriteUInt8(streamId, 1)
+				streamWriteString(streamId, production.id)
+				streamWriteString(streamId, production.mixMode)
+			else
+				streamWriteUInt8(streamId, 0)
+			end
+
+			if production.boostMode ~= "ASC" then
+				streamWriteUInt8(streamId, 1)
+				streamWriteString(streamId, production.id)
+				streamWriteString(streamId, production.boostMode)		
+			else
+				streamWriteUInt8(streamId, 0)
+			end
+		end
+
 		streamWriteUInt8(streamId, table.size(self.outputFillTypeIdsDirectSell))
 
 		for directSellFillTypeId in pairs(self.outputFillTypeIdsDirectSell) do
@@ -1922,7 +1572,6 @@ function Revamp:writeStream(superFunc, streamId, connection)
 end
 
 ProductionPoint.writeStream = Utils.overwrittenFunction(ProductionPoint.writeStream, Revamp.writeStream)
-print("Production Revamp: Production Point Write/Read Stream Overwritten")
 
 
 
@@ -1957,7 +1606,7 @@ function Revamp:addFillLevelFromTool(superFunc, farmId, deltaFillLevel, fillType
 					local ownerFarmId = self.owningPlaceable:getOwnerFarmId()
 					local testLohn = AccessHandler:canFarmAccessOtherId(farmId, ownerFarmId)
 
-					--Sollte die Porduktion dem Ablader gehören
+					--Sollte die Produktion dem Ablader gehören
 					if ownerFarmId == farmId then
 						movedFillLevel = SellingStation:superClass().addFillLevelFromTool(self, farmId, deltaFillLevel, fillType, fillInfo, toolType, extraAttributes)
 					--Sollte die Produktionen jemand anderes gehören oder niemanden
@@ -2011,7 +1660,6 @@ function Revamp:getFreeCapacity(superFunc, fillTypeIndex, farmId)
 	end
 end
 SellingStation.getFreeCapacity = Utils.overwrittenFunction(SellingStation.getFreeCapacity, Revamp.getFreeCapacity)
-print("Production Revamp: Missionfix - SellingStation overwritten")
 
 
 
@@ -2036,7 +1684,6 @@ function Revamp:mergeModTranslations(i18n)
 end
 
 Revamp:mergeModTranslations(g_i18n)
-print("Production Revamp: Added new statistic for finances")
 
 
 
@@ -2231,7 +1878,96 @@ end
 ProductionPoint.setOwnerFarmId = Utils.prependedFunction(ProductionPoint.setOwnerFarmId, Revamp.setOwnerFarmId)
 
 
+function Revamp:updateFxState(superFunc)
+	if self.isClient then
+		if #self.activeProductions > 0 then
+			if self.hiddenProductions < #self.activeProductions then
+				g_soundManager:stopSample(self.samples.idle)
+
+				if not g_soundManager:getIsSamplePlaying(self.samples.active) then
+					g_soundManager:playSample(self.samples.active)
+				end
+
+				g_animationManager:startAnimations(self.animationNodes)
+				g_effectManager:startEffects(self.effects)
+			end
+		else
+			g_soundManager:stopSample(self.samples.active)
+
+			if not g_soundManager:getIsSamplePlaying(self.samples.idle) then
+				g_soundManager:playSample(self.samples.idle)
+			end
+
+			g_animationManager:stopAnimations(self.animationNodes)
+			g_effectManager:stopEffects(self.effects)
+		end
+	end
+end
+
+ProductionPoint.updateFxState = Utils.overwrittenFunction(ProductionPoint.updateFxState, Revamp.updateFxState)
+
+
+function Revamp:setProductionState(superFunc, productionId, state, noEventSend)
+	local production = self.productionsIdToObj[productionId]
+
+	if production ~= nil then
+		if state then
+			if not table.hasElement(self.activeProductions, production) then
+				production.status = ProductionPoint.PROD_STATUS.RUNNING
+
+				table.insert(self.activeProductions, production)
+			end
+
+			if self.isClient then
+				--Versteckte Produktionen machen keinen Sound
+				if production.hideFromMenu == false then
+					g_soundManager:playSamples(production.samples)
+					g_animationManager:startAnimations(production.animationNodes)
+					g_effectManager:startEffects(production.effects)
+				end
+			end
+		else
+			table.removeElement(self.activeProductions, production)
+
+			production.status = ProductionPoint.PROD_STATUS.INACTIVE
+
+			if self.isClient then
+				g_soundManager:stopSamples(production.samples)
+				g_animationManager:stopAnimations(production.animationNodes)
+				g_effectManager:stopEffects(production.effects)
+			end
+		end
+
+		self.owningPlaceable:outputsChanged(production.outputs, state)
+		ProductionPointProductionStateEvent.sendEvent(self, productionId, state, noEventSend)
+	else
+		log(string.format("Error: setProductionState(): unknown productionId '%s'", productionId))
+	end
+
+	if self.isClient then
+		self:updateFxState()
+	end
+end
+
+ProductionPoint.setProductionState = Utils.overwrittenFunction(ProductionPoint.setProductionState, Revamp.setProductionState)
+
+
+--Production Revamp: Hinzugefügt um Input-Prioritäten zu ändern
+function ProductionPoint:setRevampSettings(productionId, mixMode, boostMode, feedMixerRecipe, noEventSend)
+	local production = self.productionsIdToObj[productionId]
+	if feedMixerRecipe ~= nil and feedMixerRecipe ~= 0 then
+		self:FMSchangeRecipe(production, feedMixerRecipe, true)
+	end
+
+	if mixMode ~= nil and mixMode ~= "none" then
+		production.mixMode = mixMode
+	end
+	if boostMode ~= nil and boostMode ~= "none" then
+		production.boostMode = boostMode
+	end
+	
+	RevampSettingsEvent.sendEvent(self, productionId, mixMode, boostMode, feedMixerRecipe, noEventSend)
+end
 
 Revamp:AddFinances()
 Revamp:LoadGui()
-print("Production Revamp: Loading complete")

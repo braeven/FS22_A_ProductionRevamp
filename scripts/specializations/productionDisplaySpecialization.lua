@@ -1,9 +1,9 @@
 --[[
-Copyright (C) Achimobil, Braeven 2022
+Copyright (C) Achimobil, Braeven 2023
 
 Author: Achimobil, Braeven
-Date: 06.01.2022
-Version: 1.0.0.0
+Date: 16.06.2023
+Version: 1.1.0.0
 
 Contact:
 https://forum.giants-software.com
@@ -18,6 +18,7 @@ History:
 1.0.0.0 @ 06.01.2023 - Fehlenquellen abgefangen und Meldungen hinzugefügt
 1.0.0.0 @ 06.01.2023 - ReverseMode added
 1.0.0.0 @ 06.01.2023 - Prozentuale Angaben werden beim colorChange unterstützt
+1.1.0.0 @ 16.06.2023 - Verzögerte Anzeige für performance verbesserung
 
 Important:
 It is not allowed to copy in own Mods. Only usage as reference with Production Revamp.
@@ -28,10 +29,9 @@ An diesem Skript dürfen ohne Genehmigung von Achimobil oder braeven keine Ände
 ]]
 
 ProductionDisplaySpecialization = {
-	Version = "1.0.0.0",
+	Version = "1.1.0.0",
 	Name = "ProductionDisplaySpecialization"
 }
-print(g_currentModName .. " - init " .. ProductionDisplaySpecialization.Name .. "(Version: " .. ProductionDisplaySpecialization.Version .. ")")
 
 function ProductionDisplaySpecialization.prerequisitesPresent(specializations)
 	return SpecializationUtil.hasSpecialization(PlaceableProductionPoint, specializations)
@@ -41,10 +41,12 @@ function ProductionDisplaySpecialization.registerEventListeners(placeableType)
 	SpecializationUtil.registerEventListener(placeableType, "onLoad", ProductionDisplaySpecialization)
 	SpecializationUtil.registerEventListener(placeableType, "onFinalizePlacement", ProductionDisplaySpecialization)
 	SpecializationUtil.registerEventListener(placeableType, "onPostFinalizePlacement", ProductionDisplaySpecialization)
+	SpecializationUtil.registerEventListener(placeableType, "onUpdate", ProductionDisplaySpecialization)
 end
 
 function ProductionDisplaySpecialization.registerFunctions(placeableType)
 	SpecializationUtil.registerFunction(placeableType, "updateDisplays", ProductionDisplaySpecialization.updateDisplays)
+	SpecializationUtil.registerFunction(placeableType, "setProductionDisplayFillLevelDirty", ProductionDisplaySpecialization.setProductionDisplayFillLevelDirty)
 end
 
 function ProductionDisplaySpecialization.registerXMLPaths(schema, basePath)
@@ -74,6 +76,8 @@ function ProductionDisplaySpecialization:onLoad(savegame)
 	local xmlFile = self.xmlFile
 	
 	spec.productionDisplays = {}
+	spec.productionDisplayFillLevelDirty = true;
+	spec.lastUpdateTime = 0;
 
 	local displayKey = "placeable.productionPoint.productionDisplays"
 	if xmlFile:hasProperty(displayKey) then
@@ -154,7 +158,7 @@ function ProductionDisplaySpecialization:onLoad(savegame)
 		end)
 
 		function spec.fillLevelChangedCallback(fillType, delta)
-			self:updateDisplays()
+			self:setProductionDisplayFillLevelDirty()
 		end
 	end
 end
@@ -166,6 +170,32 @@ end
 
 function ProductionDisplaySpecialization:onPostFinalizePlacement(savegame)
 	self:updateDisplays()
+end
+
+function ProductionDisplaySpecialization:setProductionDisplayFillLevelDirty()
+	local spec = self.spec_productionPointDisplay;
+	if not spec.productionDisplayFillLevelDirty then 
+		spec.productionDisplayFillLevelDirty = true 
+	end
+	self:raiseActive()
+end
+
+function ProductionDisplaySpecialization:onUpdate(dt)
+	local spec = self.spec_productionPointDisplay;
+	if not spec.productionDisplayFillLevelDirty then
+		return
+	end;
+	spec.lastUpdateTime = spec.lastUpdateTime + dt
+	if spec.lastUpdateTime < 1000 then
+		self:raiseActive()
+		return
+	end;
+	
+	self:updateDisplays()
+	
+	spec.lastUpdateTime = 0
+	spec.productionDisplayFillLevelDirty = false;
+	
 end
 
 function ProductionDisplaySpecialization:updateDisplays()

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="79">
+<modDesc descVersion="80">
   <author>Braeven</author>
   <contributors>Achimobil</contributors>
-  <version>1.4.3.0</version>
+  <version>1.5.0.0</version>
   <title>
     <en>Production Revamp</en>
   </title>
@@ -62,61 +62,20 @@ Changelog:
 (Full changelog can be found in the documentation)
 
 
-Version 1.4
+Version 1.5
 Bugfixes:
-* Correction of recipe and fill level indicators for extra wide monitors.
-* Purchase price adjustment works now also with fillable purchase silos
-* StoreItems via the revamp functions have mod titles again
-* Lumber trigger now adjusts its text without reloading, between selling and storing
+* The selection of seedling palettes now also works in multiplayer
+* Various minor bug fixes
 
-Innovations
-* Possibility to use animals in productions
-* Hidden production lines
-* Direct selling and distributing made deactivatable
-* Silo- and ProductionSpawner can now store more than one item at a time
-* At the silo can now be selected the seedling type, when removing corresponding pallets
-* After removing a seedling pallet, the correct tree species is now displayed
-* When removing logs, lengths of 1-20m can now be selected (adjustable in the XML, default 6m)
-* Goods in productions are sold when selling/demolishing them
-* MixMode and BoosterMode added for the whole production/production lines
-* Production modes are displayed as a separate line in the overview
-* New and updated translations
-
-Version 1.4.0.1
-* Bugfix with boostMode
-* Write error in StoreItemScript considered
-* Bugfix with production cycles display
-
-Version 1.4.0.2
-* Bugfix ingame help of other mods should work correctly again
-
-Version 1.4.1.0
-* Fill level objects can now use multiple filltypes or filltype categories as a sum
-* Possibility to use any number of opening hours
-
-Version 1.4.1.2
-* Bugfix with opening hours
-* Bugfix distribution system with PnH
-
-Version 1.4.1.3
-* Bugfix with opening hours and manual spawns
-
-Version 1.4.1.4
-* Bugfix with Pump and Hoses Version 1.3
-
-Version 1.4.1.5
-* Bugfix with manual spawning and opening hours
-
-Version 1.4.1.6
-* Translations updated
-* Buttons in production menu made translatable
-* Bug fixed when selling in combination of silo with productions in a placeable
-
-Version 1.4.2.0
-* Fixed a Bug with manually spawning logs
-
-Version 1.4.3.0
-* Fixed a Bug with Game Version 1.13.1.0
+New features
+* General revision of the code
+* Possibility to filter the price overview.
+* Possibility to create productions that sell all outputs directly
+* Improved display of production times
+* Temporary messages in the production overview are displayed in orange
+* Possibility to exclude individual production lines from the shared output
+* Possibility to create feed mixers with MaizePlus and TerraLife
+* Possibility to create recipes with any number of mix groups
 ]]>
     </en>
     <de>
@@ -173,61 +132,20 @@ Changelog:
 (Vollstände Changelog ist in der Dokumentation zu finden)
 
 
-Version 1.4
+Version 1.5
 Bugfixes:
-* Korrektur der Rezept und Füllstandsanzeigen bei extra breiten Monitoren
-* Einkaufspreisanpassung funktioniert jetzt auch bei Füllbaren Kaufsilos
-* StoreItems über die Revamp-Funktionen haben wieder Mod-Titel
-* Holz-Trigger passt seinen Text nun an ohne Neuladen, zwischen Verkaufen und Einlagern
+* Die Auswahl der Setzlingspaletten funktioniert nun auch im Multiplayer
+* Diverse kleinere Bugfixes
 
 Neuerungen
-* Möglichkeit Tiere in Produktionen zu nutzen
-* Versteckte Produktionslinien
-* Direkt Verkaufen und Verteilen deaktivierbar gemacht
-* Silo- und ProduktionsSpawner können nun mehrere Sachen gleichzeitig Auslagern
-* Beim Silo kann jetzt die Setzlingsart ausgewählt werden, beim Auslagern entsprechender Paletten
-* Nach dem Auslagern einer Setzlingspalette wird jetzt die korrekte Baumart angezeigt
-* Beim Holzstämme auslagern können jetzt Längen von 1-20m ausgewählt werden (Einstellbar in der XML, Standard 6m)
-* Güter in Produktionen werden beim Verkaufen/Abreißen dieser verkauft
-* MixModus und BoosterModus hinzugefügt für die gesamte Produktion/Produktionslinien
-* Produktions-Modi werden als eigene Zeile in der Übersicht angezeigt
-* Neue und Upgedatete Übersetzungen
-
-Version 1.4.0.1
-* Bugfix mit boostMode
-* Schreibfehler im StoreItemScript berücksichtigt
-* Bugfix mit Produktions-Zyklen-Anzeige
-
-Version 1.4.0.2
-* Bugfix Ingame Hilfe anderer Mods sollte wieder korrekt funktionieren
-
-Version 1.4.1.0
-* Fill Level Objekte können nun auch mehrere Filltypes oder Filltype Kategorien als Summe benutzen
-* Möglichkeit beliebig viele Öffnungszeiten zu verwenden
-
-Version 1.4.1.2
-* Bugfix mit Öffnungszeiten
-* Bugfix Verteilsystem mit PnH
-
-Version 1.4.1.3
-* Bugfix mit Öffnungszeiten und Manuellen Spawnen
-
-Version 1.4.1.4
-* Bugfix mit Pump and Hoses Version 1.3
-
-Version 1.4.1.5
-* Bugfix mit manuellen spawnen und Öffnungszeiten
-
-Version 1.4.1.6
-* Übersetzungen aktualisiert
-* Butten im Produktionsmenü übersetzbar gemacht
-* Bug gefixxt beim Verkaufen in Kombination von Silo mit Produktionen in einen Placeable
-
-Version 1.4.2.0
-* Bug beim manuellen spawnen von Holzstämmen behoben
-
-Version 1.4.3.0
-* Bug mit Spielversion 1.13.1.0 repariert
+* Generelle Überarbeitung des Codes
+* Möglichkeit die Preisübersicht zu filtern.
+* Möglichkeit Produktionen zu erstellen, die alle Outputs direkt verkaufen
+* Verbesserte Darstellung der Produktionszeiten
+* Vorrübergehende Meldungen in der ProduktionsÜbersicht werden Orange dargestellt
+* Möglichkeit einzelne Produktionslinen von der geteilten Leistung auszunehmen
+* Möglichkeit Futtermischer mit MaizePlus und TerraLife zu erstellen
+* Möglichkeit Rezepte zu erstellen mit beliebig vielen mix-Gruppen
 ]]>
     </de>
    <fr>
@@ -284,61 +202,20 @@ Journal des modifications :
 (Le journal des modifications complet peut être trouvé dans la documentation)
 
 
-Version 1.4
+Version 1.5
 Correction de bugs :
-* Correction de la recette et de l'affichage du niveau de remplissage sur les moniteurs extra larges.
-* L'ajustement du prix d'achat fonctionne maintenant aussi pour les silos d'achat remplissables
-* Les StoreItems via les fonctions Revamp ont à nouveau des titres de mod
-* Le déclencheur bois adapte désormais son texte sans rechargement, entre la vente et le stockage
+* La sélection des palettes de semis fonctionne désormais aussi en multijoueur.
+* Diverses corrections de bugs mineurs
 
 Nouveautés
-* Possibilité d'utiliser des animaux dans les productions
-* Lignes de production cachées
-* Vente et distribution directes rendues désactivables
-* Les générateurs de marchandises dans les silos et les productions peuvent désormais stocker plusieurs choses en même temps.
-* Pour le silo, il est maintenant possible de sélectionner le type de marchandise, lors de la sortie des palettes correspondantes.
-* Le type d'arbre correct est désormais affiché après la sortie d'une palette de plants.
-* Lors de la sortie des grumes, il est désormais possible de sélectionner des longueurs de 1 à 20 m (réglable dans le XML, 6 m par défaut).
-* Les biens dans les productions sont vendus lors de la vente/destruction de celles-ci.
-* Ajout du mode Mix et du mode Booster pour l'ensemble de la production/lignes de production
-* Les modes de production sont affichés sur une ligne séparée dans l'aperçu.
-* Ajout et mise à jour des traductions.
-
-Version 1.4.0.1
-* Correction d'un bug avec boostMode
-* correction d'une erreur d'écriture dans le StoreItemScript
-* Correction d'un bug avec l'affichage des cycles de production.
-
-Version 1.4.0.2
-* Correction d'un bug dans l'aide en jeu d'autres mods qui devrait à nouveau fonctionner correctement.
-
-Version 1.4.1.0
-* Les objets de niveau de remplissage peuvent maintenant additionner plusieurs types de remplissage ou catégories de remplissage.
-* Possibilité d'utiliser autant d'heures d'ouverture que nécessaire
-
-Version 1.4.1.2
-* Bugfix avec les heures d'ouverture
-* Bugfix système de distribution avec PnH
-
-Version 1.4.1.3
-* Correction de bug avec les heures d'ouverture et le spawn manuel
-
-Version 1.4.1.4
-* Bugfix avec la Pump and Hoses Version 1.3
-
-Version 1.4.1.5
-* Correction de bug avec le spawn manuel et les heures d'ouverture
-
-Version 1.4.1.6
-* Traductions mises à jour
-* Boutons du menu de production rendus traduisibles
-* Correction d'un bug lors de la vente en combinaison de silo avec des productions dans un placeable
-
-Version 1.4.2.0
-* Correction d'un bug avec la création manuelle de logs.
-
-Version 1.4.3.0
-* Correction d'un bug avec la version 1.13.1.0 du jeu
+* Révision générale du code.
+* Possibilité de filtrer l'aperçu des prix.
+* Possibilité de créer des productions qui vendent directement tous les outputs.
+* Amélioration de la représentation des temps de production.
+* Les messages temporaires dans l'aperçu de la production sont affichés en orange.
+* Possibilité d'exclure certaines lignes de production de la prestation partagée.
+* Possibilité de créer des mélangeurs d'aliments avec MaizePlus et TerraLife.
+* Possibilité de créer des recettes avec un nombre illimité de groupes de mélange.
 ]]>
     </fr>
   </description>
@@ -350,38 +227,17 @@ Version 1.4.3.0
   <fillTypes filename="revamp_fillTypes.xml"/>
   
   <extraSourceFiles>
-    <sourceFile filename="revamp.lua" />
-    <sourceFile filename="revampHelper.lua" />
-    <sourceFile filename="scripts/revamp_spawner.lua" />
-    <sourceFile filename="events/ProductionPointPriorityEvent.lua" />
-    <sourceFile filename="events/ProductionPointBuyInputEvent.lua" />
-    <sourceFile filename="events/ProductionPointProductionInputColorEvent.lua" />
-    <sourceFile filename="events/RevampSpawnPalletsEvent.lua" />
-    <sourceFile filename="events/RevampSpawnBalesEvent.lua" />
-    <sourceFile filename="events/RevampSpawnWoodLogsAtSiloEvent.lua" />
-    <sourceFile filename="scripts/revamp_buyInputs.lua" />
-    <sourceFile filename="scripts/revamp_prioritySystem.lua" />
-    <sourceFile filename="scripts/revamp_changeLimits.lua" />
-    <sourceFile filename="scripts/revamp_correctBuyingPrices.lua" />
-    <sourceFile filename="scripts/revamp_recipeDisplay.lua" />
-    <sourceFile filename="scripts/revamp_extendetFunctionalities.lua" />
-    <sourceFile filename="scripts/revamp_animalSystem.lua" />
-    <sourceFile filename="scripts/revampAnimalStation.lua" />
-    <sourceFile filename="scripts/revamp_sellProductionFix.lua" />
-    <sourceFile filename="revampSettings.lua" />
-	  <sourceFile filename="gui/ProductionAnimalDelivery.lua" />
-	  <sourceFile filename="gui/ProductionAnimalOverview.lua" />
-	  <sourceFile filename="events/RevampMoveAnimalsEvent.lua" />
+    <sourceFile filename="revampInit.lua" />
   </extraSourceFiles>
   
-  <revamp minVersion="1.4.0.0"></revamp>
+  <revamp minVersion="1.5.0.0"></revamp>
 
     <placeableSpecializations>
-        <specialization name="siloObjectFillLevel" className="SiloObjectFillLevelSpecialization" filename="scripts/siloObjectFillLevelSpecialization.lua"/>
-        <specialization name="siloDisplay" className="SiloDisplaySpecialization" filename="scripts/siloDisplaySpecialization.lua"/>
-        <specialization name="productionObjectFillLevel" className="ProductionObjectFillLevelSpecialization" filename="scripts/productionObjectFillLevelSpecialization.lua"/>
-        <specialization name="productionDisplay" className="ProductionDisplaySpecialization" filename="scripts/productionDisplaySpecialization.lua"/>
-        <specialization name="siloPalletSpawner" className="SiloPalletSpawnerSpecialization" filename="scripts/siloPalletSpawnerSpecialization.lua"/>
+        <specialization name="siloObjectFillLevel" className="SiloObjectFillLevelSpecialization" filename="scripts/specializations/siloObjectFillLevelSpecialization.lua"/>
+        <specialization name="siloDisplay" className="SiloDisplaySpecialization" filename="scripts/specializations/siloDisplaySpecialization.lua"/>
+        <specialization name="productionObjectFillLevel" className="ProductionObjectFillLevelSpecialization" filename="scripts/specializations/productionObjectFillLevelSpecialization.lua"/>
+        <specialization name="productionDisplay" className="ProductionDisplaySpecialization" filename="scripts/specializations/productionDisplaySpecialization.lua"/>
+        <specialization name="siloPalletSpawner" className="SiloPalletSpawnerSpecialization" filename="scripts/specializations/siloPalletSpawnerSpecialization.lua"/>
     </placeableSpecializations>
     
     <placeableTypes>

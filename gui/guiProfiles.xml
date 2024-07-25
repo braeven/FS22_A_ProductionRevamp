@@ -71,11 +71,25 @@
     <Value name="textVerticalAlignment" value="middle" />
     <Value name="textOffset" value="-13px 0" />        
     <Value name="textAlignment" value="right"/>
-    <!-- <Value name="textColor" value="$preset_colorMainUI"/> -->
   </Profile>
   <Profile name="revampAnimalOverviewIcon" extends="baseReference" with="anchorMiddleCenter">
     <Value name="imageUVs" value="0 0 1 1" />
     <Value name="size" value="40px 40px" />
-    
+  </Profile>
+  <Profile name="ingameMenuProductionProductionActivityTemporary" extends="ingameMenuProductionProductionActivity">
+    <Value name="imageColor" value="$preset_colorOrange" />
+    <Value name="imageSelectedColor" value="$preset_colorOrange" />
+  </Profile>
+  <Profile name="ingameMenuProductionDetailValueTemporaryError" extends="ingameMenuProductionDetailValue">
+    <Value name="textColor" value="$preset_colorOrange" />
+  </Profile>
+  <Profile name="ingameMenuAnimalsListSectionHeaderTextRevamp" extends="textDefault" with="anchorMiddleRight">
+    <Value name="position" value="-15px 0" />
+    <Value name="textVerticalAlignment" value="middle"/>
+    <Value name="textBold" value="true"/>
+    <Value name="textSize" value="30px"/>
+    <Value name="textUpperCase" value="true"/>
+    <Value name="textAlignment" value="right"/>
+    <Value name="textColor" value="$preset_colorHeaderText"/>
   </Profile>
 </GUIProfiles>

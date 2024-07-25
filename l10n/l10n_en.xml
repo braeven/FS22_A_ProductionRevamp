@@ -28,6 +28,37 @@
         <text name="Revamp_ViewInActiveProductions"             text="Hide Active" />
         <text name="Revamp_ViewAllProductions"                  text="View All" />
         <text name="Revamp_ChooseWoodLogLength"                 text="Choose Length" />
+        <text name="Revamp_ChangeRecipe"                        text="Change Recipe" />
+
+    <!--Production Settings-->
+        <text name="Revamp_PS_MenueButton"                      text="Change Setting" />
+        <text name="Revamp_PS_Mix_Title"                        text="Choose Mix-Mode" />
+        <text name="Revamp_PS_Mix_Text"                         text="This setting changes, in which order Mix-FillTypes are used." />
+        <text name="Revamp_PS_Mix_Asc"                          text="Order descending" />
+        <text name="Revamp_PS_Mix_Desc"                         text="Order ascending" />
+        <text name="Revamp_PS_Mix_Most"                         text="Größte Menge" />
+        <text name="Revamp_PS_Mix_Least"                        text="Kleinste Menge" />
+        <text name="Revamp_PS_Boost_Title"                      text="Choose Boost-Mode" />
+        <text name="Revamp_PS_Boost_Text"                       text="This setting changes, in which order boost-FillTypes are used." />
+        <text name="Revamp_PS_Boost_Asc"                        text="Order first available" />
+        <text name="Revamp_PS_Boost_Desc"                       text="Order  last available" />
+        <text name="Revamp_PS_Boost_Most"                       text="Use	biggest boost" />
+        <text name="Revamp_PS_Boost_Least"                      text="Use smallest boost" />
+        <text name="Revamp_PS_Choose_Title"                     text="Please chooose:" />
+        <text name="Revamp_PS_Choose_Mix"                       text="Change Mix Settings" />
+        <text name="Revamp_PS_Choose_Boost"                     text="Change Boost Settings" />
+
+    <!-- Price Menue Filter -->
+        <text name="REVAMP_FILTER"                              text="Filter: None" />
+        <text name="REVAMP_FILTER_FRUITS"                       text="Filter: Fruits" />
+        <text name="REVAMP_FILTER_GRASSES"                      text="Filter: Grasses" />
+        <text name="REVAMP_FILTER_SILAGES"                      text="Filter: Silages" />
+        <text name="REVAMP_FILTER_FEED"                         text="Filter: Feed" />
+        <text name="REVAMP_FILTER_FEEDINGREDIENTS"              text="Filter: Feed Ingredients" />
+        <text name="REVAMP_FILTER_SEEDS"                        text="Filter: Seeds" />
+        <text name="REVAMP_FILTER_PRODUCTS"                     text="Filter: Products" />
+        <text name="REVAMP_FILTER_ANIMALPRODUCTS"               text="Filter: Animal" />
+        <text name="REVAMP_FILTER_CONSUMABLES"                  text="Filter: Consumables" />
 
     <!-- Production messages -->
         <text name="Revamp_StorageEmpty"                        text="Storage is empty" />
@@ -36,21 +67,28 @@
         <text name="Revamp_ProductionNotEmpty"                  text="The Production is not empty. The following goods will be sold too:"/>
 
     <!-- Production Variants -->
+        <text name="Revamp_limitBoosters"                       text="%s limited booster" />
         <text name="Revamp_sunProduction"                       text="%s Sun dependent" />
         <text name="Revamp_rainProduction"                      text="%s Rain dependent" />
         <text name="Revamp_windProduction"                      text="%s Wind dependent" />
         <text name="Revamp_temperatureProduction"               text="%s temperature dependent" />
         <text name="Revamp_temperatureNegativeProduction"       text="%s temperature dependent" />
-        <text name="Revamp_seasonalProduction"                  text="%s Seasonal" />
-        <text name="Revamp_productionHoursDependent"            text="%s %s" />
-        <text name="Revamp_monthlyProduction"                   text="%s Monthly" />
         <text name="Revamp_productionMode"                      text="Production Mode" />
+
+    <!-- Production Variants Season Names -->
+        <text name="Revamp_seasonSpring"                       text="Spring" />
+        <text name="Revamp_seasonSummer"                       text="Summer" />
+        <text name="Revamp_seasonAutumn"                       text="Autumn" />
+        <text name="Revamp_seasonWinter"                       text="Winter" />
 
     <!-- Production menu -->
         <text name="Revamp_OpenProduction"                      text="Open Production Menu" />
         <text name="Revamp_SpawnItem"                           text="Spawn Items" />
         <text name="finance_ProductionDeliveryCosts"            text="Productions Delivery Costs" />
         <text name="Revamp_ShowAnimalsOverview"                 text="Show Animals" />
+        <text name="revamp_production_status_outsideOfSeasons"  text="Outside of Season" />
+        <text name="revamp_production_status_outsideOfHours"    text="Outside of Working Hours" />
+        <text name="revamp_production_status_outsideOfMonths"   text="Outside of Working Months" />
 
     <!-- game Settings menu -->
         <text name="Revamp_Settings_Title"                      text="Revamp" />
@@ -77,6 +115,7 @@
         <text name="Revamp_animalAgeError"                      text="Animals must be between %s and %s months old." />
         <text name="Revamp_animalHealthError"                   text="Animals must have between %s and %s health." />
         <text name="Revamp_animalNotValid"                      text="This type of animal will not be accepted here." />
+        <text name="Revamp_animalNotValidForTrigger"            text="This type of animal will not be accepted at this area." />
         <text name="Revamp_productFullError"                    text="No free space in production" />
         <text name="Revamp_amountPerAnimal"                     text="Delivery quantity per animal" />
         <text name="Revamp_amountTotal"                         text="Total delivery quantity" />

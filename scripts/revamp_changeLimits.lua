@@ -38,5 +38,6 @@ SlotSystem.NUM_OBJECT_LIMITS = {
 	}
 }
 ProductionChainManager.NUM_MAX_PRODUCTION_POINTS = 180
-FillTypeManager.SEND_NUM_BITS = 9
-print("Production Revamp: Changed Production(180), Pallet(unlimited) and FillType(512) Limit")
+FillTypeManager.SEND_NUM_BITS = 10
+
+Logging.info("Changed limits - Productions (%s), Pallets (%s) and FillType(%s)", ProductionChainManager.NUM_MAX_PRODUCTION_POINTS, SlotSystem.NUM_OBJECT_LIMITS[SlotSystem.LIMITED_OBJECT_PALLET][PlatformId.WIN], 2^FillTypeManager.SEND_NUM_BITS)

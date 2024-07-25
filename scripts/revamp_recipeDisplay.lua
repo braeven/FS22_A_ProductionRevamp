@@ -6,8 +6,8 @@ Copyright (C) braeven, Achimobil, 2022
 
 Author: braeven, Achimobil
 
-Date: 09.11.2023
-Version: 1.6.6.0
+Date: 04.12.2023
+Version: 1.7.1.0
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
@@ -33,6 +33,9 @@ Changelog:
 1.6.4.0 @ 04.01.2023 - Anzeige der Produktionsmodi erfolgt jetzt über mehrere Zeilen
 1.6.5.0 @ 08.01.2023 - Versteckte Produktionen/Linien werden nicht mehr in der infoTable angezeigt
 1.6.6.0 @ 09.11.2023 - Fixes for Patch 1.13.1
+1.6.7.0 @ 11.11.2023 - Bug bei der Rezeptdarstellung behoben
+1.7.0.0 @ 25.11.2023 - Anzeige von Vorrübergehenden Problemen eingebaut
+1.7.1.0 @ 04.12.2023 - Anzeige von II / Y Überabeitet
 
 
 Important:.
@@ -46,22 +49,18 @@ Nicht das Script in Produktionen kopieren, ladet den Mod über eine Dependency!
 
 ]]
 
+source(g_currentModDirectory .. "scripts/events/ProductionPointProductionInputColorEvent.lua")
 RevampDisplay = {}
+RevampDisplay.currentModDirectory = g_currentModDirectory
 
---Production Revamp: II oder Y hinzufügen sollte sharedThroughputCapacity aktiv sein
-function RevampDisplay:getName(superFunc, revamp)
+
+
+function RevampDisplay:getName(superFunc)
 	local name = nil
 	if self.name ~= nil then
 		name = self.name
 	else
 		name = self.owningPlaceable:getName()
-	end
-	if revamp then
-		if self.sharedThroughputCapacity == true then
-			name = name .. "    -  Y"
-		else
-			name = name .. "    -  II"
-		end
 	end
 	return name
 end
@@ -75,12 +74,35 @@ function RevampDisplay:getTitleForSectionHeader(superFunc, list, section)
 	if list == self.productionList then
 		local productionPoint = self:getProductionPoints()[section]
 
-		-- Pump'n'Hoses Produktionen ignorieren
-		if productionPoint:isa(SandboxProductionPoint) or (productionPoint.owningPlaceable.isSandboxPlaceable ~= nil and productionPoint.owningPlaceable:isSandboxPlaceable()) then
-			return superFunc(self, list, section)
-		end
+		for i = 1, #list.elements do
+			local element = list.elements[i]
+			if element.profile == "ingameMenuAnimalsListSectionHeader" and (element.sectionIndex == nil or element.sectionIndex == section) then
+				for j = 1, #element.elements do
+					local headElement = element.elements[j]
+					if headElement.profile == "ingameMenuAnimalsListSectionHeaderTextRevamp" then
+						headElement:delete()
+					end
+				end
 
-		return productionPoint:getName(true)
+				if productionPoint:isa(SandboxProductionPoint) or (productionPoint.owningPlaceable.isSandboxPlaceable ~= nil and productionPoint.owningPlaceable:isSandboxPlaceable()) then
+					return superFunc(self, list, section)
+				end
+
+				for j = 1, #element.elements do
+					local headElement = element.elements[j]
+					local myElement = TextElement.new()
+					myElement:copyAttributes(headElement)
+					myElement:applyProfile("ingameMenuAnimalsListSectionHeaderTextRevamp")
+					local mode = "II"
+					if productionPoint.sharedThroughputCapacity == true then
+						mode = "Y"
+					end
+					myElement:setText(mode)
+					element:addElement(myElement)
+				end
+			end
+		end
+		return productionPoint:getName()
 	elseif section == 1 then
 		return g_i18n:getText("ui_productions_incomingMaterials")
 	else
@@ -89,7 +111,6 @@ function RevampDisplay:getTitleForSectionHeader(superFunc, list, section)
 end
 
 InGameMenuProductionFrame.getTitleForSectionHeader = Utils.overwrittenFunction(InGameMenuProductionFrame.getTitleForSectionHeader, RevampDisplay.getTitleForSectionHeader)
-print("Production Revamp: Production Gui overwritten #2")
 
 
 
@@ -186,6 +207,8 @@ function RevampDisplay:updateDetails(superFunc)
 
 	if status == ProductionPoint.PROD_STATUS.MISSING_INPUTS then
 		statusProfile = "ingameMenuProductionDetailValueError"
+	elseif status == ProductionPoint.PROD_STATUS.OUTSIDE_OF_MONTHS or status == ProductionPoint.PROD_STATUS.OUTSIDE_OF_SEASONS or status == ProductionPoint.PROD_STATUS.OUTSIDE_OF_HOURS then
+		statusProfile = "ingameMenuProductionDetailValueTemporaryError"
 	elseif status == ProductionPoint.PROD_STATUS.NO_OUTPUT_SPACE then
 		statusProfile = "ingameMenuProductionDetailValueError"
 	end
@@ -255,99 +278,132 @@ function RevampDisplay:updateDetails(superFunc)
 	end
 
 	--Production Revamp: local function für die Input-Seite vom Rezept, berücksichtigend boost- und mix-Inputs, Zeilenumbruch und Farbanzeige Abhängig von Verfügbarkeit
-	local function createInputRecipe(list, layout, mixIndex, newline)
+	local function createInputRecipe(list, layout, mixIndex, newline, size)
 		for i = 1, #layout.elements do
 			layout.elements[i]:delete()
 		end
 
+		--Wiederholt sich ständig, daher lokale Funktion
+		local function applyText(layout, input, color)
+			local text = self.recipeText:clone(layout)
+			text.textSize = text.textSize * size
+			text.size[2] = text.size[2] * size
+			text.didApplyAspectScaling = true
+			text:setText(input)
+			if color == nil then
+			elseif color == 1 then
+				--Rot, Fehlt und wird gebraucht
+				text:setTextColor(1, 0, 0, 1)
+			elseif color == 2 then
+				--Orange, Fehlt aber kein muss
+				text:setTextColor(0.9157, 0.1420, 0.0002, 1)
+			elseif color == 3 then
+				--MasterBooster
+				text:setTextColor(0, 1, 1, 1)
+			end
+		end
+
 		for index, item in ipairs(list) do
-			if index > 1 then
-				if mixIndex == 1 then
-					 self.recipePlus:clone(layout)
+			--Beim Feedmixer die min-Prozentzahl vorraus setzen
+			if newline == false and production.feedMixer ~= nil and index == 1 then
+				if production.feedMixer.minPercentages[mixIndex] > 0 then
+					applyText(layout, g_i18n:formatNumber(production.feedMixer.minPercentages[mixIndex], 2).."%+ ")
 				else
-					local count = self.recipeText:clone(layout)
-					count.didApplyAspectScaling = true
-					count:setText(" || ")
+					applyText(layout, g_i18n:formatNumber(production.feedMixer.maxPercentages[mixIndex], 2).."% ", 2)
 				end
 			end
 
-			local count = self.recipeText:clone(layout)
-			count.didApplyAspectScaling = true
-			count:setText(g_i18n:formatNumber(item.amount, 2))
-			if item.color == 1 then
-				count:setTextColor(1, 0, 0, 1)
-			elseif item.color == 2 then
-				count:setTextColor(0.9157, 0.1420, 0.0002, 1)
+			-- Plus oder || zwischen 2 Zutaten
+			if index > 1 then
+				if production.feedMixer == nil then
+					if mixIndex == 1 then
+						 self.recipePlus:clone(layout)
+					else
+						applyText(layout, " || ")
+					end
+				else
+					applyText(layout, " ")
+				end
 			end
+
+			--Zutat Menge
+			if production.feedMixer == nil then
+				local number = g_i18n:formatNumber(item.amount, 2)
+				applyText(layout, number, item.color)
+			end
+			
+			--FillType Icon
 			local fillType = g_fillTypeManager:getFillTypeByIndex(item.type)
 			local icon = self.recipeFillIcon:clone(layout)
+			icon.size[1] = icon.size[1] * size
+			icon.size[2] = icon.size[2] * size
+			icon:setImageFilename(fillType.hudOverlayFilename)
 
-			if mixIndex == 7 then
-				local count = self.recipeText:clone(layout)
-				count.didApplyAspectScaling = true
-				count:setText( "(+ " .. g_i18n:formatNumber(item.boostfactor*100, 2) .. "%) ")
-				if item.color == 2 then
-					count:setTextColor(0.9157, 0.1420, 0.0002, 1)
-				else
-					maxboost = maxboost + item.boostfactor
+			--Booster-Anzeige
+			if mixIndex == production.boostNumber + 1 then
+				applyText(layout, "(+ " .. g_i18n:formatNumber(item.boostfactor*100, 2) .. "%) ", item.color)
+				if item.color == 0 then
+					if production.boost == true then
+						if production.boostMode == "MOST" and item.boostfactor > maxboost then
+							maxboost = item.boostfactor
+						elseif production.boostMode == "LEAST" and item.boostfactor < maxboost then
+							maxboost = item.boostfactor
+						elseif production.boostMode == "DESC" then
+							maxboost = item.boostfactor
+						elseif production.boostMode == "ASC" and maxboost == 0 then
+							maxboost = item.boostfactor
+						end
+					else
+						maxboost = maxboost + item.boostfactor
+					end
 				end
-			end
-
-			if mixIndex == 8 then
-				local count = self.recipeText:clone(layout)
-				count.didApplyAspectScaling = true
-				count:setText( "(++ " .. g_i18n:formatNumber(item.boostfactor*100, 2) .. "%) ")
-				if item.color == 2 then
-					count:setTextColor(0, 1, 1, 1)
-				else
+			elseif mixIndex == production.masterNumber + 1 then
+			--MasterBooster-Anzeige
+				applyText(layout, "(++ " .. g_i18n:formatNumber(item.boostfactor*100, 2) .. "%) ", 3)
+				if item.color == 0 then
 					masterboost = masterboost + item.boostfactor
 				end
 			end
-			icon:setImageFilename(fillType.hudOverlayFilename)
 		end
+
+		--Trenner wenn Gruppe über mehrere Zeilen geht
 		if newline then
 			if mixIndex == 1 then
 				 self.recipePlus:clone(layout)
 			else
-				local count = self.recipeText:clone(layout)
-				count.didApplyAspectScaling = true
-				count:setText(" || ")
+				applyText(layout, " || ")
 			end
 		end
 	end
 
 	--Production Revamp: Anzeige der Produktionsmodi auswerten
-	local function processProductionMode(production, mode, productionModes, numModes)
+	local function processProductionMode(production, mode, productionModes)
 		if productionModes ~= "" then
 			productionModes = productionModes.. ", "
 		end
-		if mode=="hourly" then
-			productionModes = string.format(g_i18n:getText("Revamp_productionHoursDependent"), productionModes, production.hours)
-			numModes = numModes + 1
-		elseif mode=="sun" then
+		if mode:upper()=="HOURLY" then
+			productionModes = productionModes .. " " .. production.hoursText
+		elseif mode:upper()=="SUN" then
 			productionModes = string.format(g_i18n:getText("Revamp_sunProduction"), productionModes)
-			numModes = numModes + 1
-		elseif mode=="rain" then
+		elseif mode:upper()=="RAIN" then
 			productionModes = string.format(g_i18n:getText("Revamp_rainProduction"), productionModes)
-			numModes = numModes + 1
-		elseif mode=="wind" then
+		elseif mode:upper()=="WIND" then
 			productionModes = string.format(g_i18n:getText("Revamp_windProduction"), productionModes)
-			numModes = numModes + 1
-		elseif mode=="temp" then
+		elseif mode:upper()=="TEMP" then
 			productionModes = string.format(g_i18n:getText("Revamp_temperatureProduction"), productionModes)
-			numModes = numModes + 1
-		elseif mode=="tempNegative" then
+		elseif mode:upper()=="TEMPNEGATIVE" then
 			productionModes = string.format(g_i18n:getText("Revamp_temperatureNegativeProduction"), productionModes)
-			numModes = numModes + 1
-		elseif mode=="seasonal" then
-			productionModes = string.format(g_i18n:getText("Revamp_seasonalProduction"), productionModes)
-			numModes = numModes + 1
-		elseif mode=="monthly" then
-			productionModes = string.format(g_i18n:getText("Revamp_monthlyProduction"), productionModes)
-			numModes = numModes + 1
+		elseif mode:upper()=="SEASONAL" then
+			productionModes = productionModes .. " " .. production.seasonText
+		elseif mode:upper()=="MONTHLY" then
+			productionModes = productionModes .. " " .. production.monthsText
+		elseif mode:upper()=="FEEDMIXER" then
+			productionModes = productionModes .. " Futtermischer"
+		elseif mode:upper()=="LIMITBOOSTER" then
+			productionModes = string.format(g_i18n:getText("Revamp_limitBoosters"), productionModes)
 		end
 
-		return productionModes, numModes
+		return productionModes
 	end
 
 	--Production Revamp: Anzeige der Produktionsmodi einrichten
@@ -361,9 +417,9 @@ function RevampDisplay:updateDetails(superFunc)
 			self.detailsBox:addElement(productionModeText)
 			productionModeText:updateAbsolutePosition()
 		end
-		
+
 		lineCounter = lineCounter + 1
-		
+
 		local productionMode = TextElement.new()
 		productionMode:copyAttributes(self.detailCostsPerMonth)
 		productionMode.revampLine = true
@@ -378,32 +434,22 @@ function RevampDisplay:updateDetails(superFunc)
 
 	local lineCounter = 0
 	local productionModes = ""
-	local modes = string.split(production.mode, " ")
-	local numModes = 0
 	
-	for _, mode in pairs(modes) do
-		productionModes, numModes = processProductionMode(production, mode, productionModes, numModes)
+	for _, mode in pairs(production.modes) do
+		productionModes = processProductionMode(production, mode, productionModes)
 		
-		if numModes == 2 then
-			productionModes, lineCounter = addMode(productionModes, lineCounter)
-			numModes = 0
-		end
-	end
-
-	if numModes ~= 0 then
 		productionModes, lineCounter = addMode(productionModes, lineCounter)
 	end
 		
 	--Production Revamp: ProduktionsInputs auslesen und in sortierte Listen speichern abhängig von ihrer Gruppe
 	local InputList = {}
-	InputList[1] = {}
-	InputList[2] = {}
-	InputList[3] = {}
-	InputList[4] = {}
-	InputList[5] = {}
-	InputList[6] = {}
-	InputList[7] = {}
-	InputList[8] = {}
+	for i = 1, production.masterNumber+1 do
+		InputList[i] = {}
+	end
+	local size = 1
+	if production.masterNumber > 15 then
+		size = 1 * (15 / production.masterNumber)
+	end
 	local item = {}
 	for index, item in ipairs(production.inputs) do
 		local insert = item.mix +1
@@ -413,30 +459,37 @@ function RevampDisplay:updateDetails(superFunc)
 
 	--Production Revamp: Rezept-Übersicht erstellen, Input Seite
 	local outputmax = 4
+	lineCounter = lineCounter -1
 	local lineCounterBefore = lineCounter
 	for mixIndex, list in pairs(InputList) do
 		if list ~= nil and #list ~= 0 then 
 
 			--Production Revamp: PlusZeichen zwischen zwei Zutaten-Listen, ausgenommen erste Zeile
 			if lineCounter ~= lineCounterBefore then
-				local myElement = FlowLayoutElement.new()
-				myElement:copyAttributes(self.detailRecipeInputLayout)
-				myElement.position[2] = self.detailRecipeInputLayout.position[2] - (self.detailRecipeInputLayout.size[2] * (lineCounter))
-				myElement.revampLine = true
+				if production.masterNumber <= 8 then--Plus nur bei maximal 5 MixGruppen + Boost + Master
+					local myElement = FlowLayoutElement.new()
+					myElement:copyAttributes(self.detailRecipeInputLayout)
+					myElement.position[2] = self.detailRecipeInputLayout.position[2] - (self.detailRecipeInputLayout.size[2] * lineCounter * size)
+					myElement.size[2] = self.detailRecipeInputLayout.size[2] * size
+					myElement.revampLine = true
 
-				lineCounter = lineCounter + 1
-				self.recipePlus:clone(myElement)
-				self.detailsBox:addElement(myElement)
-				myElement:updateAbsolutePosition()
-				myElement:invalidateLayout()
+					lineCounter = lineCounter + 1
+					self.recipePlus:clone(myElement)
+					self.detailsBox:addElement(myElement)
+					myElement:updateAbsolutePosition()
+					myElement:invalidateLayout()
+				end
 			end
 
 			--Production Revamp: Zeilenumbruch nach 4 bzw. 2 Inputs durch Aufteilen der Listen
 			local recipePuffer = {}
 			local recipemax = 4
-			if mixIndex >= 7 then
+			if mixIndex >= production.boostNumber then
 				recipemax = 2
 				outputmax = 2
+			end
+			if production.feedMixer ~=nil then
+				recipemax = 10
 			end
 			local numList = #list
 			for index, item in ipairs(list) do
@@ -444,14 +497,16 @@ function RevampDisplay:updateDetails(superFunc)
 				if #recipePuffer == recipemax then
 					local myElement = FlowLayoutElement.new()
 					myElement:copyAttributes(self.detailRecipeInputLayout)
-					myElement.position[2] = self.detailRecipeInputLayout.position[2] - (self.detailRecipeInputLayout.size[2] * (lineCounter))
+					myElement.position[2] = self.detailRecipeInputLayout.position[2] - (self.detailRecipeInputLayout.size[2] * lineCounter * size)
+					myElement.size[2] = self.detailRecipeInputLayout.size[2] * size
 					myElement.revampLine = true
 
 					lineCounter = lineCounter + 1
 					if numList > recipemax then
-						createInputRecipe(recipePuffer, myElement, mixIndex, true)
+						numList = numList - recipemax
+						createInputRecipe(recipePuffer, myElement, mixIndex, true, size)
 					else
-						createInputRecipe(recipePuffer, myElement, mixIndex, false)
+						createInputRecipe(recipePuffer, myElement, mixIndex, false, size)
 					end
 					self.detailsBox:addElement(myElement)
 
@@ -465,11 +520,13 @@ function RevampDisplay:updateDetails(superFunc)
 			if #recipePuffer > 0 then
 				local myElement = FlowLayoutElement.new()
 				myElement:copyAttributes(self.detailRecipeInputLayout)
-				myElement.position[2] = self.detailRecipeInputLayout.position[2] - (self.detailRecipeInputLayout.size[2] * (lineCounter))
+				myElement.position[2] = self.detailRecipeInputLayout.position[2] - (self.detailRecipeInputLayout.size[2] * lineCounter * size)
+				myElement.size[2] = self.detailRecipeInputLayout.size[2] * size
 				myElement.revampLine = true
 
 				lineCounter = lineCounter + 1
-				createInputRecipe(recipePuffer, myElement, mixIndex, false)
+				createInputRecipe(recipePuffer, myElement, mixIndex, false, size)
+				recipePuffer = {}
 				self.detailsBox:addElement(myElement)
 
 				myElement:updateAbsolutePosition()
@@ -479,12 +536,12 @@ function RevampDisplay:updateDetails(superFunc)
 	end
 
 	--Production Revamp: Rezept-Text verschieben
-	self.detailsBox.elements[8].position[2] = self.productionCostsDesc.position[2] - (self.detailRecipeInputLayout.size[2] * (lineCounterBefore + 1))
+	self.detailsBox.elements[8].position[2] = self.productionCostsDesc.position[2] - (self.detailRecipeInputLayout.size[2] * (lineCounterBefore + 2))
 	self.detailsBox.elements[8]:updateAbsolutePosition()
 	--lineCounter = lineCounter + 1
 	
 	--Production Revamp: Ergebniss-Pfeil verschieben
-	self.detailsBox.elements[10].position[2] = self.detailRecipeInputLayout.position[2] - (self.detailRecipeInputLayout.size[2] * lineCounter) - (self.detailsBox.elements[10].size[2] / 2)
+	self.detailsBox.elements[10].position[2] = self.detailRecipeInputLayout.position[2] - (self.detailRecipeInputLayout.size[2] * lineCounter * size) - (self.detailsBox.elements[10].size[2] / 2)
 	self.detailsBox.elements[10]:updateAbsolutePosition()
 	lineCounter = lineCounter + 1
 
@@ -498,11 +555,12 @@ function RevampDisplay:updateDetails(superFunc)
 		if #outputPuffer == outputmax then
 			local myElement = FlowLayoutElement.new()
 			myElement:copyAttributes(self.detailRecipeOutputLayout)
-			myElement.position[2] = self.detailRecipeInputLayout.position[2] - (self.detailRecipeInputLayout.size[2] * lineCounter)
+			myElement.position[2] = self.detailRecipeInputLayout.position[2] - (self.detailRecipeInputLayout.size[2] * lineCounter * size)
 			myElement.revampLine = true
 
 			lineCounter = lineCounter + 1
 			if numOutput > outputmax then
+				numOutput = numOutput - outputmax
 				createOutputRecipe(outputPuffer, myElement, true)
 			else
 				createOutputRecipe(outputPuffer, myElement, false)
@@ -520,7 +578,7 @@ function RevampDisplay:updateDetails(superFunc)
 	if #outputPuffer > 0 then
 		local myElement = FlowLayoutElement.new()
 		myElement:copyAttributes(self.detailRecipeOutputLayout)
-		myElement.position[2] = self.detailRecipeInputLayout.position[2] - (self.detailRecipeInputLayout.size[2] * lineCounter)
+		myElement.position[2] = self.detailRecipeInputLayout.position[2] - (self.detailRecipeInputLayout.size[2] * lineCounter * size)
 		myElement.revampLine = true
 
 		createOutputRecipe(outputPuffer, myElement, false)
@@ -575,20 +633,14 @@ function RevampDisplay:populateCellForItemInSection(superFunc, list, section, in
 			activityElement:applyProfile("ingameMenuProductionProductionActivityActive")
 		elseif status == ProductionPoint.PROD_STATUS.MISSING_INPUTS or status == ProductionPoint.PROD_STATUS.NO_OUTPUT_SPACE then
 			activityElement:applyProfile("ingameMenuProductionProductionActivityIssue")
+		elseif status == ProductionPoint.PROD_STATUS.OUTSIDE_OF_MONTHS or status == ProductionPoint.PROD_STATUS.OUTSIDE_OF_SEASONS or status == ProductionPoint.PROD_STATUS.OUTSIDE_OF_HOURS then
+			activityElement:applyProfile("ingameMenuProductionProductionActivityTemporary")
 		else
 			activityElement:applyProfile("ingameMenuProductionProductionActivity")
 		end
 	else
 		local _, productionPoint = self:getSelectedProduction()
 		local fillType, isInput = nil
-
-		-- Pump'n'Hoses Produktionen ignorieren
-		if productionPoint:isa(SandboxProductionPoint) or (productionPoint.owningPlaceable.isSandboxPlaceable ~= nil and productionPoint.owningPlaceable:isSandboxPlaceable()) then
-			if cell.attributes["outputMode"] ~= nil then
-				cell:getAttribute("outputMode"):setText("")
-			end
-			return superFunc(self, list, section, index, cell)
-		end
 
 		if section == 1 then
 			fillType = self.selectedProductionPoint.inputFillTypeIdsArray[index]
@@ -604,6 +656,15 @@ function RevampDisplay:populateCellForItemInSection(superFunc, list, section, in
 					cell.elements[i]:delete()
 				end
 			end
+
+		-- Pump'n'Hoses Produktionen ignorieren
+		if productionPoint:isa(SandboxProductionPoint) or (productionPoint.owningPlaceable.isSandboxPlaceable ~= nil and productionPoint.owningPlaceable:isSandboxPlaceable()) then
+			if cell.attributes["outputMode"] ~= nil then
+				cell:getAttribute("outputMode"):setText("")
+			end
+			return superFunc(self, list, section, index, cell)
+		end
+
 			local fillLevel = self.selectedProductionPoint:getFillLevel(fillType)
 			local capacity = self.selectedProductionPoint:getCapacity(fillType)
 			local fillTypeDesc = g_fillTypeManager:getFillTypeByIndex(fillType)
@@ -646,7 +707,7 @@ function RevampDisplay:populateCellForItemInSection(superFunc, list, section, in
 				if weatherFactor < 0 then
 					weatherAffected = weatherAffected .."_reverse"
 				end
-				local path = ProductionPoint.Revamp .."images/weather_affected_".. weatherAffected ..".png"
+				local path = ProductionPoint.Revamp .."images/weather_affected_".. weatherAffected ..".dds"
 				cell.elements[6]:setImageFilename(path)
 
 				cell.elements[6].position[1] = cell.elements[6].position[1] + 0.009
@@ -854,7 +915,3 @@ function ProductionPointInfoExtension:updateInfoNeu(superFunc, infoTable)
 end
 
 ProductionPoint.updateInfo = Utils.overwrittenFunction(ProductionPoint.updateInfo, ProductionPointInfoExtension.updateInfoNeu)
-
-
-
-print("Production Revamp: Production Gui overwritten")

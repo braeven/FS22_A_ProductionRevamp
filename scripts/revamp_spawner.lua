@@ -6,8 +6,8 @@ Copyright (C) braeven, Achimobil, 2022
 
 Author: braeven, Achimobil
 
-Date: 11.09.2023
-Version: 1.4.3.3
+Date: 05.12.2023
+Version: 1.5.0.0
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
@@ -35,6 +35,7 @@ Changelog:
 1.4.3.1 @ 12.04.2023 - Bugfix mit Spawner und Öffnungszeiten
 1.4.3.2 @ 04.05.2023 - Bugfix Öffnungszeiten
 1.4.3.2 @ 11.09.2023 - Bugfix manuelles Holzsstamm spawnen
+1.5.0.0 @ 05.12.2023 - Bugfix mit Baumsetzlingen im MP
 
 Important:.
 No changes are allowed to this script without permission from Braeven AND Achimobil.
@@ -47,20 +48,21 @@ Nicht das Script in Produktionen kopieren, ladet den Mod über eine Dependency!
 
 ]]
 
+source(g_currentModDirectory .. "scripts/events/RevampSpawnWoodLogsAtProductionEvent.lua")
+source(g_currentModDirectory .. "scripts/events/RevampSpawnPalletsEvent.lua")
+source(g_currentModDirectory .. "scripts/events/RevampSpawnBalesEvent.lua")
+
 RevampSpawner = {}
 
 --Production Revamp: Integration aPalletSilo in Produktions-Trigger/ProduktionsMenü
 --Production Revamp: Based on aPalletSilo V2.2.0 by Achimobil & Braeven, Modified for productions and Production Revamp
 
 
--- load event
-local path = g_currentModDirectory .. "events/RevampSpawnWoodLogsAtProductionEvent.lua"
-source(path)
-
 
 
 --Production Revamp: Spawnscript Aufruf hinterlegen/überschreiben
 function RevampSpawner:run()
+	RevampDebugHelper:Debug(self.productionPoint.owningPlaceable.configFileName, "RevampSpawner", "run called");
 	local ownerFarmId = self.productionPoint:getOwnerFarmId()
 
 	if ownerFarmId == AccessHandler.EVERYONE then
@@ -85,15 +87,14 @@ function RevampSpawner:run()
 			local closedTimes = ""
 			
 			for _, production in pairs (self.productionPoint.productions) do
-				local modes = string.split(production.mode, " ")
-				for _, mode in pairs(modes) do
+				for _, mode in pairs(production.modes) do
 					if mode =="hourly" then
 						local currentHour = g_currentMission.environment.currentHour
 						if production.hoursTable[currentHour] == true then
 							skip = false
 							foundOne = true
 						elseif foundOne == false then
-							closedTimes = production.hours
+							closedTimes = production.hoursText
 							skip = true
 						end
 					end
@@ -656,14 +657,16 @@ function ProductionPointActivatable:treeSaplingTypeSelected(selectedOption, args
 	--Auzulagernde Menge hinterlegen
 	productionPoint.pendingLiters[selectedArg.fillTypeIndex] = math.min(productionPoint.pendingLiters[selectedArg.fillTypeIndex], totalAmount)
 	--Event aufrufen für Multiplayer
-	RevampSpawnPalletsEvent.sendEvent(productionPoint, productionPoint.ownerFarmId, selectedArg.fillTypeIndex, productionPoint.pendingLiters[selectedArg.fillTypeIndex])
+	RevampSpawnPalletsEvent.sendEvent(productionPoint, productionPoint.ownerFarmId, selectedArg.fillTypeIndex, productionPoint.pendingLiters[selectedArg.fillTypeIndex], productionPoint.treeSaplingTypeIndex, productionPoint.treeSaplingTypeName)
 end
 
 
 
 --Production Revamp: Receive function from SendEvent
-function ProductionPoint:ReceivePalletEvent(ownerFarmId, fillTypeIndex, pendingLiters)
+function ProductionPoint:ReceivePalletEvent(ownerFarmId, fillTypeIndex, pendingLiters, treeSaplingTypeIndex, treeSaplingTypeName)
 	self.pendingLiters[fillTypeIndex] = pendingLiters
+	self.treeSaplingTypeIndex = treeSaplingTypeIndex
+	self.treeSaplingTypeName = treeSaplingTypeName
 	self.palletSpawner:spawnPallet(ownerFarmId, fillTypeIndex, ProductionPoint.getPalletCallback, self)
 end
 
@@ -969,15 +972,14 @@ function InGameMenuProductionFrame:menuconnector()
 	local closedTimes = ""
 
 	for _, production in pairs (productionPoint.productions) do
-		local modes = string.split(production.mode, " ")
-		for _, mode in pairs(modes) do
+		for _, mode in pairs(production.modes) do
 			if mode =="hourly" then
 				local currentHour = g_currentMission.environment.currentHour
 				if production.hoursTable[currentHour] == true then
 					skip = false
 					foundOne = true
 				elseif foundOne == false then
-					closedTimes = production.hours
+					closedTimes = production.hoursText
 					skip = true
 				end
 			end
@@ -1053,7 +1055,3 @@ function RevampSpawner:updateMenuButtons(superFunc)
 end
 
 InGameMenuProductionFrame.updateMenuButtons = Utils.appendedFunction(InGameMenuProductionFrame.updateMenuButtons, RevampSpawner.updateMenuButtons)
-
-
-
-print("Production Revamp: Loading Pallet/Bale Spawner complete")

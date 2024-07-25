@@ -39,19 +39,13 @@ Darf nicht in eigene Mods kopiert werden. Darf nur über den Production Revamp M
 An diesem Skript dürfen ohne Genehmigung von Achimobil oder braeven keine Änderungen vorgenommen werden.
 ]]
 
-
+source(g_currentModDirectory .. "scripts/events/SpawnPalletsAtSiloEvent.lua")
+source(g_currentModDirectory .. "scripts/events/RevampSpawnWoodLogsAtSiloEvent.lua")
 
 SiloPalletSpawnerSpecialization = {
 	Version = "2.4.2.0",
 	Name = "SiloPalletSpawnerSpecialization"
 }
-
-print(g_currentModName .. " - init " .. SiloPalletSpawnerSpecialization.Name .. "(Version: " .. SiloPalletSpawnerSpecialization.Version .. ")")
-
-
--- load event
-local path = g_currentModDirectory .. "events/SpawnPalletsAtSiloEvent.lua"
-source(path)
 
 PalletSiloActivatable = {}
 
