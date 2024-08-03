@@ -181,6 +181,8 @@ function Revamp.registerSavegameXMLPaths(schema, basePath)
 	schema:register(XMLValueType.STRING, basePath .. ".revampSettings(?)#feedMixerRecipe", "Currently Active FeedMixer Recipe")
 	schema:register(XMLValueType.STRING, basePath .. ".revampSettings(?)#mixMode", "Currently Active Mix Mode")
 	schema:register(XMLValueType.STRING, basePath .. ".revampSettings(?)#boostMode", "Currently Active Boost Mode")
+	schema:register(XMLValueType.STRING, basePath .. ".directlySoldOutputs.node(?)#fillType", "FillType of stored directly sold outputs entry.")
+	schema:register(XMLValueType.FLOAT, basePath .. ".directlySoldOutputs.node(?)#fillLevel", "Fill level of stored directly sold outputs entry.")
 end
 
 ProductionPoint.registerSavegameXMLPaths = Utils.prependedFunction(ProductionPoint.registerSavegameXMLPaths, Revamp.registerSavegameXMLPaths)
@@ -1274,6 +1276,37 @@ function Revamp:loadFromXMLFile(superFunc, xmlFile, key)
 	if not self.storage:loadFromXMLFile(xmlFile, key .. ".storage") then
 		return false
 	end
+	
+	--Production Revamp: Hinzugefügt um ProductionPoint.soldFillTypesToPayOut table aus dem Savegame laden zu können
+	local function loadProductionSoldFillTypes(productionPoint, xmlFile, key)
+		local index = 0
+		
+		while true do
+			local nodeKey = string.format(key .. ".node(%d)", index)
+
+			if not xmlFile:hasProperty(nodeKey) then
+				break
+			end
+
+			local fillTypeStr = xmlFile:getValue(nodeKey .. "#fillType")
+			local fillLevel = math.max(xmlFile:getValue(nodeKey .. "#fillLevel", 0), 0)
+			local fillTypeIndex = g_fillTypeManager:getFillTypeIndexByName(fillTypeStr)
+
+			if fillTypeIndex ~= nil then
+				self.soldFillTypesToPayOut[fillTypeIndex] = fillLevel
+			else
+				Logging.xmlWarning(xmlFile, "FillType Invalid filltype '%s'", fillTypeStr)
+			end
+
+			index = index + 1
+		end
+		
+		return true
+	end
+	
+	if not loadProductionSoldFillTypes(self, xmlFile, key .. ".directlySoldOutputs") then
+		return false
+	end
 
 	return true
 end
@@ -1357,6 +1390,24 @@ function Revamp:saveToXMLFile(superFunc, xmlFile, key, usedModNames)
 	end)
 
 	self.storage:saveToXMLFile(xmlFile, key .. ".storage", usedModNames)
+	
+	--Production Revamp: Hinzugefügt um ProductionPoint.soldFillTypesToPayOut table in das Savegame speichern zu können
+	local function saveProductionSoldFillTypes(productionPoint, xmlFile, key)
+		local index = 0
+		for fillTypeIndex, fillLevel in pairs(productionPoint.soldFillTypesToPayOut) do
+			if fillLevel > 0 then
+				local fillLevelKey = string.format("%s.node(%d)", key, index)
+				local fillTypeName = g_fillTypeManager:getFillTypeNameByIndex(fillTypeIndex)
+
+				xmlFile:setValue(fillLevelKey .. "#fillType", fillTypeName)
+				xmlFile:setValue(fillLevelKey .. "#fillLevel", fillLevel)
+
+				index = index + 1
+			end
+		end
+	end
+	
+	saveProductionSoldFillTypes(self, xmlFile, key .. ".directlySoldOutputs")
 end
 
 ProductionPoint.saveToXMLFile = Utils.overwrittenFunction(ProductionPoint.saveToXMLFile, Revamp.saveToXMLFile)
