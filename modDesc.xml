@@ -2,7 +2,7 @@
 <modDesc descVersion="80">
   <author>Braeven</author>
   <contributors>Achimobil</contributors>
-  <version>1.5.0.0</version>
+  <version>1.5.0.3</version>
   <title>
     <en>Production Revamp</en>
   </title>
@@ -76,6 +76,15 @@ New features
 * Possibility to exclude individual production lines from the shared output
 * Possibility to create feed mixers with MaizePlus and TerraLife
 * Possibility to create recipes with any number of mix groups
+
+Version 1.5.0.1
+* Bugfix with hidden productions
+
+Version 1.5.0.2
+* Bugfix with automatically selling productions
+
+Version 1.5.0.3
+* Update CZ translation
 ]]>
     </en>
     <de>
@@ -146,6 +155,15 @@ Neuerungen
 * Möglichkeit einzelne Produktionslinen von der geteilten Leistung auszunehmen
 * Möglichkeit Futtermischer mit MaizePlus und TerraLife zu erstellen
 * Möglichkeit Rezepte zu erstellen mit beliebig vielen mix-Gruppen
+
+Version 1.5.0.1
+* Bugfix mit versteckten Produktionen
+
+Version 1.5.0.2
+* Bugfix mit automatisch verkaufenden Produktionen
+
+Version 1.5.0.3
+* Update CZ Übersetzung
 ]]>
     </de>
    <fr>
@@ -216,6 +234,15 @@ Nouveautés
 * Possibilité d'exclure certaines lignes de production de la prestation partagée.
 * Possibilité de créer des mélangeurs d'aliments avec MaizePlus et TerraLife.
 * Possibilité de créer des recettes avec un nombre illimité de groupes de mélange.
+
+Version 1.5.0.1
+* Correction de bug avec des productions cachées
+
+Version 1.5.0.2
+* Correction de bug avec les productions qui se vendent automatiquement
+
+Version 1.5.0.3
+* Mise à jour de la traduction CZ
 ]]>
     </fr>
   </description>

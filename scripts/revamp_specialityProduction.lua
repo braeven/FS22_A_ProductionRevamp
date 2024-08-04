@@ -6,8 +6,8 @@ Copyright (C) braeven, Achimobil, 2022
 
 Author: braeven, Achimobil
 
-Date: 05.06.2024
-Version: 1.0.0.0
+Date: 03.08.2024
+Version: 1.0.0.1
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
@@ -15,6 +15,7 @@ discord.gg/gHmnFZAypk
 
 Changelog:
 1.0.0.0 @ 05.06.2024 - Aus revamp.lua in eigene Datei ausgelagert.
+1.0.0.1 @ 03.08.2024 - Bugfix mit Effekten
 
 
 Important:.
@@ -139,8 +140,9 @@ function ProductionPoint:loadProductionModes(production, index, productionKey, x
 	production.minPower = xmlFile:getValue(productionKey .. "#minPower", pModes.minPower)
 
 	production.hideFromMenu = xmlFile:getValue(productionKey .. "#hideFromMenu", pModes.hideFromMenu)
+	production.hideEffects = xmlFile:getValue(productionKey .. "#hideEffects", false)
 	production.hideComplete = hideFromMenu --Nötig um die Ingame-Liste komplett zu verstecken
-	if production.hideFromMenu == true then
+	if production.hideEffects == true then
 		self.hiddenProductions = self.hiddenProductions + 1
 	end
 	production.autoStart = xmlFile:getValue(productionKey .. "#autoStart", pModes.autoStart)

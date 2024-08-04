@@ -6,8 +6,8 @@ Copyright (C) braeven, Achimobil 2022
 
 Author: braeven
 Thanks for Helping: Achimobil, TethysSaturn, DickerSauerlaender, inconspicuously007, AlfredProm
-Date: 20.06.2024
-Version: 1.5.0.0 Beta 1
+Date: 03.08.2024
+Version: 1.5.0.1
 
 Contact/Help/Tutorials:
 discord.gg/gHmnFZAypk
@@ -148,6 +148,7 @@ function Revamp.registerXMLPaths(schema, basePath)
 	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#mixMode", "Changes how mix-items will be used", "ASC")
 	schema:register(XMLValueType.STRING, basePath .. ".productions.production(?)#boostMode", "Changes how boost-items will be used", "ASC")
 	schema:register(XMLValueType.BOOL, basePath .. ".productions.production(?)#hideFromMenu", "Hide Production Line from Menue", false)
+	schema:register(XMLValueType.BOOL, basePath .. ".productions.production(?)#hideEffects", "Production line does not start effects", false)
 	schema:register(XMLValueType.BOOL, basePath .. ".productions.production(?)#autoStart", "Automatically starts a productionline", false)
 	schema:register(XMLValueType.BOOL, basePath .. ".productions.production(?)#sharedThroughputCapacity", "Excludes a production line from sharedThroughputCapacity", false)
 	schema:register(XMLValueType.FLOAT, basePath .. ".productions.production(?)#boostNumber", "Which number is the boost-mix", 6)

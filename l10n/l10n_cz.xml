@@ -12,8 +12,8 @@
         <text name="Revamp_BuyInputText"                        text="Nákup %s za %s ?" />
         <text name="Revamp_BuyInput"                            text="Nákup produktů" />
         <text name="Revamp_BuyInputNotEnoughMoney"              text="Málo peněz." />
-        <text name="Revamp_ChooseAmountToPutOut"                text="Výběr množství, pro vydání" />
-        <text name="Revamp_ChooseWhatToPutOut"                  text="Výběr materiálu" />
+        <text name="Revamp_ChooseAmountToPutOut"                text="Výběr množství, pro vydání:" />
+        <text name="Revamp_ChooseWhatToPutOut"                  text="Výběr materiálu:" />
         <text name="Revamp_ExtractPallets"                      text="Vyskladnění palet" />
         <text name="Revamp_PalletSiloItem"                      text="Palety" />
         <text name="Revamp_BaleSiloItem"                        text="Balíky" />
@@ -31,34 +31,34 @@
         <text name="Revamp_ChangeRecipe"                        text="Změna receptu" />
 
     <!--Production Settings-->
-        <text name="Revamp_PS_MenueButton"                      text="Change Setting" />
-        <text name="Revamp_PS_Mix_Title"                        text="Choose Mix-Mode" />
-        <text name="Revamp_PS_Mix_Text"                         text="This setting changes, in which order Mix-FillTypes are used." />
-        <text name="Revamp_PS_Mix_Asc"                          text="Order descending" />
-        <text name="Revamp_PS_Mix_Desc"                         text="Order ascending" />
-        <text name="Revamp_PS_Mix_Most"                         text="Größte Menge" />
-        <text name="Revamp_PS_Mix_Least"                        text="Kleinste Menge" />
-        <text name="Revamp_PS_Boost_Title"                      text="Choose Boost-Mode" />
-        <text name="Revamp_PS_Boost_Text"                       text="This setting changes, in which order boost-FillTypes are used." />
-        <text name="Revamp_PS_Boost_Asc"                        text="Order first available" />
-        <text name="Revamp_PS_Boost_Desc"                       text="Order  last available" />
-        <text name="Revamp_PS_Boost_Most"                       text="Use	biggest boost" />
-        <text name="Revamp_PS_Boost_Least"                      text="Use smallest boost" />
-        <text name="Revamp_PS_Choose_Title"                     text="Please chooose:" />
-        <text name="Revamp_PS_Choose_Mix"                       text="Change Mix Settings" />
-        <text name="Revamp_PS_Choose_Boost"                     text="Change Boost Settings" />
+        <text name="Revamp_PS_MenueButton"                      text="Změna nastavení" />
+        <text name="Revamp_PS_Mix_Title"                        text="Výběr MIX režimu" />
+        <text name="Revamp_PS_Mix_Text"                         text="Tímto nastavením se mění, v jakém pořadí se použijí jednotlivé MIX ingredience." />
+        <text name="Revamp_PS_Mix_Asc"                          text="Pořadí sestupně" />
+        <text name="Revamp_PS_Mix_Desc"                         text="Pořadí vzestupně" />
+        <text name="Revamp_PS_Mix_Most"                         text="Největší množství" />
+        <text name="Revamp_PS_Mix_Least"                        text="Nejmenší množství" />
+        <text name="Revamp_PS_Boost_Title"                      text="Výběr BOOST režimu" />
+        <text name="Revamp_PS_Boost_Text"                       text="Tímto nastavením se mění, v jakém pořadí se použijí jednotlivé BOOST ingredience." />
+        <text name="Revamp_PS_Boost_Asc"                        text="Pořadí od prvního dostupného" />
+        <text name="Revamp_PS_Boost_Desc"                       text="Pořadí od posledního dostupného" />
+        <text name="Revamp_PS_Boost_Most"                       text="Nejprve největší BOOST" />
+        <text name="Revamp_PS_Boost_Least"                      text="Nejprve nejmenší BOOST" />
+        <text name="Revamp_PS_Choose_Title"                     text="Vybrat:" />
+        <text name="Revamp_PS_Choose_Mix"                       text="Změna MIX nastavení" />
+        <text name="Revamp_PS_Choose_Boost"                     text="Změna BOOST nastavení" />
 
     <!-- Price Menue Filter -->
-        <text name="REVAMP_FILTER"                              text="Filter: None" />
-        <text name="REVAMP_FILTER_FRUITS"                       text="Filter: Fruits" />
-        <text name="REVAMP_FILTER_GRASSES"                      text="Filter: Grasses" />
-        <text name="REVAMP_FILTER_SILAGES"                      text="Filter: Silages" />
-        <text name="REVAMP_FILTER_FEED"                         text="Filter: Feed" />
-        <text name="REVAMP_FILTER_FEEDINGREDIENTS"              text="Filter: Feed Ingredients" />
-        <text name="REVAMP_FILTER_SEEDS"                        text="Filter: Seeds" />
-        <text name="REVAMP_FILTER_PRODUCTS"                     text="Filter: Products" />
-        <text name="REVAMP_FILTER_ANIMALPRODUCTS"               text="Filter: Animal" />
-        <text name="REVAMP_FILTER_CONSUMABLES"                  text="Filter: Consumables" />
+        <text name="REVAMP_FILTER"                              text="Filtr: žádný" />
+        <text name="REVAMP_FILTER_FRUITS"                       text="Filtr: ovoce" />
+        <text name="REVAMP_FILTER_GRASSES"                      text="Filtr: trávy" />
+        <text name="REVAMP_FILTER_SILAGES"                      text="Filtr: siláže" />
+        <text name="REVAMP_FILTER_FEED"                         text="Filtr: krmivo" />
+        <text name="REVAMP_FILTER_FEEDINGREDIENTS"              text="Filtr: složky krmiva" />
+        <text name="REVAMP_FILTER_SEEDS"                        text="Filtr: osivo" />
+        <text name="REVAMP_FILTER_PRODUCTS"                     text="Filtr: produkty" />
+        <text name="REVAMP_FILTER_ANIMALPRODUCTS"               text="Filtr: zvířata" />
+        <text name="REVAMP_FILTER_CONSUMABLES"                  text="Filtr: spotřební zboží" />
 
     <!-- Production messages -->
         <text name="Revamp_StorageEmpty"                        text="Sklad je prázdný" />
@@ -67,7 +67,7 @@
         <text name="Revamp_ProductionNotEmpty"                  text="Výroba není prázdná. Bude se prodávat následující zboží:"/>
 
     <!-- Production Variants -->
-        <text name="Revamp_limitBoosters"                       text="%s limited booster" />
+        <text name="Revamp_limitBoosters"                       text="%s (omezené boostery)" />
         <text name="Revamp_sunProduction"                       text="%s (záleží na slunci)" />
         <text name="Revamp_rainProduction"                      text="%s (záleží na dešti)" />
         <text name="Revamp_windProduction"                      text="%s (záleží na větru)" />
@@ -76,25 +76,25 @@
         <text name="Revamp_productionMode"                      text="Režim produkce" />
 
     <!-- Production Variants Season Names -->
-        <text name="Revamp_seasonSpring"                       text="Spring" />
-        <text name="Revamp_seasonSummer"                       text="Summer" />
-        <text name="Revamp_seasonAutumn"                       text="Autumn" />
-        <text name="Revamp_seasonWinter"                       text="Winter" />
+        <text name="Revamp_seasonSpring"                       text="Jaro" />
+        <text name="Revamp_seasonSummer"                       text="Léto" />
+        <text name="Revamp_seasonAutumn"                       text="Podzim" />
+        <text name="Revamp_seasonWinter"                       text="Zima" />
 
     <!-- Production menu -->
         <text name="Revamp_OpenProduction"                      text="Otevřít menu výroby" />
         <text name="Revamp_SpawnItem"                           text="Vyskladnění" />
         <text name="finance_ProductionDeliveryCosts"            text="Poplatek za dodání výroby" />
-        <text name="Revamp_ShowAnimalsOverview"                 text="Výstavní zvířata" />
-        <text name="revamp_production_status_outsideOfSeasons"  text="Outside of Season" />
-        <text name="revamp_production_status_outsideOfHours"    text="Outside of Working Hours" />
-        <text name="revamp_production_status_outsideOfMonths"   text="Outside of Working Months" />
+        <text name="Revamp_ShowAnimalsOverview"                 text="Zobrazit přehled zvířat" />
+        <text name="revamp_production_status_outsideOfSeasons"  text="Mimo sezónu" />
+        <text name="revamp_production_status_outsideOfHours"    text="Mimo pracovní dobu" />
+        <text name="revamp_production_status_outsideOfMonths"   text="Mimo měsíce" />
 
     <!-- game Settings menu -->
         <text name="Revamp_Settings_Title"                      text="Revamp" />
         <text name="Revamp_BuyRestriction_Title"                text="Možnost přímého nákupu" />
         <text name="Revamp_BuyRestriction_Tooltip"              text="Kdo může používat funkci nákupu ve výrobách, pokud nebyla deaktivována modderem?" />
-        <text name="Revamp_BuyRestriction_Everyone"             text="Každý" />
+        <text name="Revamp_BuyRestriction_Everyone"             text="Kdokoli" />
         <text name="Revamp_BuyRestriction_FarmManager"          text="Manažer farmy" />
         <text name="Revamp_BuyRestriction_ProductionAgent"      text="Manažer výroby" />
         <text name="Revamp_BuyRestriction_None"                 text="Nikdo" />
@@ -234,7 +234,8 @@ Opravu mise lze deaktivovat v nabídce nastavení."/>
 
       <!-- Page 10 - Annotations, Other -->
         <text name="Revamp_Help_P10_Title" text="Vysvětlivky"/>
-        <text name="Revamp_Help_P10_Text_1" text="Tato nápověda ve hře je jen částečné popsání funkcí módu Revamp Production a je značně zjednodušená. Podrobnou nápovědu k instalaci naleznete přímo v dokumentaci."/>
-        <text name="Revamp_Help_P10_Text_2" text="Tato nápověda byla vytvořena pro Revamp od v.1.3. Český překlad by Zipac."/>
+        <text name="Revamp_Help_P10_Text_1" text="Tato nápověda ve hře je jen částečné popsání funkcí módu Revamp Production a je značně zjednodušená. Podrobnou nápovědu k instalaci a používání naleznete přímo v dokumentaci pro vývojáře."/>
+        <text name="Revamp_Help_P10_Text_2" text="Tato nápověda byla vytvořena pro Revamp od verze 1.3.0.0.
+Český překlad by Zipac. >>zipac@centrum.cz<<"/>
     </texts>
 </l10n>
