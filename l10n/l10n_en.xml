@@ -41,8 +41,8 @@
         <text name="Revamp_PS_Boost_Title"                      text="Choose Boost-Mode" />
         <text name="Revamp_PS_Boost_Text"                       text="This setting changes, in which order boost-FillTypes are used." />
         <text name="Revamp_PS_Boost_Asc"                        text="Order first available" />
-        <text name="Revamp_PS_Boost_Desc"                       text="Order  last available" />
-        <text name="Revamp_PS_Boost_Most"                       text="Use	biggest boost" />
+        <text name="Revamp_PS_Boost_Desc"                       text="Order last available" />
+        <text name="Revamp_PS_Boost_Most"                       text="Use biggest boost" />
         <text name="Revamp_PS_Boost_Least"                      text="Use smallest boost" />
         <text name="Revamp_PS_Choose_Title"                     text="Please chooose:" />
         <text name="Revamp_PS_Choose_Mix"                       text="Change Mix Settings" />
