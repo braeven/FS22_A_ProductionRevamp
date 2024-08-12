@@ -31,34 +31,34 @@
         <text name="Revamp_ChangeRecipe"                        text="Изменить рецепт" />
 
     <!--Production Settings-->
-        <text name="Revamp_PS_MenueButton"                      text="Change Setting" />
-        <text name="Revamp_PS_Mix_Title"                        text="Choose Mix-Mode" />
-        <text name="Revamp_PS_Mix_Text"                         text="This setting changes, in which order Mix-FillTypes are used." />
-        <text name="Revamp_PS_Mix_Asc"                          text="Order descending" />
-        <text name="Revamp_PS_Mix_Desc"                         text="Order ascending" />
-        <text name="Revamp_PS_Mix_Most"                         text="Größte Menge" />
-        <text name="Revamp_PS_Mix_Least"                        text="Kleinste Menge" />
-        <text name="Revamp_PS_Boost_Title"                      text="Choose Boost-Mode" />
-        <text name="Revamp_PS_Boost_Text"                       text="This setting changes, in which order boost-FillTypes are used." />
-        <text name="Revamp_PS_Boost_Asc"                        text="Order first available" />
-        <text name="Revamp_PS_Boost_Desc"                       text="Order  last available" />
-        <text name="Revamp_PS_Boost_Most"                       text="Use	biggest boost" />
-        <text name="Revamp_PS_Boost_Least"                      text="Use smallest boost" />
-        <text name="Revamp_PS_Choose_Title"                     text="Please chooose:" />
-        <text name="Revamp_PS_Choose_Mix"                       text="Change Mix Settings" />
-        <text name="Revamp_PS_Choose_Boost"                     text="Change Boost Settings" />
+        <text name="Revamp_PS_MenueButton"                      text="Изменить настройки" />
+        <text name="Revamp_PS_Mix_Title"                        text="Порядок использования составляющих" />
+        <text name="Revamp_PS_Mix_Text"                         text="Эта настройка изменяет порядок использования составляющих." />
+        <text name="Revamp_PS_Mix_Asc"                          text="По убыванию" />
+        <text name="Revamp_PS_Mix_Desc"                         text="По возрастанию" />
+        <text name="Revamp_PS_Mix_Most"                         text="Наибольшее по объёму" />
+        <text name="Revamp_PS_Mix_Least"                        text="Наименьшее по объёму" />
+        <text name="Revamp_PS_Boost_Title"                      text="Порядок использования ускорителей" />
+        <text name="Revamp_PS_Boost_Text"                       text="Эта настройка изменяет порядок использования ускорителей." />
+        <text name="Revamp_PS_Boost_Asc"                        text="Первый в списке" />
+        <text name="Revamp_PS_Boost_Desc"                       text="Последний в списке" />
+        <text name="Revamp_PS_Boost_Most"                       text="Наибольший по объёму" />
+        <text name="Revamp_PS_Boost_Least"                      text="Наименьший по объёму" />
+        <text name="Revamp_PS_Choose_Title"                     text="Пожалуйста, выберите:" />
+        <text name="Revamp_PS_Choose_Mix"                       text="Изменить настройки составляющих" />
+        <text name="Revamp_PS_Choose_Boost"                     text="Изменить настройки ускорителей" />
 
     <!-- Price Menue Filter -->
-        <text name="REVAMP_FILTER"                              text="Filter: None" />
-        <text name="REVAMP_FILTER_FRUITS"                       text="Filter: Fruits" />
-        <text name="REVAMP_FILTER_GRASSES"                      text="Filter: Grasses" />
-        <text name="REVAMP_FILTER_SILAGES"                      text="Filter: Silages" />
-        <text name="REVAMP_FILTER_FEED"                         text="Filter: Feed" />
-        <text name="REVAMP_FILTER_FEEDINGREDIENTS"              text="Filter: Feed Ingredients" />
-        <text name="REVAMP_FILTER_SEEDS"                        text="Filter: Seeds" />
-        <text name="REVAMP_FILTER_PRODUCTS"                     text="Filter: Products" />
-        <text name="REVAMP_FILTER_ANIMALPRODUCTS"               text="Filter: Animal" />
-        <text name="REVAMP_FILTER_CONSUMABLES"                  text="Filter: Consumables" />
+        <text name="REVAMP_FILTER"                              text="Выбрано: Ничего" />
+        <text name="REVAMP_FILTER_FRUITS"                       text="Выбрано: Фрукты" />
+        <text name="REVAMP_FILTER_GRASSES"                      text="Выбрано: Трава" />
+        <text name="REVAMP_FILTER_SILAGES"                      text="Выбрано: Силос" />
+        <text name="REVAMP_FILTER_FEED"                         text="Выбрано: Корм" />
+        <text name="REVAMP_FILTER_FEEDINGREDIENTS"              text="Выбрано: Кормовые ингредиенты" />
+        <text name="REVAMP_FILTER_SEEDS"                        text="Выбрано: Семена" />
+        <text name="REVAMP_FILTER_PRODUCTS"                     text="Выбрано: Продукты" />
+        <text name="REVAMP_FILTER_ANIMALPRODUCTS"               text="Выбрано: Животные" />
+        <text name="REVAMP_FILTER_CONSUMABLES"                  text="Выбрано: Расходные материалы" />
 
     <!-- Production messages -->
         <text name="Revamp_StorageEmpty"                        text="Склад пуст" />
@@ -67,7 +67,7 @@
         <text name="Revamp_ProductionNotEmpty"                  text="Производство не пусто. Следующие товары тоже будут проданы:"/>
 
     <!-- Production Variants -->
-        <text name="Revamp_limitBoosters"                       text="%s limited booster" />
+        <text name="Revamp_limitBoosters"                       text="%s ограниченный ускоритель" />
         <text name="Revamp_sunProduction"                       text="%s Зависит от Солнца" />
         <text name="Revamp_rainProduction"                      text="%s Зависит от дождя" />
         <text name="Revamp_windProduction"                      text="%s Зависит от ветра" />
@@ -76,19 +76,19 @@
         <text name="Revamp_productionMode"                      text="Режим производства" />
 
     <!-- Production Variants Season Names -->
-        <text name="Revamp_seasonSpring"                       text="Spring" />
-        <text name="Revamp_seasonSummer"                       text="Summer" />
-        <text name="Revamp_seasonAutumn"                       text="Autumn" />
-        <text name="Revamp_seasonWinter"                       text="Winter" />
+        <text name="Revamp_seasonSpring"                       text="Весна" />
+        <text name="Revamp_seasonSummer"                       text="Лето" />
+        <text name="Revamp_seasonAutumn"                       text="Осень" />
+        <text name="Revamp_seasonWinter"                       text="Зима" />
 
     <!-- Production menu -->
         <text name="Revamp_OpenProduction"                      text="Управление производством" />
         <text name="Revamp_SpawnItem"                           text="На поддоны" />
         <text name="finance_ProductionDeliveryCosts"            text="Сборы за доставку продукции" />
         <text name="Revamp_ShowAnimalsOverview"                 text="Показать животных" />
-        <text name="revamp_production_status_outsideOfSeasons"  text="Outside of Season" />
-        <text name="revamp_production_status_outsideOfHours"    text="Outside of Working Hours" />
-        <text name="revamp_production_status_outsideOfMonths"   text="Outside of Working Months" />
+        <text name="revamp_production_status_outsideOfSeasons"  text="Без сезонов" />
+        <text name="revamp_production_status_outsideOfHours"    text="Без часов работы" />
+        <text name="revamp_production_status_outsideOfMonths"   text="Без месяцев работы" />
 
     <!-- game Settings menu -->
         <text name="Revamp_Settings_Title"                      text="Revamp" />
@@ -115,7 +115,7 @@
         <text name="Revamp_animalAgeError"                      text="Возраст животных должен быть от %s до %s месяцев." />
         <text name="Revamp_animalHealthError"                   text="У животных должно быть от %s до %s здоровья." />
         <text name="Revamp_animalNotValid"                      text="Этот вид животных здесь не принимается." />
-        <text name="Revamp_animalNotValidForTrigger"            text="Животные такого типа не будут приниматься на этой территории." />
+        <text name="Revamp_animalNotValidForTrigger"            text="Этот вид животных не принимается в этой Точке торговли." />
         <text name="Revamp_productFullError"                    text="Нет свободного места на производстве" />
         <text name="Revamp_amountPerAnimal"                     text="Вес одного животного" />
         <text name="Revamp_amountTotal"                         text="Общий вес доставки" />
