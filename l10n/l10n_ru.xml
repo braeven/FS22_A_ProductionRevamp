@@ -49,15 +49,15 @@
         <text name="Revamp_PS_Choose_Boost"                     text="Изменить настройки ускорителей" />
 
     <!-- Price Menue Filter -->
-        <text name="REVAMP_FILTER"                              text="Выбрано: Ничего" />
-        <text name="REVAMP_FILTER_FRUITS"                       text="Выбрано: Фрукты" />
+        <text name="REVAMP_FILTER"                              text="Выбрано: Всё" />
+        <text name="REVAMP_FILTER_FRUITS"                       text="Выбрано: Сельхозпродукты" />
         <text name="REVAMP_FILTER_GRASSES"                      text="Выбрано: Трава" />
         <text name="REVAMP_FILTER_SILAGES"                      text="Выбрано: Силос" />
         <text name="REVAMP_FILTER_FEED"                         text="Выбрано: Корм" />
         <text name="REVAMP_FILTER_FEEDINGREDIENTS"              text="Выбрано: Кормовые ингредиенты" />
         <text name="REVAMP_FILTER_SEEDS"                        text="Выбрано: Семена" />
-        <text name="REVAMP_FILTER_PRODUCTS"                     text="Выбрано: Продукты" />
-        <text name="REVAMP_FILTER_ANIMALPRODUCTS"               text="Выбрано: Животные" />
+        <text name="REVAMP_FILTER_PRODUCTS"                     text="Выбрано: Готовая продукция" />
+        <text name="REVAMP_FILTER_ANIMALPRODUCTS"               text="Выбрано: Животноводство" />
         <text name="REVAMP_FILTER_CONSUMABLES"                  text="Выбрано: Расходные материалы" />
 
     <!-- Production messages -->
