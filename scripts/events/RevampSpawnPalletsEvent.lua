@@ -18,7 +18,7 @@ function RevampSpawnPalletsEvent.emptyNew()
 	return self
 end
 
-function RevampSpawnPalletsEvent.new(ProductionPoint, ownerFarmId, fillTypeIndex, pendingLiters)
+function RevampSpawnPalletsEvent.new(ProductionPoint, ownerFarmId, fillTypeIndex, pendingLiters, treeSaplingTypeIndex, treeSaplingTypeName)
 	local self = RevampSpawnPalletsEvent.emptyNew()
 	self.ProductionPoint = ProductionPoint
 	self.ownerFarmId = ownerFarmId
@@ -34,8 +34,12 @@ function RevampSpawnPalletsEvent:readStream(streamId, connection)
 	self.ownerFarmId = streamReadInt32(streamId)
 	self.fillTypeIndex = streamReadInt32(streamId)
 	self.pendingLiters = streamReadInt32(streamId)
-	self.treeSaplingTypeIndex = streamReadInt32(streamId)
-	self.treeSaplingTypeName = streamReadString(streamId)
+	local treeSaplingTypeIndex = streamReadInt32(streamId)
+	
+	if treeSaplingTypeIndex ~= -1 then
+		self.treeSaplingTypeIndex = streamReadInt32(streamId)
+		self.treeSaplingTypeName = streamReadString(streamId)
+	end
 
 	self:run(connection)
 end
@@ -45,8 +49,11 @@ function RevampSpawnPalletsEvent:writeStream(streamId, connection)
 	streamWriteInt32(streamId, self.ownerFarmId)
 	streamWriteInt32(streamId, self.fillTypeIndex)
 	streamWriteInt32(streamId, self.pendingLiters)
-	streamWriteInt32(streamId, self.treeSaplingTypeIndex)
-	streamWriteString(streamId, self.treeSaplingTypeName)
+	if self.treeSaplingTypeIndex == nil then
+		streamWriteInt32(streamId, -1)
+	else
+		streamWriteString(streamId, self.treeSaplingTypeName)
+	end
 end
 
 function RevampSpawnPalletsEvent:run(connection)

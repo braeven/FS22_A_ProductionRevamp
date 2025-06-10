@@ -76,7 +76,14 @@ function ProductionPoint:loadProductionModes(production, index, productionKey, x
 		local lastMonthText = ""
 		for s = 1, #months do
 			local month = tonumber(months[s])
-			production.monthsList[month] = true
+			local TLP = g_modManager:getModByName("FS22_TerraLifePlus")
+			if TLP ~= nil and g_modIsLoaded[TLP.modName] then
+				for i = (month * 4 - 3), month * 4 do
+					production.monthsList[i] = true
+				end
+			else
+				production.monthsList[month] = true
+			end
 			-- 1 März, 2 April, ..
 			month = month + 2
 			if month == 13 then

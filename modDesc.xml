@@ -2,7 +2,7 @@
 <modDesc descVersion="80">
   <author>Braeven</author>
   <contributors>Achimobil</contributors>
-  <version>1.5.0.4</version>
+  <version>1.5.0.7</version>
   <title>
     <en>Production Revamp</en>
   </title>
@@ -88,6 +88,12 @@ Version 1.5.0.3
 
 Version 1.5.0.4
 * Update RU translation
+
+Version 1.5.0.5
+* Support for weeks of TerraLife Plus
+
+Version 1.5.07
+* Bugfix with tree sapling palettes
 ]]>
     </en>
     <de>
@@ -170,6 +176,12 @@ Version 1.5.0.3
 
 Version 1.5.0.4
 * Update RU Übersetzung
+
+Version 1.5.0.5
+* Unterstützung für Wochen von TerraLife Plus
+
+Version 1.5.07
+* Bugfix mit Baumsetzlingspaletten
 ]]>
     </de>
    <fr>
@@ -252,6 +264,12 @@ Version 1.5.0.3
 
 Version 1.5.0.4
 * Mise à jour de la traduction RU
+
+Version 1.5.0.5
+* Prise en charge des semaines de TerraLife Plus
+
+Version 1.5.07
+* Correction de bug avec les palettes de semis d'arbres
 ]]>
     </fr>
   </description>
